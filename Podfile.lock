@@ -1,0 +1,10 @@
+PODS:
+  - PublicCodeLibrary (1.0.1)
+
+DEPENDENCIES:
+  - PublicCodeLibrary (~> 1.0)
+
+SPEC CHECKSUMS:
+  PublicCodeLibrary: 2bb4b143e3f12201ef503f1cba11e0faa2b9e2c6
+
+COCOAPODS: 0.37.2

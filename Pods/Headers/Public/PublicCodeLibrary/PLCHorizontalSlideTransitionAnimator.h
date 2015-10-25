@@ -1,0 +1,1 @@
+../../../PublicCodeLibrary/Classes/PLCHorizontalSlideTransitionAnimator.h
