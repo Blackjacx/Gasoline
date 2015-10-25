@@ -8,50 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		08A27AE94AE8450D2FA2A508 /* libPods-Gazz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FC0978507E03AB21DCEC71 /* libPods-Gazz.a */; };
-		B9302F4A1BAB6F5B00CE9CC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9302F491BAB6F5B00CE9CC4 /* main.m */; };
-		B9302F4D1BAB6F5B00CE9CC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9302F4C1BAB6F5B00CE9CC4 /* AppDelegate.m */; };
-		B9302F501BAB6F5B00CE9CC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9302F4F1BAB6F5B00CE9CC4 /* ViewController.m */; };
+		B911C7A91BDC5A4900016B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7A81BDC5A4900016B85 /* AppDelegate.swift */; };
+		B911C7E51BDC5E5500016B85 /* CreateGazzEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7E41BDC5E5500016B85 /* CreateGazzEntryViewController.swift */; };
 		B9302F531BAB6F5B00CE9CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9302F511BAB6F5B00CE9CC4 /* Main.storyboard */; };
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
-		B9302F631BAB6F5B00CE9CC4 /* GazzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9302F621BAB6F5B00CE9CC4 /* GazzTests.m */; };
-		B9302F6E1BAB6F5B00CE9CC4 /* GazzUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9302F6D1BAB6F5B00CE9CC4 /* GazzUITests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B9302F5F1BAB6F5B00CE9CC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9302F3D1BAB6F5B00CE9CC4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B9302F441BAB6F5B00CE9CC4;
-			remoteInfo = Gazz;
-		};
-		B9302F6A1BAB6F5B00CE9CC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9302F3D1BAB6F5B00CE9CC4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B9302F441BAB6F5B00CE9CC4;
-			remoteInfo = Gazz;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		25FC0978507E03AB21DCEC71 /* libPods-Gazz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gazz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0D173A8C28A4AAE808FF05 /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gazz/Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
+		B911C7A81BDC5A4900016B85 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B911C7E41BDC5E5500016B85 /* CreateGazzEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGazzEntryViewController.swift; sourceTree = "<group>"; };
 		B9302F451BAB6F5B00CE9CC4 /* Gazz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9302F491BAB6F5B00CE9CC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B9302F4B1BAB6F5B00CE9CC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B9302F4C1BAB6F5B00CE9CC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B9302F4E1BAB6F5B00CE9CC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B9302F4F1BAB6F5B00CE9CC4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B9302F521BAB6F5B00CE9CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9302F591BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9302F5E1BAB6F5B00CE9CC4 /* GazzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GazzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9302F621BAB6F5B00CE9CC4 /* GazzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GazzTests.m; sourceTree = "<group>"; };
-		B9302F641BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9302F691BAB6F5B00CE9CC4 /* GazzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GazzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9302F6D1BAB6F5B00CE9CC4 /* GazzUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GazzUITests.m; sourceTree = "<group>"; };
-		B9302F6F1BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD95A33EF559F402953F1103 /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gazz/Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,20 +32,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A27AE94AE8450D2FA2A508 /* libPods-Gazz.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9302F5B1BAB6F5B00CE9CC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9302F661BAB6F5B00CE9CC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				B9302F471BAB6F5B00CE9CC4 /* Gazz */,
-				B9302F611BAB6F5B00CE9CC4 /* GazzTests */,
-				B9302F6C1BAB6F5B00CE9CC4 /* GazzUITests */,
 				B9302F461BAB6F5B00CE9CC4 /* Products */,
 				3D7BFCEECF41061CCE174632 /* Pods */,
 				F36F5D6C6C2D8DB15E205B50 /* Frameworks */,
@@ -106,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				B9302F451BAB6F5B00CE9CC4 /* Gazz.app */,
-				B9302F5E1BAB6F5B00CE9CC4 /* GazzTests.xctest */,
-				B9302F691BAB6F5B00CE9CC4 /* GazzUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,42 +68,13 @@
 		B9302F471BAB6F5B00CE9CC4 /* Gazz */ = {
 			isa = PBXGroup;
 			children = (
-				B9302F4B1BAB6F5B00CE9CC4 /* AppDelegate.h */,
-				B9302F4C1BAB6F5B00CE9CC4 /* AppDelegate.m */,
-				B9302F4E1BAB6F5B00CE9CC4 /* ViewController.h */,
-				B9302F4F1BAB6F5B00CE9CC4 /* ViewController.m */,
+				B911C7A81BDC5A4900016B85 /* AppDelegate.swift */,
+				B911C7E41BDC5E5500016B85 /* CreateGazzEntryViewController.swift */,
 				B9302F511BAB6F5B00CE9CC4 /* Main.storyboard */,
 				B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */,
 				B9302F591BAB6F5B00CE9CC4 /* Info.plist */,
-				B9302F481BAB6F5B00CE9CC4 /* Supporting Files */,
 			);
 			path = Gazz;
-			sourceTree = "<group>";
-		};
-		B9302F481BAB6F5B00CE9CC4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B9302F491BAB6F5B00CE9CC4 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B9302F611BAB6F5B00CE9CC4 /* GazzTests */ = {
-			isa = PBXGroup;
-			children = (
-				B9302F621BAB6F5B00CE9CC4 /* GazzTests.m */,
-				B9302F641BAB6F5B00CE9CC4 /* Info.plist */,
-			);
-			path = GazzTests;
-			sourceTree = "<group>";
-		};
-		B9302F6C1BAB6F5B00CE9CC4 /* GazzUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B9302F6D1BAB6F5B00CE9CC4 /* GazzUITests.m */,
-				B9302F6F1BAB6F5B00CE9CC4 /* Info.plist */,
-			);
-			path = GazzUITests;
 			sourceTree = "<group>";
 		};
 		F36F5D6C6C2D8DB15E205B50 /* Frameworks */ = {
@@ -183,61 +107,18 @@
 			productReference = B9302F451BAB6F5B00CE9CC4 /* Gazz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B9302F5D1BAB6F5B00CE9CC4 /* GazzTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9302F751BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "GazzTests" */;
-			buildPhases = (
-				B9302F5A1BAB6F5B00CE9CC4 /* Sources */,
-				B9302F5B1BAB6F5B00CE9CC4 /* Frameworks */,
-				B9302F5C1BAB6F5B00CE9CC4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B9302F601BAB6F5B00CE9CC4 /* PBXTargetDependency */,
-			);
-			name = GazzTests;
-			productName = GazzTests;
-			productReference = B9302F5E1BAB6F5B00CE9CC4 /* GazzTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B9302F681BAB6F5B00CE9CC4 /* GazzUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9302F781BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "GazzUITests" */;
-			buildPhases = (
-				B9302F651BAB6F5B00CE9CC4 /* Sources */,
-				B9302F661BAB6F5B00CE9CC4 /* Frameworks */,
-				B9302F671BAB6F5B00CE9CC4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B9302F6B1BAB6F5B00CE9CC4 /* PBXTargetDependency */,
-			);
-			name = GazzUITests;
-			productName = GazzUITests;
-			productReference = B9302F691BAB6F5B00CE9CC4 /* GazzUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B9302F3D1BAB6F5B00CE9CC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Stefan Herold";
 				TargetAttributes = {
 					B9302F441BAB6F5B00CE9CC4 = {
 						CreatedOnToolsVersion = 7.0;
-					};
-					B9302F5D1BAB6F5B00CE9CC4 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = B9302F441BAB6F5B00CE9CC4;
-					};
-					B9302F681BAB6F5B00CE9CC4 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = B9302F441BAB6F5B00CE9CC4;
 					};
 				};
 			};
@@ -255,8 +136,6 @@
 			projectRoot = "";
 			targets = (
 				B9302F441BAB6F5B00CE9CC4 /* Gazz */,
-				B9302F5D1BAB6F5B00CE9CC4 /* GazzTests */,
-				B9302F681BAB6F5B00CE9CC4 /* GazzUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,20 +147,6 @@
 			files = (
 				B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */,
 				B9302F531BAB6F5B00CE9CC4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9302F5C1BAB6F5B00CE9CC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9302F671BAB6F5B00CE9CC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,42 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9302F501BAB6F5B00CE9CC4 /* ViewController.m in Sources */,
-				B9302F4D1BAB6F5B00CE9CC4 /* AppDelegate.m in Sources */,
-				B9302F4A1BAB6F5B00CE9CC4 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9302F5A1BAB6F5B00CE9CC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9302F631BAB6F5B00CE9CC4 /* GazzTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9302F651BAB6F5B00CE9CC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9302F6E1BAB6F5B00CE9CC4 /* GazzUITests.m in Sources */,
+				B911C7A91BDC5A4900016B85 /* AppDelegate.swift in Sources */,
+				B911C7E51BDC5E5500016B85 /* CreateGazzEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B9302F601BAB6F5B00CE9CC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B9302F441BAB6F5B00CE9CC4 /* Gazz */;
-			targetProxy = B9302F5F1BAB6F5B00CE9CC4 /* PBXContainerItemProxy */;
-		};
-		B9302F6B1BAB6F5B00CE9CC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B9302F441BAB6F5B00CE9CC4 /* Gazz */;
-			targetProxy = B9302F6A1BAB6F5B00CE9CC4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B9302F511BAB6F5B00CE9CC4 /* Main.storyboard */ = {
@@ -410,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -447,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -459,10 +294,12 @@
 			baseConfigurationReference = 7B0D173A8C28A4AAE808FF05 /* Pods-Gazz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Gazz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Stefan-Herold.Gazz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -471,58 +308,11 @@
 			baseConfigurationReference = CD95A33EF559F402953F1103 /* Pods-Gazz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Gazz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Stefan-Herold.Gazz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		B9302F761BAB6F5B00CE9CC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GazzTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Stefan-Herold.GazzTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gazz.app/Gazz";
-			};
-			name = Debug;
-		};
-		B9302F771BAB6F5B00CE9CC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GazzTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Stefan-Herold.GazzTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gazz.app/Gazz";
-			};
-			name = Release;
-		};
-		B9302F791BAB6F5B00CE9CC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GazzUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Stefan-Herold.GazzUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Gazz;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		B9302F7A1BAB6F5B00CE9CC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GazzUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Stefan-Herold.GazzUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Gazz;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -543,24 +333,6 @@
 			buildConfigurations = (
 				B9302F731BAB6F5B00CE9CC4 /* Debug */,
 				B9302F741BAB6F5B00CE9CC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B9302F751BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "GazzTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9302F761BAB6F5B00CE9CC4 /* Debug */,
-				B9302F771BAB6F5B00CE9CC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B9302F781BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "GazzUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9302F791BAB6F5B00CE9CC4 /* Debug */,
-				B9302F7A1BAB6F5B00CE9CC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

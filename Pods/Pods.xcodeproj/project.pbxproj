@@ -7,344 +7,344 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05F49D090807DDBEF9C1B8DE /* UIColor+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B79FA3F55D8F50C88FD2D3E /* UIColor+PCLExtensions.h */; };
-		0EE90349CD70ED5705CC507A /* NSDate+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F9DF11050D48B213D58B62 /* NSDate+PCLExtensions.m */; };
-		0F0348388B6E9E1E3A030E3F /* UIDevice+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F526BC427E3DBFDE408AA9D /* UIDevice+PCLExtensions.m */; };
-		10B5FABA40D68D37E4BC9112 /* PCLDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = E069122455D1EB3B0F35346B /* PCLDebugging.h */; };
-		26FFC93AA4C37D58CC37B3B6 /* PCLTransitionAnimatorDocumentation.h in Headers */ = {isa = PBXBuildFile; fileRef = DE7086DE763F4C88C73254E2 /* PCLTransitionAnimatorDocumentation.h */; };
-		27EE1F61BAD868070739EFE9 /* PCLBackgroundTaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B9AA9BCC6683BC1550F557 /* PCLBackgroundTaskHandler.m */; };
-		29ADAA362C98DF7794C7C40C /* PLCHorizontalSlideTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD784970413BFF0D5769A2B /* PLCHorizontalSlideTransitionAnimator.h */; };
-		2A25435BE39FE883DBF8AAA4 /* PCLRestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = FC849A4576A64B8E39F0CB7A /* PCLRestCommand.m */; };
-		2D54CB7877D79DE41177AFA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AAB922E9AEB1EB888BE5AD /* Foundation.framework */; };
-		40C447BA01A9AC1F8D9056F2 /* UIImage+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB90444C40F91A220DC0A0 /* UIImage+PCLExtensions.m */; };
-		41A5F01FE14AD65E871BA84E /* Pods-Gazz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9093DE143275F881BA33CB29 /* Pods-Gazz-dummy.m */; };
-		488B0773060698E3C8C81A3D /* PublicCodeLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E83DBA7DE9FFF61AD7D15D5 /* PublicCodeLibrary.h */; };
-		4A4161938458E883F2DAA531 /* PCLTypeDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4182058AD4B42D358C86CDB9 /* PCLTypeDefs.h */; };
-		5947BCADB27902817DF9A1BF /* UIApplication+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C9A94F3E4E65248C57704 /* UIApplication+PCLExtensions.m */; };
-		5CF8B53A34A37E8BD4F8FE5F /* UIView+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 343F661D2345C0FF224A11F2 /* UIView+PCLExtensions.h */; };
-		6778E43B838F9F9E9093BF22 /* UIViewConroller+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BD40CD92C225FE50F8762B /* UIViewConroller+PCLExtensions.m */; };
-		6CDDFD3A4DEB19647F2A6591 /* NSURLRequest+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9137414D99C89AED79F3E9 /* NSURLRequest+PCLExtensions.m */; };
-		75648E84C25F4CEAA2FC8649 /* NSString+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B7764AB0EFCA9A420E9741 /* NSString+PCLExtensions.m */; };
-		7C05D5D96DFE46B5150D6262 /* NSError+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F8FD564BC369C5EB444AC8 /* NSError+PCLExtensions.h */; };
-		7CD7A5B4679346EDB5944869 /* UIImage+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A245C628B4B42A7169557F /* UIImage+PCLExtensions.h */; };
-		8C114D30D11D3C9B8ED09A18 /* PLCCrossFadeTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1E0FE35AB024DB63DF9B1 /* PLCCrossFadeTransitionAnimator.m */; };
-		8CC1673A2CE791A1B4E844AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AAB922E9AEB1EB888BE5AD /* Foundation.framework */; };
-		8ED4048EC690A35777057CDE /* UIApplication+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D90C7B40DA01E1C8D1113EEE /* UIApplication+PCLExtensions.h */; };
-		92C1FF0FD00726E8C93B09D8 /* PCLTransitionAnimatorConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C7E51522CF198794682098F6 /* PCLTransitionAnimatorConstants.h */; };
-		9422BE416B5E41A55DF4DACF /* UIColor+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC797ACCE397B1A8F883B42F /* UIColor+PCLExtensions.m */; };
-		96DF9855CEE68E8FDBCCE2F2 /* NSDate+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 40039A23CC94E07440F6C80F /* NSDate+PCLExtensions.h */; };
-		97AF5CC3381AA2690359C848 /* PCLBackgroundTaskHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6218AE3BF677C2DA0F577A2C /* PCLBackgroundTaskHandler.h */; };
-		988C0F26820C982F1DF30C82 /* UIView+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C4EDA4358F72F489A1EB0C /* UIView+PCLExtensions.m */; };
-		A1539F33469C8043B3158885 /* PCLTransitionAnimatorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 59064A7E5410CC861A3C4752 /* PCLTransitionAnimatorConstants.m */; };
-		AAA70C3D722EFDCA55355C05 /* PCLStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 149701D86F854955B8C7ACB8 /* PCLStrings.h */; };
-		AB6A9EEB0ED6D6F820D81115 /* NSObject+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6300747D49E3409664E54262 /* NSObject+PCLExtensions.h */; };
-		AD986C32C422AAAAD4FB9E6F /* NSArray+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092FD2A3383714C3246BEC35 /* NSArray+PCLExtensions.h */; };
-		C24B02B73049A84CB13B10A5 /* NSURLRequest+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D3119439059A46AAA07890F5 /* NSURLRequest+PCLExtensions.h */; };
-		CAD0DBD0A4C82465C2E1F783 /* NSError+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF83B96D15892B953DADCB55 /* NSError+PCLExtensions.m */; };
-		CCC6EDFEAEB367BB601CDE2B /* NSData+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8DC0744FD1F36C91743367 /* NSData+PCLExtensions.h */; };
-		CFB95A23107B7684DCAFCDC8 /* NSData+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D0B1EB737E01494A35C1F /* NSData+PCLExtensions.m */; };
-		D5AB37B1EE0EFD9A334221AC /* NSString+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3627478EC9F5B7B39AEFBBE9 /* NSString+PCLExtensions.h */; };
-		D8CDD3A4606FEFFB89A82C66 /* PCLRestCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 8797130CAF80C082169A9598 /* PCLRestCommand.h */; };
-		DBE90E0807AAB6B99253EF45 /* NSNotificationCenter+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A32F40CE464E4798F50934A0 /* NSNotificationCenter+PCLExtensions.m */; };
-		DC66095D3056E100B08FFB74 /* NSArray+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F1DA9D7B2B4D33AC025788 /* NSArray+PCLExtensions.m */; };
-		DD4AD8A4667BD9745F84A241 /* PLCHorizontalSlideTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A55773BCF59D9FFC4B5FCD8E /* PLCHorizontalSlideTransitionAnimator.m */; };
-		DEE084A81C80370FC7436CEA /* UIDevice+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = FF382CFE0357D66A4E17B150 /* UIDevice+PCLExtensions.h */; };
-		DF36104B3CD5D7DD675FF691 /* NSURL+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB500FE42F85EB244EA0D7 /* NSURL+PCLExtensions.m */; };
-		E0E5964E3FC21D03E35E3114 /* PLCCrossFadeTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA789E0669710C6249BA9B6 /* PLCCrossFadeTransitionAnimator.h */; };
-		E37862E817EE2BD2BAB0F82F /* UIViewConroller+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B0F62A98BCC3B53469150FF3 /* UIViewConroller+PCLExtensions.h */; };
-		E5123067CAC94BC2F6E8E48E /* NSURL+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E64DF3D6F5089B6ED0E67B74 /* NSURL+PCLExtensions.h */; };
-		E72FB162A15D14821BA7C57B /* NSObject+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B69B4248DE85DD74725AAD7 /* NSObject+PCLExtensions.m */; };
-		F652EC385BF4B5DBD0912015 /* NSNotificationCenter+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC8B283C3755910E7EB6C5 /* NSNotificationCenter+PCLExtensions.h */; };
-		F953C48A636D43BE7A759E61 /* Pods-Gazz-PublicCodeLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF4663FE187BBB860CAA699 /* Pods-Gazz-PublicCodeLibrary-dummy.m */; };
+		065DCA86E1DA0D0FF90B0031 /* PLCCrossFadeTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = C12F4A7C572577B6A70CB343 /* PLCCrossFadeTransitionAnimator.h */; };
+		115A9563B3E80B0612D79E74 /* NSArray+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E8623F392A9ED85821AFA3 /* NSArray+PCLExtensions.h */; };
+		15E8B93415FD3B305E12E6F5 /* NSDate+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 033286685F7A3CC4DF460378 /* NSDate+PCLExtensions.h */; };
+		15F99670F170837A58B75402 /* PLCCrossFadeTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F78C26261A731695366CE197 /* PLCCrossFadeTransitionAnimator.m */; };
+		2692666020CDFBF3A4EEA5D8 /* NSData+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 27ADBA93DFC8600C4A2135F6 /* NSData+PCLExtensions.h */; };
+		2EC3FA417BD25ED9EE417CCE /* PLCHorizontalSlideTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EF63A32850DFFCA58F2E4 /* PLCHorizontalSlideTransitionAnimator.m */; };
+		416263E1F50D1083CF9F31EB /* NSDate+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA2D300E47D8052277AD9C7 /* NSDate+PCLExtensions.m */; };
+		42E19486EB837B9416D45951 /* NSObject+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A5FBE0BBB062CAE266D599 /* NSObject+PCLExtensions.h */; };
+		465AC6D4A0BD981CEAF9DCE5 /* PCLStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 471B243EEA48061275EA2093 /* PCLStrings.h */; };
+		4F6E49B4DE6A261EBC055ADB /* UIApplication+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DA76DBCE650670EC673EB1B /* UIApplication+PCLExtensions.h */; };
+		5224A1F48A27A54BE1414BD9 /* NSNotificationCenter+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E40ACA17EE785540076F7C4 /* NSNotificationCenter+PCLExtensions.m */; };
+		57BB3291EA7CE6A3B89EB2B1 /* UIView+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EFDD3A7BBE3BCE92667D65 /* UIView+PCLExtensions.h */; };
+		598EF1CBF0A0A8A6EDCED94F /* NSString+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = F050A7459163D31E5B636542 /* NSString+PCLExtensions.h */; };
+		5EB3F16BA26368E0663778CF /* PCLTransitionAnimatorConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D28508CA2B1F144B9D9E37 /* PCLTransitionAnimatorConstants.h */; };
+		6034331A2856AD93E64F5DC3 /* UIImage+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F91C3C5BBBE140CF72CE1A /* UIImage+PCLExtensions.h */; };
+		708BFCF200017FC496DCFD2A /* NSURLRequest+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 85A2B2A2099DA664A0CB2662 /* NSURLRequest+PCLExtensions.h */; };
+		7116AAD70977362374DD12DD /* NSURL+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6801F236562F706367AB19E /* NSURL+PCLExtensions.m */; };
+		7383D53F41413B3481E12C9C /* PCLTransitionAnimatorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4DF12D2F19C542FF721661 /* PCLTransitionAnimatorConstants.m */; };
+		744294B9326448F53014A552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5FFD4733816A176E42B38 /* Foundation.framework */; };
+		7E302A003C81156C5B0DDBED /* PCLDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 58D5B9034814E3A37DD0CB0C /* PCLDebugging.h */; };
+		8AB7087493192F50D2010A83 /* Pods-Gazz-PublicCodeLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC01FBA8A6F400172FA1AB35 /* Pods-Gazz-PublicCodeLibrary-dummy.m */; };
+		8B233D05366A6BA736004BE0 /* NSNotificationCenter+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 170AA49892C56BCA3C07673D /* NSNotificationCenter+PCLExtensions.h */; };
+		8D1CCAD49E68E0C60BB832E3 /* Pods-Gazz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F743057B05FFBBD2919288A3 /* Pods-Gazz-dummy.m */; };
+		8ED2502DAF3222BD219674D9 /* NSURLRequest+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 314E94D88FD1340AB98555C9 /* NSURLRequest+PCLExtensions.m */; };
+		8EDA4E403F35035FEA980872 /* PCLBackgroundTaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632272DE2DBEE0E804A623A /* PCLBackgroundTaskHandler.m */; };
+		90FBF9F914CF175FFF04B35C /* PCLTypeDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF359B82BA2CB36DA697FE7 /* PCLTypeDefs.h */; };
+		913E0F0B1CBB15ABA246AF42 /* UIViewConroller+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 839F493BF519C3A6D05B6168 /* UIViewConroller+PCLExtensions.m */; };
+		92C84B957C86D46F6C97A148 /* UIDevice+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E05B9FD663C6F0263834D /* UIDevice+PCLExtensions.m */; };
+		935A1D397FCC645F39837005 /* NSObject+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E52162DB344D93C3B256A90E /* NSObject+PCLExtensions.m */; };
+		937021A7140DADD1751EE5AB /* UIDevice+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B69C05EEC237F5DD547D1 /* UIDevice+PCLExtensions.h */; };
+		96A0E8DF52816031099F3859 /* NSString+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D074A879F7D268E2B9E6B4EB /* NSString+PCLExtensions.m */; };
+		97A1FC41CE2E706CBCF5F0BC /* NSURL+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6133DD444C75A58BF4E78B88 /* NSURL+PCLExtensions.h */; };
+		A83DE8D290A01377D668D7E1 /* PCLBackgroundTaskHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = F068BD1986C38A3EEC0DF26F /* PCLBackgroundTaskHandler.h */; };
+		AC3B2DDE33371F5E9E2A5657 /* UIApplication+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 468E2566EACDDFAB58DDB9FA /* UIApplication+PCLExtensions.m */; };
+		B52DCB88DA58A274D75458B1 /* UIImage+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE2D82011467D2312F00DE /* UIImage+PCLExtensions.m */; };
+		BD05A5AE12FE4EC79B05EB95 /* PLCHorizontalSlideTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = E770263B1B04F3A3BA031310 /* PLCHorizontalSlideTransitionAnimator.h */; };
+		BD92331595640FD350833C88 /* PCLTransitionAnimatorDocumentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 002F43089DCC6BB7F52105D2 /* PCLTransitionAnimatorDocumentation.h */; };
+		C1900CC5E677B92ABF9F00C0 /* NSError+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDB25BADBD771F8842D7530 /* NSError+PCLExtensions.m */; };
+		C4A9503514EA65A779FB192F /* PCLRestCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D36003FD797FC1750EA135F /* PCLRestCommand.h */; };
+		C5F208802552D7C5BD63E9C6 /* PublicCodeLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9F6632B983F62848D9303C /* PublicCodeLibrary.h */; };
+		CAC97ED44DE3E96C00AA4C8C /* NSArray+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 19164CFDBD97EB8A3C898409 /* NSArray+PCLExtensions.m */; };
+		CDD0D1BD93576DC4673ED4BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5FFD4733816A176E42B38 /* Foundation.framework */; };
+		CF7C14ACF9AB53B3EE99DE87 /* PCLRestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A768815F910171B62E18B7 /* PCLRestCommand.m */; };
+		D47CC5F6DAD94B53E34F878D /* UIColor+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = AB7285399753D6CC06034914 /* UIColor+PCLExtensions.h */; };
+		D57CCC72493333D246BBC8A5 /* NSData+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA2FEDA0F7E3C5141C524F /* NSData+PCLExtensions.m */; };
+		D78345C63DF11F65EC1BD3A6 /* NSError+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7855AF016B2DA4E9AB234FFD /* NSError+PCLExtensions.h */; };
+		E320BC16EAEF43EEF9D57BF6 /* UIViewConroller+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D46043F8E3A5547E5EE162 /* UIViewConroller+PCLExtensions.h */; };
+		E54091EC2977A2E3CF376EB8 /* UIColor+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C3837E1D606F0847F0169316 /* UIColor+PCLExtensions.m */; };
+		E60AC4EC2DF4B1E5A4E23129 /* UIView+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7694BF3F8BD901BE160F69 /* UIView+PCLExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		259E88D2FB1CCF3BDECD1D31 /* PBXContainerItemProxy */ = {
+		6FEDC115F49D2B7FC17454A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9EB061E44E3D5079B7526749 /* Project object */;
+			containerPortal = 35B854528780F1B9AEA7C89D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D8FAFC0D3DA1C288C13617FF;
+			remoteGlobalIDString = ACC13E70A1139D576224FAAC;
 			remoteInfo = "Pods-Gazz-PublicCodeLibrary";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04AAB922E9AEB1EB888BE5AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		07DC8B283C3755910E7EB6C5 /* NSNotificationCenter+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+PCLExtensions.h"; path = "Classes/NSNotificationCenter+PCLExtensions.h"; sourceTree = "<group>"; };
-		092FD2A3383714C3246BEC35 /* NSArray+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PCLExtensions.h"; path = "Classes/NSArray+PCLExtensions.h"; sourceTree = "<group>"; };
-		1166D83D859966AF85843130 /* Pods-Gazz-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-environment.h"; sourceTree = "<group>"; };
-		13D6010EA9BFEAAC450AFCE8 /* Pods-Gazz-PublicCodeLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz-PublicCodeLibrary.xcconfig"; sourceTree = "<group>"; };
-		149701D86F854955B8C7ACB8 /* PCLStrings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLStrings.h; path = Classes/PCLStrings.h; sourceTree = "<group>"; };
-		1806F70C1142CE06EEA2750A /* libPods-Gazz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gazz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AF4663FE187BBB860CAA699 /* Pods-Gazz-PublicCodeLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-PublicCodeLibrary-dummy.m"; sourceTree = "<group>"; };
-		1B69B4248DE85DD74725AAD7 /* NSObject+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PCLExtensions.m"; path = "Classes/NSObject+PCLExtensions.m"; sourceTree = "<group>"; };
-		1EE1E0FE35AB024DB63DF9B1 /* PLCCrossFadeTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCCrossFadeTransitionAnimator.m; path = Classes/PLCCrossFadeTransitionAnimator.m; sourceTree = "<group>"; };
-		21A7B912B9E9A6B3478E90DD /* Pods-Gazz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gazz-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2A7F516537CDB33D5EE1B8E6 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		343F661D2345C0FF224A11F2 /* UIView+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PCLExtensions.h"; path = "Classes/UIView+PCLExtensions.h"; sourceTree = "<group>"; };
-		3627478EC9F5B7B39AEFBBE9 /* NSString+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+PCLExtensions.h"; path = "Classes/NSString+PCLExtensions.h"; sourceTree = "<group>"; };
-		37F9DF11050D48B213D58B62 /* NSDate+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+PCLExtensions.m"; path = "Classes/NSDate+PCLExtensions.m"; sourceTree = "<group>"; };
-		38995CAC08DDFD63B72691E2 /* Pods-Gazz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gazz-acknowledgements.plist"; sourceTree = "<group>"; };
-		3BD784970413BFF0D5769A2B /* PLCHorizontalSlideTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCHorizontalSlideTransitionAnimator.h; path = Classes/PLCHorizontalSlideTransitionAnimator.h; sourceTree = "<group>"; };
-		40039A23CC94E07440F6C80F /* NSDate+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PCLExtensions.h"; path = "Classes/NSDate+PCLExtensions.h"; sourceTree = "<group>"; };
-		4182058AD4B42D358C86CDB9 /* PCLTypeDefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTypeDefs.h; path = Classes/PCLTypeDefs.h; sourceTree = "<group>"; };
-		46B6E43B525D8C13F1DE787C /* Pods-Gazz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gazz-resources.sh"; sourceTree = "<group>"; };
-		53F1DA9D7B2B4D33AC025788 /* NSArray+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PCLExtensions.m"; path = "Classes/NSArray+PCLExtensions.m"; sourceTree = "<group>"; };
-		59064A7E5410CC861A3C4752 /* PCLTransitionAnimatorConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLTransitionAnimatorConstants.m; path = Classes/PCLTransitionAnimatorConstants.m; sourceTree = "<group>"; };
-		6218AE3BF677C2DA0F577A2C /* PCLBackgroundTaskHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLBackgroundTaskHandler.h; path = Classes/PCLBackgroundTaskHandler.h; sourceTree = "<group>"; };
-		6300747D49E3409664E54262 /* NSObject+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PCLExtensions.h"; path = "Classes/NSObject+PCLExtensions.h"; sourceTree = "<group>"; };
-		6E83DBA7DE9FFF61AD7D15D5 /* PublicCodeLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PublicCodeLibrary.h; path = Classes/PublicCodeLibrary.h; sourceTree = "<group>"; };
-		72B7764AB0EFCA9A420E9741 /* NSString+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+PCLExtensions.m"; path = "Classes/NSString+PCLExtensions.m"; sourceTree = "<group>"; };
-		80F8FD564BC369C5EB444AC8 /* NSError+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+PCLExtensions.h"; path = "Classes/NSError+PCLExtensions.h"; sourceTree = "<group>"; };
-		86913EFBEE5AAD9A3B3E55CE /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
-		8797130CAF80C082169A9598 /* PCLRestCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLRestCommand.h; path = Classes/PCLRestCommand.h; sourceTree = "<group>"; };
-		8B79FA3F55D8F50C88FD2D3E /* UIColor+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PCLExtensions.h"; path = "Classes/UIColor+PCLExtensions.h"; sourceTree = "<group>"; };
-		8C338519D6E930ED6A8D4C00 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz-PublicCodeLibrary-Private.xcconfig"; sourceTree = "<group>"; };
-		8CA789E0669710C6249BA9B6 /* PLCCrossFadeTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCCrossFadeTransitionAnimator.h; path = Classes/PLCCrossFadeTransitionAnimator.h; sourceTree = "<group>"; };
-		8DDB90444C40F91A220DC0A0 /* UIImage+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PCLExtensions.m"; path = "Classes/UIImage+PCLExtensions.m"; sourceTree = "<group>"; };
-		8F526BC427E3DBFDE408AA9D /* UIDevice+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+PCLExtensions.m"; path = "Classes/UIDevice+PCLExtensions.m"; sourceTree = "<group>"; };
-		9093DE143275F881BA33CB29 /* Pods-Gazz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-dummy.m"; sourceTree = "<group>"; };
-		9CD8F59E27292BF8DC930535 /* Pods-Gazz-PublicCodeLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-PublicCodeLibrary-prefix.pch"; sourceTree = "<group>"; };
-		9D0C9A94F3E4E65248C57704 /* UIApplication+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+PCLExtensions.m"; path = "Classes/UIApplication+PCLExtensions.m"; sourceTree = "<group>"; };
-		9D2D0B1EB737E01494A35C1F /* NSData+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+PCLExtensions.m"; path = "Classes/NSData+PCLExtensions.m"; sourceTree = "<group>"; };
-		9D8DC0744FD1F36C91743367 /* NSData+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+PCLExtensions.h"; path = "Classes/NSData+PCLExtensions.h"; sourceTree = "<group>"; };
-		9FDB500FE42F85EB244EA0D7 /* NSURL+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+PCLExtensions.m"; path = "Classes/NSURL+PCLExtensions.m"; sourceTree = "<group>"; };
-		A32F40CE464E4798F50934A0 /* NSNotificationCenter+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+PCLExtensions.m"; path = "Classes/NSNotificationCenter+PCLExtensions.m"; sourceTree = "<group>"; };
-		A55773BCF59D9FFC4B5FCD8E /* PLCHorizontalSlideTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCHorizontalSlideTransitionAnimator.m; path = Classes/PLCHorizontalSlideTransitionAnimator.m; sourceTree = "<group>"; };
-		B0F62A98BCC3B53469150FF3 /* UIViewConroller+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewConroller+PCLExtensions.h"; path = "Classes/UIViewConroller+PCLExtensions.h"; sourceTree = "<group>"; };
-		BF83B96D15892B953DADCB55 /* NSError+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+PCLExtensions.m"; path = "Classes/NSError+PCLExtensions.m"; sourceTree = "<group>"; };
-		C2B9AA9BCC6683BC1550F557 /* PCLBackgroundTaskHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLBackgroundTaskHandler.m; path = Classes/PCLBackgroundTaskHandler.m; sourceTree = "<group>"; };
-		C547B7BDC58582342ADED2D0 /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
-		C7E51522CF198794682098F6 /* PCLTransitionAnimatorConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorConstants.h; path = Classes/PCLTransitionAnimatorConstants.h; sourceTree = "<group>"; };
-		CF9137414D99C89AED79F3E9 /* NSURLRequest+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+PCLExtensions.m"; path = "Classes/NSURLRequest+PCLExtensions.m"; sourceTree = "<group>"; };
-		D3119439059A46AAA07890F5 /* NSURLRequest+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+PCLExtensions.h"; path = "Classes/NSURLRequest+PCLExtensions.h"; sourceTree = "<group>"; };
-		D90C7B40DA01E1C8D1113EEE /* UIApplication+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+PCLExtensions.h"; path = "Classes/UIApplication+PCLExtensions.h"; sourceTree = "<group>"; };
-		DE7086DE763F4C88C73254E2 /* PCLTransitionAnimatorDocumentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorDocumentation.h; path = Classes/PCLTransitionAnimatorDocumentation.h; sourceTree = "<group>"; };
-		E069122455D1EB3B0F35346B /* PCLDebugging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLDebugging.h; path = Classes/PCLDebugging.h; sourceTree = "<group>"; };
-		E5A245C628B4B42A7169557F /* UIImage+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PCLExtensions.h"; path = "Classes/UIImage+PCLExtensions.h"; sourceTree = "<group>"; };
-		E64DF3D6F5089B6ED0E67B74 /* NSURL+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+PCLExtensions.h"; path = "Classes/NSURL+PCLExtensions.h"; sourceTree = "<group>"; };
-		F6BD40CD92C225FE50F8762B /* UIViewConroller+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewConroller+PCLExtensions.m"; path = "Classes/UIViewConroller+PCLExtensions.m"; sourceTree = "<group>"; };
-		F9C4EDA4358F72F489A1EB0C /* UIView+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PCLExtensions.m"; path = "Classes/UIView+PCLExtensions.m"; sourceTree = "<group>"; };
-		FC797ACCE397B1A8F883B42F /* UIColor+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PCLExtensions.m"; path = "Classes/UIColor+PCLExtensions.m"; sourceTree = "<group>"; };
-		FC849A4576A64B8E39F0CB7A /* PCLRestCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLRestCommand.m; path = Classes/PCLRestCommand.m; sourceTree = "<group>"; };
-		FEE4ED504F7219163815A93B /* libPods-Gazz-PublicCodeLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gazz-PublicCodeLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF382CFE0357D66A4E17B150 /* UIDevice+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+PCLExtensions.h"; path = "Classes/UIDevice+PCLExtensions.h"; sourceTree = "<group>"; };
+		002F43089DCC6BB7F52105D2 /* PCLTransitionAnimatorDocumentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorDocumentation.h; path = Classes/PCLTransitionAnimatorDocumentation.h; sourceTree = "<group>"; };
+		033286685F7A3CC4DF460378 /* NSDate+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PCLExtensions.h"; path = "Classes/NSDate+PCLExtensions.h"; sourceTree = "<group>"; };
+		06D46043F8E3A5547E5EE162 /* UIViewConroller+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewConroller+PCLExtensions.h"; path = "Classes/UIViewConroller+PCLExtensions.h"; sourceTree = "<group>"; };
+		0E40ACA17EE785540076F7C4 /* NSNotificationCenter+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+PCLExtensions.m"; path = "Classes/NSNotificationCenter+PCLExtensions.m"; sourceTree = "<group>"; };
+		162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz-PublicCodeLibrary-Private.xcconfig"; sourceTree = "<group>"; };
+		16F91C3C5BBBE140CF72CE1A /* UIImage+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PCLExtensions.h"; path = "Classes/UIImage+PCLExtensions.h"; sourceTree = "<group>"; };
+		170AA49892C56BCA3C07673D /* NSNotificationCenter+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+PCLExtensions.h"; path = "Classes/NSNotificationCenter+PCLExtensions.h"; sourceTree = "<group>"; };
+		19164CFDBD97EB8A3C898409 /* NSArray+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PCLExtensions.m"; path = "Classes/NSArray+PCLExtensions.m"; sourceTree = "<group>"; };
+		1FA5FFD4733816A176E42B38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2632272DE2DBEE0E804A623A /* PCLBackgroundTaskHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLBackgroundTaskHandler.m; path = Classes/PCLBackgroundTaskHandler.m; sourceTree = "<group>"; };
+		27ADBA93DFC8600C4A2135F6 /* NSData+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+PCLExtensions.h"; path = "Classes/NSData+PCLExtensions.h"; sourceTree = "<group>"; };
+		302C95C53121FC658769EAEF /* Pods-Gazz-PublicCodeLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz-PublicCodeLibrary.xcconfig"; sourceTree = "<group>"; };
+		30E8623F392A9ED85821AFA3 /* NSArray+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PCLExtensions.h"; path = "Classes/NSArray+PCLExtensions.h"; sourceTree = "<group>"; };
+		314E94D88FD1340AB98555C9 /* NSURLRequest+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+PCLExtensions.m"; path = "Classes/NSURLRequest+PCLExtensions.m"; sourceTree = "<group>"; };
+		3E1C730EF1A6877777915908 /* libPods-Gazz-PublicCodeLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gazz-PublicCodeLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		468E2566EACDDFAB58DDB9FA /* UIApplication+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+PCLExtensions.m"; path = "Classes/UIApplication+PCLExtensions.m"; sourceTree = "<group>"; };
+		46ADA020FE3443EE7F51BA33 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		471B243EEA48061275EA2093 /* PCLStrings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLStrings.h; path = Classes/PCLStrings.h; sourceTree = "<group>"; };
+		4D36003FD797FC1750EA135F /* PCLRestCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLRestCommand.h; path = Classes/PCLRestCommand.h; sourceTree = "<group>"; };
+		54A5FBE0BBB062CAE266D599 /* NSObject+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PCLExtensions.h"; path = "Classes/NSObject+PCLExtensions.h"; sourceTree = "<group>"; };
+		58D5B9034814E3A37DD0CB0C /* PCLDebugging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLDebugging.h; path = Classes/PCLDebugging.h; sourceTree = "<group>"; };
+		5EE9E158FDCCD5732B07D39C /* Pods-Gazz-PublicCodeLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-PublicCodeLibrary-prefix.pch"; sourceTree = "<group>"; };
+		6133DD444C75A58BF4E78B88 /* NSURL+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+PCLExtensions.h"; path = "Classes/NSURL+PCLExtensions.h"; sourceTree = "<group>"; };
+		63D28508CA2B1F144B9D9E37 /* PCLTransitionAnimatorConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorConstants.h; path = Classes/PCLTransitionAnimatorConstants.h; sourceTree = "<group>"; };
+		6B0E05B9FD663C6F0263834D /* UIDevice+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+PCLExtensions.m"; path = "Classes/UIDevice+PCLExtensions.m"; sourceTree = "<group>"; };
+		6DA76DBCE650670EC673EB1B /* UIApplication+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+PCLExtensions.h"; path = "Classes/UIApplication+PCLExtensions.h"; sourceTree = "<group>"; };
+		7855AF016B2DA4E9AB234FFD /* NSError+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+PCLExtensions.h"; path = "Classes/NSError+PCLExtensions.h"; sourceTree = "<group>"; };
+		7DDE2D82011467D2312F00DE /* UIImage+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PCLExtensions.m"; path = "Classes/UIImage+PCLExtensions.m"; sourceTree = "<group>"; };
+		81EFDD3A7BBE3BCE92667D65 /* UIView+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PCLExtensions.h"; path = "Classes/UIView+PCLExtensions.h"; sourceTree = "<group>"; };
+		839F493BF519C3A6D05B6168 /* UIViewConroller+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewConroller+PCLExtensions.m"; path = "Classes/UIViewConroller+PCLExtensions.m"; sourceTree = "<group>"; };
+		85A2B2A2099DA664A0CB2662 /* NSURLRequest+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+PCLExtensions.h"; path = "Classes/NSURLRequest+PCLExtensions.h"; sourceTree = "<group>"; };
+		88C8558ED3A2E0CB94D58A74 /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
+		9205055FB485D57C530D5F34 /* Pods-Gazz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gazz-acknowledgements.plist"; sourceTree = "<group>"; };
+		95A768815F910171B62E18B7 /* PCLRestCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLRestCommand.m; path = Classes/PCLRestCommand.m; sourceTree = "<group>"; };
+		96FF8BED8CF8CA7A367D42A3 /* libPods-Gazz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gazz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A7694BF3F8BD901BE160F69 /* UIView+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PCLExtensions.m"; path = "Classes/UIView+PCLExtensions.m"; sourceTree = "<group>"; };
+		9EC079226FF73AC75BA124F1 /* Pods-Gazz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gazz-resources.sh"; sourceTree = "<group>"; };
+		AB7285399753D6CC06034914 /* UIColor+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PCLExtensions.h"; path = "Classes/UIColor+PCLExtensions.h"; sourceTree = "<group>"; };
+		BBF359B82BA2CB36DA697FE7 /* PCLTypeDefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTypeDefs.h; path = Classes/PCLTypeDefs.h; sourceTree = "<group>"; };
+		BD8B69C05EEC237F5DD547D1 /* UIDevice+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+PCLExtensions.h"; path = "Classes/UIDevice+PCLExtensions.h"; sourceTree = "<group>"; };
+		BF9F6632B983F62848D9303C /* PublicCodeLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PublicCodeLibrary.h; path = Classes/PublicCodeLibrary.h; sourceTree = "<group>"; };
+		C12F4A7C572577B6A70CB343 /* PLCCrossFadeTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCCrossFadeTransitionAnimator.h; path = Classes/PLCCrossFadeTransitionAnimator.h; sourceTree = "<group>"; };
+		C3725A824233F181BFEA5C58 /* Pods-Gazz-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-environment.h"; sourceTree = "<group>"; };
+		C3837E1D606F0847F0169316 /* UIColor+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PCLExtensions.m"; path = "Classes/UIColor+PCLExtensions.m"; sourceTree = "<group>"; };
+		CC01FBA8A6F400172FA1AB35 /* Pods-Gazz-PublicCodeLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-PublicCodeLibrary-dummy.m"; sourceTree = "<group>"; };
+		D074A879F7D268E2B9E6B4EB /* NSString+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+PCLExtensions.m"; path = "Classes/NSString+PCLExtensions.m"; sourceTree = "<group>"; };
+		D6801F236562F706367AB19E /* NSURL+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+PCLExtensions.m"; path = "Classes/NSURL+PCLExtensions.m"; sourceTree = "<group>"; };
+		DA0EF63A32850DFFCA58F2E4 /* PLCHorizontalSlideTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCHorizontalSlideTransitionAnimator.m; path = Classes/PLCHorizontalSlideTransitionAnimator.m; sourceTree = "<group>"; };
+		E52162DB344D93C3B256A90E /* NSObject+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PCLExtensions.m"; path = "Classes/NSObject+PCLExtensions.m"; sourceTree = "<group>"; };
+		E770263B1B04F3A3BA031310 /* PLCHorizontalSlideTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCHorizontalSlideTransitionAnimator.h; path = Classes/PLCHorizontalSlideTransitionAnimator.h; sourceTree = "<group>"; };
+		E983F7CA589B09B50B255B4B /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
+		ED4DF12D2F19C542FF721661 /* PCLTransitionAnimatorConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLTransitionAnimatorConstants.m; path = Classes/PCLTransitionAnimatorConstants.m; sourceTree = "<group>"; };
+		EEDB25BADBD771F8842D7530 /* NSError+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+PCLExtensions.m"; path = "Classes/NSError+PCLExtensions.m"; sourceTree = "<group>"; };
+		F050A7459163D31E5B636542 /* NSString+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+PCLExtensions.h"; path = "Classes/NSString+PCLExtensions.h"; sourceTree = "<group>"; };
+		F068BD1986C38A3EEC0DF26F /* PCLBackgroundTaskHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLBackgroundTaskHandler.h; path = Classes/PCLBackgroundTaskHandler.h; sourceTree = "<group>"; };
+		F18E464AF9C9C80003F7BF16 /* Pods-Gazz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gazz-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F743057B05FFBBD2919288A3 /* Pods-Gazz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-dummy.m"; sourceTree = "<group>"; };
+		F78C26261A731695366CE197 /* PLCCrossFadeTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCCrossFadeTransitionAnimator.m; path = Classes/PLCCrossFadeTransitionAnimator.m; sourceTree = "<group>"; };
+		FAA2D300E47D8052277AD9C7 /* NSDate+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+PCLExtensions.m"; path = "Classes/NSDate+PCLExtensions.m"; sourceTree = "<group>"; };
+		FADA2FEDA0F7E3C5141C524F /* NSData+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+PCLExtensions.m"; path = "Classes/NSData+PCLExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2EDBCE9895E55040266E84F9 /* Frameworks */ = {
+		6A59F103EE2714B980F5B967 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D54CB7877D79DE41177AFA5 /* Foundation.framework in Frameworks */,
+				CDD0D1BD93576DC4673ED4BF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		519109D2AF5B2FBB8295D745 /* Frameworks */ = {
+		ADE22F8ABB232393082F51DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC1673A2CE791A1B4E844AA /* Foundation.framework in Frameworks */,
+				744294B9326448F53014A552 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03FF85E9DA3FE046F9FAD00A = {
+		1BD59BFA30C71580E1C5BB4E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2A7F516537CDB33D5EE1B8E6 /* Podfile */,
-				594C8094416C8A5B3478C016 /* Frameworks */,
-				13C81DCC46ECC693B457F29D /* Pods */,
-				F1E98DE2DD276E27AB726936 /* Products */,
-				92BF721CEF5CA0CAE014AEFE /* Targets Support Files */,
+				1D7D1FAA2DEE2885B9F85CD6 /* Pods-Gazz */,
 			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		13C81DCC46ECC693B457F29D /* Pods */ = {
+		1D7D1FAA2DEE2885B9F85CD6 /* Pods-Gazz */ = {
 			isa = PBXGroup;
 			children = (
-				196255D81EEDF473C99B363D /* PublicCodeLibrary */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		196255D81EEDF473C99B363D /* PublicCodeLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				092FD2A3383714C3246BEC35 /* NSArray+PCLExtensions.h */,
-				53F1DA9D7B2B4D33AC025788 /* NSArray+PCLExtensions.m */,
-				9D8DC0744FD1F36C91743367 /* NSData+PCLExtensions.h */,
-				9D2D0B1EB737E01494A35C1F /* NSData+PCLExtensions.m */,
-				40039A23CC94E07440F6C80F /* NSDate+PCLExtensions.h */,
-				37F9DF11050D48B213D58B62 /* NSDate+PCLExtensions.m */,
-				80F8FD564BC369C5EB444AC8 /* NSError+PCLExtensions.h */,
-				BF83B96D15892B953DADCB55 /* NSError+PCLExtensions.m */,
-				07DC8B283C3755910E7EB6C5 /* NSNotificationCenter+PCLExtensions.h */,
-				A32F40CE464E4798F50934A0 /* NSNotificationCenter+PCLExtensions.m */,
-				6300747D49E3409664E54262 /* NSObject+PCLExtensions.h */,
-				1B69B4248DE85DD74725AAD7 /* NSObject+PCLExtensions.m */,
-				3627478EC9F5B7B39AEFBBE9 /* NSString+PCLExtensions.h */,
-				72B7764AB0EFCA9A420E9741 /* NSString+PCLExtensions.m */,
-				E64DF3D6F5089B6ED0E67B74 /* NSURL+PCLExtensions.h */,
-				9FDB500FE42F85EB244EA0D7 /* NSURL+PCLExtensions.m */,
-				D3119439059A46AAA07890F5 /* NSURLRequest+PCLExtensions.h */,
-				CF9137414D99C89AED79F3E9 /* NSURLRequest+PCLExtensions.m */,
-				6218AE3BF677C2DA0F577A2C /* PCLBackgroundTaskHandler.h */,
-				C2B9AA9BCC6683BC1550F557 /* PCLBackgroundTaskHandler.m */,
-				E069122455D1EB3B0F35346B /* PCLDebugging.h */,
-				8797130CAF80C082169A9598 /* PCLRestCommand.h */,
-				FC849A4576A64B8E39F0CB7A /* PCLRestCommand.m */,
-				149701D86F854955B8C7ACB8 /* PCLStrings.h */,
-				C7E51522CF198794682098F6 /* PCLTransitionAnimatorConstants.h */,
-				59064A7E5410CC861A3C4752 /* PCLTransitionAnimatorConstants.m */,
-				DE7086DE763F4C88C73254E2 /* PCLTransitionAnimatorDocumentation.h */,
-				4182058AD4B42D358C86CDB9 /* PCLTypeDefs.h */,
-				8CA789E0669710C6249BA9B6 /* PLCCrossFadeTransitionAnimator.h */,
-				1EE1E0FE35AB024DB63DF9B1 /* PLCCrossFadeTransitionAnimator.m */,
-				3BD784970413BFF0D5769A2B /* PLCHorizontalSlideTransitionAnimator.h */,
-				A55773BCF59D9FFC4B5FCD8E /* PLCHorizontalSlideTransitionAnimator.m */,
-				6E83DBA7DE9FFF61AD7D15D5 /* PublicCodeLibrary.h */,
-				D90C7B40DA01E1C8D1113EEE /* UIApplication+PCLExtensions.h */,
-				9D0C9A94F3E4E65248C57704 /* UIApplication+PCLExtensions.m */,
-				8B79FA3F55D8F50C88FD2D3E /* UIColor+PCLExtensions.h */,
-				FC797ACCE397B1A8F883B42F /* UIColor+PCLExtensions.m */,
-				FF382CFE0357D66A4E17B150 /* UIDevice+PCLExtensions.h */,
-				8F526BC427E3DBFDE408AA9D /* UIDevice+PCLExtensions.m */,
-				E5A245C628B4B42A7169557F /* UIImage+PCLExtensions.h */,
-				8DDB90444C40F91A220DC0A0 /* UIImage+PCLExtensions.m */,
-				343F661D2345C0FF224A11F2 /* UIView+PCLExtensions.h */,
-				F9C4EDA4358F72F489A1EB0C /* UIView+PCLExtensions.m */,
-				B0F62A98BCC3B53469150FF3 /* UIViewConroller+PCLExtensions.h */,
-				F6BD40CD92C225FE50F8762B /* UIViewConroller+PCLExtensions.m */,
-				CF1802228030DD301B4D09CE /* Support Files */,
-			);
-			path = PublicCodeLibrary;
-			sourceTree = "<group>";
-		};
-		594C8094416C8A5B3478C016 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DC81833A9169B04AF8EED00E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6F142AA27B8436D3CE80EF97 /* Pods-Gazz */ = {
-			isa = PBXGroup;
-			children = (
-				21A7B912B9E9A6B3478E90DD /* Pods-Gazz-acknowledgements.markdown */,
-				38995CAC08DDFD63B72691E2 /* Pods-Gazz-acknowledgements.plist */,
-				9093DE143275F881BA33CB29 /* Pods-Gazz-dummy.m */,
-				1166D83D859966AF85843130 /* Pods-Gazz-environment.h */,
-				46B6E43B525D8C13F1DE787C /* Pods-Gazz-resources.sh */,
-				C547B7BDC58582342ADED2D0 /* Pods-Gazz.debug.xcconfig */,
-				86913EFBEE5AAD9A3B3E55CE /* Pods-Gazz.release.xcconfig */,
+				F18E464AF9C9C80003F7BF16 /* Pods-Gazz-acknowledgements.markdown */,
+				9205055FB485D57C530D5F34 /* Pods-Gazz-acknowledgements.plist */,
+				F743057B05FFBBD2919288A3 /* Pods-Gazz-dummy.m */,
+				C3725A824233F181BFEA5C58 /* Pods-Gazz-environment.h */,
+				9EC079226FF73AC75BA124F1 /* Pods-Gazz-resources.sh */,
+				88C8558ED3A2E0CB94D58A74 /* Pods-Gazz.debug.xcconfig */,
+				E983F7CA589B09B50B255B4B /* Pods-Gazz.release.xcconfig */,
 			);
 			name = "Pods-Gazz";
 			path = "Target Support Files/Pods-Gazz";
 			sourceTree = "<group>";
 		};
-		92BF721CEF5CA0CAE014AEFE /* Targets Support Files */ = {
+		24C27240D9D1F56067907A11 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6F142AA27B8436D3CE80EF97 /* Pods-Gazz */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		CF1802228030DD301B4D09CE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				13D6010EA9BFEAAC450AFCE8 /* Pods-Gazz-PublicCodeLibrary.xcconfig */,
-				8C338519D6E930ED6A8D4C00 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */,
-				1AF4663FE187BBB860CAA699 /* Pods-Gazz-PublicCodeLibrary-dummy.m */,
-				9CD8F59E27292BF8DC930535 /* Pods-Gazz-PublicCodeLibrary-prefix.pch */,
+				302C95C53121FC658769EAEF /* Pods-Gazz-PublicCodeLibrary.xcconfig */,
+				162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */,
+				CC01FBA8A6F400172FA1AB35 /* Pods-Gazz-PublicCodeLibrary-dummy.m */,
+				5EE9E158FDCCD5732B07D39C /* Pods-Gazz-PublicCodeLibrary-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-Gazz-PublicCodeLibrary";
 			sourceTree = "<group>";
 		};
-		DC81833A9169B04AF8EED00E /* iOS */ = {
+		56EB1EEDC404EEF00027BD9F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04AAB922E9AEB1EB888BE5AD /* Foundation.framework */,
+				803543080022A5EA9228D0CF /* PublicCodeLibrary */,
 			);
-			name = iOS;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		F1E98DE2DD276E27AB726936 /* Products */ = {
+		803543080022A5EA9228D0CF /* PublicCodeLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				1806F70C1142CE06EEA2750A /* libPods-Gazz.a */,
-				FEE4ED504F7219163815A93B /* libPods-Gazz-PublicCodeLibrary.a */,
+				30E8623F392A9ED85821AFA3 /* NSArray+PCLExtensions.h */,
+				19164CFDBD97EB8A3C898409 /* NSArray+PCLExtensions.m */,
+				27ADBA93DFC8600C4A2135F6 /* NSData+PCLExtensions.h */,
+				FADA2FEDA0F7E3C5141C524F /* NSData+PCLExtensions.m */,
+				033286685F7A3CC4DF460378 /* NSDate+PCLExtensions.h */,
+				FAA2D300E47D8052277AD9C7 /* NSDate+PCLExtensions.m */,
+				7855AF016B2DA4E9AB234FFD /* NSError+PCLExtensions.h */,
+				EEDB25BADBD771F8842D7530 /* NSError+PCLExtensions.m */,
+				170AA49892C56BCA3C07673D /* NSNotificationCenter+PCLExtensions.h */,
+				0E40ACA17EE785540076F7C4 /* NSNotificationCenter+PCLExtensions.m */,
+				54A5FBE0BBB062CAE266D599 /* NSObject+PCLExtensions.h */,
+				E52162DB344D93C3B256A90E /* NSObject+PCLExtensions.m */,
+				F050A7459163D31E5B636542 /* NSString+PCLExtensions.h */,
+				D074A879F7D268E2B9E6B4EB /* NSString+PCLExtensions.m */,
+				6133DD444C75A58BF4E78B88 /* NSURL+PCLExtensions.h */,
+				D6801F236562F706367AB19E /* NSURL+PCLExtensions.m */,
+				85A2B2A2099DA664A0CB2662 /* NSURLRequest+PCLExtensions.h */,
+				314E94D88FD1340AB98555C9 /* NSURLRequest+PCLExtensions.m */,
+				F068BD1986C38A3EEC0DF26F /* PCLBackgroundTaskHandler.h */,
+				2632272DE2DBEE0E804A623A /* PCLBackgroundTaskHandler.m */,
+				58D5B9034814E3A37DD0CB0C /* PCLDebugging.h */,
+				4D36003FD797FC1750EA135F /* PCLRestCommand.h */,
+				95A768815F910171B62E18B7 /* PCLRestCommand.m */,
+				471B243EEA48061275EA2093 /* PCLStrings.h */,
+				63D28508CA2B1F144B9D9E37 /* PCLTransitionAnimatorConstants.h */,
+				ED4DF12D2F19C542FF721661 /* PCLTransitionAnimatorConstants.m */,
+				002F43089DCC6BB7F52105D2 /* PCLTransitionAnimatorDocumentation.h */,
+				BBF359B82BA2CB36DA697FE7 /* PCLTypeDefs.h */,
+				C12F4A7C572577B6A70CB343 /* PLCCrossFadeTransitionAnimator.h */,
+				F78C26261A731695366CE197 /* PLCCrossFadeTransitionAnimator.m */,
+				E770263B1B04F3A3BA031310 /* PLCHorizontalSlideTransitionAnimator.h */,
+				DA0EF63A32850DFFCA58F2E4 /* PLCHorizontalSlideTransitionAnimator.m */,
+				BF9F6632B983F62848D9303C /* PublicCodeLibrary.h */,
+				6DA76DBCE650670EC673EB1B /* UIApplication+PCLExtensions.h */,
+				468E2566EACDDFAB58DDB9FA /* UIApplication+PCLExtensions.m */,
+				AB7285399753D6CC06034914 /* UIColor+PCLExtensions.h */,
+				C3837E1D606F0847F0169316 /* UIColor+PCLExtensions.m */,
+				BD8B69C05EEC237F5DD547D1 /* UIDevice+PCLExtensions.h */,
+				6B0E05B9FD663C6F0263834D /* UIDevice+PCLExtensions.m */,
+				16F91C3C5BBBE140CF72CE1A /* UIImage+PCLExtensions.h */,
+				7DDE2D82011467D2312F00DE /* UIImage+PCLExtensions.m */,
+				81EFDD3A7BBE3BCE92667D65 /* UIView+PCLExtensions.h */,
+				9A7694BF3F8BD901BE160F69 /* UIView+PCLExtensions.m */,
+				06D46043F8E3A5547E5EE162 /* UIViewConroller+PCLExtensions.h */,
+				839F493BF519C3A6D05B6168 /* UIViewConroller+PCLExtensions.m */,
+				24C27240D9D1F56067907A11 /* Support Files */,
+			);
+			path = PublicCodeLibrary;
+			sourceTree = "<group>";
+		};
+		AF175D886CB433B356DE2120 = {
+			isa = PBXGroup;
+			children = (
+				46ADA020FE3443EE7F51BA33 /* Podfile */,
+				FBF0CFAE462BE8110E4F8FE4 /* Frameworks */,
+				56EB1EEDC404EEF00027BD9F /* Pods */,
+				CC9C39B924016EB32C92803E /* Products */,
+				1BD59BFA30C71580E1C5BB4E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CC9C39B924016EB32C92803E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96FF8BED8CF8CA7A367D42A3 /* libPods-Gazz.a */,
+				3E1C730EF1A6877777915908 /* libPods-Gazz-PublicCodeLibrary.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FBF0CFAE462BE8110E4F8FE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD10A427CC91033B7126E5FF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD10A427CC91033B7126E5FF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5FFD4733816A176E42B38 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9E2D392003855560A1B8C21E /* Headers */ = {
+		8F75DFB99C732E34D5CB15B4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD986C32C422AAAAD4FB9E6F /* NSArray+PCLExtensions.h in Headers */,
-				CCC6EDFEAEB367BB601CDE2B /* NSData+PCLExtensions.h in Headers */,
-				96DF9855CEE68E8FDBCCE2F2 /* NSDate+PCLExtensions.h in Headers */,
-				7C05D5D96DFE46B5150D6262 /* NSError+PCLExtensions.h in Headers */,
-				F652EC385BF4B5DBD0912015 /* NSNotificationCenter+PCLExtensions.h in Headers */,
-				AB6A9EEB0ED6D6F820D81115 /* NSObject+PCLExtensions.h in Headers */,
-				D5AB37B1EE0EFD9A334221AC /* NSString+PCLExtensions.h in Headers */,
-				E5123067CAC94BC2F6E8E48E /* NSURL+PCLExtensions.h in Headers */,
-				C24B02B73049A84CB13B10A5 /* NSURLRequest+PCLExtensions.h in Headers */,
-				97AF5CC3381AA2690359C848 /* PCLBackgroundTaskHandler.h in Headers */,
-				10B5FABA40D68D37E4BC9112 /* PCLDebugging.h in Headers */,
-				D8CDD3A4606FEFFB89A82C66 /* PCLRestCommand.h in Headers */,
-				AAA70C3D722EFDCA55355C05 /* PCLStrings.h in Headers */,
-				92C1FF0FD00726E8C93B09D8 /* PCLTransitionAnimatorConstants.h in Headers */,
-				26FFC93AA4C37D58CC37B3B6 /* PCLTransitionAnimatorDocumentation.h in Headers */,
-				4A4161938458E883F2DAA531 /* PCLTypeDefs.h in Headers */,
-				E0E5964E3FC21D03E35E3114 /* PLCCrossFadeTransitionAnimator.h in Headers */,
-				29ADAA362C98DF7794C7C40C /* PLCHorizontalSlideTransitionAnimator.h in Headers */,
-				488B0773060698E3C8C81A3D /* PublicCodeLibrary.h in Headers */,
-				8ED4048EC690A35777057CDE /* UIApplication+PCLExtensions.h in Headers */,
-				05F49D090807DDBEF9C1B8DE /* UIColor+PCLExtensions.h in Headers */,
-				DEE084A81C80370FC7436CEA /* UIDevice+PCLExtensions.h in Headers */,
-				7CD7A5B4679346EDB5944869 /* UIImage+PCLExtensions.h in Headers */,
-				5CF8B53A34A37E8BD4F8FE5F /* UIView+PCLExtensions.h in Headers */,
-				E37862E817EE2BD2BAB0F82F /* UIViewConroller+PCLExtensions.h in Headers */,
+				115A9563B3E80B0612D79E74 /* NSArray+PCLExtensions.h in Headers */,
+				2692666020CDFBF3A4EEA5D8 /* NSData+PCLExtensions.h in Headers */,
+				15E8B93415FD3B305E12E6F5 /* NSDate+PCLExtensions.h in Headers */,
+				D78345C63DF11F65EC1BD3A6 /* NSError+PCLExtensions.h in Headers */,
+				8B233D05366A6BA736004BE0 /* NSNotificationCenter+PCLExtensions.h in Headers */,
+				42E19486EB837B9416D45951 /* NSObject+PCLExtensions.h in Headers */,
+				598EF1CBF0A0A8A6EDCED94F /* NSString+PCLExtensions.h in Headers */,
+				97A1FC41CE2E706CBCF5F0BC /* NSURL+PCLExtensions.h in Headers */,
+				708BFCF200017FC496DCFD2A /* NSURLRequest+PCLExtensions.h in Headers */,
+				A83DE8D290A01377D668D7E1 /* PCLBackgroundTaskHandler.h in Headers */,
+				7E302A003C81156C5B0DDBED /* PCLDebugging.h in Headers */,
+				C4A9503514EA65A779FB192F /* PCLRestCommand.h in Headers */,
+				465AC6D4A0BD981CEAF9DCE5 /* PCLStrings.h in Headers */,
+				5EB3F16BA26368E0663778CF /* PCLTransitionAnimatorConstants.h in Headers */,
+				BD92331595640FD350833C88 /* PCLTransitionAnimatorDocumentation.h in Headers */,
+				90FBF9F914CF175FFF04B35C /* PCLTypeDefs.h in Headers */,
+				065DCA86E1DA0D0FF90B0031 /* PLCCrossFadeTransitionAnimator.h in Headers */,
+				BD05A5AE12FE4EC79B05EB95 /* PLCHorizontalSlideTransitionAnimator.h in Headers */,
+				C5F208802552D7C5BD63E9C6 /* PublicCodeLibrary.h in Headers */,
+				4F6E49B4DE6A261EBC055ADB /* UIApplication+PCLExtensions.h in Headers */,
+				D47CC5F6DAD94B53E34F878D /* UIColor+PCLExtensions.h in Headers */,
+				937021A7140DADD1751EE5AB /* UIDevice+PCLExtensions.h in Headers */,
+				6034331A2856AD93E64F5DC3 /* UIImage+PCLExtensions.h in Headers */,
+				57BB3291EA7CE6A3B89EB2B1 /* UIView+PCLExtensions.h in Headers */,
+				E320BC16EAEF43EEF9D57BF6 /* UIViewConroller+PCLExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		04365E08B1325DFAF510CD12 /* Pods-Gazz */ = {
+		72B8630A73CF2B2974322FEB /* Pods-Gazz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A9418285F8EEA433BD36360 /* Build configuration list for PBXNativeTarget "Pods-Gazz" */;
+			buildConfigurationList = 56B0598D85ECB33A1350E90B /* Build configuration list for PBXNativeTarget "Pods-Gazz" */;
 			buildPhases = (
-				682ED5FC9E352498C15784D9 /* Sources */,
-				2EDBCE9895E55040266E84F9 /* Frameworks */,
+				6419C651CABE0664FF624231 /* Sources */,
+				6A59F103EE2714B980F5B967 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3A70BD4E12B2FF08CF866735 /* PBXTargetDependency */,
+				C32978935354CD426FD9F939 /* PBXTargetDependency */,
 			);
 			name = "Pods-Gazz";
 			productName = "Pods-Gazz";
-			productReference = 1806F70C1142CE06EEA2750A /* libPods-Gazz.a */;
+			productReference = 96FF8BED8CF8CA7A367D42A3 /* libPods-Gazz.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D8FAFC0D3DA1C288C13617FF /* Pods-Gazz-PublicCodeLibrary */ = {
+		ACC13E70A1139D576224FAAC /* Pods-Gazz-PublicCodeLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0946EB384EBC23DDF9BDFBE0 /* Build configuration list for PBXNativeTarget "Pods-Gazz-PublicCodeLibrary" */;
+			buildConfigurationList = 6C40391DF64061C807E0C297 /* Build configuration list for PBXNativeTarget "Pods-Gazz-PublicCodeLibrary" */;
 			buildPhases = (
-				C3E61249157A5B3CDCDFB5BA /* Sources */,
-				519109D2AF5B2FBB8295D745 /* Frameworks */,
-				9E2D392003855560A1B8C21E /* Headers */,
+				29A736E5B566EFBFCA9F4C08 /* Sources */,
+				ADE22F8ABB232393082F51DD /* Frameworks */,
+				8F75DFB99C732E34D5CB15B4 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -352,85 +352,85 @@
 			);
 			name = "Pods-Gazz-PublicCodeLibrary";
 			productName = "Pods-Gazz-PublicCodeLibrary";
-			productReference = FEE4ED504F7219163815A93B /* libPods-Gazz-PublicCodeLibrary.a */;
+			productReference = 3E1C730EF1A6877777915908 /* libPods-Gazz-PublicCodeLibrary.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9EB061E44E3D5079B7526749 /* Project object */ = {
+		35B854528780F1B9AEA7C89D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 117DB4B011353DE0AE83B951 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 58CD79F5F7181B41434BE6EF /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 03FF85E9DA3FE046F9FAD00A;
-			productRefGroup = F1E98DE2DD276E27AB726936 /* Products */;
+			mainGroup = AF175D886CB433B356DE2120;
+			productRefGroup = CC9C39B924016EB32C92803E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04365E08B1325DFAF510CD12 /* Pods-Gazz */,
-				D8FAFC0D3DA1C288C13617FF /* Pods-Gazz-PublicCodeLibrary */,
+				72B8630A73CF2B2974322FEB /* Pods-Gazz */,
+				ACC13E70A1139D576224FAAC /* Pods-Gazz-PublicCodeLibrary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		682ED5FC9E352498C15784D9 /* Sources */ = {
+		29A736E5B566EFBFCA9F4C08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41A5F01FE14AD65E871BA84E /* Pods-Gazz-dummy.m in Sources */,
+				CAC97ED44DE3E96C00AA4C8C /* NSArray+PCLExtensions.m in Sources */,
+				D57CCC72493333D246BBC8A5 /* NSData+PCLExtensions.m in Sources */,
+				416263E1F50D1083CF9F31EB /* NSDate+PCLExtensions.m in Sources */,
+				C1900CC5E677B92ABF9F00C0 /* NSError+PCLExtensions.m in Sources */,
+				5224A1F48A27A54BE1414BD9 /* NSNotificationCenter+PCLExtensions.m in Sources */,
+				935A1D397FCC645F39837005 /* NSObject+PCLExtensions.m in Sources */,
+				96A0E8DF52816031099F3859 /* NSString+PCLExtensions.m in Sources */,
+				7116AAD70977362374DD12DD /* NSURL+PCLExtensions.m in Sources */,
+				8ED2502DAF3222BD219674D9 /* NSURLRequest+PCLExtensions.m in Sources */,
+				8EDA4E403F35035FEA980872 /* PCLBackgroundTaskHandler.m in Sources */,
+				CF7C14ACF9AB53B3EE99DE87 /* PCLRestCommand.m in Sources */,
+				7383D53F41413B3481E12C9C /* PCLTransitionAnimatorConstants.m in Sources */,
+				15F99670F170837A58B75402 /* PLCCrossFadeTransitionAnimator.m in Sources */,
+				2EC3FA417BD25ED9EE417CCE /* PLCHorizontalSlideTransitionAnimator.m in Sources */,
+				8AB7087493192F50D2010A83 /* Pods-Gazz-PublicCodeLibrary-dummy.m in Sources */,
+				AC3B2DDE33371F5E9E2A5657 /* UIApplication+PCLExtensions.m in Sources */,
+				E54091EC2977A2E3CF376EB8 /* UIColor+PCLExtensions.m in Sources */,
+				92C84B957C86D46F6C97A148 /* UIDevice+PCLExtensions.m in Sources */,
+				B52DCB88DA58A274D75458B1 /* UIImage+PCLExtensions.m in Sources */,
+				E60AC4EC2DF4B1E5A4E23129 /* UIView+PCLExtensions.m in Sources */,
+				913E0F0B1CBB15ABA246AF42 /* UIViewConroller+PCLExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3E61249157A5B3CDCDFB5BA /* Sources */ = {
+		6419C651CABE0664FF624231 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC66095D3056E100B08FFB74 /* NSArray+PCLExtensions.m in Sources */,
-				CFB95A23107B7684DCAFCDC8 /* NSData+PCLExtensions.m in Sources */,
-				0EE90349CD70ED5705CC507A /* NSDate+PCLExtensions.m in Sources */,
-				CAD0DBD0A4C82465C2E1F783 /* NSError+PCLExtensions.m in Sources */,
-				DBE90E0807AAB6B99253EF45 /* NSNotificationCenter+PCLExtensions.m in Sources */,
-				E72FB162A15D14821BA7C57B /* NSObject+PCLExtensions.m in Sources */,
-				75648E84C25F4CEAA2FC8649 /* NSString+PCLExtensions.m in Sources */,
-				DF36104B3CD5D7DD675FF691 /* NSURL+PCLExtensions.m in Sources */,
-				6CDDFD3A4DEB19647F2A6591 /* NSURLRequest+PCLExtensions.m in Sources */,
-				27EE1F61BAD868070739EFE9 /* PCLBackgroundTaskHandler.m in Sources */,
-				2A25435BE39FE883DBF8AAA4 /* PCLRestCommand.m in Sources */,
-				A1539F33469C8043B3158885 /* PCLTransitionAnimatorConstants.m in Sources */,
-				8C114D30D11D3C9B8ED09A18 /* PLCCrossFadeTransitionAnimator.m in Sources */,
-				DD4AD8A4667BD9745F84A241 /* PLCHorizontalSlideTransitionAnimator.m in Sources */,
-				F953C48A636D43BE7A759E61 /* Pods-Gazz-PublicCodeLibrary-dummy.m in Sources */,
-				5947BCADB27902817DF9A1BF /* UIApplication+PCLExtensions.m in Sources */,
-				9422BE416B5E41A55DF4DACF /* UIColor+PCLExtensions.m in Sources */,
-				0F0348388B6E9E1E3A030E3F /* UIDevice+PCLExtensions.m in Sources */,
-				40C447BA01A9AC1F8D9056F2 /* UIImage+PCLExtensions.m in Sources */,
-				988C0F26820C982F1DF30C82 /* UIView+PCLExtensions.m in Sources */,
-				6778E43B838F9F9E9093BF22 /* UIViewConroller+PCLExtensions.m in Sources */,
+				8D1CCAD49E68E0C60BB832E3 /* Pods-Gazz-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3A70BD4E12B2FF08CF866735 /* PBXTargetDependency */ = {
+		C32978935354CD426FD9F939 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Gazz-PublicCodeLibrary";
-			target = D8FAFC0D3DA1C288C13617FF /* Pods-Gazz-PublicCodeLibrary */;
-			targetProxy = 259E88D2FB1CCF3BDECD1D31 /* PBXContainerItemProxy */;
+			target = ACC13E70A1139D576224FAAC /* Pods-Gazz-PublicCodeLibrary */;
+			targetProxy = 6FEDC115F49D2B7FC17454A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05AB58368421B999586589B1 /* Release */ = {
+		2FB45430AAC68955E8C596BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -457,20 +457,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		0E7C6BA14046133E72DC270F /* Release */ = {
+		75EDA423A36A127DEE5ED6BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C338519D6E930ED6A8D4C00 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */;
+			baseConfigurationReference = 162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Gazz-PublicCodeLibrary/Pods-Gazz-PublicCodeLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -480,7 +480,23 @@
 			};
 			name = Release;
 		};
-		2793710A39533EEE5739F10B /* Debug */ = {
+		89F0712C3CB80F7B82E3F886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E983F7CA589B09B50B255B4B /* Pods-Gazz.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CF50C9240CA5D2EB83C173A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -512,19 +528,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		4B375967A10B62F4D52C109F /* Debug */ = {
+		EF2DE23066D3BB96D454E434 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C547B7BDC58582342ADED2D0 /* Pods-Gazz.debug.xcconfig */;
+			baseConfigurationReference = 88C8558ED3A2E0CB94D58A74 /* Pods-Gazz.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -535,29 +551,13 @@
 			};
 			name = Debug;
 		};
-		64819AE87BF491794C74CD9B /* Release */ = {
+		F6DB9E67789C64CD0645E383 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86913EFBEE5AAD9A3B3E55CE /* Pods-Gazz.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A59E91E87E7965B9ED3398CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C338519D6E930ED6A8D4C00 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */;
+			baseConfigurationReference = 162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-Gazz-PublicCodeLibrary/Pods-Gazz-PublicCodeLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -570,34 +570,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0946EB384EBC23DDF9BDFBE0 /* Build configuration list for PBXNativeTarget "Pods-Gazz-PublicCodeLibrary" */ = {
+		56B0598D85ECB33A1350E90B /* Build configuration list for PBXNativeTarget "Pods-Gazz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A59E91E87E7965B9ED3398CA /* Debug */,
-				0E7C6BA14046133E72DC270F /* Release */,
+				EF2DE23066D3BB96D454E434 /* Debug */,
+				89F0712C3CB80F7B82E3F886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		117DB4B011353DE0AE83B951 /* Build configuration list for PBXProject "Pods" */ = {
+		58CD79F5F7181B41434BE6EF /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2793710A39533EEE5739F10B /* Debug */,
-				05AB58368421B999586589B1 /* Release */,
+				CF50C9240CA5D2EB83C173A3 /* Debug */,
+				2FB45430AAC68955E8C596BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A9418285F8EEA433BD36360 /* Build configuration list for PBXNativeTarget "Pods-Gazz" */ = {
+		6C40391DF64061C807E0C297 /* Build configuration list for PBXNativeTarget "Pods-Gazz-PublicCodeLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B375967A10B62F4D52C109F /* Debug */,
-				64819AE87BF491794C74CD9B /* Release */,
+				F6DB9E67789C64CD0645E383 /* Debug */,
+				75EDA423A36A127DEE5ED6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9EB061E44E3D5079B7526749 /* Project object */;
+	rootObject = 35B854528780F1B9AEA7C89D /* Project object */;
 }
