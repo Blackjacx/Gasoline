@@ -11,24 +11,21 @@ import Firebase
 
 class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate {
     
-    enum Tag: Int {
-        case AlertViewSaveConfirmation = 1
-    }
-    
     // Outlets
-    @IBOutlet weak var totalCostsLabel: UILabel!
-    @IBOutlet weak var pricePerLiterLabel: UILabel!
-    @IBOutlet weak var literAmountLabel: UILabel!
-    @IBOutlet weak var kilometerAmountLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var totalCostsEuroTextField: UITextField!
-    @IBOutlet weak var totalCostsCentTextField: UITextField!
-    @IBOutlet weak var pricePerLiterEuroTextField: UITextField!
-    @IBOutlet weak var pricePerLiterCentTextField: UITextField!
-    @IBOutlet weak var literAmountLiterTextField: UITextField!
-    @IBOutlet weak var literAmountCentiliterTextField: UITextField!
-    @IBOutlet weak var kilometerAmountTextField: UITextField!
+    @IBOutlet private weak var totalCostsLabel: UILabel!
+    @IBOutlet private weak var pricePerLiterLabel: UILabel!
+    @IBOutlet private weak var literAmountLabel: UILabel!
+    @IBOutlet private weak var kilometerAmountLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var totalCostsEuroTextField: UITextField!
+    @IBOutlet private weak var totalCostsCentTextField: UITextField!
+    @IBOutlet private weak var pricePerLiterEuroTextField: UITextField!
+    @IBOutlet private weak var pricePerLiterCentTextField: UITextField!
+    @IBOutlet private weak var literAmountLiterTextField: UITextField!
+    @IBOutlet private weak var literAmountCentiliterTextField: UITextField!
+    @IBOutlet private weak var kilometerAmountTextField: UITextField!
+    @IBOutlet private weak var noteTextField: UITextField!
     // Div
     var textFieldList: NSArray?
     var recordKey: String?
@@ -61,11 +58,12 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     }
     
     @IBAction func pressedSave(sender: AnyObject) {
-        let sTotalCosts = (self.totalCostsEuroTextField?.text)! + "." + (self.totalCostsCentTextField?.text)!
-        let sPricePerLiter = (self.pricePerLiterEuroTextField?.text)! + "." + (self.pricePerLiterCentTextField?.text)!
-        let sFuelAmount = (self.literAmountLiterTextField?.text)! + "." + (self.literAmountCentiliterTextField?.text)!
-        let sMileage = (self.kilometerAmountTextField?.text)!
-        guard let record = Record(creationDate: self.datePicker.date, totalCosts: sTotalCosts, pricePerLiter: sPricePerLiter, fuelAmount: sFuelAmount, mileage: sMileage) else {
+        let sTotalCosts = totalCostsEuroTextField.text! + "." + totalCostsCentTextField.text!
+        let sPricePerLiter = pricePerLiterEuroTextField.text! + "." + pricePerLiterCentTextField.text!
+        let sFuelAmount = literAmountLiterTextField.text! + "." + literAmountCentiliterTextField.text!
+        let sMileage = kilometerAmountTextField.text!
+        let note = self.noteTextField.text!
+        guard let record = Record(creationDate: self.datePicker.date, totalCosts: sTotalCosts, pricePerLiter: sPricePerLiter, fuelAmount: sFuelAmount, mileage: sMileage, note: note) else {
             return
         }
         let recordRef = self.firebaseRecordRef.childByAutoId()

@@ -23,10 +23,16 @@ struct UserDefaultsKeys {
 }
 
 struct FireBaseURL {
-    static let kRootURL = "https://gazz.firebaseio.com"
-    static let kRecordURL = kRootURL + "/items"
+    private static let kRootURL = "https://gazz.firebaseio.com"
+    static let kRecordURL = kRootURL + "/records"
     
-    static func urlForRecordKey(key: String) -> String {
+    static func recordKey(key: String) -> String {
         return kRecordURL  + "/" + key
     }
+    
+    // https://gazz.firebaseio.com/<user_id>/
+    // https://gazz.firebaseio.com/<user_id>/profile/
+    // https://gazz.firebaseio.com/<user_id>/statistics/
+    // https://gazz.firebaseio.com/<user_id>/records/
+    // https://gazz.firebaseio.com/<user_id>/records/<record_id>/
 }
