@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Gazz
+
+  Created by Stefan Herold on 08/03/16.
+  Copyright © 2016 Stefan Herold. All rights reserved.
+*/
+
+"gz.recordListViewController.listCellTitle.format" = "%.2fl für %.2f€";
+"gz.general.yes.text" = "ja";
+"gz.general.no.text" = "nein";

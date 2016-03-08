@@ -1,15 +1,9 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 target 'Gazz' do
-pod 'PublicCodeLibrary', '~> 1.0'
+    use_frameworks!
+    pod 'PublicCodeLibrary'
+    pod 'Firebase'
+    pod 'R.swift'
 end
-
-target 'GazzTests' do
-
-end
-
-target 'GazzUITests' do
-
-end
-

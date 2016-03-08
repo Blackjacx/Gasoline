@@ -7,496 +7,907 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		065DCA86E1DA0D0FF90B0031 /* PLCCrossFadeTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = C12F4A7C572577B6A70CB343 /* PLCCrossFadeTransitionAnimator.h */; };
-		115A9563B3E80B0612D79E74 /* NSArray+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E8623F392A9ED85821AFA3 /* NSArray+PCLExtensions.h */; };
-		15E8B93415FD3B305E12E6F5 /* NSDate+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 033286685F7A3CC4DF460378 /* NSDate+PCLExtensions.h */; };
-		15F99670F170837A58B75402 /* PLCCrossFadeTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F78C26261A731695366CE197 /* PLCCrossFadeTransitionAnimator.m */; };
-		2692666020CDFBF3A4EEA5D8 /* NSData+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 27ADBA93DFC8600C4A2135F6 /* NSData+PCLExtensions.h */; };
-		2EC3FA417BD25ED9EE417CCE /* PLCHorizontalSlideTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EF63A32850DFFCA58F2E4 /* PLCHorizontalSlideTransitionAnimator.m */; };
-		416263E1F50D1083CF9F31EB /* NSDate+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA2D300E47D8052277AD9C7 /* NSDate+PCLExtensions.m */; };
-		42E19486EB837B9416D45951 /* NSObject+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A5FBE0BBB062CAE266D599 /* NSObject+PCLExtensions.h */; };
-		465AC6D4A0BD981CEAF9DCE5 /* PCLStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 471B243EEA48061275EA2093 /* PCLStrings.h */; };
-		4F6E49B4DE6A261EBC055ADB /* UIApplication+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DA76DBCE650670EC673EB1B /* UIApplication+PCLExtensions.h */; };
-		5224A1F48A27A54BE1414BD9 /* NSNotificationCenter+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E40ACA17EE785540076F7C4 /* NSNotificationCenter+PCLExtensions.m */; };
-		57BB3291EA7CE6A3B89EB2B1 /* UIView+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 81EFDD3A7BBE3BCE92667D65 /* UIView+PCLExtensions.h */; };
-		598EF1CBF0A0A8A6EDCED94F /* NSString+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = F050A7459163D31E5B636542 /* NSString+PCLExtensions.h */; };
-		5EB3F16BA26368E0663778CF /* PCLTransitionAnimatorConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D28508CA2B1F144B9D9E37 /* PCLTransitionAnimatorConstants.h */; };
-		6034331A2856AD93E64F5DC3 /* UIImage+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F91C3C5BBBE140CF72CE1A /* UIImage+PCLExtensions.h */; };
-		708BFCF200017FC496DCFD2A /* NSURLRequest+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 85A2B2A2099DA664A0CB2662 /* NSURLRequest+PCLExtensions.h */; };
-		7116AAD70977362374DD12DD /* NSURL+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6801F236562F706367AB19E /* NSURL+PCLExtensions.m */; };
-		7383D53F41413B3481E12C9C /* PCLTransitionAnimatorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4DF12D2F19C542FF721661 /* PCLTransitionAnimatorConstants.m */; };
-		744294B9326448F53014A552 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5FFD4733816A176E42B38 /* Foundation.framework */; };
-		7E302A003C81156C5B0DDBED /* PCLDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 58D5B9034814E3A37DD0CB0C /* PCLDebugging.h */; };
-		8AB7087493192F50D2010A83 /* Pods-Gazz-PublicCodeLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC01FBA8A6F400172FA1AB35 /* Pods-Gazz-PublicCodeLibrary-dummy.m */; };
-		8B233D05366A6BA736004BE0 /* NSNotificationCenter+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 170AA49892C56BCA3C07673D /* NSNotificationCenter+PCLExtensions.h */; };
-		8D1CCAD49E68E0C60BB832E3 /* Pods-Gazz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F743057B05FFBBD2919288A3 /* Pods-Gazz-dummy.m */; };
-		8ED2502DAF3222BD219674D9 /* NSURLRequest+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 314E94D88FD1340AB98555C9 /* NSURLRequest+PCLExtensions.m */; };
-		8EDA4E403F35035FEA980872 /* PCLBackgroundTaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632272DE2DBEE0E804A623A /* PCLBackgroundTaskHandler.m */; };
-		90FBF9F914CF175FFF04B35C /* PCLTypeDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF359B82BA2CB36DA697FE7 /* PCLTypeDefs.h */; };
-		913E0F0B1CBB15ABA246AF42 /* UIViewConroller+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 839F493BF519C3A6D05B6168 /* UIViewConroller+PCLExtensions.m */; };
-		92C84B957C86D46F6C97A148 /* UIDevice+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E05B9FD663C6F0263834D /* UIDevice+PCLExtensions.m */; };
-		935A1D397FCC645F39837005 /* NSObject+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E52162DB344D93C3B256A90E /* NSObject+PCLExtensions.m */; };
-		937021A7140DADD1751EE5AB /* UIDevice+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B69C05EEC237F5DD547D1 /* UIDevice+PCLExtensions.h */; };
-		96A0E8DF52816031099F3859 /* NSString+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D074A879F7D268E2B9E6B4EB /* NSString+PCLExtensions.m */; };
-		97A1FC41CE2E706CBCF5F0BC /* NSURL+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6133DD444C75A58BF4E78B88 /* NSURL+PCLExtensions.h */; };
-		A83DE8D290A01377D668D7E1 /* PCLBackgroundTaskHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = F068BD1986C38A3EEC0DF26F /* PCLBackgroundTaskHandler.h */; };
-		AC3B2DDE33371F5E9E2A5657 /* UIApplication+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 468E2566EACDDFAB58DDB9FA /* UIApplication+PCLExtensions.m */; };
-		B52DCB88DA58A274D75458B1 /* UIImage+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE2D82011467D2312F00DE /* UIImage+PCLExtensions.m */; };
-		BD05A5AE12FE4EC79B05EB95 /* PLCHorizontalSlideTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = E770263B1B04F3A3BA031310 /* PLCHorizontalSlideTransitionAnimator.h */; };
-		BD92331595640FD350833C88 /* PCLTransitionAnimatorDocumentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 002F43089DCC6BB7F52105D2 /* PCLTransitionAnimatorDocumentation.h */; };
-		C1900CC5E677B92ABF9F00C0 /* NSError+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDB25BADBD771F8842D7530 /* NSError+PCLExtensions.m */; };
-		C4A9503514EA65A779FB192F /* PCLRestCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D36003FD797FC1750EA135F /* PCLRestCommand.h */; };
-		C5F208802552D7C5BD63E9C6 /* PublicCodeLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9F6632B983F62848D9303C /* PublicCodeLibrary.h */; };
-		CAC97ED44DE3E96C00AA4C8C /* NSArray+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 19164CFDBD97EB8A3C898409 /* NSArray+PCLExtensions.m */; };
-		CDD0D1BD93576DC4673ED4BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA5FFD4733816A176E42B38 /* Foundation.framework */; };
-		CF7C14ACF9AB53B3EE99DE87 /* PCLRestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A768815F910171B62E18B7 /* PCLRestCommand.m */; };
-		D47CC5F6DAD94B53E34F878D /* UIColor+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = AB7285399753D6CC06034914 /* UIColor+PCLExtensions.h */; };
-		D57CCC72493333D246BBC8A5 /* NSData+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FADA2FEDA0F7E3C5141C524F /* NSData+PCLExtensions.m */; };
-		D78345C63DF11F65EC1BD3A6 /* NSError+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7855AF016B2DA4E9AB234FFD /* NSError+PCLExtensions.h */; };
-		E320BC16EAEF43EEF9D57BF6 /* UIViewConroller+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D46043F8E3A5547E5EE162 /* UIViewConroller+PCLExtensions.h */; };
-		E54091EC2977A2E3CF376EB8 /* UIColor+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C3837E1D606F0847F0169316 /* UIColor+PCLExtensions.m */; };
-		E60AC4EC2DF4B1E5A4E23129 /* UIView+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7694BF3F8BD901BE160F69 /* UIView+PCLExtensions.m */; };
+		012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA7E6E63EFF78242648DE46ACD69FDA /* Empty.m */; };
+		0434678B93AE66A57112C5D8EAE105DF /* PLCHorizontalSlideTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E84E4845B9D61A0409CE2A36897611B4 /* PLCHorizontalSlideTransitionAnimator.m */; };
+		04F831FEF15763D388BE03DFE936CD43 /* PLCHorizontalSlideTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = FEA2234D58F815F1C9227E8E4CFB5E7B /* PLCHorizontalSlideTransitionAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		065326B5EECB12BDC90F3CA84EB32811 /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833C88F30D508490CE5AC01484869670 /* FileResource.swift */; };
+		06869031F02D08B45FEC067C846EE92D /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A7B7B7ED7DABC911A5B35CCCF4E7 /* Identifier.swift */; };
+		0C2F6551C93C100A2A6F5D03A69A0A59 /* Pods-Gazz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F50A4264BA94780B8DC0D0F206EA6281 /* Pods-Gazz-dummy.m */; };
+		0F9BD61D7BEFBEB666EE1DF5E085E6C0 /* NSData+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB8C032F2BC7E509EFFA69BA7288201 /* NSData+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10881CC7B6D700DD4BEEB07B57DC6256 /* NSURL+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C1846B3A651B0FE6E9460DC8AED44F1B /* NSURL+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11150366CD4B194B37445002AA1DC6B6 /* UIViewConroller+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6AACADD7D3F5F41EA4C0650E2DEBF3 /* UIViewConroller+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13F49425FC7895F28BCC96AD9E30BEA8 /* UIStoryboard+StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6207C240DDD7F7235109FAA3184B3D99 /* UIStoryboard+StoryboardResource.swift */; };
+		1721D0C521E3BA8F81E178E65F86BB85 /* PCLRestCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCCD3E8F8B4F331E228831804AED24E /* PCLRestCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		181EAF47A449CD06CD210B42A0746EA6 /* UIDevice+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = BB5F1CFADA98E5124DD2B14EBEC91A03 /* UIDevice+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA9511EFA3DCFE128C80B823899EC4A /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AD2D9A1F67A270872048F9B180BD096 /* NibResource+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FE3963B7FC94A5A84A83FF6CE97ECA /* NibResource+UIKit.swift */; };
+		1B52AF3BDDE79E25505C8EC880EABE6F /* PCLRestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1262F61D22E09AA8099AABD9425FCE /* PCLRestCommand.m */; };
+		1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */; };
+		1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FBFCA56D5A1C084E0B2F57092992665 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = EA04CBCA358C66047D480EAFCD94AE66 /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A362AC33495752FF4E3C87BF53B52 /* Firebase-dummy.m */; };
+		1E442305F19E0AE618B25EFEB804AE14 /* UIViewController+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282780A1D8FC17244B814B47952E364F /* UIViewController+NibResource.swift */; };
+		2363D74E9196ED1EC99DE155D5DC20E5 /* UITableView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77B8E4C7F297899FBEBDA9BDCC40B86 /* UITableView+ReuseIdentifierProtocol.swift */; };
+		239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = E5B3CBAE1632A37207F5BA25CAB4A95E /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		274EA9123A8D840BE8E1C59330D86A2F /* UIColor+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB0816ABAE8821C5299D2FCB03DF0A /* UIColor+PCLExtensions.m */; };
+		2B42EFC37A10F751A3553729EDD73DD8 /* NSError+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D7BE16F873BE741A7283951E4595F41B /* NSError+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1D4244C5AC56DC7988E8812A89EA7 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FC7781802144B9DF27E14258CF24640 /* PublicCodeLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8930330ACEAAD8854E05CA83BB9CA4B /* PublicCodeLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3094C49215D8B559C8212BD50A69588A /* PLCCrossFadeTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BE9731A7DF355D452C5ACF65CB3A8A /* PLCCrossFadeTransitionAnimator.m */; };
+		31AA5CB5E75B55E0B8DD7AB1CB8041FE /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A386E67DBEC26E12F4C71917B035EBD /* Validatable.swift */; };
+		321DEE8CAA96ACBDCE604BCBE9FCA08A /* StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDA2435E01D4DCB3C563C1939E5847 /* StoryboardResource.swift */; };
+		32F5E9FC2FFAA51AAC85CA779B94D0D2 /* NSNotificationCenter+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 834FB69998D9244BA9ECEE15C8C62541 /* NSNotificationCenter+PCLExtensions.m */; };
+		4142F5D3D56E906645C191D378DCBE97 /* NSData+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFD8F699DC1FFC63BC5D6C94D42EA2 /* NSData+PCLExtensions.m */; };
+		46DDA34C9DE472E8AF3045944958C5C5 /* NSArray+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C6945B62C1479D8714B81BBB5AFF8B08 /* NSArray+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49314F1D199B5E891A0A25649CC3B378 /* UIDevice+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 633D6A39120DA3EEF631D38BA9A9EBA8 /* UIDevice+PCLExtensions.m */; };
+		4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E882AB3ED29A2ABF0675616D7C5F8D1C /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52056DA5D2CF49A7CDF1F09DF37FE687 /* NSArray+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4099B4A766092603605463DEFEF4C8B /* NSArray+PCLExtensions.m */; };
+		53B59E07BB9D798D3D1A9110CD869374 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		5842ACD49757C6E6B5518B28D9B45F3B /* NSError+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4298723B5E5522590124BC540A3432 /* NSError+PCLExtensions.m */; };
+		5AF9E9002E9E4960854959AC7178E733 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		5C060F273FE4D2DFCE97C1CF93BFBA23 /* NSURLRequest+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF48CF0FFA01340098CDA80A1ED8D12 /* NSURLRequest+PCLExtensions.m */; };
+		60D6C814D31023135E84A068536BA04F /* PCLStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D97EAA84EA69F3CFC410E47F60A36BB /* PCLStrings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60F63635990DDAFE42B47DA5B89C62CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */; };
+		60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA34344EA6C31903AB31935BEA2B1976 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61A9789BE696CBECDFF79E69C20C56CB /* NSBundle+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498D124EB05B68023D7FBDC514351A6 /* NSBundle+FileResource.swift */; };
+		6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AAA6645E885C6CD42E22F59F9585E66 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69C5DD4B073188E88E054C48622B8DE1 /* PCLTypeDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 91317E3EA1CF6E866583B5125E6E018E /* PCLTypeDefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7083EC51C0A2D637A723FB2E046373AC /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148026E344314BDF765BFD344A93BE4 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */; };
+		716BBB3D9974439702BC980B90E64137 /* UIImage+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 206E95F0DD3A5AA85E60553BF741B052 /* UIImage+PCLExtensions.m */; };
+		7B48D35AF27AD01F540AD0729127F045 /* NSObject+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB33C9C9D80328DADAA42D30048C16E /* NSObject+PCLExtensions.m */; };
+		814D86581EF4F884393CBF3FB993ED54 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D30643F0A961F7AE3E0DD25875F0C4 /* ImageResource.swift */; };
+		849689D5DC44FB03B8A108AF03540030 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8289496594D89C8A9F142AFD2C40F0 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */; };
+		85F340B5718BB85EB4122E91D351C5FE /* PCLDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 358B65AD1B0A7BF5241D79FA68690041 /* PCLDebugging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8ED5B1F1F242B47D9E08E77586F6CA1A /* StoryboardResourceWithInitialController+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5FB0D6F379E7A9DCAC7D5359BAF003 /* StoryboardResourceWithInitialController+UIKit.swift */; };
+		8FE07FA32E2D52D5F95174D987EFE02A /* UIApplication+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DAAFDA11B05827D59CC65212F86CC4D /* UIApplication+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91BAAAE8726605863CDE843DCDF7780A /* UIFont+FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED33CC2709BDD2B02E1B992536DBF3 /* UIFont+FontResource.swift */; };
+		95E4E319C1E7AB0B6183B75C84E79D27 /* UINib+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0806BE3AEBF758D2F62E676EE520EF /* UINib+NibResource.swift */; };
+		A2E34E38DD738F5C29765A15446CA029 /* PCLTransitionAnimatorConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4A32E2CBDA99D5318CED9368F4B13B /* PCLTransitionAnimatorConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B30D5694C2C9F8227715762F5CAB14F8 /* NSObject+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ED5D48ECF8A82D98ED0BF259BE29B76 /* NSObject+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B361131C1A1B30610CB3133FD0AA5984 /* PublicCodeLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9821DA3C8D101218B43A6E22B9B09C /* PublicCodeLibrary-dummy.m */; };
+		B6FA2F44161AA396E664A893B4D67793 /* NSString+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D749F3882AD5B0603FCC8F588C0F086B /* NSString+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBF30623B180A0437F7F5E4C88129A95 /* NSURLRequest+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD64D4026CEF93B50C4C948112ECE48 /* NSURLRequest+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE8272AA53DF72339CB5C3901A33992C /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAAD55277E67609D6424E9738BF5D33 /* UICollectionView+ReuseIdentifierProtocol.swift */; };
+		BF15197AB262CCAA4EEAC8B2E3E783EB /* PCLTransitionAnimatorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAE190038DDC936D1FABE39A55FC29 /* PCLTransitionAnimatorConstants.m */; };
+		C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = 36D53E420E0684B46A3B2A80E681F8FE /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C79CEB2EC36D98A9552F549911E58378 /* NSURL+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F3C2DA712569BC8EAAEF5A2ACCA20D /* NSURL+PCLExtensions.m */; };
+		C8C5F45B723590DE1449910C27B1CAA0 /* NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF1BC0CF19187838D3E1162CEA7351 /* NibResource.swift */; };
+		CC5A6B3016209EF062347C454E8B592B /* NSDate+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = F750AB74DBACE56CE77B1D6A19DEAAA2 /* NSDate+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D03D1C53C74AF64DAB23E54BFC65E72B /* PCLBackgroundTaskHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 682EA5C8999A407EA9BD4267B69D0157 /* PCLBackgroundTaskHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D966E6CAC409A90B66C8BCA9CEE1BA /* R.swift.Library-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC203FFBF470D120B5BC7875FB1D0A9 /* R.swift.Library-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2142F12848C7D808BB8370AA6665559 /* Pods-Gazz-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9082FCC3213D2B6603528EE1D3A00F7 /* Pods-Gazz-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D226A2B688DBC81F8D32749E7F702015 /* PublicCodeLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = E61835D80B973647D2D0D0DCDC65A2F9 /* PublicCodeLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D39CB59EC0566E557DF45CE5C48CB419 /* UIImage+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F282041AEB5A0ACD8941D851FA61D /* UIImage+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3AF33AA94A2ECBBD73950828FF432BF /* FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879F4FF434EF540B96D18EC5733ABDC /* FontResource.swift */; };
+		D6C18D227A3E9ECA15DEEB14DF2B9E92 /* PCLTransitionAnimatorDocumentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CA3D22E6BD71CB5897379A567C789B2 /* PCLTransitionAnimatorDocumentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D865D971E68678178B4F1A3EFAF80F43 /* R.swift.Library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF06BB2DAE38FDF0344C8FE568B66755 /* R.swift.Library-dummy.m */; };
+		DA0A4C84C98A061E9A220EA389F00112 /* UIImage+ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CF258DA468AFF3E135A2638E930137 /* UIImage+ImageResource.swift */; };
+		DAF71844C3200436185A91577629097C /* NSString+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F291A9774C2A3B3884574F3FD356DB9 /* NSString+PCLExtensions.m */; };
+		DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2243221F3A114B5FB65EFCB65835C332 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB4786B5DFBD0393B3D6737D5A7A3F91 /* StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E9F5014DCF8539EB63C2093822CB1B /* StoryboardSegueIdentifierProtocol.swift */; };
+		DBE5D6D2F96F3794D955B2D0A7245CFF /* PLCCrossFadeTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = C118C9D33D3F405F6FC9D8C9D8D7EEAD /* PLCCrossFadeTransitionAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE2AF2AF0C9EE121BB118EE577711293 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D8C8673EBB385263A23C205DD72DF /* ReuseIdentifierProtocol.swift */; };
+		DF39166AE787184C3E836C742FDBD992 /* UIViewConroller+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BD9CA87D673EB508977578E03A1779 /* UIViewConroller+PCLExtensions.m */; };
+		E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */; };
+		E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */; };
+		E5E1505ACECBBBE6422B237D25E5C00E /* UIView+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9946FDFDF4BBFCA0C940D240874DA78F /* UIView+PCLExtensions.m */; };
+		E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = ACEB8AA7D7ECA3DA590A3F33975DB14D /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = ED3931A488749F574BC179D45449221B /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F29AC12519C091DE595935E08FC96AE1 /* NSDate+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4012DE88715A18847682D432418BF4C2 /* NSDate+PCLExtensions.m */; };
+		F4238206DD10F9E103EDFB67E0DCE5AB /* UIView+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9FFD23F52EF6789BCF05F31A40F572 /* UIView+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5513427C703871E15107AFFBF8BC7C9 /* PCLBackgroundTaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CBDE0A8A64C6D5FD1D2D1F09B3A6A8 /* PCLBackgroundTaskHandler.m */; };
+		F86FDE20B50F4D9734210A191AEA8269 /* UIColor+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D153E171251C61175EAF679CCCDD68FE /* UIColor+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB17C75C6F1F6137F77B8E0D4C173366 /* UIApplication+PCLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D760EE5BD49FEB2747E158C9A2D647D0 /* UIApplication+PCLExtensions.m */; };
+		FB381833756A6261C77FE7278983AF85 /* NSNotificationCenter+PCLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E62B318919A9945879096502E45EBFC3 /* NSNotificationCenter+PCLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6FEDC115F49D2B7FC17454A4 /* PBXContainerItemProxy */ = {
+		01E23CC59ACD2599E43FB03284569186 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 35B854528780F1B9AEA7C89D /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ACC13E70A1139D576224FAAC;
-			remoteInfo = "Pods-Gazz-PublicCodeLibrary";
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
+		};
+		4DEE48AC18FDFF0F7E24D9072A4EBDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FBA1061C7509D9206DD96625F27D662;
+			remoteInfo = R.swift.Library;
+		};
+		BC82DA8F07A07A67BE8C697EECCF345B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 667A85585BB129C17DE5B32A8FB5E617;
+			remoteInfo = PublicCodeLibrary;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		002F43089DCC6BB7F52105D2 /* PCLTransitionAnimatorDocumentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorDocumentation.h; path = Classes/PCLTransitionAnimatorDocumentation.h; sourceTree = "<group>"; };
-		033286685F7A3CC4DF460378 /* NSDate+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PCLExtensions.h"; path = "Classes/NSDate+PCLExtensions.h"; sourceTree = "<group>"; };
-		06D46043F8E3A5547E5EE162 /* UIViewConroller+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewConroller+PCLExtensions.h"; path = "Classes/UIViewConroller+PCLExtensions.h"; sourceTree = "<group>"; };
-		0E40ACA17EE785540076F7C4 /* NSNotificationCenter+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+PCLExtensions.m"; path = "Classes/NSNotificationCenter+PCLExtensions.m"; sourceTree = "<group>"; };
-		162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz-PublicCodeLibrary-Private.xcconfig"; sourceTree = "<group>"; };
-		16F91C3C5BBBE140CF72CE1A /* UIImage+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PCLExtensions.h"; path = "Classes/UIImage+PCLExtensions.h"; sourceTree = "<group>"; };
-		170AA49892C56BCA3C07673D /* NSNotificationCenter+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+PCLExtensions.h"; path = "Classes/NSNotificationCenter+PCLExtensions.h"; sourceTree = "<group>"; };
-		19164CFDBD97EB8A3C898409 /* NSArray+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PCLExtensions.m"; path = "Classes/NSArray+PCLExtensions.m"; sourceTree = "<group>"; };
-		1FA5FFD4733816A176E42B38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2632272DE2DBEE0E804A623A /* PCLBackgroundTaskHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLBackgroundTaskHandler.m; path = Classes/PCLBackgroundTaskHandler.m; sourceTree = "<group>"; };
-		27ADBA93DFC8600C4A2135F6 /* NSData+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+PCLExtensions.h"; path = "Classes/NSData+PCLExtensions.h"; sourceTree = "<group>"; };
-		302C95C53121FC658769EAEF /* Pods-Gazz-PublicCodeLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz-PublicCodeLibrary.xcconfig"; sourceTree = "<group>"; };
-		30E8623F392A9ED85821AFA3 /* NSArray+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PCLExtensions.h"; path = "Classes/NSArray+PCLExtensions.h"; sourceTree = "<group>"; };
-		314E94D88FD1340AB98555C9 /* NSURLRequest+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+PCLExtensions.m"; path = "Classes/NSURLRequest+PCLExtensions.m"; sourceTree = "<group>"; };
-		3E1C730EF1A6877777915908 /* libPods-Gazz-PublicCodeLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gazz-PublicCodeLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		468E2566EACDDFAB58DDB9FA /* UIApplication+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+PCLExtensions.m"; path = "Classes/UIApplication+PCLExtensions.m"; sourceTree = "<group>"; };
-		46ADA020FE3443EE7F51BA33 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		471B243EEA48061275EA2093 /* PCLStrings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLStrings.h; path = Classes/PCLStrings.h; sourceTree = "<group>"; };
-		4D36003FD797FC1750EA135F /* PCLRestCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLRestCommand.h; path = Classes/PCLRestCommand.h; sourceTree = "<group>"; };
-		54A5FBE0BBB062CAE266D599 /* NSObject+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PCLExtensions.h"; path = "Classes/NSObject+PCLExtensions.h"; sourceTree = "<group>"; };
-		58D5B9034814E3A37DD0CB0C /* PCLDebugging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLDebugging.h; path = Classes/PCLDebugging.h; sourceTree = "<group>"; };
-		5EE9E158FDCCD5732B07D39C /* Pods-Gazz-PublicCodeLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-PublicCodeLibrary-prefix.pch"; sourceTree = "<group>"; };
-		6133DD444C75A58BF4E78B88 /* NSURL+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+PCLExtensions.h"; path = "Classes/NSURL+PCLExtensions.h"; sourceTree = "<group>"; };
-		63D28508CA2B1F144B9D9E37 /* PCLTransitionAnimatorConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorConstants.h; path = Classes/PCLTransitionAnimatorConstants.h; sourceTree = "<group>"; };
-		6B0E05B9FD663C6F0263834D /* UIDevice+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+PCLExtensions.m"; path = "Classes/UIDevice+PCLExtensions.m"; sourceTree = "<group>"; };
-		6DA76DBCE650670EC673EB1B /* UIApplication+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+PCLExtensions.h"; path = "Classes/UIApplication+PCLExtensions.h"; sourceTree = "<group>"; };
-		7855AF016B2DA4E9AB234FFD /* NSError+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+PCLExtensions.h"; path = "Classes/NSError+PCLExtensions.h"; sourceTree = "<group>"; };
-		7DDE2D82011467D2312F00DE /* UIImage+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PCLExtensions.m"; path = "Classes/UIImage+PCLExtensions.m"; sourceTree = "<group>"; };
-		81EFDD3A7BBE3BCE92667D65 /* UIView+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PCLExtensions.h"; path = "Classes/UIView+PCLExtensions.h"; sourceTree = "<group>"; };
-		839F493BF519C3A6D05B6168 /* UIViewConroller+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewConroller+PCLExtensions.m"; path = "Classes/UIViewConroller+PCLExtensions.m"; sourceTree = "<group>"; };
-		85A2B2A2099DA664A0CB2662 /* NSURLRequest+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+PCLExtensions.h"; path = "Classes/NSURLRequest+PCLExtensions.h"; sourceTree = "<group>"; };
-		88C8558ED3A2E0CB94D58A74 /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
-		9205055FB485D57C530D5F34 /* Pods-Gazz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gazz-acknowledgements.plist"; sourceTree = "<group>"; };
-		95A768815F910171B62E18B7 /* PCLRestCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLRestCommand.m; path = Classes/PCLRestCommand.m; sourceTree = "<group>"; };
-		96FF8BED8CF8CA7A367D42A3 /* libPods-Gazz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gazz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A7694BF3F8BD901BE160F69 /* UIView+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PCLExtensions.m"; path = "Classes/UIView+PCLExtensions.m"; sourceTree = "<group>"; };
-		9EC079226FF73AC75BA124F1 /* Pods-Gazz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gazz-resources.sh"; sourceTree = "<group>"; };
-		AB7285399753D6CC06034914 /* UIColor+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PCLExtensions.h"; path = "Classes/UIColor+PCLExtensions.h"; sourceTree = "<group>"; };
-		BBF359B82BA2CB36DA697FE7 /* PCLTypeDefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTypeDefs.h; path = Classes/PCLTypeDefs.h; sourceTree = "<group>"; };
-		BD8B69C05EEC237F5DD547D1 /* UIDevice+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+PCLExtensions.h"; path = "Classes/UIDevice+PCLExtensions.h"; sourceTree = "<group>"; };
-		BF9F6632B983F62848D9303C /* PublicCodeLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PublicCodeLibrary.h; path = Classes/PublicCodeLibrary.h; sourceTree = "<group>"; };
-		C12F4A7C572577B6A70CB343 /* PLCCrossFadeTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCCrossFadeTransitionAnimator.h; path = Classes/PLCCrossFadeTransitionAnimator.h; sourceTree = "<group>"; };
-		C3725A824233F181BFEA5C58 /* Pods-Gazz-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-environment.h"; sourceTree = "<group>"; };
-		C3837E1D606F0847F0169316 /* UIColor+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PCLExtensions.m"; path = "Classes/UIColor+PCLExtensions.m"; sourceTree = "<group>"; };
-		CC01FBA8A6F400172FA1AB35 /* Pods-Gazz-PublicCodeLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-PublicCodeLibrary-dummy.m"; sourceTree = "<group>"; };
-		D074A879F7D268E2B9E6B4EB /* NSString+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+PCLExtensions.m"; path = "Classes/NSString+PCLExtensions.m"; sourceTree = "<group>"; };
-		D6801F236562F706367AB19E /* NSURL+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+PCLExtensions.m"; path = "Classes/NSURL+PCLExtensions.m"; sourceTree = "<group>"; };
-		DA0EF63A32850DFFCA58F2E4 /* PLCHorizontalSlideTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCHorizontalSlideTransitionAnimator.m; path = Classes/PLCHorizontalSlideTransitionAnimator.m; sourceTree = "<group>"; };
-		E52162DB344D93C3B256A90E /* NSObject+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PCLExtensions.m"; path = "Classes/NSObject+PCLExtensions.m"; sourceTree = "<group>"; };
-		E770263B1B04F3A3BA031310 /* PLCHorizontalSlideTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCHorizontalSlideTransitionAnimator.h; path = Classes/PLCHorizontalSlideTransitionAnimator.h; sourceTree = "<group>"; };
-		E983F7CA589B09B50B255B4B /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
-		ED4DF12D2F19C542FF721661 /* PCLTransitionAnimatorConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLTransitionAnimatorConstants.m; path = Classes/PCLTransitionAnimatorConstants.m; sourceTree = "<group>"; };
-		EEDB25BADBD771F8842D7530 /* NSError+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+PCLExtensions.m"; path = "Classes/NSError+PCLExtensions.m"; sourceTree = "<group>"; };
-		F050A7459163D31E5B636542 /* NSString+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+PCLExtensions.h"; path = "Classes/NSString+PCLExtensions.h"; sourceTree = "<group>"; };
-		F068BD1986C38A3EEC0DF26F /* PCLBackgroundTaskHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLBackgroundTaskHandler.h; path = Classes/PCLBackgroundTaskHandler.h; sourceTree = "<group>"; };
-		F18E464AF9C9C80003F7BF16 /* Pods-Gazz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gazz-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F743057B05FFBBD2919288A3 /* Pods-Gazz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-dummy.m"; sourceTree = "<group>"; };
-		F78C26261A731695366CE197 /* PLCCrossFadeTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCCrossFadeTransitionAnimator.m; path = Classes/PLCCrossFadeTransitionAnimator.m; sourceTree = "<group>"; };
-		FAA2D300E47D8052277AD9C7 /* NSDate+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+PCLExtensions.m"; path = "Classes/NSDate+PCLExtensions.m"; sourceTree = "<group>"; };
-		FADA2FEDA0F7E3C5141C524F /* NSData+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+PCLExtensions.m"; path = "Classes/NSData+PCLExtensions.m"; sourceTree = "<group>"; };
+		02296FB8DBA84FF6E8E9EC5AA117C71E /* R.swift.Library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.xcconfig; sourceTree = "<group>"; };
+		03F886D5B07D7D18183AF0B5AEC14611 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048888F8F41012B5FD6FB15E97DD667E /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		080F6EEB4634EE03E1DB7FBA6A0C31F3 /* Pods-Gazz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gazz-acknowledgements.plist"; sourceTree = "<group>"; };
+		0D890324A870BEDA6250169E9A2B7C00 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		0EF48CF0FFA01340098CDA80A1ED8D12 /* NSURLRequest+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+PCLExtensions.m"; path = "Classes/NSURLRequest+PCLExtensions.m"; sourceTree = "<group>"; };
+		13E9F5014DCF8539EB63C2093822CB1B /* StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSegueIdentifierProtocol.swift; path = Library/Core/StoryboardSegueIdentifierProtocol.swift; sourceTree = "<group>"; };
+		157603B6673E6C9722026ACB91A43273 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AEF1BC0CF19187838D3E1162CEA7351 /* NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibResource.swift; path = Library/Core/NibResource.swift; sourceTree = "<group>"; };
+		1CA3D22E6BD71CB5897379A567C789B2 /* PCLTransitionAnimatorDocumentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorDocumentation.h; path = Classes/PCLTransitionAnimatorDocumentation.h; sourceTree = "<group>"; };
+		1F291A9774C2A3B3884574F3FD356DB9 /* NSString+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+PCLExtensions.m"; path = "Classes/NSString+PCLExtensions.m"; sourceTree = "<group>"; };
+		206E95F0DD3A5AA85E60553BF741B052 /* UIImage+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PCLExtensions.m"; path = "Classes/UIImage+PCLExtensions.m"; sourceTree = "<group>"; };
+		20834C8609FBD0E42145DF243C3758E0 /* Pods_Gazz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gazz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2148026E344314BDF765BFD344A93BE4 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+StoryboardSegueIdentifierProtocol.swift"; path = "Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		2243221F3A114B5FB65EFCB65835C332 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		24DA0024CC9CE63AFAAC14E384D414C3 /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
+		282780A1D8FC17244B814B47952E364F /* UIViewController+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+NibResource.swift"; path = "Library/UIKit/UIViewController+NibResource.swift"; sourceTree = "<group>"; };
+		2B735FCEE31AC6DEC99CD1CA6448EDA5 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		2DB8C032F2BC7E509EFFA69BA7288201 /* NSData+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+PCLExtensions.h"; path = "Classes/NSData+PCLExtensions.h"; sourceTree = "<group>"; };
+		2ED5D48ECF8A82D98ED0BF259BE29B76 /* NSObject+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PCLExtensions.h"; path = "Classes/NSObject+PCLExtensions.h"; sourceTree = "<group>"; };
+		316F64F3F62CFDB0971F76DB7349F2C4 /* Pods-Gazz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gazz-resources.sh"; sourceTree = "<group>"; };
+		31CF258DA468AFF3E135A2638E930137 /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "Library/UIKit/UIImage+ImageResource.swift"; sourceTree = "<group>"; };
+		320A0CF04ADEF0E2E696D05D19066A9D /* Pods-Gazz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gazz-acknowledgements.markdown"; sourceTree = "<group>"; };
+		358B65AD1B0A7BF5241D79FA68690041 /* PCLDebugging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLDebugging.h; path = Classes/PCLDebugging.h; sourceTree = "<group>"; };
+		36D53E420E0684B46A3B2A80E681F8FE /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
+		385F282041AEB5A0ACD8941D851FA61D /* UIImage+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PCLExtensions.h"; path = "Classes/UIImage+PCLExtensions.h"; sourceTree = "<group>"; };
+		3A4298723B5E5522590124BC540A3432 /* NSError+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+PCLExtensions.m"; path = "Classes/NSError+PCLExtensions.m"; sourceTree = "<group>"; };
+		3AAA6645E885C6CD42E22F59F9585E66 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		3DAAFDA11B05827D59CC65212F86CC4D /* UIApplication+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+PCLExtensions.h"; path = "Classes/UIApplication+PCLExtensions.h"; sourceTree = "<group>"; };
+		4012DE88715A18847682D432418BF4C2 /* NSDate+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+PCLExtensions.m"; path = "Classes/NSDate+PCLExtensions.m"; sourceTree = "<group>"; };
+		40BB7352E94A24B43A523016B2A3B501 /* R.swift.Library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = R.swift.Library.modulemap; sourceTree = "<group>"; };
+		432924C0197C1411E8D261074500028D /* Pods-Gazz-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gazz-frameworks.sh"; sourceTree = "<group>"; };
+		4498D124EB05B68023D7FBDC514351A6 /* NSBundle+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+FileResource.swift"; path = "Library/Foundation/NSBundle+FileResource.swift"; sourceTree = "<group>"; };
+		4B8289496594D89C8A9F142AFD2C40F0 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; path = "Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; sourceTree = "<group>"; };
+		4C4A32E2CBDA99D5318CED9368F4B13B /* PCLTransitionAnimatorConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTransitionAnimatorConstants.h; path = Classes/PCLTransitionAnimatorConstants.h; sourceTree = "<group>"; };
+		4D6AACADD7D3F5F41EA4C0650E2DEBF3 /* UIViewConroller+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewConroller+PCLExtensions.h"; path = "Classes/UIViewConroller+PCLExtensions.h"; sourceTree = "<group>"; };
+		4EA9511EFA3DCFE128C80B823899EC4A /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
+		4FBFCA56D5A1C084E0B2F57092992665 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		57ED33CC2709BDD2B02E1B992536DBF3 /* UIFont+FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+FontResource.swift"; path = "Library/UIKit/UIFont+FontResource.swift"; sourceTree = "<group>"; };
+		59C1D4244C5AC56DC7988E8812A89EA7 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		5AC203FFBF470D120B5BC7875FB1D0A9 /* R.swift.Library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-umbrella.h"; sourceTree = "<group>"; };
+		5D97EAA84EA69F3CFC410E47F60A36BB /* PCLStrings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLStrings.h; path = Classes/PCLStrings.h; sourceTree = "<group>"; };
+		5FB33C9C9D80328DADAA42D30048C16E /* NSObject+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PCLExtensions.m"; path = "Classes/NSObject+PCLExtensions.m"; sourceTree = "<group>"; };
+		60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		6207C240DDD7F7235109FAA3184B3D99 /* UIStoryboard+StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardResource.swift"; sourceTree = "<group>"; };
+		633D6A39120DA3EEF631D38BA9A9EBA8 /* UIDevice+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+PCLExtensions.m"; path = "Classes/UIDevice+PCLExtensions.m"; sourceTree = "<group>"; };
+		682EA5C8999A407EA9BD4267B69D0157 /* PCLBackgroundTaskHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLBackgroundTaskHandler.h; path = Classes/PCLBackgroundTaskHandler.h; sourceTree = "<group>"; };
+		68BD9CA87D673EB508977578E03A1779 /* UIViewConroller+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewConroller+PCLExtensions.m"; path = "Classes/UIViewConroller+PCLExtensions.m"; sourceTree = "<group>"; };
+		6FD64D4026CEF93B50C4C948112ECE48 /* NSURLRequest+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+PCLExtensions.h"; path = "Classes/NSURLRequest+PCLExtensions.h"; sourceTree = "<group>"; };
+		70FE3963B7FC94A5A84A83FF6CE97ECA /* NibResource+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NibResource+UIKit.swift"; path = "Library/UIKit/NibResource+UIKit.swift"; sourceTree = "<group>"; };
+		77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7ACAE190038DDC936D1FABE39A55FC29 /* PCLTransitionAnimatorConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLTransitionAnimatorConstants.m; path = Classes/PCLTransitionAnimatorConstants.m; sourceTree = "<group>"; };
+		7B4A362AC33495752FF4E3C87BF53B52 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		833C88F30D508490CE5AC01484869670 /* FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileResource.swift; path = Library/Core/FileResource.swift; sourceTree = "<group>"; };
+		834FB69998D9244BA9ECEE15C8C62541 /* NSNotificationCenter+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+PCLExtensions.m"; path = "Classes/NSNotificationCenter+PCLExtensions.m"; sourceTree = "<group>"; };
+		84D34851F0788393C5C271C5B28D4D01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DFB0816ABAE8821C5299D2FCB03DF0A /* UIColor+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+PCLExtensions.m"; path = "Classes/UIColor+PCLExtensions.m"; sourceTree = "<group>"; };
+		91317E3EA1CF6E866583B5125E6E018E /* PCLTypeDefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLTypeDefs.h; path = Classes/PCLTypeDefs.h; sourceTree = "<group>"; };
+		97D30643F0A961F7AE3E0DD25875F0C4 /* ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageResource.swift; path = Library/Core/ImageResource.swift; sourceTree = "<group>"; };
+		9946FDFDF4BBFCA0C940D240874DA78F /* UIView+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PCLExtensions.m"; path = "Classes/UIView+PCLExtensions.m"; sourceTree = "<group>"; };
+		9A386E67DBEC26E12F4C71917B035EBD /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Library/Core/Validatable.swift; sourceTree = "<group>"; };
+		9AFEFFD76637CCA4F593FA5C2C7BCF4E /* Pods-Gazz.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Gazz.modulemap"; sourceTree = "<group>"; };
+		9E9821DA3C8D101218B43A6E22B9B09C /* PublicCodeLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PublicCodeLibrary-dummy.m"; sourceTree = "<group>"; };
+		A3EF7DAEE07F06813BECD49D84CAE80E /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		A4099B4A766092603605463DEFEF4C8B /* NSArray+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PCLExtensions.m"; path = "Classes/NSArray+PCLExtensions.m"; sourceTree = "<group>"; };
+		A4F3C2DA712569BC8EAAEF5A2ACCA20D /* NSURL+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+PCLExtensions.m"; path = "Classes/NSURL+PCLExtensions.m"; sourceTree = "<group>"; };
+		A879F4FF434EF540B96D18EC5733ABDC /* FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontResource.swift; path = Library/Core/FontResource.swift; sourceTree = "<group>"; };
+		A8930330ACEAAD8854E05CA83BB9CA4B /* PublicCodeLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PublicCodeLibrary-umbrella.h"; sourceTree = "<group>"; };
+		A89D8C8673EBB385263A23C205DD72DF /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseIdentifierProtocol.swift; path = Library/Core/ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		ACEB8AA7D7ECA3DA590A3F33975DB14D /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		ADBFD8F699DC1FFC63BC5D6C94D42EA2 /* NSData+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+PCLExtensions.m"; path = "Classes/NSData+PCLExtensions.m"; sourceTree = "<group>"; };
+		AF0806BE3AEBF758D2F62E676EE520EF /* UINib+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINib+NibResource.swift"; path = "Library/UIKit/UINib+NibResource.swift"; sourceTree = "<group>"; };
+		B1CBDE0A8A64C6D5FD1D2D1F09B3A6A8 /* PCLBackgroundTaskHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLBackgroundTaskHandler.m; path = Classes/PCLBackgroundTaskHandler.m; sourceTree = "<group>"; };
+		B2DDA2435E01D4DCB3C563C1939E5847 /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Library/Core/StoryboardResource.swift; sourceTree = "<group>"; };
+		B33711BC9A96C073CB473D13C2355148 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB5F1CFADA98E5124DD2B14EBEC91A03 /* UIDevice+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+PCLExtensions.h"; path = "Classes/UIDevice+PCLExtensions.h"; sourceTree = "<group>"; };
+		C118C9D33D3F405F6FC9D8C9D8D7EEAD /* PLCCrossFadeTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCCrossFadeTransitionAnimator.h; path = Classes/PLCCrossFadeTransitionAnimator.h; sourceTree = "<group>"; };
+		C1846B3A651B0FE6E9460DC8AED44F1B /* NSURL+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+PCLExtensions.h"; path = "Classes/NSURL+PCLExtensions.h"; sourceTree = "<group>"; };
+		C3BE9731A7DF355D452C5ACF65CB3A8A /* PLCCrossFadeTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCCrossFadeTransitionAnimator.m; path = Classes/PLCCrossFadeTransitionAnimator.m; sourceTree = "<group>"; };
+		C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C677C31E5996F5B270F132CFF7FDEEAE /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
+		C6945B62C1479D8714B81BBB5AFF8B08 /* NSArray+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PCLExtensions.h"; path = "Classes/NSArray+PCLExtensions.h"; sourceTree = "<group>"; };
+		CA7A6DA817A508D6E70EA2DB12A96D30 /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA7E6E63EFF78242648DE46ACD69FDA /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		CBF7C2B2F641C449F2459CD7A1B505A1 /* PublicCodeLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PublicCodeLibrary-prefix.pch"; sourceTree = "<group>"; };
+		CD71A7B7B7ED7DABC911A5B35CCCF4E7 /* Identifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifier.swift; path = Library/Core/Identifier.swift; sourceTree = "<group>"; };
+		CE0C17205CF6C6D206098CD3BCCC247C /* PublicCodeLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PublicCodeLibrary.xcconfig; sourceTree = "<group>"; };
+		CF06BB2DAE38FDF0344C8FE568B66755 /* R.swift.Library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "R.swift.Library-dummy.m"; sourceTree = "<group>"; };
+		D153E171251C61175EAF679CCCDD68FE /* UIColor+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PCLExtensions.h"; path = "Classes/UIColor+PCLExtensions.h"; sourceTree = "<group>"; };
+		D749F3882AD5B0603FCC8F588C0F086B /* NSString+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+PCLExtensions.h"; path = "Classes/NSString+PCLExtensions.h"; sourceTree = "<group>"; };
+		D760EE5BD49FEB2747E158C9A2D647D0 /* UIApplication+PCLExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+PCLExtensions.m"; path = "Classes/UIApplication+PCLExtensions.m"; sourceTree = "<group>"; };
+		D7BE16F873BE741A7283951E4595F41B /* NSError+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+PCLExtensions.h"; path = "Classes/NSError+PCLExtensions.h"; sourceTree = "<group>"; };
+		DA4811C280D2BB39944E1DAB12DEA044 /* PublicCodeLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PublicCodeLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5FB0D6F379E7A9DCAC7D5359BAF003 /* StoryboardResourceWithInitialController+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StoryboardResourceWithInitialController+UIKit.swift"; path = "Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift"; sourceTree = "<group>"; };
+		E0964769C481088FDFA61F6DEFF2E815 /* Rswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B3CBAE1632A37207F5BA25CAB4A95E /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		E61835D80B973647D2D0D0DCDC65A2F9 /* PublicCodeLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PublicCodeLibrary.h; path = Classes/PublicCodeLibrary.h; sourceTree = "<group>"; };
+		E62B318919A9945879096502E45EBFC3 /* NSNotificationCenter+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+PCLExtensions.h"; path = "Classes/NSNotificationCenter+PCLExtensions.h"; sourceTree = "<group>"; };
+		E84E4845B9D61A0409CE2A36897611B4 /* PLCHorizontalSlideTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PLCHorizontalSlideTransitionAnimator.m; path = Classes/PLCHorizontalSlideTransitionAnimator.m; sourceTree = "<group>"; };
+		E882AB3ED29A2ABF0675616D7C5F8D1C /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		E9082FCC3213D2B6603528EE1D3A00F7 /* Pods-Gazz-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-umbrella.h"; sourceTree = "<group>"; };
+		EA04CBCA358C66047D480EAFCD94AE66 /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		ED3931A488749F574BC179D45449221B /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
+		EDCCD3E8F8B4F331E228831804AED24E /* PCLRestCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLRestCommand.h; path = Classes/PCLRestCommand.h; sourceTree = "<group>"; };
+		EEAED2B9D815CBD08E7A2AD4C46BF472 /* PublicCodeLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PublicCodeLibrary.modulemap; sourceTree = "<group>"; };
+		F32D564615CF60A8D72C3726208AA641 /* R.swift.Library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-prefix.pch"; sourceTree = "<group>"; };
+		F50A4264BA94780B8DC0D0F206EA6281 /* Pods-Gazz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-dummy.m"; sourceTree = "<group>"; };
+		F750AB74DBACE56CE77B1D6A19DEAAA2 /* NSDate+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PCLExtensions.h"; path = "Classes/NSDate+PCLExtensions.h"; sourceTree = "<group>"; };
+		F77B8E4C7F297899FBEBDA9BDCC40B86 /* UITableView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UITableView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		FA1262F61D22E09AA8099AABD9425FCE /* PCLRestCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCLRestCommand.m; path = Classes/PCLRestCommand.m; sourceTree = "<group>"; };
+		FA34344EA6C31903AB31935BEA2B1976 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		FBAAD55277E67609D6424E9738BF5D33 /* UICollectionView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		FC9FFD23F52EF6789BCF05F31A40F572 /* UIView+PCLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PCLExtensions.h"; path = "Classes/UIView+PCLExtensions.h"; sourceTree = "<group>"; };
+		FEA2234D58F815F1C9227E8E4CFB5E7B /* PLCHorizontalSlideTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PLCHorizontalSlideTransitionAnimator.h; path = Classes/PLCHorizontalSlideTransitionAnimator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6A59F103EE2714B980F5B967 /* Frameworks */ = {
+		3FC2394CE0998A7B5055340A552D7005 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD0D1BD93576DC4673ED4BF /* Foundation.framework in Frameworks */,
+				53B59E07BB9D798D3D1A9110CD869374 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADE22F8ABB232393082F51DD /* Frameworks */ = {
+		9832DAE0F23E6E4B4EE8D8A1E59CF125 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744294B9326448F53014A552 /* Foundation.framework in Frameworks */,
+				60F63635990DDAFE42B47DA5B89C62CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7E10F383DCD59079712A57B50DCF88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */,
+				4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */,
+				1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */,
+				E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E85B13403777CE6AF8E98FDFD9F93F0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AF9E9002E9E4960854959AC7178E733 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1BD59BFA30C71580E1C5BB4E /* Targets Support Files */ = {
+		0A4D1ED35F0B780D367222AFD86738E9 /* R.swift */ = {
 			isa = PBXGroup;
 			children = (
-				1D7D1FAA2DEE2885B9F85CD6 /* Pods-Gazz */,
+			);
+			path = R.swift;
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				843A690C4A272ACCFA5202DC4499C74E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1680DD682F7698D26240BFF28FDE91A1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				03F886D5B07D7D18183AF0B5AEC14611 /* Info.plist */,
+				EEAED2B9D815CBD08E7A2AD4C46BF472 /* PublicCodeLibrary.modulemap */,
+				CE0C17205CF6C6D206098CD3BCCC247C /* PublicCodeLibrary.xcconfig */,
+				9E9821DA3C8D101218B43A6E22B9B09C /* PublicCodeLibrary-dummy.m */,
+				CBF7C2B2F641C449F2459CD7A1B505A1 /* PublicCodeLibrary-prefix.pch */,
+				A8930330ACEAAD8854E05CA83BB9CA4B /* PublicCodeLibrary-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PublicCodeLibrary";
+			sourceTree = "<group>";
+		};
+		189628CC289309953959C1962A265C55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD80F17453E61A65602A6810A0EA48BA /* Firebase */,
+				4BEA2E35A62072301E2AE7EE77346A51 /* PublicCodeLibrary */,
+				0A4D1ED35F0B780D367222AFD86738E9 /* R.swift */,
+				61FA9C615C98C814600E47407A4B332E /* R.swift.Library */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1DBD180C7275B9634A0B9CB7B5B99761 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				157603B6673E6C9722026ACB91A43273 /* Info.plist */,
+				40BB7352E94A24B43A523016B2A3B501 /* R.swift.Library.modulemap */,
+				02296FB8DBA84FF6E8E9EC5AA117C71E /* R.swift.Library.xcconfig */,
+				CF06BB2DAE38FDF0344C8FE568B66755 /* R.swift.Library-dummy.m */,
+				F32D564615CF60A8D72C3726208AA641 /* R.swift.Library-prefix.pch */,
+				5AC203FFBF470D120B5BC7875FB1D0A9 /* R.swift.Library-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/R.swift.Library";
+			sourceTree = "<group>";
+		};
+		2A310E782B9F82AB48988E36C2D11FD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA7A6DA817A508D6E70EA2DB12A96D30 /* Firebase.framework */,
+				20834C8609FBD0E42145DF243C3758E0 /* Pods_Gazz.framework */,
+				DA4811C280D2BB39944E1DAB12DEA044 /* PublicCodeLibrary.framework */,
+				E0964769C481088FDFA61F6DEFF2E815 /* Rswift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43E0781F7A82CFE0FE3985A1ED43E246 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D2B09B7CFA809BF347172B62639DD98 /* Pods-Gazz */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		1D7D1FAA2DEE2885B9F85CD6 /* Pods-Gazz */ = {
+		4BEA2E35A62072301E2AE7EE77346A51 /* PublicCodeLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				F18E464AF9C9C80003F7BF16 /* Pods-Gazz-acknowledgements.markdown */,
-				9205055FB485D57C530D5F34 /* Pods-Gazz-acknowledgements.plist */,
-				F743057B05FFBBD2919288A3 /* Pods-Gazz-dummy.m */,
-				C3725A824233F181BFEA5C58 /* Pods-Gazz-environment.h */,
-				9EC079226FF73AC75BA124F1 /* Pods-Gazz-resources.sh */,
-				88C8558ED3A2E0CB94D58A74 /* Pods-Gazz.debug.xcconfig */,
-				E983F7CA589B09B50B255B4B /* Pods-Gazz.release.xcconfig */,
+				C6945B62C1479D8714B81BBB5AFF8B08 /* NSArray+PCLExtensions.h */,
+				A4099B4A766092603605463DEFEF4C8B /* NSArray+PCLExtensions.m */,
+				2DB8C032F2BC7E509EFFA69BA7288201 /* NSData+PCLExtensions.h */,
+				ADBFD8F699DC1FFC63BC5D6C94D42EA2 /* NSData+PCLExtensions.m */,
+				F750AB74DBACE56CE77B1D6A19DEAAA2 /* NSDate+PCLExtensions.h */,
+				4012DE88715A18847682D432418BF4C2 /* NSDate+PCLExtensions.m */,
+				D7BE16F873BE741A7283951E4595F41B /* NSError+PCLExtensions.h */,
+				3A4298723B5E5522590124BC540A3432 /* NSError+PCLExtensions.m */,
+				E62B318919A9945879096502E45EBFC3 /* NSNotificationCenter+PCLExtensions.h */,
+				834FB69998D9244BA9ECEE15C8C62541 /* NSNotificationCenter+PCLExtensions.m */,
+				2ED5D48ECF8A82D98ED0BF259BE29B76 /* NSObject+PCLExtensions.h */,
+				5FB33C9C9D80328DADAA42D30048C16E /* NSObject+PCLExtensions.m */,
+				D749F3882AD5B0603FCC8F588C0F086B /* NSString+PCLExtensions.h */,
+				1F291A9774C2A3B3884574F3FD356DB9 /* NSString+PCLExtensions.m */,
+				C1846B3A651B0FE6E9460DC8AED44F1B /* NSURL+PCLExtensions.h */,
+				A4F3C2DA712569BC8EAAEF5A2ACCA20D /* NSURL+PCLExtensions.m */,
+				6FD64D4026CEF93B50C4C948112ECE48 /* NSURLRequest+PCLExtensions.h */,
+				0EF48CF0FFA01340098CDA80A1ED8D12 /* NSURLRequest+PCLExtensions.m */,
+				682EA5C8999A407EA9BD4267B69D0157 /* PCLBackgroundTaskHandler.h */,
+				B1CBDE0A8A64C6D5FD1D2D1F09B3A6A8 /* PCLBackgroundTaskHandler.m */,
+				358B65AD1B0A7BF5241D79FA68690041 /* PCLDebugging.h */,
+				EDCCD3E8F8B4F331E228831804AED24E /* PCLRestCommand.h */,
+				FA1262F61D22E09AA8099AABD9425FCE /* PCLRestCommand.m */,
+				5D97EAA84EA69F3CFC410E47F60A36BB /* PCLStrings.h */,
+				4C4A32E2CBDA99D5318CED9368F4B13B /* PCLTransitionAnimatorConstants.h */,
+				7ACAE190038DDC936D1FABE39A55FC29 /* PCLTransitionAnimatorConstants.m */,
+				1CA3D22E6BD71CB5897379A567C789B2 /* PCLTransitionAnimatorDocumentation.h */,
+				91317E3EA1CF6E866583B5125E6E018E /* PCLTypeDefs.h */,
+				C118C9D33D3F405F6FC9D8C9D8D7EEAD /* PLCCrossFadeTransitionAnimator.h */,
+				C3BE9731A7DF355D452C5ACF65CB3A8A /* PLCCrossFadeTransitionAnimator.m */,
+				FEA2234D58F815F1C9227E8E4CFB5E7B /* PLCHorizontalSlideTransitionAnimator.h */,
+				E84E4845B9D61A0409CE2A36897611B4 /* PLCHorizontalSlideTransitionAnimator.m */,
+				E61835D80B973647D2D0D0DCDC65A2F9 /* PublicCodeLibrary.h */,
+				3DAAFDA11B05827D59CC65212F86CC4D /* UIApplication+PCLExtensions.h */,
+				D760EE5BD49FEB2747E158C9A2D647D0 /* UIApplication+PCLExtensions.m */,
+				D153E171251C61175EAF679CCCDD68FE /* UIColor+PCLExtensions.h */,
+				8DFB0816ABAE8821C5299D2FCB03DF0A /* UIColor+PCLExtensions.m */,
+				BB5F1CFADA98E5124DD2B14EBEC91A03 /* UIDevice+PCLExtensions.h */,
+				633D6A39120DA3EEF631D38BA9A9EBA8 /* UIDevice+PCLExtensions.m */,
+				385F282041AEB5A0ACD8941D851FA61D /* UIImage+PCLExtensions.h */,
+				206E95F0DD3A5AA85E60553BF741B052 /* UIImage+PCLExtensions.m */,
+				FC9FFD23F52EF6789BCF05F31A40F572 /* UIView+PCLExtensions.h */,
+				9946FDFDF4BBFCA0C940D240874DA78F /* UIView+PCLExtensions.m */,
+				4D6AACADD7D3F5F41EA4C0650E2DEBF3 /* UIViewConroller+PCLExtensions.h */,
+				68BD9CA87D673EB508977578E03A1779 /* UIViewConroller+PCLExtensions.m */,
+				1680DD682F7698D26240BFF28FDE91A1 /* Support Files */,
+			);
+			path = PublicCodeLibrary;
+			sourceTree = "<group>";
+		};
+		61FA9C615C98C814600E47407A4B332E /* R.swift.Library */ = {
+			isa = PBXGroup;
+			children = (
+				833C88F30D508490CE5AC01484869670 /* FileResource.swift */,
+				A879F4FF434EF540B96D18EC5733ABDC /* FontResource.swift */,
+				CD71A7B7B7ED7DABC911A5B35CCCF4E7 /* Identifier.swift */,
+				97D30643F0A961F7AE3E0DD25875F0C4 /* ImageResource.swift */,
+				1AEF1BC0CF19187838D3E1162CEA7351 /* NibResource.swift */,
+				70FE3963B7FC94A5A84A83FF6CE97ECA /* NibResource+UIKit.swift */,
+				4498D124EB05B68023D7FBDC514351A6 /* NSBundle+FileResource.swift */,
+				A89D8C8673EBB385263A23C205DD72DF /* ReuseIdentifierProtocol.swift */,
+				B2DDA2435E01D4DCB3C563C1939E5847 /* StoryboardResource.swift */,
+				DE5FB0D6F379E7A9DCAC7D5359BAF003 /* StoryboardResourceWithInitialController+UIKit.swift */,
+				13E9F5014DCF8539EB63C2093822CB1B /* StoryboardSegueIdentifierProtocol.swift */,
+				4B8289496594D89C8A9F142AFD2C40F0 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */,
+				FBAAD55277E67609D6424E9738BF5D33 /* UICollectionView+ReuseIdentifierProtocol.swift */,
+				57ED33CC2709BDD2B02E1B992536DBF3 /* UIFont+FontResource.swift */,
+				31CF258DA468AFF3E135A2638E930137 /* UIImage+ImageResource.swift */,
+				AF0806BE3AEBF758D2F62E676EE520EF /* UINib+NibResource.swift */,
+				6207C240DDD7F7235109FAA3184B3D99 /* UIStoryboard+StoryboardResource.swift */,
+				F77B8E4C7F297899FBEBDA9BDCC40B86 /* UITableView+ReuseIdentifierProtocol.swift */,
+				282780A1D8FC17244B814B47952E364F /* UIViewController+NibResource.swift */,
+				2148026E344314BDF765BFD344A93BE4 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */,
+				9A386E67DBEC26E12F4C71917B035EBD /* Validatable.swift */,
+				1DBD180C7275B9634A0B9CB7B5B99761 /* Support Files */,
+			);
+			path = R.swift.Library;
+			sourceTree = "<group>";
+		};
+		6D2B09B7CFA809BF347172B62639DD98 /* Pods-Gazz */ = {
+			isa = PBXGroup;
+			children = (
+				84D34851F0788393C5C271C5B28D4D01 /* Info.plist */,
+				9AFEFFD76637CCA4F593FA5C2C7BCF4E /* Pods-Gazz.modulemap */,
+				320A0CF04ADEF0E2E696D05D19066A9D /* Pods-Gazz-acknowledgements.markdown */,
+				080F6EEB4634EE03E1DB7FBA6A0C31F3 /* Pods-Gazz-acknowledgements.plist */,
+				F50A4264BA94780B8DC0D0F206EA6281 /* Pods-Gazz-dummy.m */,
+				432924C0197C1411E8D261074500028D /* Pods-Gazz-frameworks.sh */,
+				316F64F3F62CFDB0971F76DB7349F2C4 /* Pods-Gazz-resources.sh */,
+				E9082FCC3213D2B6603528EE1D3A00F7 /* Pods-Gazz-umbrella.h */,
+				C677C31E5996F5B270F132CFF7FDEEAE /* Pods-Gazz.debug.xcconfig */,
+				24DA0024CC9CE63AFAAC14E384D414C3 /* Pods-Gazz.release.xcconfig */,
 			);
 			name = "Pods-Gazz";
 			path = "Target Support Files/Pods-Gazz";
 			sourceTree = "<group>";
 		};
-		24C27240D9D1F56067907A11 /* Support Files */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				302C95C53121FC658769EAEF /* Pods-Gazz-PublicCodeLibrary.xcconfig */,
-				162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */,
-				CC01FBA8A6F400172FA1AB35 /* Pods-Gazz-PublicCodeLibrary-dummy.m */,
-				5EE9E158FDCCD5732B07D39C /* Pods-Gazz-PublicCodeLibrary-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-Gazz-PublicCodeLibrary";
-			sourceTree = "<group>";
-		};
-		56EB1EEDC404EEF00027BD9F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				803543080022A5EA9228D0CF /* PublicCodeLibrary */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		803543080022A5EA9228D0CF /* PublicCodeLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				30E8623F392A9ED85821AFA3 /* NSArray+PCLExtensions.h */,
-				19164CFDBD97EB8A3C898409 /* NSArray+PCLExtensions.m */,
-				27ADBA93DFC8600C4A2135F6 /* NSData+PCLExtensions.h */,
-				FADA2FEDA0F7E3C5141C524F /* NSData+PCLExtensions.m */,
-				033286685F7A3CC4DF460378 /* NSDate+PCLExtensions.h */,
-				FAA2D300E47D8052277AD9C7 /* NSDate+PCLExtensions.m */,
-				7855AF016B2DA4E9AB234FFD /* NSError+PCLExtensions.h */,
-				EEDB25BADBD771F8842D7530 /* NSError+PCLExtensions.m */,
-				170AA49892C56BCA3C07673D /* NSNotificationCenter+PCLExtensions.h */,
-				0E40ACA17EE785540076F7C4 /* NSNotificationCenter+PCLExtensions.m */,
-				54A5FBE0BBB062CAE266D599 /* NSObject+PCLExtensions.h */,
-				E52162DB344D93C3B256A90E /* NSObject+PCLExtensions.m */,
-				F050A7459163D31E5B636542 /* NSString+PCLExtensions.h */,
-				D074A879F7D268E2B9E6B4EB /* NSString+PCLExtensions.m */,
-				6133DD444C75A58BF4E78B88 /* NSURL+PCLExtensions.h */,
-				D6801F236562F706367AB19E /* NSURL+PCLExtensions.m */,
-				85A2B2A2099DA664A0CB2662 /* NSURLRequest+PCLExtensions.h */,
-				314E94D88FD1340AB98555C9 /* NSURLRequest+PCLExtensions.m */,
-				F068BD1986C38A3EEC0DF26F /* PCLBackgroundTaskHandler.h */,
-				2632272DE2DBEE0E804A623A /* PCLBackgroundTaskHandler.m */,
-				58D5B9034814E3A37DD0CB0C /* PCLDebugging.h */,
-				4D36003FD797FC1750EA135F /* PCLRestCommand.h */,
-				95A768815F910171B62E18B7 /* PCLRestCommand.m */,
-				471B243EEA48061275EA2093 /* PCLStrings.h */,
-				63D28508CA2B1F144B9D9E37 /* PCLTransitionAnimatorConstants.h */,
-				ED4DF12D2F19C542FF721661 /* PCLTransitionAnimatorConstants.m */,
-				002F43089DCC6BB7F52105D2 /* PCLTransitionAnimatorDocumentation.h */,
-				BBF359B82BA2CB36DA697FE7 /* PCLTypeDefs.h */,
-				C12F4A7C572577B6A70CB343 /* PLCCrossFadeTransitionAnimator.h */,
-				F78C26261A731695366CE197 /* PLCCrossFadeTransitionAnimator.m */,
-				E770263B1B04F3A3BA031310 /* PLCHorizontalSlideTransitionAnimator.h */,
-				DA0EF63A32850DFFCA58F2E4 /* PLCHorizontalSlideTransitionAnimator.m */,
-				BF9F6632B983F62848D9303C /* PublicCodeLibrary.h */,
-				6DA76DBCE650670EC673EB1B /* UIApplication+PCLExtensions.h */,
-				468E2566EACDDFAB58DDB9FA /* UIApplication+PCLExtensions.m */,
-				AB7285399753D6CC06034914 /* UIColor+PCLExtensions.h */,
-				C3837E1D606F0847F0169316 /* UIColor+PCLExtensions.m */,
-				BD8B69C05EEC237F5DD547D1 /* UIDevice+PCLExtensions.h */,
-				6B0E05B9FD663C6F0263834D /* UIDevice+PCLExtensions.m */,
-				16F91C3C5BBBE140CF72CE1A /* UIImage+PCLExtensions.h */,
-				7DDE2D82011467D2312F00DE /* UIImage+PCLExtensions.m */,
-				81EFDD3A7BBE3BCE92667D65 /* UIView+PCLExtensions.h */,
-				9A7694BF3F8BD901BE160F69 /* UIView+PCLExtensions.m */,
-				06D46043F8E3A5547E5EE162 /* UIViewConroller+PCLExtensions.h */,
-				839F493BF519C3A6D05B6168 /* UIViewConroller+PCLExtensions.m */,
-				24C27240D9D1F56067907A11 /* Support Files */,
-			);
-			path = PublicCodeLibrary;
-			sourceTree = "<group>";
-		};
-		AF175D886CB433B356DE2120 = {
-			isa = PBXGroup;
-			children = (
-				46ADA020FE3443EE7F51BA33 /* Podfile */,
-				FBF0CFAE462BE8110E4F8FE4 /* Frameworks */,
-				56EB1EEDC404EEF00027BD9F /* Pods */,
-				CC9C39B924016EB32C92803E /* Products */,
-				1BD59BFA30C71580E1C5BB4E /* Targets Support Files */,
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				189628CC289309953959C1962A265C55 /* Pods */,
+				2A310E782B9F82AB48988E36C2D11FD3 /* Products */,
+				43E0781F7A82CFE0FE3985A1ED43E246 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		CC9C39B924016EB32C92803E /* Products */ = {
+		843A690C4A272ACCFA5202DC4499C74E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				96FF8BED8CF8CA7A367D42A3 /* libPods-Gazz.a */,
-				3E1C730EF1A6877777915908 /* libPods-Gazz-PublicCodeLibrary.a */,
+				60F85758B54CB0D843A3E97DFFB2F21F /* CFNetwork.framework */,
+				77C49D928448B31FB9A7D5AE5C8D6C4E /* Foundation.framework */,
+				C6204446BD9150A17B12E81B4A6F9CA8 /* Security.framework */,
+				6166BE40C18BC6BF0EED92CAB212EC33 /* SystemConfiguration.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		FBF0CFAE462BE8110E4F8FE4 /* Frameworks */ = {
+		9AB2C9FE48ED381F90120C59B435C4FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD10A427CC91033B7126E5FF /* iOS */,
+				0D890324A870BEDA6250169E9A2B7C00 /* libFirebaseStatic.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FD10A427CC91033B7126E5FF /* iOS */ = {
+		AD80F17453E61A65602A6810A0EA48BA /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				1FA5FFD4733816A176E42B38 /* Foundation.framework */,
+				CAA7E6E63EFF78242648DE46ACD69FDA /* Empty.m */,
+				36D53E420E0684B46A3B2A80E681F8FE /* FAuthData.h */,
+				EA04CBCA358C66047D480EAFCD94AE66 /* FAuthType.h */,
+				ACEB8AA7D7ECA3DA590A3F33975DB14D /* FConfig.h */,
+				ED3931A488749F574BC179D45449221B /* FDataSnapshot.h */,
+				E5B3CBAE1632A37207F5BA25CAB4A95E /* FEventType.h */,
+				4FBFCA56D5A1C084E0B2F57092992665 /* Firebase.h */,
+				59C1D4244C5AC56DC7988E8812A89EA7 /* FirebaseApp.h */,
+				3AAA6645E885C6CD42E22F59F9585E66 /* FirebaseServerValue.h */,
+				2243221F3A114B5FB65EFCB65835C332 /* FMutableData.h */,
+				E882AB3ED29A2ABF0675616D7C5F8D1C /* FQuery.h */,
+				4EA9511EFA3DCFE128C80B823899EC4A /* FTransactionResult.h */,
+				9AB2C9FE48ED381F90120C59B435C4FD /* Frameworks */,
+				D0FC144E256C2F0D1CB9186E7E3DC5CE /* Support Files */,
 			);
-			name = iOS;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D0FC144E256C2F0D1CB9186E7E3DC5CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3EF7DAEE07F06813BECD49D84CAE80E /* Firebase.modulemap */,
+				2B735FCEE31AC6DEC99CD1CA6448EDA5 /* Firebase.xcconfig */,
+				7B4A362AC33495752FF4E3C87BF53B52 /* Firebase-dummy.m */,
+				048888F8F41012B5FD6FB15E97DD667E /* Firebase-prefix.pch */,
+				FA34344EA6C31903AB31935BEA2B1976 /* Firebase-umbrella.h */,
+				B33711BC9A96C073CB473D13C2355148 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Firebase";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8F75DFB99C732E34D5CB15B4 /* Headers */ = {
+		19A0E3AF84DA75378E428BEEF1867F72 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115A9563B3E80B0612D79E74 /* NSArray+PCLExtensions.h in Headers */,
-				2692666020CDFBF3A4EEA5D8 /* NSData+PCLExtensions.h in Headers */,
-				15E8B93415FD3B305E12E6F5 /* NSDate+PCLExtensions.h in Headers */,
-				D78345C63DF11F65EC1BD3A6 /* NSError+PCLExtensions.h in Headers */,
-				8B233D05366A6BA736004BE0 /* NSNotificationCenter+PCLExtensions.h in Headers */,
-				42E19486EB837B9416D45951 /* NSObject+PCLExtensions.h in Headers */,
-				598EF1CBF0A0A8A6EDCED94F /* NSString+PCLExtensions.h in Headers */,
-				97A1FC41CE2E706CBCF5F0BC /* NSURL+PCLExtensions.h in Headers */,
-				708BFCF200017FC496DCFD2A /* NSURLRequest+PCLExtensions.h in Headers */,
-				A83DE8D290A01377D668D7E1 /* PCLBackgroundTaskHandler.h in Headers */,
-				7E302A003C81156C5B0DDBED /* PCLDebugging.h in Headers */,
-				C4A9503514EA65A779FB192F /* PCLRestCommand.h in Headers */,
-				465AC6D4A0BD981CEAF9DCE5 /* PCLStrings.h in Headers */,
-				5EB3F16BA26368E0663778CF /* PCLTransitionAnimatorConstants.h in Headers */,
-				BD92331595640FD350833C88 /* PCLTransitionAnimatorDocumentation.h in Headers */,
-				90FBF9F914CF175FFF04B35C /* PCLTypeDefs.h in Headers */,
-				065DCA86E1DA0D0FF90B0031 /* PLCCrossFadeTransitionAnimator.h in Headers */,
-				BD05A5AE12FE4EC79B05EB95 /* PLCHorizontalSlideTransitionAnimator.h in Headers */,
-				C5F208802552D7C5BD63E9C6 /* PublicCodeLibrary.h in Headers */,
-				4F6E49B4DE6A261EBC055ADB /* UIApplication+PCLExtensions.h in Headers */,
-				D47CC5F6DAD94B53E34F878D /* UIColor+PCLExtensions.h in Headers */,
-				937021A7140DADD1751EE5AB /* UIDevice+PCLExtensions.h in Headers */,
-				6034331A2856AD93E64F5DC3 /* UIImage+PCLExtensions.h in Headers */,
-				57BB3291EA7CE6A3B89EB2B1 /* UIView+PCLExtensions.h in Headers */,
-				E320BC16EAEF43EEF9D57BF6 /* UIViewConroller+PCLExtensions.h in Headers */,
+				46DDA34C9DE472E8AF3045944958C5C5 /* NSArray+PCLExtensions.h in Headers */,
+				0F9BD61D7BEFBEB666EE1DF5E085E6C0 /* NSData+PCLExtensions.h in Headers */,
+				CC5A6B3016209EF062347C454E8B592B /* NSDate+PCLExtensions.h in Headers */,
+				2B42EFC37A10F751A3553729EDD73DD8 /* NSError+PCLExtensions.h in Headers */,
+				FB381833756A6261C77FE7278983AF85 /* NSNotificationCenter+PCLExtensions.h in Headers */,
+				B30D5694C2C9F8227715762F5CAB14F8 /* NSObject+PCLExtensions.h in Headers */,
+				B6FA2F44161AA396E664A893B4D67793 /* NSString+PCLExtensions.h in Headers */,
+				10881CC7B6D700DD4BEEB07B57DC6256 /* NSURL+PCLExtensions.h in Headers */,
+				BBF30623B180A0437F7F5E4C88129A95 /* NSURLRequest+PCLExtensions.h in Headers */,
+				D03D1C53C74AF64DAB23E54BFC65E72B /* PCLBackgroundTaskHandler.h in Headers */,
+				85F340B5718BB85EB4122E91D351C5FE /* PCLDebugging.h in Headers */,
+				1721D0C521E3BA8F81E178E65F86BB85 /* PCLRestCommand.h in Headers */,
+				60D6C814D31023135E84A068536BA04F /* PCLStrings.h in Headers */,
+				A2E34E38DD738F5C29765A15446CA029 /* PCLTransitionAnimatorConstants.h in Headers */,
+				D6C18D227A3E9ECA15DEEB14DF2B9E92 /* PCLTransitionAnimatorDocumentation.h in Headers */,
+				69C5DD4B073188E88E054C48622B8DE1 /* PCLTypeDefs.h in Headers */,
+				DBE5D6D2F96F3794D955B2D0A7245CFF /* PLCCrossFadeTransitionAnimator.h in Headers */,
+				04F831FEF15763D388BE03DFE936CD43 /* PLCHorizontalSlideTransitionAnimator.h in Headers */,
+				2FC7781802144B9DF27E14258CF24640 /* PublicCodeLibrary-umbrella.h in Headers */,
+				D226A2B688DBC81F8D32749E7F702015 /* PublicCodeLibrary.h in Headers */,
+				8FE07FA32E2D52D5F95174D987EFE02A /* UIApplication+PCLExtensions.h in Headers */,
+				F86FDE20B50F4D9734210A191AEA8269 /* UIColor+PCLExtensions.h in Headers */,
+				181EAF47A449CD06CD210B42A0746EA6 /* UIDevice+PCLExtensions.h in Headers */,
+				D39CB59EC0566E557DF45CE5C48CB419 /* UIImage+PCLExtensions.h in Headers */,
+				F4238206DD10F9E103EDFB67E0DCE5AB /* UIView+PCLExtensions.h in Headers */,
+				11150366CD4B194B37445002AA1DC6B6 /* UIViewConroller+PCLExtensions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */,
+				1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */,
+				E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */,
+				E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */,
+				239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */,
+				60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */,
+				1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */,
+				2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */,
+				6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */,
+				DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */,
+				4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */,
+				191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDA05C6750C1EFE2AF7A99E2B451102D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2142F12848C7D808BB8370AA6665559 /* Pods-Gazz-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80703363DFB85BF0D5486E8C36B124B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D966E6CAC409A90B66C8BCA9CEE1BA /* R.swift.Library-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		72B8630A73CF2B2974322FEB /* Pods-Gazz */ = {
+		1FBA1061C7509D9206DD96625F27D662 /* R.swift.Library */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56B0598D85ECB33A1350E90B /* Build configuration list for PBXNativeTarget "Pods-Gazz" */;
+			buildConfigurationList = D61D2E41FAF15A805DFE3BA2EAF002C5 /* Build configuration list for PBXNativeTarget "R.swift.Library" */;
 			buildPhases = (
-				6419C651CABE0664FF624231 /* Sources */,
-				6A59F103EE2714B980F5B967 /* Frameworks */,
+				DD4C8A103445F287FB53AAB15B18D97F /* Sources */,
+				E85B13403777CE6AF8E98FDFD9F93F0E /* Frameworks */,
+				D80703363DFB85BF0D5486E8C36B124B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C32978935354CD426FD9F939 /* PBXTargetDependency */,
+			);
+			name = R.swift.Library;
+			productName = R.swift.Library;
+			productReference = E0964769C481088FDFA61F6DEFF2E815 /* Rswift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		667A85585BB129C17DE5B32A8FB5E617 /* PublicCodeLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E764A53134CCE88CBB2FFA113A7E3FC4 /* Build configuration list for PBXNativeTarget "PublicCodeLibrary" */;
+			buildPhases = (
+				095F51DC1205F1EE009D2775F256A6C3 /* Sources */,
+				3FC2394CE0998A7B5055340A552D7005 /* Frameworks */,
+				19A0E3AF84DA75378E428BEEF1867F72 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PublicCodeLibrary;
+			productName = PublicCodeLibrary;
+			productReference = DA4811C280D2BB39944E1DAB12DEA044 /* PublicCodeLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B7AC9326D819482593FE118E915409D7 /* Firebase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */;
+			buildPhases = (
+				46E052D320E3B778B76D8393E0BAFE0F /* Sources */,
+				A7E10F383DCD59079712A57B50DCF88E /* Frameworks */,
+				2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Firebase;
+			productName = Firebase;
+			productReference = CA7A6DA817A508D6E70EA2DB12A96D30 /* Firebase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6D68109012B5146E000A2B6DD74D0DE /* Pods-Gazz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB602BD8B75E40B8F581544ABCC41434 /* Build configuration list for PBXNativeTarget "Pods-Gazz" */;
+			buildPhases = (
+				110282127A346B86AD9E550580360EC4 /* Sources */,
+				9832DAE0F23E6E4B4EE8D8A1E59CF125 /* Frameworks */,
+				BDA05C6750C1EFE2AF7A99E2B451102D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C029439301B922733032BD9275EE8B6C /* PBXTargetDependency */,
+				2BC05A3AFBE60C938419CDEF9756C584 /* PBXTargetDependency */,
+				FDA6AF0314B6FE56977569E3C442F624 /* PBXTargetDependency */,
 			);
 			name = "Pods-Gazz";
 			productName = "Pods-Gazz";
-			productReference = 96FF8BED8CF8CA7A367D42A3 /* libPods-Gazz.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		ACC13E70A1139D576224FAAC /* Pods-Gazz-PublicCodeLibrary */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6C40391DF64061C807E0C297 /* Build configuration list for PBXNativeTarget "Pods-Gazz-PublicCodeLibrary" */;
-			buildPhases = (
-				29A736E5B566EFBFCA9F4C08 /* Sources */,
-				ADE22F8ABB232393082F51DD /* Frameworks */,
-				8F75DFB99C732E34D5CB15B4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-Gazz-PublicCodeLibrary";
-			productName = "Pods-Gazz-PublicCodeLibrary";
-			productReference = 3E1C730EF1A6877777915908 /* libPods-Gazz-PublicCodeLibrary.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 20834C8609FBD0E42145DF243C3758E0 /* Pods_Gazz.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		35B854528780F1B9AEA7C89D /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 58CD79F5F7181B41434BE6EF /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = AF175D886CB433B356DE2120;
-			productRefGroup = CC9C39B924016EB32C92803E /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2A310E782B9F82AB48988E36C2D11FD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				72B8630A73CF2B2974322FEB /* Pods-Gazz */,
-				ACC13E70A1139D576224FAAC /* Pods-Gazz-PublicCodeLibrary */,
+				B7AC9326D819482593FE118E915409D7 /* Firebase */,
+				C6D68109012B5146E000A2B6DD74D0DE /* Pods-Gazz */,
+				667A85585BB129C17DE5B32A8FB5E617 /* PublicCodeLibrary */,
+				1FBA1061C7509D9206DD96625F27D662 /* R.swift.Library */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		29A736E5B566EFBFCA9F4C08 /* Sources */ = {
+		095F51DC1205F1EE009D2775F256A6C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC97ED44DE3E96C00AA4C8C /* NSArray+PCLExtensions.m in Sources */,
-				D57CCC72493333D246BBC8A5 /* NSData+PCLExtensions.m in Sources */,
-				416263E1F50D1083CF9F31EB /* NSDate+PCLExtensions.m in Sources */,
-				C1900CC5E677B92ABF9F00C0 /* NSError+PCLExtensions.m in Sources */,
-				5224A1F48A27A54BE1414BD9 /* NSNotificationCenter+PCLExtensions.m in Sources */,
-				935A1D397FCC645F39837005 /* NSObject+PCLExtensions.m in Sources */,
-				96A0E8DF52816031099F3859 /* NSString+PCLExtensions.m in Sources */,
-				7116AAD70977362374DD12DD /* NSURL+PCLExtensions.m in Sources */,
-				8ED2502DAF3222BD219674D9 /* NSURLRequest+PCLExtensions.m in Sources */,
-				8EDA4E403F35035FEA980872 /* PCLBackgroundTaskHandler.m in Sources */,
-				CF7C14ACF9AB53B3EE99DE87 /* PCLRestCommand.m in Sources */,
-				7383D53F41413B3481E12C9C /* PCLTransitionAnimatorConstants.m in Sources */,
-				15F99670F170837A58B75402 /* PLCCrossFadeTransitionAnimator.m in Sources */,
-				2EC3FA417BD25ED9EE417CCE /* PLCHorizontalSlideTransitionAnimator.m in Sources */,
-				8AB7087493192F50D2010A83 /* Pods-Gazz-PublicCodeLibrary-dummy.m in Sources */,
-				AC3B2DDE33371F5E9E2A5657 /* UIApplication+PCLExtensions.m in Sources */,
-				E54091EC2977A2E3CF376EB8 /* UIColor+PCLExtensions.m in Sources */,
-				92C84B957C86D46F6C97A148 /* UIDevice+PCLExtensions.m in Sources */,
-				B52DCB88DA58A274D75458B1 /* UIImage+PCLExtensions.m in Sources */,
-				E60AC4EC2DF4B1E5A4E23129 /* UIView+PCLExtensions.m in Sources */,
-				913E0F0B1CBB15ABA246AF42 /* UIViewConroller+PCLExtensions.m in Sources */,
+				52056DA5D2CF49A7CDF1F09DF37FE687 /* NSArray+PCLExtensions.m in Sources */,
+				4142F5D3D56E906645C191D378DCBE97 /* NSData+PCLExtensions.m in Sources */,
+				F29AC12519C091DE595935E08FC96AE1 /* NSDate+PCLExtensions.m in Sources */,
+				5842ACD49757C6E6B5518B28D9B45F3B /* NSError+PCLExtensions.m in Sources */,
+				32F5E9FC2FFAA51AAC85CA779B94D0D2 /* NSNotificationCenter+PCLExtensions.m in Sources */,
+				7B48D35AF27AD01F540AD0729127F045 /* NSObject+PCLExtensions.m in Sources */,
+				DAF71844C3200436185A91577629097C /* NSString+PCLExtensions.m in Sources */,
+				C79CEB2EC36D98A9552F549911E58378 /* NSURL+PCLExtensions.m in Sources */,
+				5C060F273FE4D2DFCE97C1CF93BFBA23 /* NSURLRequest+PCLExtensions.m in Sources */,
+				F5513427C703871E15107AFFBF8BC7C9 /* PCLBackgroundTaskHandler.m in Sources */,
+				1B52AF3BDDE79E25505C8EC880EABE6F /* PCLRestCommand.m in Sources */,
+				BF15197AB262CCAA4EEAC8B2E3E783EB /* PCLTransitionAnimatorConstants.m in Sources */,
+				3094C49215D8B559C8212BD50A69588A /* PLCCrossFadeTransitionAnimator.m in Sources */,
+				0434678B93AE66A57112C5D8EAE105DF /* PLCHorizontalSlideTransitionAnimator.m in Sources */,
+				B361131C1A1B30610CB3133FD0AA5984 /* PublicCodeLibrary-dummy.m in Sources */,
+				FB17C75C6F1F6137F77B8E0D4C173366 /* UIApplication+PCLExtensions.m in Sources */,
+				274EA9123A8D840BE8E1C59330D86A2F /* UIColor+PCLExtensions.m in Sources */,
+				49314F1D199B5E891A0A25649CC3B378 /* UIDevice+PCLExtensions.m in Sources */,
+				716BBB3D9974439702BC980B90E64137 /* UIImage+PCLExtensions.m in Sources */,
+				E5E1505ACECBBBE6422B237D25E5C00E /* UIView+PCLExtensions.m in Sources */,
+				DF39166AE787184C3E836C742FDBD992 /* UIViewConroller+PCLExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6419C651CABE0664FF624231 /* Sources */ = {
+		110282127A346B86AD9E550580360EC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1CCAD49E68E0C60BB832E3 /* Pods-Gazz-dummy.m in Sources */,
+				0C2F6551C93C100A2A6F5D03A69A0A59 /* Pods-Gazz-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E052D320E3B778B76D8393E0BAFE0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */,
+				1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4C8A103445F287FB53AAB15B18D97F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065326B5EECB12BDC90F3CA84EB32811 /* FileResource.swift in Sources */,
+				D3AF33AA94A2ECBBD73950828FF432BF /* FontResource.swift in Sources */,
+				06869031F02D08B45FEC067C846EE92D /* Identifier.swift in Sources */,
+				814D86581EF4F884393CBF3FB993ED54 /* ImageResource.swift in Sources */,
+				1AD2D9A1F67A270872048F9B180BD096 /* NibResource+UIKit.swift in Sources */,
+				C8C5F45B723590DE1449910C27B1CAA0 /* NibResource.swift in Sources */,
+				61A9789BE696CBECDFF79E69C20C56CB /* NSBundle+FileResource.swift in Sources */,
+				D865D971E68678178B4F1A3EFAF80F43 /* R.swift.Library-dummy.m in Sources */,
+				DE2AF2AF0C9EE121BB118EE577711293 /* ReuseIdentifierProtocol.swift in Sources */,
+				321DEE8CAA96ACBDCE604BCBE9FCA08A /* StoryboardResource.swift in Sources */,
+				8ED5B1F1F242B47D9E08E77586F6CA1A /* StoryboardResourceWithInitialController+UIKit.swift in Sources */,
+				DB4786B5DFBD0393B3D6737D5A7A3F91 /* StoryboardSegueIdentifierProtocol.swift in Sources */,
+				849689D5DC44FB03B8A108AF03540030 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */,
+				BE8272AA53DF72339CB5C3901A33992C /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */,
+				91BAAAE8726605863CDE843DCDF7780A /* UIFont+FontResource.swift in Sources */,
+				DA0A4C84C98A061E9A220EA389F00112 /* UIImage+ImageResource.swift in Sources */,
+				95E4E319C1E7AB0B6183B75C84E79D27 /* UINib+NibResource.swift in Sources */,
+				13F49425FC7895F28BCC96AD9E30BEA8 /* UIStoryboard+StoryboardResource.swift in Sources */,
+				2363D74E9196ED1EC99DE155D5DC20E5 /* UITableView+ReuseIdentifierProtocol.swift in Sources */,
+				1E442305F19E0AE618B25EFEB804AE14 /* UIViewController+NibResource.swift in Sources */,
+				7083EC51C0A2D637A723FB2E046373AC /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */,
+				31AA5CB5E75B55E0B8DD7AB1CB8041FE /* Validatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C32978935354CD426FD9F939 /* PBXTargetDependency */ = {
+		2BC05A3AFBE60C938419CDEF9756C584 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-Gazz-PublicCodeLibrary";
-			target = ACC13E70A1139D576224FAAC /* Pods-Gazz-PublicCodeLibrary */;
-			targetProxy = 6FEDC115F49D2B7FC17454A4 /* PBXContainerItemProxy */;
+			name = PublicCodeLibrary;
+			target = 667A85585BB129C17DE5B32A8FB5E617 /* PublicCodeLibrary */;
+			targetProxy = BC82DA8F07A07A67BE8C697EECCF345B /* PBXContainerItemProxy */;
+		};
+		C029439301B922733032BD9275EE8B6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = 01E23CC59ACD2599E43FB03284569186 /* PBXContainerItemProxy */;
+		};
+		FDA6AF0314B6FE56977569E3C442F624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = R.swift.Library;
+			target = 1FBA1061C7509D9206DD96625F27D662 /* R.swift.Library */;
+			targetProxy = 4DEE48AC18FDFF0F7E24D9072A4EBDEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2FB45430AAC68955E8C596BE /* Release */ = {
+		0D043A3BE409E3147095890ABDBECC40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0C17205CF6C6D206098CD3BCCC247C /* PublicCodeLibrary.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		75EDA423A36A127DEE5ED6BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */;
-			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Gazz-PublicCodeLibrary/Pods-Gazz-PublicCodeLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Target Support Files/PublicCodeLibrary/PublicCodeLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PublicCodeLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PublicCodeLibrary/PublicCodeLibrary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PublicCodeLibrary;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		89F0712C3CB80F7B82E3F886 /* Release */ = {
+		120BA59D434B86EB93008F8C92D06BEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E983F7CA589B09B50B255B4B /* Pods-Gazz.release.xcconfig */;
+			baseConfigurationReference = C677C31E5996F5B270F132CFF7FDEEAE /* Pods-Gazz.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gazz/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gazz/Pods-Gazz.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Gazz;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A12C1AE4F4CCA35BC0F38AE90629255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B735FCEE31AC6DEC99CD1CA6448EDA5 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7224AD649174A88C25AF79BCC0C24B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B735FCEE31AC6DEC99CD1CA6448EDA5 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		CF50C9240CA5D2EB83C173A3 /* Debug */ = {
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -528,76 +939,208 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		EF2DE23066D3BB96D454E434 /* Debug */ = {
+		A73BABE63CD0C543937E3FA19B35744A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88C8558ED3A2E0CB94D58A74 /* Pods-Gazz.debug.xcconfig */;
+			baseConfigurationReference = 02296FB8DBA84FF6E8E9EC5AA117C71E /* R.swift.Library.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "Target Support Files/R.swift.Library/R.swift.Library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/R.swift.Library/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/R.swift.Library/R.swift.Library.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Rswift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		F6DB9E67789C64CD0645E383 /* Debug */ = {
+		B7B7EFC1DE15233CA25585EB4A3B4496 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 162603714029648A7571E142 /* Pods-Gazz-PublicCodeLibrary-Private.xcconfig */;
+			baseConfigurationReference = 02296FB8DBA84FF6E8E9EC5AA117C71E /* R.swift.Library.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Gazz-PublicCodeLibrary/Pods-Gazz-PublicCodeLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Target Support Files/R.swift.Library/R.swift.Library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/R.swift.Library/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/R.swift.Library/R.swift.Library.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Rswift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
+		};
+		BA9AC029A4A26A79BBEB98A0E8EBBD54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0C17205CF6C6D206098CD3BCCC247C /* PublicCodeLibrary.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PublicCodeLibrary/PublicCodeLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PublicCodeLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PublicCodeLibrary/PublicCodeLibrary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PublicCodeLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C91D53CC6D5F074F47947D146F3C9905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DA0024CC9CE63AFAAC14E384D414C3 /* Pods-Gazz.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gazz/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gazz/Pods-Gazz.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Gazz;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56B0598D85ECB33A1350E90B /* Build configuration list for PBXNativeTarget "Pods-Gazz" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF2DE23066D3BB96D454E434 /* Debug */,
-				89F0712C3CB80F7B82E3F886 /* Release */,
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58CD79F5F7181B41434BE6EF /* Build configuration list for PBXProject "Pods" */ = {
+		49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF50C9240CA5D2EB83C173A3 /* Debug */,
-				2FB45430AAC68955E8C596BE /* Release */,
+				6A12C1AE4F4CCA35BC0F38AE90629255 /* Debug */,
+				7224AD649174A88C25AF79BCC0C24B68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C40391DF64061C807E0C297 /* Build configuration list for PBXNativeTarget "Pods-Gazz-PublicCodeLibrary" */ = {
+		D61D2E41FAF15A805DFE3BA2EAF002C5 /* Build configuration list for PBXNativeTarget "R.swift.Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6DB9E67789C64CD0645E383 /* Debug */,
-				75EDA423A36A127DEE5ED6BC /* Release */,
+				A73BABE63CD0C543937E3FA19B35744A /* Debug */,
+				B7B7EFC1DE15233CA25585EB4A3B4496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E764A53134CCE88CBB2FFA113A7E3FC4 /* Build configuration list for PBXNativeTarget "PublicCodeLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D043A3BE409E3147095890ABDBECC40 /* Debug */,
+				BA9AC029A4A26A79BBEB98A0E8EBBD54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB602BD8B75E40B8F581544ABCC41434 /* Build configuration list for PBXNativeTarget "Pods-Gazz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120BA59D434B86EB93008F8C92D06BEF /* Debug */,
+				C91D53CC6D5F074F47947D146F3C9905 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 35B854528780F1B9AEA7C89D /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }
