@@ -20,9 +20,12 @@ class RecordListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set up swipe to delete
         tableView.allowsMultipleSelectionDuringEditing = false
+        
+        // Enable editing
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -49,7 +52,6 @@ class RecordListViewController: UITableViewController {
                 // A table cell has been selected
                 let record = records[indexPath.row]
                 recordDetailViewController.recordKey = record.key
-                recordDetailViewController.isEditMode = true
             } else {
                 // The add button has been pressed
             }

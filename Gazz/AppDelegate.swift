@@ -21,6 +21,9 @@
 // TODO: Convert Pictures to b&w images to save space
 // TODO: Offer to crop image to save space
 // TODO: OCR mileage in the car via camera
+// TODO: Implement NSNumberFormatter and reduce to 1 textfield for currency: http://stackoverflow.com/questions/276382/what-is-the-best-way-to-enter-numeric-values-with-decimal-points
+// TODO: Toggle Edit/Save depending on mode you are in
+// TODO: Make a login screen
 
 
 

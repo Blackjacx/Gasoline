@@ -18,6 +18,7 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     @IBOutlet private weak var kilometerAmountLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var datePicker: UIDatePicker!
+    
     @IBOutlet private weak var totalCostsEuroTextField: UITextField!
     @IBOutlet private weak var totalCostsCentTextField: UITextField!
     @IBOutlet private weak var pricePerLiterEuroTextField: UITextField!
@@ -28,24 +29,73 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     @IBOutlet private weak var noteTextField: UITextField!
     // Div
     var textFieldList: NSArray?
-    var recordKey: String?
-    var isEditMode: Bool = false {
+    var recordKey: String? {
         didSet {
-            
+            guard let recordKey = recordKey else {
+                return
+            }
+            if let concreteRecordHandle = firebaseConcreteRecordHandle {
+                firebaseConcreteRecordRef?.removeObserverWithHandle(concreteRecordHandle)
+            }
+            firebaseConcreteRecordRef = Firebase(url: FireBaseURL.recordKey(recordKey))
+            firebaseConcreteRecordHandle = firebaseConcreteRecordRef!.observeEventType(.Value, withBlock: { snapshot in
+                if let record = Record(snapshot: snapshot) {
+                    self.updateWithRecord(record)
+                }
+            })
         }
     }
     // Private 
     private let firebaseRecordRef = Firebase(url: FireBaseURL.kRecordURL)
+    private var firebaseConcreteRecordRef: Firebase?
+    private var firebaseConcreteRecordHandle: UInt?
+    private lazy var textFieldFormatter: NSNumberFormatter = {
+        let formatter = NSNumberFormatter()
+        formatter.roundingMode = .RoundFloor
+        formatter.decimalSeparator = ""
+        formatter.groupingSeparator = "."
+        return formatter
+    }()
     
+    
+    deinit {
+        if let concreteRecordHandle = firebaseConcreteRecordHandle {
+            firebaseConcreteRecordRef?.removeObserverWithHandle(concreteRecordHandle)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.textFieldList = [self.totalCostsEuroTextField!, self.totalCostsCentTextField!, self.pricePerLiterEuroTextField!, self.pricePerLiterCentTextField!, self.literAmountLiterTextField!, self.literAmountCentiliterTextField!, self.kilometerAmountTextField!]
+        self.textFieldList = [self.totalCostsEuroTextField, self.totalCostsCentTextField, self.pricePerLiterEuroTextField, self.pricePerLiterCentTextField, self.literAmountLiterTextField, self.literAmountCentiliterTextField, self.kilometerAmountTextField, self.noteTextField]
         
-        self.datePicker?.maximumDate = NSDate()
-        self.datePickerDidFinish(self.datePicker!)
+        self.datePickerDidFinish(self.datePicker)
     }
     
+    func updateWithRecord(record: Record) {
+        textFieldFormatter.maximumFractionDigits = 0
+        
+        totalCostsEuroTextField.text = textFieldFormatter.stringFromNumber(record.totalCosts)
+        pricePerLiterEuroTextField.text = textFieldFormatter.stringFromNumber(record.pricePerLiter)
+        literAmountLiterTextField.text = textFieldFormatter.stringFromNumber(record.fuelAmount)
+        kilometerAmountTextField.text = textFieldFormatter.stringFromNumber(record.mileage)
+        
+        textFieldFormatter.maximumIntegerDigits = 0
+        textFieldFormatter.minimumFractionDigits = 2
+        textFieldFormatter.maximumFractionDigits = 2
+        
+        totalCostsCentTextField.text = textFieldFormatter.stringFromNumber(record.totalCosts)
+        literAmountCentiliterTextField.text = textFieldFormatter.stringFromNumber(record.fuelAmount)
+        
+        textFieldFormatter.minimumFractionDigits = 3
+        textFieldFormatter.maximumFractionDigits = 3
+        
+        pricePerLiterCentTextField.text = textFieldFormatter.stringFromNumber(record.pricePerLiter)
+        
+        noteTextField.text = record.note
+        datePicker.date = record.creationDate
+        
+        self.datePickerDidFinish(self.datePicker)
+    }
     
     // MARK: - Actions
     
@@ -72,6 +122,28 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
         })
     }
     
+    @IBAction func textFieldEditingChanged(textField: UITextField) {
+//        if (textField == totalCostsEuroTextField) {
+//            return newLength <= 4
+//            textField.text = textFieldFormatter.string
+//        } else if (textField == totalCostsCentTextField) {
+//            return newLength <= 2
+//        } else if (textField == pricePerLiterEuroTextField) {
+//            return newLength <= 1
+//        } else if (textField == pricePerLiterCentTextField) {
+//            return newLength <= 3
+//        } else if (textField == literAmountLiterTextField) {
+//            return newLength <= 4
+//        } else if (textField == literAmountCentiliterTextField) {
+//            return newLength <= 2
+//        } else if (textField == kilometerAmountTextField) {
+//            return newLength <= 7
+//        } else if (textField == noteTextField) {
+//        } else {
+//            assert(false, "unknown text field: <\(textField)>: \(textField.text)")
+//        }
+    }
+    
     
     // MARK: - UITextFieldDelegate
     
@@ -91,6 +163,11 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if (textField == noteTextField) {
+            return true
+        }
+        
         // Rejects non digits - useful if the user copy and pastes...
         let nonDigitsCharacterSet = NSCharacterSet.decimalDigitCharacterSet().invertedSet
         if let range = string.rangeOfCharacterFromSet(nonDigitsCharacterSet) where !range.isEmpty {

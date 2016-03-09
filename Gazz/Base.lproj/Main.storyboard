@@ -14,12 +14,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="aDW-cQ-qKM" userLabel="Footer">
+                            <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordListCell" textLabel="kaH-H1-Xk7" detailTextLabel="rNF-eA-aGS" imageView="Dmo-dm-wWV" style="IBUITableViewCellStyleSubtitle" id="HFt-dq-A94">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecordListCell" textLabel="kaH-H1-Xk7" detailTextLabel="rNF-eA-aGS" imageView="Dmo-dm-wWV" style="IBUITableViewCellStyleSubtitle" id="HFt-dq-A94">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HFt-dq-A94" id="k4N-Rd-BjG">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kaH-H1-Xk7">
@@ -95,24 +100,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxxx" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4a0-cm-ifs">
-                                <rect key="frame" x="105" y="72" width="395.5" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_ . _ _ _" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4a0-cm-ifs">
+                                <rect key="frame" x="105" y="72" width="391.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="gnd-eT-A3r"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="beI-lC-OmM"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xx" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paa-ec-hmM">
-                                <rect key="frame" x="505.5" y="72" width="43" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_ _" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paa-ec-hmM">
+                                <rect key="frame" x="501.5" y="72" width="47" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="7tg-Mx-8Qs"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="E1j-wP-Xba"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-tL-Fu5">
-                                <rect key="frame" x="500.5" y="72" width="5" height="30"/>
+                                <rect key="frame" x="496.5" y="72" width="5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -133,24 +140,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="x" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTC-4h-w2n">
-                                <rect key="frame" x="105" y="110" width="395.5" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTC-4h-w2n">
+                                <rect key="frame" x="105" y="110" width="391.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Qua-Cg-rgh"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zFs-ze-Dqf"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxx" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-a7-Wra">
-                                <rect key="frame" x="505.5" y="110" width="43" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_ _ _" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-a7-Wra">
+                                <rect key="frame" x="501.5" y="110" width="47" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="XHt-Uw-dg1"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="MVl-a0-MFe"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFY-be-DAo">
-                                <rect key="frame" x="500.5" y="110" width="5" height="30"/>
+                                <rect key="frame" x="496.5" y="110" width="5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -170,24 +179,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxxx" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LeH-1R-RAW">
-                                <rect key="frame" x="105" y="148" width="395.5" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_ . _ _ _" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LeH-1R-RAW">
+                                <rect key="frame" x="105" y="148" width="391.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="2iG-mn-Wpc"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Fl7-PC-19v"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xx" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3KF-kw-a4V">
-                                <rect key="frame" x="505.5" y="148" width="43" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_ _" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3KF-kw-a4V">
+                                <rect key="frame" x="501.5" y="148" width="47" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="fiV-yQ-Hz9"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XB6-Fb-ljT"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxm-YU-DKq">
-                                <rect key="frame" x="500.5" y="148" width="5" height="30"/>
+                                <rect key="frame" x="496.5" y="148" width="5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,11 +218,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="x.xxx.xxx" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Saj-GN-Peq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_ . _ _ _ . _ _ _" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Saj-GN-Peq">
                                 <rect key="frame" x="105" y="186" width="443.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Quc-pG-lQk"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="UeA-S2-gLy"/>
                                 </connections>
                             </textField>
@@ -240,9 +252,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ar7-rS-6xJ">
-                                <rect key="frame" x="105" y="224" width="475" height="30"/>
+                                <rect key="frame" x="105" y="224" width="443.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="la3-HO-0eg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tDK-Zc-6I5"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%date%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWI-hc-SJ2">
                                 <rect key="frame" x="20" y="478" width="560" height="20.5"/>
@@ -254,9 +270,6 @@
                                 <rect key="frame" x="0.0" y="254" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="464220280.948955">
                                     <!--2015-09-17 22:04:40 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
-                                    <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                                 <connections>
                                     <action selector="datePickerDidFinish:" destination="BYZ-38-t0r" eventType="valueChanged" id="4sw-ai-QQq"/>
@@ -277,7 +290,6 @@
                             <constraint firstItem="TEn-o6-VaN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9FV-uI-Xf9"/>
                             <constraint firstItem="hbk-qx-id3" firstAttribute="top" secondItem="hRY-fT-z1I" secondAttribute="top" id="A6I-Ur-Vb4"/>
                             <constraint firstItem="QaD-7a-MJC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AFZ-xs-RYT"/>
-                            <constraint firstItem="QTd-Lq-pZk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BHv-6S-78i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ar7-rS-6xJ" secondAttribute="trailing" id="BIY-iz-Vjv"/>
                             <constraint firstItem="4a0-cm-ifs" firstAttribute="leading" secondItem="1qa-gq-ncU" secondAttribute="trailing" constant="8" symbolic="YES" id="DbP-ro-5dg"/>
                             <constraint firstItem="lFY-be-DAo" firstAttribute="top" secondItem="QaD-7a-MJC" secondAttribute="top" id="EW5-z2-SyX"/>
@@ -291,13 +303,11 @@
                             <constraint firstItem="paa-ec-hmM" firstAttribute="height" secondItem="4a0-cm-ifs" secondAttribute="height" id="LQj-hJ-mW4"/>
                             <constraint firstItem="LeH-1R-RAW" firstAttribute="top" secondItem="hRY-fT-z1I" secondAttribute="top" id="Lj7-Ug-iRa"/>
                             <constraint firstItem="Saj-GN-Peq" firstAttribute="top" secondItem="hKU-wf-IN0" secondAttribute="top" id="M3Y-Ou-xgh"/>
-                            <constraint firstAttribute="trailing" secondItem="QTd-Lq-pZk" secondAttribute="trailing" id="Mrv-Sy-v7e"/>
                             <constraint firstItem="hRY-fT-z1I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MsE-Uz-XcQ"/>
                             <constraint firstItem="Saj-GN-Peq" firstAttribute="height" secondItem="hKU-wf-IN0" secondAttribute="height" id="Ope-oU-nkj"/>
                             <constraint firstItem="Qxm-YU-DKq" firstAttribute="leading" secondItem="LeH-1R-RAW" secondAttribute="trailing" id="P2r-Td-dJV"/>
                             <constraint firstItem="hbk-qx-id3" firstAttribute="width" secondItem="HZA-u4-rpL" secondAttribute="width" id="RYs-vf-j6G"/>
                             <constraint firstItem="0pj-sb-Sst" firstAttribute="width" secondItem="HZA-u4-rpL" secondAttribute="width" id="ReL-IG-wOW"/>
-                            <constraint firstItem="1qa-gq-ncU" firstAttribute="top" secondItem="QTd-Lq-pZk" secondAttribute="bottom" constant="8" id="SmV-5x-zH2"/>
                             <constraint firstItem="0pj-sb-Sst" firstAttribute="leading" secondItem="v6T-a7-Wra" secondAttribute="trailing" constant="8" id="T2i-0b-SZq"/>
                             <constraint firstItem="pu2-AF-Ptc" firstAttribute="top" secondItem="hKU-wf-IN0" secondAttribute="top" id="UU4-7g-wz7"/>
                             <constraint firstItem="4a0-cm-ifs" firstAttribute="height" secondItem="1qa-gq-ncU" secondAttribute="height" id="UcS-cQ-BmW"/>
@@ -309,6 +319,7 @@
                             <constraint firstItem="QTd-Lq-pZk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aQh-Q8-jJh"/>
                             <constraint firstItem="0pj-sb-Sst" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bqY-OS-hVs"/>
                             <constraint firstItem="QTd-Lq-pZk" firstAttribute="top" secondItem="Ar7-rS-6xJ" secondAttribute="bottom" id="c01-sO-Npo"/>
+                            <constraint firstItem="Ar7-rS-6xJ" firstAttribute="trailing" secondItem="Saj-GN-Peq" secondAttribute="trailing" id="cNg-9B-hHo"/>
                             <constraint firstItem="LeH-1R-RAW" firstAttribute="width" secondItem="4a0-cm-ifs" secondAttribute="width" id="dWU-tG-F5R"/>
                             <constraint firstItem="v6T-a7-Wra" firstAttribute="width" secondItem="paa-ec-hmM" secondAttribute="width" id="e67-Qv-QoC"/>
                             <constraint firstItem="LeH-1R-RAW" firstAttribute="leading" secondItem="hRY-fT-z1I" secondAttribute="trailing" constant="8" symbolic="YES" id="eLN-sI-qe8"/>
@@ -322,7 +333,6 @@
                             <constraint firstItem="paa-ec-hmM" firstAttribute="leading" secondItem="PyK-tL-Fu5" secondAttribute="trailing" id="m4o-bM-nr3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jWI-hc-SJ2" secondAttribute="trailing" id="mTE-zJ-9y0"/>
                             <constraint firstItem="QaD-7a-MJC" firstAttribute="top" secondItem="1qa-gq-ncU" secondAttribute="bottom" constant="8" symbolic="YES" id="mub-8x-nUY"/>
-                            <constraint firstItem="QTd-Lq-pZk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ng0-mO-HXf"/>
                             <constraint firstItem="3KF-kw-a4V" firstAttribute="width" secondItem="v6T-a7-Wra" secondAttribute="width" id="oGq-el-SYw"/>
                             <constraint firstItem="pu2-AF-Ptc" firstAttribute="width" secondItem="HZA-u4-rpL" secondAttribute="width" id="obR-30-wRY"/>
                             <constraint firstItem="pu2-AF-Ptc" firstAttribute="leading" secondItem="Saj-GN-Peq" secondAttribute="trailing" constant="8" id="pBX-iD-6zE"/>
@@ -350,10 +360,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="SmV-5x-zH2"/>
-                                <exclude reference="BHv-6S-78i"/>
-                                <exclude reference="Mrv-Sy-v7e"/>
-                                <exclude reference="ng0-mO-HXf"/>
+                                <exclude reference="BIY-iz-Vjv"/>
                             </mask>
                         </variation>
                         <connections>
