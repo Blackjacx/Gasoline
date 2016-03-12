@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-struct Record {
+class Record {
     
     struct JSON {
         static let creationDate = "creationDate"
@@ -31,41 +31,49 @@ struct Record {
     
     // Initialize from arbitrary data
     init?(creationDate: NSDate, totalCosts: String, pricePerLiter: String, fuelAmount: String, mileage: String, note: String = "", key: String = "") {
-        guard let totalCosts = Double(totalCosts),
-            let pricePerLiter = Double(pricePerLiter),
-            let fuelAmount = Double(fuelAmount),
-            let mileage = Int(mileage) else {
-            return nil
-        }
+        
+        let oTotalCosts = Double(totalCosts)
+        let oPricePerLiter = Double(pricePerLiter)
+        let oFuelAmount = Double(fuelAmount)
+        let oMileage = Int(mileage)
+        
         self.key = key
         self.creationDate = creationDate
-        self.totalCosts = totalCosts
-        self.pricePerLiter = pricePerLiter
-        self.fuelAmount = fuelAmount
-        self.mileage = mileage
+        self.totalCosts = oTotalCosts ?? 0.0
+        self.pricePerLiter = oPricePerLiter ?? 0.0
+        self.fuelAmount = oFuelAmount ?? 0.0
+        self.mileage = oMileage ?? 0
         self.note = note
         self.ref = nil
+        
+        if (oTotalCosts == nil) || (oPricePerLiter == nil) || (oFuelAmount == nil) || (oMileage == nil) {
+            return nil
+        }
     }
     
     init?(snapshot: FDataSnapshot) {
-        guard let key = snapshot.key,
-            let creationDate = snapshot.value[JSON.creationDate] as? String,
-            let totalCosts = snapshot.value[JSON.totalCosts] as? Double,
-            let pricePerLiter = snapshot.value[JSON.pricePerLiter] as? Double,
-            let fuelAmount = snapshot.value[JSON.fuelAmount] as? Double,
-            let mileage = snapshot.value[JSON.mileage] as? Int,
-            let note = snapshot.value[JSON.note] as? String,
-            let ref = snapshot.ref else {
-                return nil
-        }
+        let key = snapshot.key
+        let ref = snapshot.ref
+        
+        let oCreationDate = snapshot.value[JSON.creationDate] as? String
+        let oTotalCosts = snapshot.value[JSON.totalCosts] as? Double
+        let oPricePerLiter = snapshot.value[JSON.pricePerLiter] as? Double
+        let oFuelAmount = snapshot.value[JSON.fuelAmount] as? Double
+        let oMileage = snapshot.value[JSON.mileage] as? Int
+        let oNote = snapshot.value[JSON.note] as? String
+        
         self.key = key
-        self.creationDate = FLCDateFormatter.dateFromString(creationDate, usingFormat: FLCDateFormat.RFC3339)!
-        self.totalCosts = totalCosts
-        self.pricePerLiter = pricePerLiter
-        self.fuelAmount = fuelAmount
-        self.mileage = mileage
-        self.note = note
         self.ref = ref
+        self.creationDate = FLCDateFormatter.dateFromString(oCreationDate, usingFormat: FLCDateFormat.RFC3339)!
+        self.totalCosts = oTotalCosts ?? 0.0
+        self.pricePerLiter = oPricePerLiter ?? 0.0
+        self.fuelAmount = oFuelAmount ?? 0.0
+        self.mileage = oMileage ?? 0
+        self.note = oNote ?? ""
+        
+        if (oCreationDate == nil) || (oTotalCosts == nil) || (oPricePerLiter == nil) || (oFuelAmount == nil) || (oMileage == nil) || (oNote == nil) {
+            return nil
+        }
     }
     
     func toAnyObject() -> AnyObject {

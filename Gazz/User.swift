@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-struct User {
+class User {
     
     struct JSON {
         static let email = "email"
@@ -20,11 +20,14 @@ struct User {
     
     // Initialize from Firebase
     init?(authData: FAuthData) {
-        guard let email = authData.providerData[JSON.email] as? String else {
+        let oEmail = authData.providerData[JSON.email] as? String
+
+        email = oEmail ?? ""
+        uid = authData.uid
+
+        if (oEmail == nil) || uid.isEmpty {
             return nil
         }
-        self.uid = authData.uid
-        self.email = email
     }
     
     // Initialize from arbitrary data

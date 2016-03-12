@@ -77,8 +77,9 @@ class RecordListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.recordListCell, forIndexPath: indexPath)
         let record = records[indexPath.row]
         
-        cell!.textLabel?.text = String(format: NSLocalizedString("gz.recordListViewController.listCellTitle.format", comment:"Title format of the cells displaying a record."), record.fuelAmount, record.totalCosts)
-        cell!.detailTextLabel?.text = FLCDateFormatter.stringFromDate(record.creationDate, usingFormat: FLCDateFormat.ShortTime_ShortDate)
+        cell!.textLabel?.text = FLCDateFormatter.stringFromDate(record.creationDate, usingFormat: FLCDateFormat.ShortTime_ShortDate)
+        
+        cell!.detailTextLabel?.text = String(format: NSLocalizedString("gz.recordListViewController.listCellTitle.format", comment:"Title format of the cells displaying a record."), record.fuelAmount, record.totalCosts)
         
         return cell!
     }

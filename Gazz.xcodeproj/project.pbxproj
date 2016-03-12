@@ -13,11 +13,11 @@
 		B92B62261C8F542C00790D3B /* RecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B62251C8F542C00790D3B /* RecordListViewController.swift */; };
 		B92B622A1C8F572300790D3B /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B62291C8F572300790D3B /* Record.swift */; };
 		B92B622C1C8F573800790D3B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B622B1C8F573800790D3B /* User.swift */; };
-		B92B62331C8F69BE00790D3B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B62321C8F69BE00790D3B /* R.generated.swift */; };
 		B92B623A1C8F716B00790D3B /* FLCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B62391C8F716B00790D3B /* FLCDateFormatter.m */; };
 		B92B624C1C8F815D00790D3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B92B624E1C8F815D00790D3B /* Localizable.strings */; };
 		B9302F531BAB6F5B00CE9CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9302F511BAB6F5B00CE9CC4 /* Main.storyboard */; };
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
+		B933030A1C939D320099936C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93303091C939D320099936C /* R.generated.swift */; };
 		B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F8ED1C7A327C008C66E5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,6 @@
 		B92B62251C8F542C00790D3B /* RecordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordListViewController.swift; sourceTree = "<group>"; };
 		B92B62291C8F572300790D3B /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		B92B622B1C8F573800790D3B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B92B62321C8F69BE00790D3B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B92B62381C8F716B00790D3B /* FLCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCDateFormatter.h; sourceTree = "<group>"; };
 		B92B62391C8F716B00790D3B /* FLCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCDateFormatter.m; sourceTree = "<group>"; };
 		B92B624D1C8F815D00790D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		B9302F521BAB6F5B00CE9CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9302F591BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B93303091C939D320099936C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CD95A33EF559F402953F1103 /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gazz/Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +77,7 @@
 		B92B622E1C8F576600790D3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B92B62321C8F69BE00790D3B /* R.generated.swift */,
+				B93303091C939D320099936C /* R.generated.swift */,
 				B92B62221C8F534300790D3B /* Gazz-Bridging-Header.h */,
 				B9302F511BAB6F5B00CE9CC4 /* Main.storyboard */,
 				B9302F591BAB6F5B00CE9CC4 /* Info.plist */,
@@ -241,7 +241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Gazz\"";
 		};
 		EFA0A780CCDA0DEBC1C85035 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -266,9 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B911C7A91BDC5A4900016B85 /* AppDelegate.swift in Sources */,
-				B92B62331C8F69BE00790D3B /* R.generated.swift in Sources */,
 				B92B62261C8F542C00790D3B /* RecordListViewController.swift in Sources */,
 				B92B622C1C8F573800790D3B /* User.swift in Sources */,
+				B933030A1C939D320099936C /* R.generated.swift in Sources */,
 				B92B623A1C8F716B00790D3B /* FLCDateFormatter.m in Sources */,
 				B92B622A1C8F572300790D3B /* Record.swift in Sources */,
 				B911C7E51BDC5E5500016B85 /* RecordDetailViewController.swift in Sources */,

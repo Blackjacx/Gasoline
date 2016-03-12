@@ -6,14 +6,14 @@
 //  Copyright © 2015 Stefan Herold. All rights reserved.
 //
 
-// BUGS
+// IMPROVEMENTS
 // TODO: Save the date with a standardized time 12:00 afternoon
 // TODO: put a next/done button on the num keypad
 // TODO: Make fonts dark gray: 30, 60, ...
 // TODO: Realize Datepicker as seperate View and show it from below on button press.
 // TODO: Check the Date 22:00 after changing dateii
-// TODO: Integrate an advanced date formatter class
-// TODO: Make a replacement for NSUsewrdefaults that stores all frefixes all keys
+// TODO: Integrate an advanced date formatter class and a relative date/time format on dashboard
+// TODO: Make a replacement for NSUsewrdefaults that stores all frefixes all keys (PLCDataPersistor)
 
 // FEATURES
 // TODO: Taking Picture of the bill
