@@ -11,20 +11,8 @@
 /* Class = "UILabel"; text = "Gesamtpreis"; ObjectID = "1qa-gq-ncU"; */
 "1qa-gq-ncU.text" = "Gesamtpreis";
 
-/* Class = "UITextField"; placeholder = "xx"; ObjectID = "3KF-kw-a4V"; */
-"3KF-kw-a4V.placeholder" = "_ _";
-
-/* Class = "UITextField"; placeholder = "xxxx"; ObjectID = "4a0-cm-ifs"; */
-"4a0-cm-ifs.placeholder" = "_ . _ _ _";
-
-/* Class = "UITextField"; placeholder = "x"; ObjectID = "FTC-4h-w2n"; */
-"FTC-4h-w2n.placeholder" = "_";
-
 /* Class = "UILabel"; text = "€"; ObjectID = "HZA-u4-rpL"; */
 "HZA-u4-rpL.text" = "€";
-
-/* Class = "UITextField"; placeholder = "xxxx"; ObjectID = "LeH-1R-RAW"; */
-"LeH-1R-RAW.placeholder" = "_ . _ _ _";
 
 /* Class = "UILabel"; text = "."; ObjectID = "PyK-tL-Fu5"; */
 "PyK-tL-Fu5.text" = ".";
@@ -34,9 +22,6 @@
 
 /* Class = "UILabel"; text = "."; ObjectID = "Qxm-YU-DKq"; */
 "Qxm-YU-DKq.text" = ".";
-
-/* Class = "UITextField"; placeholder = "x.xxx.xxx"; ObjectID = "Saj-GN-Peq"; */
-"Saj-GN-Peq.placeholder" = "_._ _ _._ _ _";
 
 /* Class = "UINavigationItem"; title = "Neuer Eintrag"; ObjectID = "UyO-6i-THr"; */
 "UyO-6i-THr.title" = "Neuer Eintrag";
@@ -62,14 +47,8 @@
 /* Class = "UILabel"; text = "."; ObjectID = "lFY-be-DAo"; */
 "lFY-be-DAo.text" = ".";
 
-/* Class = "UITextField"; placeholder = "xx"; ObjectID = "paa-ec-hmM"; */
-"paa-ec-hmM.placeholder" = "_ _";
-
 /* Class = "UILabel"; text = "km"; ObjectID = "pu2-AF-Ptc"; */
 "pu2-AF-Ptc.text" = "km";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "rNF-eA-aGS"; */
 "rNF-eA-aGS.text" = "Subtitle";
-
-/* Class = "UITextField"; placeholder = "xxx"; ObjectID = "v6T-a7-Wra"; */
-"v6T-a7-Wra.placeholder" = "_ _ _";

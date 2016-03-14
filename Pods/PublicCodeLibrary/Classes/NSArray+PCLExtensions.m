@@ -10,15 +10,6 @@
 
 @implementation NSArray (PCLExtensions)
 
-- (id)pcl_firstObject
-{
-    if ( [self count] == 0 ) 
-    {
-        return nil;
-    }
-    return self[0];
-}
-
 - (NSArray*)pcl_sortedWithKey:(NSString*)aKey ascending:(BOOL)sortAscending
 {
     NSSortDescriptor * const aSortDescriptor = [[NSSortDescriptor alloc]

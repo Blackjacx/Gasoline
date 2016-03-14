@@ -7,8 +7,17 @@ PODS:
 
 DEPENDENCIES:
   - Firebase
-  - PublicCodeLibrary
+  - PublicCodeLibrary (from `https://github.com/Blackjacx/PublicCodeLibrary.git`)
   - R.swift
+
+EXTERNAL SOURCES:
+  PublicCodeLibrary:
+    :git: https://github.com/Blackjacx/PublicCodeLibrary.git
+
+CHECKOUT OPTIONS:
+  PublicCodeLibrary:
+    :commit: 27894921f03c07b6e80525d626196ce7cded3cf0
+    :git: https://github.com/Blackjacx/PublicCodeLibrary.git
 
 SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085

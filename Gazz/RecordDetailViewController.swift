@@ -19,12 +19,9 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var datePicker: UIDatePicker!
     
-    @IBOutlet private weak var totalCostsEuroTextField: UITextField!
-    @IBOutlet private weak var totalCostsCentTextField: UITextField!
-    @IBOutlet private weak var pricePerLiterEuroTextField: UITextField!
-    @IBOutlet private weak var pricePerLiterCentTextField: UITextField!
-    @IBOutlet private weak var literAmountLiterTextField: UITextField!
-    @IBOutlet private weak var literAmountCentiliterTextField: UITextField!
+    @IBOutlet private weak var totalCostsTextField: UITextField!
+    @IBOutlet private weak var pricePerLiterTextField: UITextField!
+    @IBOutlet private weak var literAmountTextField: UITextField!
     @IBOutlet private weak var kilometerAmountTextField: UITextField!
     @IBOutlet private weak var noteTextField: UITextField!
     // Div
@@ -49,6 +46,7 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     private let firebaseRecordRef = Firebase(url: FireBaseURL.kRecordURL)
     private var firebaseConcreteRecordRef: Firebase?
     private var firebaseConcreteRecordHandle: UInt?
+    private let decimalSeparator = NSNumberFormatter().decimalSeparator
     private lazy var textFieldFormatter: NSNumberFormatter = {
         let formatter = NSNumberFormatter()
         formatter.roundingMode = .RoundFloor
@@ -66,7 +64,7 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.textFieldList = [self.totalCostsEuroTextField, self.totalCostsCentTextField, self.pricePerLiterEuroTextField, self.pricePerLiterCentTextField, self.literAmountLiterTextField, self.literAmountCentiliterTextField, self.kilometerAmountTextField, self.noteTextField]
+        self.textFieldList = [totalCostsTextField, pricePerLiterTextField, literAmountTextField, kilometerAmountTextField, noteTextField]
         
         self.datePickerDidFinish(self.datePicker)
     }
@@ -74,22 +72,10 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     func updateWithRecord(record: Record) {
         textFieldFormatter.maximumFractionDigits = 0
         
-        totalCostsEuroTextField.text = textFieldFormatter.stringFromNumber(record.totalCosts)
-        pricePerLiterEuroTextField.text = textFieldFormatter.stringFromNumber(record.pricePerLiter)
-        literAmountLiterTextField.text = textFieldFormatter.stringFromNumber(record.fuelAmount)
+        totalCostsTextField.text = textFieldFormatter.stringFromNumber(record.totalCosts)
+        pricePerLiterTextField.text = textFieldFormatter.stringFromNumber(record.pricePerLiter)
+        literAmountTextField.text = textFieldFormatter.stringFromNumber(record.fuelAmount)
         kilometerAmountTextField.text = textFieldFormatter.stringFromNumber(record.mileage)
-        
-        textFieldFormatter.maximumIntegerDigits = 0
-        textFieldFormatter.minimumFractionDigits = 2
-        textFieldFormatter.maximumFractionDigits = 2
-        
-        totalCostsCentTextField.text = textFieldFormatter.stringFromNumber(record.totalCosts)
-        literAmountCentiliterTextField.text = textFieldFormatter.stringFromNumber(record.fuelAmount)
-        
-        textFieldFormatter.minimumFractionDigits = 3
-        textFieldFormatter.maximumFractionDigits = 3
-        
-        pricePerLiterCentTextField.text = textFieldFormatter.stringFromNumber(record.pricePerLiter)
         
         noteTextField.text = record.note
         datePicker.date = record.creationDate
@@ -108,14 +94,13 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
     }
     
     @IBAction func pressedSave(sender: AnyObject) {
-        let sTotalCosts = totalCostsEuroTextField.text! + "." + totalCostsCentTextField.text!
-        let sPricePerLiter = pricePerLiterEuroTextField.text! + "." + pricePerLiterCentTextField.text!
-        let sFuelAmount = literAmountLiterTextField.text! + "." + literAmountCentiliterTextField.text!
-        let sMileage = kilometerAmountTextField.text!
-        let note = self.noteTextField.text!
-        guard let record = Record(creationDate: self.datePicker.date, totalCosts: sTotalCosts, pricePerLiter: sPricePerLiter, fuelAmount: sFuelAmount, mileage: sMileage, note: note) else {
-            return
-        }
+        let totalCosts = NSDecimalNumber(string: totalCostsTextField.text!)
+        let pricePerLiter = NSDecimalNumber(string: pricePerLiterTextField.text!)
+        let fuelAmount = NSDecimalNumber(string: literAmountTextField.text!)
+        let mileage = Int(kilometerAmountTextField.text!) ?? 0
+        let note = self.noteTextField.text ?? ""
+
+        let record = Record(creationDate: self.datePicker.date, totalCosts: totalCosts, pricePerLiter: pricePerLiter, fuelAmount: fuelAmount, mileage: mileage, note: note)
         let recordRef = self.firebaseRecordRef.childByAutoId()
         recordRef.setValue(record.toAnyObject(), withCompletionBlock: { (error, firebaseRef) -> Void in
             self.performSegueWithIdentifier(R.segue.recordDetailViewController.unwindToRecordList, sender: self)
@@ -168,35 +153,38 @@ class RecordDetailViewController: UIViewController, UITextFieldDelegate, UIAlert
             return true
         }
         
+        let tfText = textField.text ?? ""
+        
         // Rejects non digits - useful if the user copy and pastes...
-        let nonDigitsCharacterSet = NSCharacterSet.decimalDigitCharacterSet().invertedSet
-        if let range = string.rangeOfCharacterFromSet(nonDigitsCharacterSet) where !range.isEmpty {
+        let decimalSet = NSMutableCharacterSet.decimalDigitCharacterSet()
+        decimalSet.addCharactersInString(decimalSeparator)
+        let invertedDecimalSet = decimalSet.invertedSet
+        if let range = string.rangeOfCharacterFromSet(invertedDecimalSet) where !range.isEmpty {
             return false
         }
         
-        let currentCharacterCount = textField.text?.characters.count ?? 0
+        // Only one decimal separator is permitted
+        if (string.containsString(decimalSeparator) && tfText.containsString(decimalSeparator)) {
+            return false
+        }
+        
+        let currentCharacterCount = tfText.characters.count
         if (range.length + range.location > currentCharacterCount){
             return false
         }
         
+        // Cnstain the number of characters entered by the user
         let newLength = currentCharacterCount + string.characters.count - range.length
-        
-        if (textField == totalCostsEuroTextField) {
-            return newLength <= 4
-        } else if (textField == totalCostsCentTextField) {
-            return newLength <= 2
-        } else if (textField == pricePerLiterEuroTextField) {
-            return newLength <= 1
-        } else if (textField == pricePerLiterCentTextField) {
-            return newLength <= 3
-        } else if (textField == literAmountLiterTextField) {
-            return newLength <= 4
-        } else if (textField == literAmountCentiliterTextField) {
-            return newLength <= 2
+        if (textField == totalCostsTextField) {
+            return newLength <= 7
+        } else if (textField == pricePerLiterTextField) {
+            return newLength <= 5
+        } else if (textField == literAmountTextField) {
+            return newLength <= 7
         } else if (textField == kilometerAmountTextField) {
             return newLength <= 7
         } else {
-            assert(false, "unknown text field: <\(textField)>: \(textField.text)")
+            assert(false, "unknown text field: <\(textField)>: \(tfText)")
             return false
         }
     }

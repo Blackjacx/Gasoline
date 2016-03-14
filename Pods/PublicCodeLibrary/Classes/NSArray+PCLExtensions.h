@@ -8,7 +8,6 @@
 
 @interface NSArray (PCLExtensions)
 
-- (id)pcl_firstObject;
 - (NSArray*)pcl_sortedWithKey:(NSString*)aKey ascending:(BOOL)sortAscending;
 
 @end

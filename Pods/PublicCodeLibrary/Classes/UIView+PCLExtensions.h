@@ -21,9 +21,16 @@
 - (void)pcl_enableRoundRectWithRadius:(CGFloat)aRadius borderWidth:(CGFloat)aWidth borderColor:(UIColor*)aColor;
 
 
-#pragma mark - Finding Views
+#pragma mark - Keyboard Helper
+
++ (void)pcl_attachDoneButtonToolbarTo:(id<UITextInput>)input target:(id)target action:(SEL)action;
+
+
+
+#pragma mark - Working with Subviews
 
 - (void)pcl_recursivelyFindSubviewsOfClass:(Class)aClass storeInArray:(NSMutableArray*)array;
+- (void)addSubviewMaximized:(UIView *)view;
 
 @end
 

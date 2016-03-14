@@ -33,6 +33,10 @@
 		"or ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus"
 		" sollicitudin metus eget eros.";
 		
+    if (aLengthOrCount == 0) {
+        return @"";
+    }
+    
 	if ( NSStringLoremIpsumTypeMaxLength == aType || NSStringLoremIpsumTypeMaxWords == aType )
     {
 		// Generate a random number between 1 (!) and the max length | count
@@ -61,12 +65,12 @@
         {
 			NSMutableArray * resultingWordList = [[NSMutableArray alloc] initWithCapacity:aLengthOrCount];
 			NSArray * loremIpsumExploded = [loremIpsumBaseString componentsSeparatedByString:separationString];
-			NSUInteger loremIpsumWordCount = loremIpsumExploded.count;
+			NSUInteger wordCount = loremIpsumExploded.count;
 			
-            for (NSUInteger i=0; i<loremIpsumWordCount; i++)
+            for (NSUInteger i=0; i<aLengthOrCount; i++)
             {
 				// Modulo for the case: requested count > word count
-				[resultingWordList addObject:loremIpsumExploded[(i % loremIpsumWordCount)]];
+				[resultingWordList addObject:loremIpsumExploded[(i % wordCount)]];
 			}
 			result = [resultingWordList componentsJoinedByString:separationString];
 		}    

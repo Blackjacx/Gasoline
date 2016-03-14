@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75DD418DE54B42FE33239501 /* Pods_Gazz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8097F776996A452843D023FA /* Pods_Gazz.framework */; };
+		B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */; };
 		B911C7A91BDC5A4900016B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7A81BDC5A4900016B85 /* AppDelegate.swift */; };
 		B911C7E51BDC5E5500016B85 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7E41BDC5E5500016B85 /* RecordDetailViewController.swift */; };
 		B92B62261C8F542C00790D3B /* RecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92B62251C8F542C00790D3B /* RecordListViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		7B0D173A8C28A4AAE808FF05 /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gazz/Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
 		8097F776996A452843D023FA /* Pods_Gazz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gazz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		B911C7A81BDC5A4900016B85 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B911C7E41BDC5E5500016B85 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		B92B62221C8F534300790D3B /* Gazz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gazz-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				B936F8ED1C7A327C008C66E5 /* Constants.swift */,
 				B911C7E41BDC5E5500016B85 /* RecordDetailViewController.swift */,
 				B92B62251C8F542C00790D3B /* RecordListViewController.swift */,
+				B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */,
 				B92B62381C8F716B00790D3B /* FLCDateFormatter.h */,
 				B92B62391C8F716B00790D3B /* FLCDateFormatter.m */,
 				B92B622D1C8F573D00790D3B /* Model */,
@@ -164,6 +167,7 @@
 				TargetAttributes = {
 					B9302F441BAB6F5B00CE9CC4 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = PDX76S8JD6;
 					};
 				};
 			};
@@ -270,6 +274,7 @@
 				B92B622C1C8F573800790D3B /* User.swift in Sources */,
 				B933030A1C939D320099936C /* R.generated.swift in Sources */,
 				B92B623A1C8F716B00790D3B /* FLCDateFormatter.m in Sources */,
+				B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */,
 				B92B622A1C8F572300790D3B /* Record.swift in Sources */,
 				B911C7E51BDC5E5500016B85 /* RecordDetailViewController.swift in Sources */,
 				B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */,
@@ -385,7 +390,9 @@
 			baseConfigurationReference = 7B0D173A8C28A4AAE808FF05 /* Pods-Gazz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gazz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -401,7 +408,9 @@
 			baseConfigurationReference = CD95A33EF559F402953F1103 /* Pods-Gazz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gazz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

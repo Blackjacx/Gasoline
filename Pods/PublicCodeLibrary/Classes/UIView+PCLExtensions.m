@@ -58,7 +58,25 @@
 }
 
 
-#pragma mark - Finding Views 
++ (void)pcl_attachDoneButtonToolbarTo:(id<UITextInput>)input target:(id)target action:(SEL)action {
+    UIToolbar *toolbar = [[UIToolbar alloc] init];
+    [toolbar setBarStyle:UIBarStyleDefault];
+    [toolbar sizeToFit];
+    
+    UIBarButtonItem *flexButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
+    
+    toolbar.items = @[flexButton, doneButton];
+    
+    if([input isKindOfClass:[UITextView class]]) {
+        ((UITextView*) input).inputAccessoryView = toolbar;
+    } else if([input isKindOfClass:[UITextField class]]) {
+        ((UITextField*) input).inputAccessoryView = toolbar;
+    }
+}
+
+
+#pragma mark - Working with Subviews
 
 - (void)pcl_recursivelyFindSubviewsOfClass:(Class)aClass storeInArray:(NSMutableArray*)array {
     for (UIView *subview in self.subviews) {
@@ -69,5 +87,13 @@
     }
 }
 
+- (void)addSubviewMaximized:(UIView *)view {
+    NSDictionary *views = @{@"view":view};
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+
+    [self addSubview:view];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]|" options:kNilOptions metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[view]|" options:kNilOptions metrics:nil views:views]];
+}
 
 @end

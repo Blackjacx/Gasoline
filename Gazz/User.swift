@@ -19,15 +19,11 @@ class User {
     let email: String
     
     // Initialize from Firebase
-    init?(authData: FAuthData) {
-        let oEmail = authData.providerData[JSON.email] as? String
-
-        email = oEmail ?? ""
-        uid = authData.uid
-
-        if (oEmail == nil) || uid.isEmpty {
+    convenience init?(authData: FAuthData) {
+        guard let email = authData.providerData[JSON.email] as? String else {
             return nil
         }
+        self.init(uid: authData.uid, email: email)
     }
     
     // Initialize from arbitrary data
