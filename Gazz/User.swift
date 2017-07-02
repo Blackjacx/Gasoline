@@ -7,28 +7,22 @@
 //
 
 import UIKit
-import Firebase
 
-class User {
-    
-    struct JSON {
+public struct User: CoreModel {
+
+    struct JsonKey {
         static let email = "email"
+        static let firstName = "first_name"
+        static let lastName = "last_name"
     }
-    
-    let uid: String
-    let email: String
-    
-    // Initialize from Firebase
-    convenience init?(authData: FAuthData) {
-        guard let email = authData.providerData[JSON.email] as? String else {
-            return nil
-        }
-        self.init(uid: authData.uid, email: email)
-    }
-    
-    // Initialize from arbitrary data
-    init(uid: String, email: String) {
-        self.uid = uid
-        self.email = email
-    }
+
+    /// The model with properties common to all model objects
+    public let common: Common
+
+    /// The email address of the user
+    public let email: String
+    /// The first name of the user
+    public let firstName: String
+    /// The last name of the user
+    public let lastName: String
 }

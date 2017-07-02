@@ -9,3 +9,4 @@
 "gz.recordListViewController.listCellTitle.format" = "%.2fl for %.2f€";
 "gz.general.yes.text" = "yes";
 "gz.general.no.text" = "no";
+"fli.recordDetails.numpadKeyboardAccessoryNextButon.title" = "Next";

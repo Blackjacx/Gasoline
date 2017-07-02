@@ -8,10 +8,15 @@
 
 import UIKit
 
-class TextFieldCell: UITableViewCell, UITextFieldDelegate {
+class TextFieldCell: UITableViewCell {
 
     // MARK: - Private Properties
-    private let textField = UITextField()
+    lazy private(set) var textField: UITextField = { [weak self] in
+        let textField = UITextField()
+        textField.delegate = self
+        textField.backgroundColor = self?.backgroundColor
+        return textField
+    }()
     
     // MARK: - Property Observer
     var placeholderText: String? {
@@ -31,33 +36,19 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
             textField.backgroundColor = backgroundColor
         }
     }
-    
-    
-    // MARK: - Overrides
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        translatesAutoresizingMaskIntoConstraints = false
-        selectionStyle = .None
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = self.backgroundColor
-        textField.delegate = self
-        
-        contentView.addSubviewMaximized(textField)
-        
-        UIView .pcl_attachDoneButtonToolbarTo(textField, target: textField, action: Selector("resignFirstResponder"))
+        textField.addMaximizedTo(contentView)
     }
 
+    @available(*, unavailable, message:"init(coder:) has not been implemented")
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError()
     }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+}
 
-        // Configure the view for the selected state
-    }
+extension TextFieldCell: UITextFieldDelegate {
 
 }
