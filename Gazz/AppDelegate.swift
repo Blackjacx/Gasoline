@@ -7,6 +7,7 @@
 //
 
 // IMPROVEMENTS
+// TODO: Implement Adding!!!!!!!!!
 // TODO: Save the date with a standardized time 12:00 afternoon
 // TODO: Use the decimal keypad and and include a accessory view on top with next prev buttons
 // TODO: Make fonts dark gray: 30, 60, ...
@@ -25,21 +26,43 @@
 // TODO: Toggle Edit/Save depending on mode you are in
 // TODO: Make a login screen
 
-
-
-
-
 import UIKit
-import Firebase
+
+var globalDataBaseReference: DataBase = DataBaseImplementation.sharedInstance
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    let rootViewController: RootViewController = RootViewController()
+
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
+
+        return true
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+
+    }
     
-    override init() {
-        super.init()
-        Firebase.defaultConfig().persistenceEnabled = true
-//        Firebase.setLoggingEnabled(true)
+    func applicationWillTerminate(_ application: UIApplication) {
+        
     }
 }
