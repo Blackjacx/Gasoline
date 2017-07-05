@@ -1,6 +1,6 @@
 //
 //  RefuelListViewController.swift
-//  Gazz
+//  Gasoline
 //
 //  Created by Stefan Herold on 02.07.17.
 //  Copyright © 2017 Stefan Herold. All rights reserved.
@@ -16,8 +16,8 @@ class RefuelListViewController: UIViewController {
     private(set) lazy var tableView: UITableView = { [weak self] in
         let table = UITableView(frame: .zero, style: .plain)
         table.delegate = self
-        table.backgroundColor = GazzColor.background
-        table.separatorColor = GazzColor.cellSeparator
+        table.backgroundColor = GasolineColor.background
+        table.separatorColor = GasolineColor.cellSeparator
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = Constants.tableViewCellHeight
         table.tableFooterView = UIView()

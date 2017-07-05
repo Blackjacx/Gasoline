@@ -7,69 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E54F58B32FA8DD4AC5C0B1A26E08EDD /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 38F21737883760AB6654B25464A0A189 /* Info.plist */; };
-		40A54E460D32131FE1D016BCFBCFAA00 /* SHDateFormatter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB1A3D2AFFFF226C49928FC58ADB7ED /* SHDateFormatter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D16F2883564EDAD86221F9C201AD508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		816653E465DC06160B6680624BC3C851 /* SHDateFormatter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D8C3D5A6B2041125D5D8AAC1A34D6F /* SHDateFormatter-dummy.m */; };
-		8D98754DDEE376A1808966670FBFA430 /* Pods-Gazz-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9082FCC3213D2B6603528EE1D3A00F7 /* Pods-Gazz-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96DA203C58AAC454248B60A62621178D /* SHDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = D8EBC8C4F4141D041D7D2970C633983B /* SHDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3C924649036AF99A034F46B700C9162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C627AB78A08A400662294215AE41C935 /* SHDateFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C0BC547236BED189C597044CCB83 /* SHDateFormatter+Additions.swift */; };
-		E4446227E584201FB0FFB1950D99DCF7 /* SHDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62EC5F016E0D0C484207B6286DE96F /* SHDateFormatter.swift */; };
-		ED38B19C6506E0C998C377BC45B10ED5 /* Pods-Gazz-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F50A4264BA94780B8DC0D0F206EA6281 /* Pods-Gazz-dummy.m */; };
+		32201237D3C3CBC79230F12E94CBED88 /* SHDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62EC5F016E0D0C484207B6286DE96F /* SHDateFormatter.swift */; };
+		47CD3DE48502DA223CBA45300C5A4682 /* SHDateFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C0BC547236BED189C597044CCB83 /* SHDateFormatter+Additions.swift */; };
+		68A436698FB5D942C2AB1A242D930824 /* Pods-Gasoline-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBF8E5850D9D48AC8CA7C3C2924B62D /* Pods-Gasoline-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D83BB33AE7F3A2005A9CC06A4B0AEB /* SHDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = D8EBC8C4F4141D041D7D2970C633983B /* SHDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85148618E7B76F9BEAB0A0F073D942C8 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 38F21737883760AB6654B25464A0A189 /* Info.plist */; };
+		8FAFC48A3A6D24D301F94762EC5CC76D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A52BDFFBB987A3B18B613F92A7A5604B /* SHDateFormatter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D8C3D5A6B2041125D5D8AAC1A34D6F /* SHDateFormatter-dummy.m */; };
+		A9EF72FD2E460F51ABB9647A89808781 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C0ED5D49FD396D7E47280E800A0C123A /* SHDateFormatter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB1A3D2AFFFF226C49928FC58ADB7ED /* SHDateFormatter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CED5B8E604154A19A6EE67F8E8DCD2ED /* Pods-Gasoline-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA60FD60E8ABACC1FE0C052C72445628 /* Pods-Gasoline-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6C82D98C607458C055449ADB816B841A /* PBXContainerItemProxy */ = {
+		EEF60878E5FAE400AAD22884E7F9C9BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 202BBEDEC33A4AFB3ED5B4C183C17E40;
+			remoteGlobalIDString = 243AED934E7F0BD679E8ACACB0CE3CA9;
 			remoteInfo = SHDateFormatter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		080F6EEB4634EE03E1DB7FBA6A0C31F3 /* Pods-Gazz-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gazz-acknowledgements.plist"; sourceTree = "<group>"; };
+		06BFCCBE2D50863A3848854E02DD5B04 /* Pods-Gasoline-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gasoline-acknowledgements.plist"; sourceTree = "<group>"; };
+		1B68C1514C6E8C368B448D963781EB2B /* SHDateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SHDateFormatter.framework; path = SHDateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4B8590767732EC0BCB3F1E04B93E7C /* SHDateFormatter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SHDateFormatter.xcconfig; sourceTree = "<group>"; };
-		1E165D78E4AB1654C1A2D5E67BD8C1F7 /* SHDateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SHDateFormatter.framework; path = SHDateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24DA0024CC9CE63AFAAC14E384D414C3 /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
-		316F64F3F62CFDB0971F76DB7349F2C4 /* Pods-Gazz-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gazz-resources.sh"; sourceTree = "<group>"; };
-		320A0CF04ADEF0E2E696D05D19066A9D /* Pods-Gazz-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gazz-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1FBF8E5850D9D48AC8CA7C3C2924B62D /* Pods-Gasoline-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gasoline-umbrella.h"; sourceTree = "<group>"; };
+		232FD1F1ED4DC15FCCE5E7FCEACE6CD0 /* Pods-Gasoline-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gasoline-frameworks.sh"; sourceTree = "<group>"; };
 		38F21737883760AB6654B25464A0A189 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
-		432924C0197C1411E8D261074500028D /* Pods-Gazz-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gazz-frameworks.sh"; sourceTree = "<group>"; };
+		449B14CA600B675BBFBF9D73CCDBEE68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49BD88DAC3C388D143EB0943C9D0F6AF /* Pods-Gasoline.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Gasoline.modulemap"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7F62EC5F016E0D0C484207B6286DE96F /* SHDateFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHDateFormatter.swift; path = Source/SHDateFormatter.swift; sourceTree = "<group>"; };
 		81D8C3D5A6B2041125D5D8AAC1A34D6F /* SHDateFormatter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SHDateFormatter-dummy.m"; sourceTree = "<group>"; };
-		84D34851F0788393C5C271C5B28D4D01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		852D4D32F0966EC3FA2745EE72455F04 /* Pods_Gazz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gazz.framework; path = "Pods-Gazz.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AFEFFD76637CCA4F593FA5C2C7BCF4E /* Pods-Gazz.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Gazz.modulemap"; sourceTree = "<group>"; };
+		BA60FD60E8ABACC1FE0C052C72445628 /* Pods-Gasoline-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gasoline-dummy.m"; sourceTree = "<group>"; };
 		C207B99401D909F73B872F2DB13FF892 /* SHDateFormatter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SHDateFormatter.modulemap; sourceTree = "<group>"; };
-		C677C31E5996F5B270F132CFF7FDEEAE /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
+		CC250C8016EF9FE1FB9EEA1979A29BDA /* Pods-Gasoline-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gasoline-resources.sh"; sourceTree = "<group>"; };
 		CD8CD89C4C7CC9422279BAC25C39E0BE /* SHDateFormatter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SHDateFormatter-prefix.pch"; sourceTree = "<group>"; };
 		D8EBC8C4F4141D041D7D2970C633983B /* SHDateFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHDateFormatter.h; path = Source/SHDateFormatter.h; sourceTree = "<group>"; };
 		DBB1A3D2AFFFF226C49928FC58ADB7ED /* SHDateFormatter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SHDateFormatter-umbrella.h"; sourceTree = "<group>"; };
-		E9082FCC3213D2B6603528EE1D3A00F7 /* Pods-Gazz-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gazz-umbrella.h"; sourceTree = "<group>"; };
+		DD0AD0405CFC7FAB8A6168D53F2FBBAC /* Pods-Gasoline-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gasoline-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EAAB65C4A7161F04FE3195FB33B0334D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F50A4264BA94780B8DC0D0F206EA6281 /* Pods-Gazz-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gazz-dummy.m"; sourceTree = "<group>"; };
+		EF94048D1D441C6647E0A4D6144EAD66 /* Pods-Gasoline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gasoline.release.xcconfig"; sourceTree = "<group>"; };
 		F567C0BC547236BED189C597044CCB83 /* SHDateFormatter+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SHDateFormatter+Additions.swift"; path = "Source/SHDateFormatter+Additions.swift"; sourceTree = "<group>"; };
+		FBBA9E2CECE6E6015198EB0231256D07 /* Pods-Gasoline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gasoline.debug.xcconfig"; sourceTree = "<group>"; };
+		FE0F225876A6AD7BED5F397A9F33E65B /* Pods_Gasoline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gasoline.framework; path = "Pods-Gasoline.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A619506371EA16AAD8817C5BA60B7E15 /* Frameworks */ = {
+		87E2D7402DB6518076899828AC93ADEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D16F2883564EDAD86221F9C201AD508 /* Foundation.framework in Frameworks */,
+				A9EF72FD2E460F51ABB9647A89808781 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEB7BB94676E3239E31DB64F328407DE /* Frameworks */ = {
+		AC99D0A6527D27667D137312ED1F5B18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3C924649036AF99A034F46B700C9162 /* Foundation.framework in Frameworks */,
+				8FAFC48A3A6D24D301F94762EC5CC76D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,39 +84,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		43E0781F7A82CFE0FE3985A1ED43E246 /* Targets Support Files */ = {
+		57CC4F131D9A8C49DEE6971F41A2F220 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6D2B09B7CFA809BF347172B62639DD98 /* Pods-Gazz */,
+				9BDA61F7A7EA3B41282560E8EE38D46C /* Pods-Gasoline */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5B8F24E34BDB144AE03DABC5EF9419A0 /* Products */ = {
+		5A7BAFF160D735A811941DAD1E5401DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				852D4D32F0966EC3FA2745EE72455F04 /* Pods_Gazz.framework */,
-				1E165D78E4AB1654C1A2D5E67BD8C1F7 /* SHDateFormatter.framework */,
+				FE0F225876A6AD7BED5F397A9F33E65B /* Pods_Gasoline.framework */,
+				1B68C1514C6E8C368B448D963781EB2B /* SHDateFormatter.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6D2B09B7CFA809BF347172B62639DD98 /* Pods-Gazz */ = {
-			isa = PBXGroup;
-			children = (
-				84D34851F0788393C5C271C5B28D4D01 /* Info.plist */,
-				9AFEFFD76637CCA4F593FA5C2C7BCF4E /* Pods-Gazz.modulemap */,
-				320A0CF04ADEF0E2E696D05D19066A9D /* Pods-Gazz-acknowledgements.markdown */,
-				080F6EEB4634EE03E1DB7FBA6A0C31F3 /* Pods-Gazz-acknowledgements.plist */,
-				F50A4264BA94780B8DC0D0F206EA6281 /* Pods-Gazz-dummy.m */,
-				432924C0197C1411E8D261074500028D /* Pods-Gazz-frameworks.sh */,
-				316F64F3F62CFDB0971F76DB7349F2C4 /* Pods-Gazz-resources.sh */,
-				E9082FCC3213D2B6603528EE1D3A00F7 /* Pods-Gazz-umbrella.h */,
-				C677C31E5996F5B270F132CFF7FDEEAE /* Pods-Gazz.debug.xcconfig */,
-				24DA0024CC9CE63AFAAC14E384D414C3 /* Pods-Gazz.release.xcconfig */,
-			);
-			name = "Pods-Gazz";
-			path = "Target Support Files/Pods-Gazz";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -125,9 +107,27 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				3F8ED914172D2E9EEDD983F9AFC8CCD3 /* Pods */,
-				5B8F24E34BDB144AE03DABC5EF9419A0 /* Products */,
-				43E0781F7A82CFE0FE3985A1ED43E246 /* Targets Support Files */,
+				5A7BAFF160D735A811941DAD1E5401DC /* Products */,
+				57CC4F131D9A8C49DEE6971F41A2F220 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9BDA61F7A7EA3B41282560E8EE38D46C /* Pods-Gasoline */ = {
+			isa = PBXGroup;
+			children = (
+				449B14CA600B675BBFBF9D73CCDBEE68 /* Info.plist */,
+				49BD88DAC3C388D143EB0943C9D0F6AF /* Pods-Gasoline.modulemap */,
+				DD0AD0405CFC7FAB8A6168D53F2FBBAC /* Pods-Gasoline-acknowledgements.markdown */,
+				06BFCCBE2D50863A3848854E02DD5B04 /* Pods-Gasoline-acknowledgements.plist */,
+				BA60FD60E8ABACC1FE0C052C72445628 /* Pods-Gasoline-dummy.m */,
+				232FD1F1ED4DC15FCCE5E7FCEACE6CD0 /* Pods-Gasoline-frameworks.sh */,
+				CC250C8016EF9FE1FB9EEA1979A29BDA /* Pods-Gasoline-resources.sh */,
+				1FBF8E5850D9D48AC8CA7C3C2924B62D /* Pods-Gasoline-umbrella.h */,
+				FBBA9E2CECE6E6015198EB0231256D07 /* Pods-Gasoline.debug.xcconfig */,
+				EF94048D1D441C6647E0A4D6144EAD66 /* Pods-Gasoline.release.xcconfig */,
+			);
+			name = "Pods-Gasoline";
+			path = "Target Support Files/Pods-Gasoline";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -176,33 +176,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BC65C4E8783B066D6F497F4F4C684101 /* Headers */ = {
+		B6D1FB62A651C1505CF4235DFD370097 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40A54E460D32131FE1D016BCFBCFAA00 /* SHDateFormatter-umbrella.h in Headers */,
-				96DA203C58AAC454248B60A62621178D /* SHDateFormatter.h in Headers */,
+				C0ED5D49FD396D7E47280E800A0C123A /* SHDateFormatter-umbrella.h in Headers */,
+				78D83BB33AE7F3A2005A9CC06A4B0AEB /* SHDateFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7682B02AF7430A89A0557D4D8917B38 /* Headers */ = {
+		DB133BAF40E5858F72E9522DDAB26EDC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D98754DDEE376A1808966670FBFA430 /* Pods-Gazz-umbrella.h in Headers */,
+				68A436698FB5D942C2AB1A242D930824 /* Pods-Gasoline-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		202BBEDEC33A4AFB3ED5B4C183C17E40 /* SHDateFormatter */ = {
+		243AED934E7F0BD679E8ACACB0CE3CA9 /* SHDateFormatter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D70C92E9F445F8C7B7E463A008C8D48 /* Build configuration list for PBXNativeTarget "SHDateFormatter" */;
+			buildConfigurationList = 26E609475D3C5B3696B916917F74011E /* Build configuration list for PBXNativeTarget "SHDateFormatter" */;
 			buildPhases = (
-				905B24A8916393BA4949E5CDAA164A8C /* Sources */,
-				A619506371EA16AAD8817C5BA60B7E15 /* Frameworks */,
-				BC65C4E8783B066D6F497F4F4C684101 /* Headers */,
+				2C5EF3080FF65F8F11A679C61EE6CDA1 /* Sources */,
+				87E2D7402DB6518076899828AC93ADEE /* Frameworks */,
+				B6D1FB62A651C1505CF4235DFD370097 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -210,25 +210,25 @@
 			);
 			name = SHDateFormatter;
 			productName = SHDateFormatter;
-			productReference = 1E165D78E4AB1654C1A2D5E67BD8C1F7 /* SHDateFormatter.framework */;
+			productReference = 1B68C1514C6E8C368B448D963781EB2B /* SHDateFormatter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		56C53F007BD39099728F1DF006B18CFD /* Pods-Gazz */ = {
+		B1F8692A3860EAFE053F3C563813A892 /* Pods-Gasoline */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C85F9576466E4E9548BCCF709DB37665 /* Build configuration list for PBXNativeTarget "Pods-Gazz" */;
+			buildConfigurationList = 20B4C93610D35F3C7CEBA7BFE34C57E4 /* Build configuration list for PBXNativeTarget "Pods-Gasoline" */;
 			buildPhases = (
-				937731A38F2154DB222DF1388DFFB3FB /* Sources */,
-				DEB7BB94676E3239E31DB64F328407DE /* Frameworks */,
-				D7682B02AF7430A89A0557D4D8917B38 /* Headers */,
+				CDC747FC19DF1FF7DE697C3147837BC2 /* Sources */,
+				AC99D0A6527D27667D137312ED1F5B18 /* Frameworks */,
+				DB133BAF40E5858F72E9522DDAB26EDC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A3EB57F215DB623FA8D07A0772375FB5 /* PBXTargetDependency */,
+				C1B14379041FA59C45FC15B1ABEB37CD /* PBXTargetDependency */,
 			);
-			name = "Pods-Gazz";
-			productName = "Pods-Gazz";
-			productReference = 852D4D32F0966EC3FA2745EE72455F04 /* Pods_Gazz.framework */;
+			name = "Pods-Gasoline";
+			productName = "Pods-Gasoline";
+			productReference = FE0F225876A6AD7BED5F397A9F33E65B /* Pods_Gasoline.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -248,48 +248,83 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5B8F24E34BDB144AE03DABC5EF9419A0 /* Products */;
+			productRefGroup = 5A7BAFF160D735A811941DAD1E5401DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56C53F007BD39099728F1DF006B18CFD /* Pods-Gazz */,
-				202BBEDEC33A4AFB3ED5B4C183C17E40 /* SHDateFormatter */,
+				B1F8692A3860EAFE053F3C563813A892 /* Pods-Gasoline */,
+				243AED934E7F0BD679E8ACACB0CE3CA9 /* SHDateFormatter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		905B24A8916393BA4949E5CDAA164A8C /* Sources */ = {
+		2C5EF3080FF65F8F11A679C61EE6CDA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E54F58B32FA8DD4AC5C0B1A26E08EDD /* Info.plist in Sources */,
-				C627AB78A08A400662294215AE41C935 /* SHDateFormatter+Additions.swift in Sources */,
-				816653E465DC06160B6680624BC3C851 /* SHDateFormatter-dummy.m in Sources */,
-				E4446227E584201FB0FFB1950D99DCF7 /* SHDateFormatter.swift in Sources */,
+				85148618E7B76F9BEAB0A0F073D942C8 /* Info.plist in Sources */,
+				47CD3DE48502DA223CBA45300C5A4682 /* SHDateFormatter+Additions.swift in Sources */,
+				A52BDFFBB987A3B18B613F92A7A5604B /* SHDateFormatter-dummy.m in Sources */,
+				32201237D3C3CBC79230F12E94CBED88 /* SHDateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		937731A38F2154DB222DF1388DFFB3FB /* Sources */ = {
+		CDC747FC19DF1FF7DE697C3147837BC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED38B19C6506E0C998C377BC45B10ED5 /* Pods-Gazz-dummy.m in Sources */,
+				CED5B8E604154A19A6EE67F8E8DCD2ED /* Pods-Gasoline-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A3EB57F215DB623FA8D07A0772375FB5 /* PBXTargetDependency */ = {
+		C1B14379041FA59C45FC15B1ABEB37CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SHDateFormatter;
-			target = 202BBEDEC33A4AFB3ED5B4C183C17E40 /* SHDateFormatter */;
-			targetProxy = 6C82D98C607458C055449ADB816B841A /* PBXContainerItemProxy */;
+			target = 243AED934E7F0BD679E8ACACB0CE3CA9 /* SHDateFormatter */;
+			targetProxy = EEF60878E5FAE400AAD22884E7F9C9BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		033C0064AAD9DF327F48E2434738D982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D4B8590767732EC0BCB3F1E04B93E7C /* SHDateFormatter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SHDateFormatter/SHDateFormatter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SHDateFormatter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SHDateFormatter/SHDateFormatter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SHDateFormatter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -334,9 +369,9 @@
 			};
 			name = Release;
 		};
-		2FE848DF3AC8F3CE94B6B03514455853 /* Release */ = {
+		1A8F66A6C8A80B4CFB43CCA18C16B5EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24DA0024CC9CE63AFAAC14E384D414C3 /* Pods-Gazz.release.xcconfig */;
+			baseConfigurationReference = 1D4B8590767732EC0BCB3F1E04B93E7C /* SHDateFormatter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -350,105 +385,27 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Gazz/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SHDateFormatter/SHDateFormatter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SHDateFormatter/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gazz/Pods-Gazz.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SHDateFormatter/SHDateFormatter.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Gazz;
+				PRODUCT_NAME = SHDateFormatter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		768818C6A23B6B5E6A1A3E50414E5DCF /* Debug */ = {
+		58B889E81F2A5C2163A5795FB8DA6CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D4B8590767732EC0BCB3F1E04B93E7C /* SHDateFormatter.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SHDateFormatter/SHDateFormatter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SHDateFormatter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SHDateFormatter/SHDateFormatter.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SHDateFormatter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9BD2BF38A190118059065799A9A5EEEE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C677C31E5996F5B270F132CFF7FDEEAE /* Pods-Gazz.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Gazz/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gazz/Pods-Gazz.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Gazz;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BFB37C3A18111C5B546178FB459C89B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D4B8590767732EC0BCB3F1E04B93E7C /* SHDateFormatter.xcconfig */;
+			baseConfigurationReference = EF94048D1D441C6647E0A4D6144EAD66 /* Pods-Gasoline.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -462,18 +419,22 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SHDateFormatter/SHDateFormatter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SHDateFormatter/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gasoline/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SHDateFormatter/SHDateFormatter.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gasoline/Pods-Gasoline.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SHDateFormatter;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gasoline;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -528,32 +489,71 @@
 			};
 			name = Debug;
 		};
+		E3BE717C5E57246BBFDFFA0A02B880CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBA9E2CECE6E6015198EB0231256D07 /* Pods-Gasoline.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gasoline/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gasoline/Pods-Gasoline.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gasoline;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20B4C93610D35F3C7CEBA7BFE34C57E4 /* Build configuration list for PBXNativeTarget "Pods-Gasoline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BE717C5E57246BBFDFFA0A02B880CC /* Debug */,
+				58B889E81F2A5C2163A5795FB8DA6CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26E609475D3C5B3696B916917F74011E /* Build configuration list for PBXNativeTarget "SHDateFormatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033C0064AAD9DF327F48E2434738D982 /* Debug */,
+				1A8F66A6C8A80B4CFB43CCA18C16B5EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */,
 				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8D70C92E9F445F8C7B7E463A008C8D48 /* Build configuration list for PBXNativeTarget "SHDateFormatter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				768818C6A23B6B5E6A1A3E50414E5DCF /* Debug */,
-				BFB37C3A18111C5B546178FB459C89B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C85F9576466E4E9548BCCF709DB37665 /* Build configuration list for PBXNativeTarget "Pods-Gazz" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9BD2BF38A190118059065799A9A5EEEE /* Debug */,
-				2FE848DF3AC8F3CE94B6B03514455853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,6 @@
 //
 //  TextFieldCell.swift
-//  Gazz
+//  Gasoline
 //
 //  Created by Stefan Herold on 14/03/16.
 //  Copyright © 2016 Stefan Herold. All rights reserved.

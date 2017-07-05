@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  Gazz
+//  Gasoline
 //
 //  Created by Stefan Herold on 21/02/16.
 //  Copyright © 2016 Stefan Herold. All rights reserved.

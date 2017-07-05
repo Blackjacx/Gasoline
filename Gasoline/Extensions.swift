@@ -1,6 +1,6 @@
 //
 //  Extensions.swift
-//  Gazz
+//  Gasoline
 //
 //  Created by Stefan Herold on 02.07.17.
 //  Copyright © 2017 Stefan Herold. All rights reserved.
@@ -38,7 +38,7 @@ extension UIView {
     }
 }
 
-struct GazzColor {
+struct GasolineColor {
 
     static let background = UIColor.white
     static let cellSeparator = UIColor.lightGray
