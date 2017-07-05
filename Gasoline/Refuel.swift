@@ -8,19 +8,24 @@
 
 import UIKit
 
-public struct Refuel: CoreModel {
+public struct Refuel: Codable {
 
-    struct JsonKey {
-        static let totalCosts = "total_costs"
-        static let date = "date"
-        static let pricePerLiter = "price_per_liter"
-        static let fuelAmount = "fuel_amount"
-        static let mileage = "mileage"
-        static let note = "note"
+    enum CodingKeys : String, CodingKey {
+        case id
+        case createdAt = "created_at"
+
+        case date
+        case literPrice = "liter_price"
+        case fuelAmount = "fuel_amount"
+        case mileage
+        case note
     }
 
-    /// The model with properties common to all model objects
-    public let common: Common
+    /// The database id for the model object
+    public let id: String
+    /// The creation date of the model object
+    public let createdAt: Date
+    
 
     /// The total costs in the major curency value (Euro, Dollar, ...)
     public var totalCosts: Double { return literPrice * fuelAmount.value }
@@ -40,7 +45,13 @@ extension Refuel {
 
     init(date: Date, literPrice: Double, fuelAmount: Measurement<UnitVolume>, mileage: Measurement<UnitLength>, note: String? = nil) {
 
-        let common = Common(id: NSUUID().uuidString, createdAt: Date())
-        self.init(common: common, date: date, literPrice: literPrice, fuelAmount: fuelAmount, mileage: mileage, note: note)
+        self.init(
+            id: NSUUID().uuidString,
+            createdAt: Date(),
+            date: date,
+            literPrice: literPrice,
+            fuelAmount: fuelAmount,
+            mileage: mileage,
+            note: note)
     }
 }

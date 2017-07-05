@@ -16,12 +16,10 @@
 		B92E57AE1F096290003437B3 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E57AD1F096290003437B3 /* DataBase.swift */; };
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
 		B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F8ED1C7A327C008C66E5 /* Constants.swift */; };
-		B973FEA71F094514008D368E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEA61F094514008D368E /* Common.swift */; };
 		B973FEA91F094C47008D368E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEA81F094C47008D368E /* RootViewController.swift */; };
 		B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAA1F094D34008D368E /* RefuelListViewController.swift */; };
 		B973FEAD1F094E2E008D368E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAC1F094E2E008D368E /* Extensions.swift */; };
 		B973FEAF1F094EE5008D368E /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAE1F094EE5008D368E /* GenericDataSource.swift */; };
-		B9DD14591F0968940095AD0F /* CoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD14581F0968940095AD0F /* CoreModel.swift */; };
 		B9DD145F1F09825B0095AD0F /* RefuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */; };
 		B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */; };
 		C5505B83757ABAD197A77D98 /* Pods_Gasoline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24563A9BA95B6EDD4E82F356 /* Pods_Gasoline.framework */; };
@@ -42,12 +40,10 @@
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9302F591BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B973FEA61F094514008D368E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		B973FEA81F094C47008D368E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B973FEAA1F094D34008D368E /* RefuelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelListViewController.swift; sourceTree = "<group>"; };
 		B973FEAC1F094E2E008D368E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B973FEAE1F094EE5008D368E /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
-		B9DD14581F0968940095AD0F /* CoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModel.swift; sourceTree = "<group>"; };
 		B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelCell.swift; sourceTree = "<group>"; };
 		B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		D0B364826026F36A1D02BE2E /* Pods_Gazz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gazz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,10 +83,8 @@
 		B92B622D1C8F573D00790D3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B973FEA61F094514008D368E /* Common.swift */,
 				B92B62291C8F572300790D3B /* Refuel.swift */,
 				B92B622B1C8F573800790D3B /* User.swift */,
-				B9DD14581F0968940095AD0F /* CoreModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -272,8 +266,6 @@
 				B973FEA91F094C47008D368E /* RootViewController.swift in Sources */,
 				B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */,
 				B92B622C1C8F573800790D3B /* User.swift in Sources */,
-				B9DD14591F0968940095AD0F /* CoreModel.swift in Sources */,
-				B973FEA71F094514008D368E /* Common.swift in Sources */,
 				B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */,
 				B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */,
 				B92B622A1C8F572300790D3B /* Refuel.swift in Sources */,
