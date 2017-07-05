@@ -1,6 +1,6 @@
 //
 //  CoreModel.swift
-//  Gazz
+//  Gasoline
 //
 //  Created by Stefan Herold on 02.07.17.
 //  Copyright © 2017 Stefan Herold. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  RefuelDetailViewController.swift
-//  Gazz
+//  Gasoline
 //
 //  Created by Stefan Herold on 25/10/15.
 //  Copyright © 2015 Stefan Herold. All rights reserved.

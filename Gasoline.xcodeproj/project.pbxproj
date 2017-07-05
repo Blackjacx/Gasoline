@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19682C36FBFA34B48606C611 /* Pods_Gazz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B364826026F36A1D02BE2E /* Pods_Gazz.framework */; };
 		B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */; };
 		B911C7A91BDC5A4900016B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7A81BDC5A4900016B85 /* AppDelegate.swift */; };
 		B911C7E51BDC5E5500016B85 /* RefuelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */; };
@@ -25,11 +24,12 @@
 		B9DD14591F0968940095AD0F /* CoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD14581F0968940095AD0F /* CoreModel.swift */; };
 		B9DD145F1F09825B0095AD0F /* RefuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */; };
 		B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */; };
+		C5505B83757ABAD197A77D98 /* Pods_Gasoline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24563A9BA95B6EDD4E82F356 /* Pods_Gasoline.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D0A923C73464A0E44DE6601 /* Pods-Gazz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gazz/Pods-Gazz.debug.xcconfig"; sourceTree = "<group>"; };
-		AA70F87C9682B9CD42ACAB33 /* Pods-Gazz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gazz/Pods-Gazz.release.xcconfig"; sourceTree = "<group>"; };
+		15C1F329FBEFDB8D24B4300C /* Pods-Gasoline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gasoline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gasoline/Pods-Gasoline.debug.xcconfig"; sourceTree = "<group>"; };
+		24563A9BA95B6EDD4E82F356 /* Pods_Gasoline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gasoline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		B911C7A81BDC5A4900016B85 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelDetailViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		B92B624D1C8F815D00790D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B92B62501C8F816600790D3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B92E57AD1F096290003437B3 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		B9302F451BAB6F5B00CE9CC4 /* Gazz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9302F451BAB6F5B00CE9CC4 /* Gasoline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gasoline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9302F591BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -51,6 +51,7 @@
 		B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelCell.swift; sourceTree = "<group>"; };
 		B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		D0B364826026F36A1D02BE2E /* Pods_Gazz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gazz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02C78E114D3B4E59BB55269 /* Pods-Gasoline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gasoline.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gasoline/Pods-Gasoline.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19682C36FBFA34B48606C611 /* Pods_Gazz.framework in Frameworks */,
+				C5505B83757ABAD197A77D98 /* Pods_Gasoline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +69,8 @@
 		0AA26CB805BB2BCBCC19B3FB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D0A923C73464A0E44DE6601 /* Pods-Gazz.debug.xcconfig */,
-				AA70F87C9682B9CD42ACAB33 /* Pods-Gazz.release.xcconfig */,
+				15C1F329FBEFDB8D24B4300C /* Pods-Gasoline.debug.xcconfig */,
+				F02C78E114D3B4E59BB55269 /* Pods-Gasoline.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -78,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B364826026F36A1D02BE2E /* Pods_Gazz.framework */,
+				24563A9BA95B6EDD4E82F356 /* Pods_Gasoline.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,7 +108,7 @@
 		B9302F3C1BAB6F5B00CE9CC4 = {
 			isa = PBXGroup;
 			children = (
-				B9302F471BAB6F5B00CE9CC4 /* Gazz */,
+				B9302F471BAB6F5B00CE9CC4 /* Gasoline */,
 				B9302F461BAB6F5B00CE9CC4 /* Products */,
 				0AA26CB805BB2BCBCC19B3FB /* Pods */,
 				26FBFFF77A83EBC49186AAAA /* Frameworks */,
@@ -116,12 +118,12 @@
 		B9302F461BAB6F5B00CE9CC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9302F451BAB6F5B00CE9CC4 /* Gazz.app */,
+				B9302F451BAB6F5B00CE9CC4 /* Gasoline.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9302F471BAB6F5B00CE9CC4 /* Gazz */ = {
+		B9302F471BAB6F5B00CE9CC4 /* Gasoline */ = {
 			isa = PBXGroup;
 			children = (
 				B911C7A81BDC5A4900016B85 /* AppDelegate.swift */,
@@ -138,15 +140,15 @@
 				B92B622E1C8F576600790D3B /* Supporting Files */,
 				B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */,
 			);
-			path = Gazz;
+			path = Gasoline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9302F441BAB6F5B00CE9CC4 /* Gazz */ = {
+		B9302F441BAB6F5B00CE9CC4 /* Gasoline */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9302F721BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "Gazz" */;
+			buildConfigurationList = B9302F721BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "Gasoline" */;
 			buildPhases = (
 				CC955235246918BB4D3C9B04 /* [CP] Check Pods Manifest.lock */,
 				B9302F411BAB6F5B00CE9CC4 /* Sources */,
@@ -159,9 +161,9 @@
 			);
 			dependencies = (
 			);
-			name = Gazz;
+			name = Gasoline;
 			productName = Gazz;
-			productReference = B9302F451BAB6F5B00CE9CC4 /* Gazz.app */;
+			productReference = B9302F451BAB6F5B00CE9CC4 /* Gasoline.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +183,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9302F401BAB6F5B00CE9CC4 /* Build configuration list for PBXProject "Gazz" */;
+			buildConfigurationList = B9302F401BAB6F5B00CE9CC4 /* Build configuration list for PBXProject "Gasoline" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -194,7 +196,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9302F441BAB6F5B00CE9CC4 /* Gazz */,
+				B9302F441BAB6F5B00CE9CC4 /* Gasoline */,
 			);
 		};
 /* End PBXProject section */
@@ -224,7 +226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gazz/Pods-Gazz-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gasoline/Pods-Gasoline-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		94E8B5C85E11FBC1A2D5847B /* [CP] Embed Pods Frameworks */ = {
@@ -239,7 +241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gazz/Pods-Gazz-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gasoline/Pods-Gasoline-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC955235246918BB4D3C9B04 /* [CP] Check Pods Manifest.lock */ = {
@@ -396,17 +398,17 @@
 		};
 		B9302F731BAB6F5B00CE9CC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D0A923C73464A0E44DE6601 /* Pods-Gazz.debug.xcconfig */;
+			baseConfigurationReference = 15C1F329FBEFDB8D24B4300C /* Pods-Gasoline.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = PCW579R278;
-				INFOPLIST_FILE = Gazz/Info.plist;
+				INFOPLIST_FILE = Gasoline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gazz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gasoline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -416,17 +418,17 @@
 		};
 		B9302F741BAB6F5B00CE9CC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA70F87C9682B9CD42ACAB33 /* Pods-Gazz.release.xcconfig */;
+			baseConfigurationReference = F02C78E114D3B4E59BB55269 /* Pods-Gasoline.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = PCW579R278;
-				INFOPLIST_FILE = Gazz/Info.plist;
+				INFOPLIST_FILE = Gasoline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gazz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gasoline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -436,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9302F401BAB6F5B00CE9CC4 /* Build configuration list for PBXProject "Gazz" */ = {
+		B9302F401BAB6F5B00CE9CC4 /* Build configuration list for PBXProject "Gasoline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9302F701BAB6F5B00CE9CC4 /* Debug */,
@@ -445,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9302F721BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "Gazz" */ = {
+		B9302F721BAB6F5B00CE9CC4 /* Build configuration list for PBXNativeTarget "Gasoline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9302F731BAB6F5B00CE9CC4 /* Debug */,
