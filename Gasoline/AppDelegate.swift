@@ -7,14 +7,13 @@
 //
 
 // IMPROVEMENTS
-// TODO: Implement Adding!!!!!!!!!
-// TODO: Save the date with a standardized time 12:00 afternoon
+// TODO: Implement Adding
+// TODO: Implement Persistence
 // TODO: Use the decimal keypad and and include a accessory view on top with next prev buttons
 // TODO: Make fonts dark gray: 30, 60, ...
 // TODO: Realize Datepicker as seperate View and show it from below on button press.
 // TODO: Check the Date 22:00 after changing dateii
 // TODO: Integrate an advanced date formatter class and a relative date/time format on dashboard
-// TODO: Make a replacement for NSUsewrdefaults that stores all frefixes all keys (PLCDataPersistor)
 
 // FEATURES
 // TODO: Taking Picture of the bill
