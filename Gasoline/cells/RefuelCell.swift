@@ -56,7 +56,7 @@ extension RefuelCell: ConfigurableCell {
 
         guard let item = item as? Refuel else { return }
 
-        let date = SHDateFormatter.shared.stringFromDate(date: item.date, format: .noTimeShortDate)
+        let date = SHDateFormatter.shared.stringFromDate(date: item.date, format: .noTimeRelativeDate)
         let time = SHDateFormatter.shared.stringFromDate(date: item.date, format: .shortTimeNoDate)
 
         dateLabel.text = "\(date), \(time)"
