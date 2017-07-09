@@ -1,12 +1,12 @@
 PODS:
-  - SHDateFormatter (0.9.2)
+  - SHDateFormatter (0.9.6)
 
 DEPENDENCIES:
   - SHDateFormatter
 
 SPEC CHECKSUMS:
-  SHDateFormatter: 47fe3d0a6c212b10f86c4a34ebe9a0efa45b9519
+  SHDateFormatter: c45354ab53665cd00073a1e3c784d9cb8d21b37b
 
-PODFILE CHECKSUM: 1a0ccb80847a63e7b2255fe5af168528bb4e1124
+PODFILE CHECKSUM: 446a6f705cf43abf653b6c5e7f9e059bd55b11c8
 
 COCOAPODS: 1.2.1

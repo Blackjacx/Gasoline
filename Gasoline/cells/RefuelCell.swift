@@ -11,10 +11,10 @@ import SHDateFormatter
 
 class RefuelCell: UITableViewCell {
 
-    let dateLabel = RefuelCell.label(withTextAlignment: .right)
-    let mileageLabel = RefuelCell.label(withTextAlignment: .left)
-    let fuelAmountLabel = RefuelCell.label(withTextAlignment: .left)
-    let literPriceLabel = RefuelCell.label(withTextAlignment: .center)
+    let dateLabel = RefuelCell.label(withTextAlignment: .left, requiredCompressionResistancyForAxis: [.horizontal])
+    let mileageLabel = RefuelCell.label(withTextAlignment: .right)
+    let fuelAmountLabel = RefuelCell.label(withTextAlignment: .right)
+    let literPriceLabel = RefuelCell.label(withTextAlignment: .right)
     let totalPriceLabel = RefuelCell.label(withTextAlignment: .right)
     let notesLabel = RefuelCell.label(withTextAlignment: .left)
 
@@ -22,24 +22,14 @@ class RefuelCell: UITableViewCell {
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        let topStack = UIStackView()
-        topStack.addArrangedSubview(mileageLabel)
-        topStack.addArrangedSubview(dateLabel)
-
-        let middleStack = UIStackView()
-        middleStack.distribution = .equalCentering
-        middleStack.addArrangedSubview(fuelAmountLabel)
-        middleStack.addArrangedSubview(literPriceLabel)
-        middleStack.addArrangedSubview(totalPriceLabel)
-
-        let bottomStack = UIStackView()
-        bottomStack.addArrangedSubview(notesLabel)
-
         let margin = Constants.rasterSize
-        let verticalStackMargins = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
-        let verticalStack = UIStackView(arrangedSubviews: [topStack, middleStack, bottomStack])
+        let parentStackMargins = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+
+        let verticalStack = UIStackView(arrangedSubviews: [totalPriceLabel, mileageLabel, literPriceLabel, fuelAmountLabel, notesLabel])
         verticalStack.axis = .vertical
-        verticalStack.addMaximizedTo(contentView, margins: verticalStackMargins)
+
+        let horizontalStack = UIStackView(arrangedSubviews: [dateLabel, verticalStack])
+        horizontalStack.addMaximizedTo(contentView, margins: parentStackMargins)
     }
 
     @available(*, unavailable, message:"init(coder:) has not been implemented")
@@ -49,10 +39,14 @@ class RefuelCell: UITableViewCell {
 
     // MARK: - Creating Labels
 
-    static func label(withTextAlignment textAlignment: NSTextAlignment) -> UILabel {
+    static func label(
+        withTextAlignment textAlignment: NSTextAlignment,
+        requiredCompressionResistancyForAxis: [UILayoutConstraintAxis] = []) -> UILabel {
 
         let label = UILabel()
+        label.backgroundColor = .red
         label.textAlignment = textAlignment
+        requiredCompressionResistancyForAxis.forEach { label.setContentCompressionResistancePriority(.required, for: $0) }
         return label
     }
 }
@@ -63,8 +57,8 @@ extension RefuelCell: ConfigurableCell {
 
         guard let item = item as? Refuel else { return }
 
-        let date = SHDateFormatter.sharedInstance.stringFromDate(date: item.date, format: .noTimeShortDate)
-        let time = SHDateFormatter.sharedInstance.stringFromDate(date: item.date, format: .shortTimeNoDate)
+        let date = SHDateFormatter.shared.stringFromDate(date: item.date, format: .noTimeShortDate)
+        let time = SHDateFormatter.shared.stringFromDate(date: item.date, format: .shortTimeNoDate)
         let literPrice = CurrencyFormatter.shared.stringFromValue(value: item.literPrice, maximumFractionDigits: 3)
         let totalPrice = CurrencyFormatter.shared.stringFromValue(value: item.totalCosts)
 

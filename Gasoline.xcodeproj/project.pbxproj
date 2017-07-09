@@ -80,13 +80,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B92B622D1C8F573D00790D3B /* Model */ = {
+		B92B622D1C8F573D00790D3B /* model */ = {
 			isa = PBXGroup;
 			children = (
 				B92B62291C8F572300790D3B /* Refuel.swift */,
 				B92B622B1C8F573800790D3B /* User.swift */,
 			);
-			name = Model;
+			name = model;
 			sourceTree = "<group>";
 		};
 		B92B622E1C8F576600790D3B /* Supporting Files */ = {
@@ -122,19 +122,27 @@
 			children = (
 				B911C7A81BDC5A4900016B85 /* AppDelegate.swift */,
 				B936F8ED1C7A327C008C66E5 /* Constants.swift */,
+				B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */,
 				B92E57AD1F096290003437B3 /* DataBase.swift */,
 				B973FEAC1F094E2E008D368E /* Extensions.swift */,
 				B973FEAE1F094EE5008D368E /* GenericDataSource.swift */,
-				B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */,
 				B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */,
 				B973FEAA1F094D34008D368E /* RefuelListViewController.swift */,
 				B973FEA81F094C47008D368E /* RootViewController.swift */,
-				B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */,
-				B92B622D1C8F573D00790D3B /* Model */,
+				B95450D01F12754800371C0F /* cells */,
+				B92B622D1C8F573D00790D3B /* model */,
 				B92B622E1C8F576600790D3B /* Supporting Files */,
-				B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */,
 			);
 			path = Gasoline;
+			sourceTree = "<group>";
+		};
+		B95450D01F12754800371C0F /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */,
+				B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

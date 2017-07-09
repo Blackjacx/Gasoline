@@ -92,8 +92,8 @@ class RefuelDetailViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func datePickerDidFinish(_ datePicker: UIDatePicker) {
-        let date = SHDateFormatter.sharedInstance.stringFromDate(date: datePicker.date, format: .noTimeShortDate)
-        let time = SHDateFormatter.sharedInstance.stringFromDate(date: datePicker.date, format: .shortTimeNoDate)
+        let date = SHDateFormatter.shared.stringFromDate(date: datePicker.date, format: .noTimeShortDate)
+        let time = SHDateFormatter.shared.stringFromDate(date: datePicker.date, format: .shortTimeNoDate)
         dateLabel.text = "\(date), \(time)"
     }
 
