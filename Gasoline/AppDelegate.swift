@@ -28,7 +28,7 @@
 
 import UIKit
 
-var globalDataBaseReference: DataBase = DataBaseImplementation.sharedInstance
+var globalDataBaseReference: DataBase = DataBaseImplementation.shared
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
