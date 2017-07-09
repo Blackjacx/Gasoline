@@ -29,7 +29,7 @@ public struct Refuel: Codable {
     
 
     /// The total costs in the major curency value (Euro, Dollar, ...)
-    public var totalCosts: Double { return literPrice * fuelAmount.value }
+    public var totalPrice: Double { return literPrice * fuelAmount.value }
     /// The date the refuel action has been done
     public let date: Date
     /// The currency that applies to all price values of this class.

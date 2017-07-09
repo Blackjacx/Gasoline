@@ -29,7 +29,8 @@ struct DataBaseImplementation: DataBase {
             date: Date(),
             literPrice: 1.359,
             fuelAmount: Measurement(value: 32.36, unit: UnitVolume.liters),
-            mileage: Measurement(value: 96000, unit: UnitLength.kilometers))
+            mileage: Measurement(value: 96000, unit: UnitLength.kilometers),
+            note: "Bla Blubb Bla Blubb Bla Blubb Bla Blubb Bla Blubb Bla Blubb Bla Blubb Bla Blubb Bla Blubb ")
 
         demoRefuelList.append(refuel)
         demoRefuelList.append(refuel)
