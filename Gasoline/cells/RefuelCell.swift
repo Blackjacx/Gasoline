@@ -58,15 +58,20 @@ extension RefuelCell: ConfigurableCell {
         guard let item = item as? Refuel else { return }
 
         let date = SHDateFormatter.shared.stringFromDate(date: item.date, format: .noTimeShortDate)
+        let mileage = MeasurementFormatHandler.shared.stringFrom(measurement: item.mileage, maximumFractionDigits: 0)
+        let fuelAmount = MeasurementFormatHandler.shared.stringFrom(measurement: item.mileage, maximumFractionDigits: 2)
         let time = SHDateFormatter.shared.stringFromDate(date: item.date, format: .shortTimeNoDate)
-        let literPrice = CurrencyFormatter.shared.stringFromValue(value: item.literPrice, maximumFractionDigits: 3)
-        let totalPrice = CurrencyFormatter.shared.stringFromValue(value: item.totalCosts)
+        let totalPrice = CurrencyFormatter.shared.stringFromValue(value: item.totalCosts, currencyCode: item.currencyCode)
+        let literPrice = CurrencyFormatter.shared.stringFromValue(
+            value: item.literPrice,
+            currencyCode: item.currencyCode,
+            maximumFractionDigits: 3)
 
         dateLabel.text = "\(date), \(time)"
-        mileageLabel.text = "\(item.mileage)"
-        fuelAmountLabel.text = "\(item.fuelAmount)"
-        literPriceLabel.text = "\(literPrice)"
-        totalPriceLabel.text = "\(totalPrice)"
+        mileageLabel.text = mileage
+        fuelAmountLabel.text = fuelAmount
+        literPriceLabel.text = literPrice
+        totalPriceLabel.text = totalPrice
         notesLabel.text = item.note ?? ""
     }
 }
