@@ -9,6 +9,7 @@
 // IMPROVEMENTS
 // TODO: Implement Adding
 // TODO: Implement Persistence
+// TODO: Include a specialized method for selecting desired fonts
 
 // FEATURES
 // TODO: Taking Picture of the bill
