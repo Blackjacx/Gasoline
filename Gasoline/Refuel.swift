@@ -15,6 +15,7 @@ public struct Refuel: Codable {
         case createdAt = "created_at"
 
         case date
+        case currencyCode = "currency_code"
         case literPrice = "liter_price"
         case fuelAmount = "fuel_amount"
         case mileage
@@ -31,11 +32,13 @@ public struct Refuel: Codable {
     public var totalCosts: Double { return literPrice * fuelAmount.value }
     /// The date the refuel action has been done
     public let date: Date
+    /// The currency that applies to all price values of this class.
+    public let currencyCode: String
     /// The price per liter in the major curency value (Euro, Dollar, ...)
     public let literPrice: Double
     /// The taken fuel amount im milli liters
     public let fuelAmount: Measurement<UnitVolume>
-    /// The current mileage directly before the refuel
+    /// The current mileage right at the gas station
     public let mileage: Measurement<UnitLength>
     /// An optional note from the user
     public let note: String?
@@ -43,12 +46,18 @@ public struct Refuel: Codable {
 
 extension Refuel {
 
-    init(date: Date, literPrice: Double, fuelAmount: Measurement<UnitVolume>, mileage: Measurement<UnitLength>, note: String? = nil) {
+    init(
+        date: Date,
+        currencyCode: String = "EUR", // TODO: The default for now - change later!
+        literPrice: Double,
+        fuelAmount: Measurement<UnitVolume>,
+        mileage: Measurement<UnitLength>, note: String? = nil) {
 
         self.init(
             id: NSUUID().uuidString,
             createdAt: Date(),
             date: date,
+            currencyCode: currencyCode,
             literPrice: literPrice,
             fuelAmount: fuelAmount,
             mileage: mileage,
