@@ -19,6 +19,7 @@ public struct MeasurementFormatHandler {
     }()
 
     func stringFrom<U>(measurement: Measurement<U>, maximumFractionDigits: Int) -> String {
+        formatter.numberFormatter.maximumFractionDigits = maximumFractionDigits
         return formatter.string(from: measurement)
     }
 }

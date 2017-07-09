@@ -44,7 +44,6 @@ class RefuelCell: UITableViewCell {
         requiredCompressionResistancyForAxis: [UILayoutConstraintAxis] = []) -> UILabel {
 
         let label = UILabel()
-        label.backgroundColor = .red
         label.textAlignment = textAlignment
         requiredCompressionResistancyForAxis.forEach { label.setContentCompressionResistancePriority(.required, for: $0) }
         return label
@@ -58,20 +57,16 @@ extension RefuelCell: ConfigurableCell {
         guard let item = item as? Refuel else { return }
 
         let date = SHDateFormatter.shared.stringFromDate(date: item.date, format: .noTimeShortDate)
-        let mileage = MeasurementFormatHandler.shared.stringFrom(measurement: item.mileage, maximumFractionDigits: 0)
-        let fuelAmount = MeasurementFormatHandler.shared.stringFrom(measurement: item.mileage, maximumFractionDigits: 2)
         let time = SHDateFormatter.shared.stringFromDate(date: item.date, format: .shortTimeNoDate)
-        let totalPrice = CurrencyFormatter.shared.stringFromValue(value: item.totalCosts, currencyCode: item.currencyCode)
-        let literPrice = CurrencyFormatter.shared.stringFromValue(
+
+        dateLabel.text = "\(date), \(time)"
+        mileageLabel.text = MeasurementFormatHandler.shared.stringFrom(measurement: item.mileage, maximumFractionDigits: 0)
+        fuelAmountLabel.text = MeasurementFormatHandler.shared.stringFrom(measurement: item.fuelAmount, maximumFractionDigits: 2)
+        notesLabel.text = item.note ?? ""
+        totalPriceLabel.text = CurrencyFormatter.shared.stringFromValue(value: item.totalCosts, currencyCode: item.currencyCode)
+        literPriceLabel.text = CurrencyFormatter.shared.stringFromValue(
             value: item.literPrice,
             currencyCode: item.currencyCode,
             maximumFractionDigits: 3)
-
-        dateLabel.text = "\(date), \(time)"
-        mileageLabel.text = mileage
-        fuelAmountLabel.text = fuelAmount
-        literPriceLabel.text = literPrice
-        totalPriceLabel.text = totalPrice
-        notesLabel.text = item.note ?? ""
     }
 }
