@@ -71,6 +71,11 @@ class RefuelListViewController: UIViewController {
 
         // Setup UI
         tableView.addMaximizedTo(view)
+
+
+
+
+        codeGenerator.qrCodeFromContact(contactPickerParent: self)
     }
 
     // MARK: - Actions
@@ -78,6 +83,21 @@ class RefuelListViewController: UIViewController {
     @IBAction func pressedAddNewItem(sender: UIButton) {
 
         print("pressed add new refuel item...")
+    }
+
+    lazy var codeGenerator = ContactQRCodeGenerator { (image, error) in
+        guard let image = image else {
+            let message = "Sorry, could not generate the image. The contact information may be too large in size."
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        let imageView = UIImageView(image: image)
+        imageView.backgroundColor = .white
+        imageView.contentMode = .scaleAspectFit
+        imageView.addMaximizedTo(self.view)
     }
 }
 

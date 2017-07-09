@@ -17,6 +17,7 @@
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
 		B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F8ED1C7A327C008C66E5 /* Constants.swift */; };
 		B95610931F12830D000E5649 /* MeasurementFormatHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95610921F1282C9000E5649 /* MeasurementFormatHandler.swift */; };
+		B95610961F12960A000E5649 /* ContactQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95610951F12960A000E5649 /* ContactQRCodeGenerator.swift */; };
 		B973FEA91F094C47008D368E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEA81F094C47008D368E /* RootViewController.swift */; };
 		B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAA1F094D34008D368E /* RefuelListViewController.swift */; };
 		B973FEAD1F094E2E008D368E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAC1F094E2E008D368E /* Extensions.swift */; };
@@ -42,6 +43,7 @@
 		B9302F591BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B95610921F1282C9000E5649 /* MeasurementFormatHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatHandler.swift; sourceTree = "<group>"; };
+		B95610951F12960A000E5649 /* ContactQRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactQRCodeGenerator.swift; sourceTree = "<group>"; };
 		B973FEA81F094C47008D368E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B973FEAA1F094D34008D368E /* RefuelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelListViewController.swift; sourceTree = "<group>"; };
 		B973FEAC1F094E2E008D368E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				B95610941F128400000E5649 /* formatter */,
 				B92B622D1C8F573D00790D3B /* model */,
 				B92B622E1C8F576600790D3B /* Supporting Files */,
+				B95610951F12960A000E5649 /* ContactQRCodeGenerator.swift */,
 			);
 			path = Gasoline;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				B92E57AE1F096290003437B3 /* DataBase.swift in Sources */,
 				B973FEA91F094C47008D368E /* RootViewController.swift in Sources */,
 				B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */,
+				B95610961F12960A000E5649 /* ContactQRCodeGenerator.swift in Sources */,
 				B92B622C1C8F573800790D3B /* User.swift in Sources */,
 				B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */,
 				B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */,
