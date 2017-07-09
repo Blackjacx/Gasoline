@@ -55,18 +55,23 @@ extension RefuelCell: ConfigurableCell {
     func configure(item: GenericDataSourceItem) {
 
         guard let item = item as? Refuel else { return }
+        let dateFormatter = SHDateFormatter.shared
+        let measurementFormatter = MeasurementFormatting.shared
+        let currencyFormatter = CurrencyFormatter.shared
 
-        let date = SHDateFormatter.shared.stringFromDate(date: item.date, format: .noTimeRelativeDate)
-        let time = SHDateFormatter.shared.stringFromDate(date: item.date, format: .shortTimeNoDate)
+        let date = dateFormatter.stringFromDate(date: item.date, format: .noTimeRelativeDate)
+        let time = dateFormatter.stringFromDate(date: item.date, format: .shortTimeNoDate)
+        let mileage = measurementFormatter.stringFrom(measurement: item.mileage, fractionDigits: 0)
+        let fuelAmount = measurementFormatter.stringFrom(measurement: item.fuelAmount, fractionDigits: 2)
+        let note = item.note ?? ""
+        let totalPrice = currencyFormatter.stringFromValue(value: item.totalPrice, currencyCode: item.currencyCode)
+        let literPrice = currencyFormatter.stringFromValue(value: item.literPrice, currencyCode: item.currencyCode, fractionDigits: 3)
 
-        dateLabel.text = "\(date), \(time)"
-        mileageLabel.text = MeasurementFormatHandler.shared.stringFrom(measurement: item.mileage, maximumFractionDigits: 0)
-        fuelAmountLabel.text = MeasurementFormatHandler.shared.stringFrom(measurement: item.fuelAmount, maximumFractionDigits: 2)
-        notesLabel.text = item.note ?? ""
-        totalPriceLabel.text = CurrencyFormatter.shared.stringFromValue(value: item.totalCosts, currencyCode: item.currencyCode)
-        literPriceLabel.text = CurrencyFormatter.shared.stringFromValue(
-            value: item.literPrice,
-            currencyCode: item.currencyCode,
-            maximumFractionDigits: 3)
+        dateLabel.attributedText = FontStyle.headline.normalStyleAttributedString("\(date), \(time)")
+        totalPriceLabel.attributedText = FontStyle.title1.normalStyleAttributedString(totalPrice)
+        literPriceLabel.attributedText = FontStyle.body.lightStyleAttributedString(literPrice)
+        mileageLabel.attributedText = FontStyle.body.lightStyleAttributedString("\(mileage)")
+        fuelAmountLabel.attributedText = FontStyle.body.lightStyleAttributedString("\(fuelAmount)")
+        notesLabel.attributedText = FontStyle.body.lightStyleAttributedString(note)
     }
 }

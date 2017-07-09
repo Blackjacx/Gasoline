@@ -19,8 +19,9 @@ public struct CurrencyFormatter {
         return formatter
     }()
 
-    func stringFromValue(value: Double, currencyCode: String, maximumFractionDigits: Int = 2) -> String {
-        formatter.maximumFractionDigits = maximumFractionDigits
+    func stringFromValue(value: Double, currencyCode: String, fractionDigits: Int = 2) -> String {
+        formatter.minimumFractionDigits = fractionDigits
+        formatter.maximumFractionDigits = fractionDigits
         formatter.currencyCode = currencyCode
         return formatter.string(from: NSNumber(floatLiteral: value)) ?? "-,--"
     }
