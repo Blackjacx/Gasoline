@@ -16,6 +16,8 @@
 		B92E57AE1F096290003437B3 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E57AD1F096290003437B3 /* DataBase.swift */; };
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
 		B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F8ED1C7A327C008C66E5 /* Constants.swift */; };
+		B9537FB11F1C0FCB001E2174 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9537FB01F1C0FCB001E2174 /* Colors.xcassets */; };
+		B9537FB21F1C1421001E2174 /* Sketchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CB62671F1BF3AE003DB4A6 /* Sketchpad.storyboard */; };
 		B95610931F12830D000E5649 /* MeasurementFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95610921F1282C9000E5649 /* MeasurementFormatting.swift */; };
 		B973FEA91F094C47008D368E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEA81F094C47008D368E /* RootViewController.swift */; };
 		B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAA1F094D34008D368E /* RefuelListViewController.swift */; };
@@ -85,11 +87,13 @@
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9302F591BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B9537FB01F1C0FCB001E2174 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B95610921F1282C9000E5649 /* MeasurementFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatting.swift; sourceTree = "<group>"; };
 		B973FEA81F094C47008D368E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B973FEAA1F094D34008D368E /* RefuelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelListViewController.swift; sourceTree = "<group>"; };
 		B973FEAC1F094E2E008D368E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B973FEAE1F094EE5008D368E /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		B9CB62671F1BF3AE003DB4A6 /* Sketchpad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sketchpad.storyboard; sourceTree = "<group>"; };
 		B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelCell.swift; sourceTree = "<group>"; };
 		B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		B9F8B6181F12E23C00168E2D /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
@@ -149,13 +153,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B92B622D1C8F573D00790D3B /* model */ = {
+		B92B622D1C8F573D00790D3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B92B62291C8F572300790D3B /* Refuel.swift */,
 				B92B622B1C8F573800790D3B /* User.swift */,
 			);
-			name = model;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B92B622E1C8F576600790D3B /* Supporting Files */ = {
@@ -163,6 +167,7 @@
 			children = (
 				B9302F591BAB6F5B00CE9CC4 /* Info.plist */,
 				B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */,
+				B9537FB01F1C0FCB001E2174 /* Colors.xcassets */,
 				B92B624E1C8F815D00790D3B /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -193,6 +198,7 @@
 		B9302F471BAB6F5B00CE9CC4 /* Gasoline */ = {
 			isa = PBXGroup;
 			children = (
+				B9CB62671F1BF3AE003DB4A6 /* Sketchpad.storyboard */,
 				B911C7A81BDC5A4900016B85 /* AppDelegate.swift */,
 				B936F8ED1C7A327C008C66E5 /* Constants.swift */,
 				B92E57AD1F096290003437B3 /* DataBase.swift */,
@@ -201,30 +207,30 @@
 				B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */,
 				B973FEAA1F094D34008D368E /* RefuelListViewController.swift */,
 				B973FEA81F094C47008D368E /* RootViewController.swift */,
-				B95450D01F12754800371C0F /* cells */,
-				B95610941F128400000E5649 /* formatter */,
-				B92B622D1C8F573D00790D3B /* model */,
+				B95450D01F12754800371C0F /* Cells */,
+				B95610941F128400000E5649 /* Formatter */,
+				B92B622D1C8F573D00790D3B /* Model */,
 				B92B622E1C8F576600790D3B /* Supporting Files */,
 			);
 			path = Gasoline;
 			sourceTree = "<group>";
 		};
-		B95450D01F12754800371C0F /* cells */ = {
+		B95450D01F12754800371C0F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */,
 				B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */,
 			);
-			path = cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		B95610941F128400000E5649 /* formatter */ = {
+		B95610941F128400000E5649 /* Formatter */ = {
 			isa = PBXGroup;
 			children = (
 				B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */,
 				B95610921F1282C9000E5649 /* MeasurementFormatting.swift */,
 			);
-			path = formatter;
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 		B9F8B6201F12E29900168E2D /* Core */ = {
@@ -370,7 +376,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9537FB11F1C0FCB001E2174 /* Colors.xcassets in Resources */,
 				B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */,
+				B9537FB21F1C1421001E2174 /* Sketchpad.storyboard in Resources */,
 				B92B624C1C8F815D00790D3B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,6 +792,7 @@
 				B9F8B6381F12E29900168E2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9F8B63A1F12E29900168E2D /* Build configuration list for PBXNativeTarget "CoreTests" */ = {
 			isa = XCConfigurationList;
@@ -792,6 +801,7 @@
 				B9F8B63C1F12E29900168E2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
