@@ -17,7 +17,7 @@
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
 		B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F8ED1C7A327C008C66E5 /* Constants.swift */; };
 		B9537FB11F1C0FCB001E2174 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9537FB01F1C0FCB001E2174 /* Colors.xcassets */; };
-		B9537FB21F1C1421001E2174 /* Sketchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CB62671F1BF3AE003DB4A6 /* Sketchpad.storyboard */; };
+		B9537FB31F1C1A70001E2174 /* Sketchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CB62671F1BF3AE003DB4A6 /* Sketchpad.storyboard */; };
 		B95610931F12830D000E5649 /* MeasurementFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95610921F1282C9000E5649 /* MeasurementFormatting.swift */; };
 		B973FEA91F094C47008D368E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEA81F094C47008D368E /* RootViewController.swift */; };
 		B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAA1F094D34008D368E /* RefuelListViewController.swift */; };
@@ -378,7 +378,7 @@
 			files = (
 				B9537FB11F1C0FCB001E2174 /* Colors.xcassets in Resources */,
 				B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */,
-				B9537FB21F1C1421001E2174 /* Sketchpad.storyboard in Resources */,
+				B9537FB31F1C1A70001E2174 /* Sketchpad.storyboard in Resources */,
 				B92B624C1C8F815D00790D3B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

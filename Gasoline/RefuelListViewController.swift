@@ -72,7 +72,7 @@ class RefuelListViewController: UIViewController {
         // Setup UI
         tableView.addMaximizedTo(view)
     }
-
+    
     // MARK: - Actions
 
     @IBAction func pressedAddNewItem(sender: UIButton) {
