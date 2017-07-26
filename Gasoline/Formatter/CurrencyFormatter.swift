@@ -11,6 +11,8 @@ import UIKit
 public struct CurrencyFormatter {
 
     public static let shared = CurrencyFormatter()
+    private static let defaultString = "-,--"
+
     private init() {}
 
     private let formatter: NumberFormatter = {
@@ -19,10 +21,12 @@ public struct CurrencyFormatter {
         return formatter
     }()
 
-    func stringFromValue(value: Double, currencyCode: String, fractionDigits: Int = 2) -> String {
-        formatter.minimumFractionDigits = fractionDigits
-        formatter.maximumFractionDigits = fractionDigits
+    public func stringFromValue(value: Decimal?, currencyCode: String, maximumFractionDigits: Int = 2) -> String {
+        guard let value = value else { return CurrencyFormatter.defaultString }
+        let normalizedValue = value / 100.0
+        formatter.minimumFractionDigits = maximumFractionDigits
+        formatter.maximumFractionDigits = maximumFractionDigits
         formatter.currencyCode = currencyCode
-        return formatter.string(from: NSNumber(floatLiteral: value)) ?? "-,--"
+        return formatter.string(from: normalizedValue as NSDecimalNumber) ?? CurrencyFormatter.defaultString
     }
 }

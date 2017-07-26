@@ -29,13 +29,13 @@ public struct Refuel: Codable {
     
 
     /// The total costs in the major curency value (Euro, Dollar, ...)
-    public var totalPrice: Double { return literPrice * fuelAmount.value }
+    public var totalPrice: Decimal { return literPrice * Decimal(fuelAmount.value) }
     /// The date the refuel action has been done
     public let date: Date
     /// The currency that applies to all price values of this class.
     public let currencyCode: String
     /// The price per liter in the major curency value (Euro, Dollar, ...)
-    public let literPrice: Double
+    public let literPrice: Decimal
     /// The taken fuel amount im milli liters
     public let fuelAmount: Measurement<UnitVolume>
     /// The current mileage right at the gas station
@@ -49,7 +49,7 @@ extension Refuel {
     init(
         date: Date,
         currencyCode: String = "EUR", // TODO: The default for now - change later!
-        literPrice: Double,
+        literPrice: Decimal,
         fuelAmount: Measurement<UnitVolume>,
         mileage: Measurement<UnitLength>, note: String? = nil) {
 

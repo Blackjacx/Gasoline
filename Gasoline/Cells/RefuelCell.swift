@@ -65,7 +65,7 @@ extension RefuelCell: ConfigurableCell {
         let fuelAmount = measurementFormatter.stringFrom(measurement: item.fuelAmount, fractionDigits: 2)
         let note = item.note ?? ""
         let totalPrice = currencyFormatter.stringFromValue(value: item.totalPrice, currencyCode: item.currencyCode)
-        let literPrice = currencyFormatter.stringFromValue(value: item.literPrice, currencyCode: item.currencyCode, fractionDigits: 3)
+        let literPrice = currencyFormatter.stringFromValue(value: item.literPrice, currencyCode: item.currencyCode, maximumFractionDigits: 3)
 
         dateLabel.attributedText = FontStyle.headline.normalStyleAttributedString("\(date), \(time)")
         totalPriceLabel.attributedText = FontStyle.title1.normalStyleAttributedString(totalPrice)
