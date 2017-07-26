@@ -36,7 +36,7 @@ public struct Refuel: Codable {
     public let currencyCode: String
     /// The price per liter in the major curency value (Euro, Dollar, ...)
     public let literPrice: Decimal
-    /// The taken fuel amount im milli liters
+    /// The fuel amount in liters
     public let fuelAmount: Measurement<UnitVolume>
     /// The current mileage right at the gas station
     public let mileage: Measurement<UnitLength>
