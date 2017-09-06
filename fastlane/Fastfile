@@ -81,6 +81,15 @@ lane :release do |options|
   
   increment_bundle_versions(product_name: product_name, version: version)
 
+  # using changelog fastlane plugin
+  changelog = read_changelog
+
+  # using changelog fastlane plugin
+  stamp_changelog(
+    section_identifier: version, # Stamp Unreleased section with newly released build number
+    git_tag: version # Specify reference to git tag associated with this section
+  )
+
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
   # Finish the release branch. The shell may hang here because it: 
@@ -96,7 +105,7 @@ lane :release do |options|
   # push to master + push tags
   push_to_git_remote(local_branch: "master", force: true)
 
-  push_github_release(product_name: product_name, version: version, github_account: github_account) 
+  push_github_release(product_name: product_name, version: version, github_account: github_account, changelog: changelog) 
 
   # deploy to TestFlight, Crashlytics, Hockey or whatever
 end
@@ -148,22 +157,14 @@ end
 desc "Creates a github release with a git commit changelog"
 private_lane :push_github_release do |options|
 
-  if !options[:product_name] || !options[:version] || !options[:github_account]
-    raise "No product_name, version specified, or github_account specified!".red
+  if !options[:product_name] || !options[:version] || !options[:github_account] || !options[:changelog]
+    raise "No product_name, version specified, github_account or changelog specified!".red
   end
 
   product_name = options[:product_name]
   version = options[:version]
   github_account = options[:github_account]
-
-  # using changelog fastlane plugin
-  changelog = read_changelog
-
-  # using changelog fastlane plugin
-  stamp_changelog(
-    section_identifier: version, # Stamp Unreleased section with newly released build number
-    git_tag: version # Specify reference to git tag associated with this section
-  )
+  changelog = options[:changelog]
 
   github_release = set_github_release(
     repository_name: "#{github_account}/#{product_name}",
