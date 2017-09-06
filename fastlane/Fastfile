@@ -103,7 +103,7 @@ desc "Runs tests using scan"
 lane :test do |options|
 
   if !options[:product_name]
-    raise "No product_name or no version specified".red
+    raise "No product_name specified".red
   end
 
   product_name = options[:product_name]
