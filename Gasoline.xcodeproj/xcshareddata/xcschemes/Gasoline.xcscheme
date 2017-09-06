@@ -20,6 +20,48 @@
                ReferencedContainer = "container:Gasoline.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9F8B6261F12E29900168E2D"
+               BuildableName = "CoreTests.xctest"
+               BlueprintName = "CoreTests"
+               ReferencedContainer = "container:Gasoline.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9E595ED1F60A0590005D740"
+               BuildableName = "GasolineUITests.xctest"
+               BlueprintName = "GasolineUITests"
+               ReferencedContainer = "container:Gasoline.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9E595FB1F60A0620005D740"
+               BuildableName = "GasolineTests.xctest"
+               BlueprintName = "GasolineTests"
+               ReferencedContainer = "container:Gasoline.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -36,6 +78,26 @@
                BlueprintIdentifier = "B9F8B6261F12E29900168E2D"
                BuildableName = "CoreTests.xctest"
                BlueprintName = "CoreTests"
+               ReferencedContainer = "container:Gasoline.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9E595ED1F60A0590005D740"
+               BuildableName = "GasolineUITests.xctest"
+               BlueprintName = "GasolineUITests"
+               ReferencedContainer = "container:Gasoline.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B9E595FB1F60A0620005D740"
+               BuildableName = "GasolineTests.xctest"
+               BlueprintName = "GasolineTests"
                ReferencedContainer = "container:Gasoline.xcodeproj">
             </BuildableReference>
          </TestableReference>
