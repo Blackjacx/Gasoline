@@ -9,4 +9,3 @@
 * [#5](https://github.com/blackjacx/starter/pull/5): Make currency code customisable - [@blackjacx](https://github.com/blackjacx).
 * [#4](https://github.com/blackjacx/starter/pull/4): Convert to Swift 4 Codable - [@blackjacx](https://github.com/blackjacx).
 * [#1](https://github.com/blackjacx/starter/pull/1): Establish Swift 4 compatibility - [@blackjacx](https://github.com/blackjacx).
-0.0.1* [0.0.1](https://github.com/blackjacx/starter/pull/1): Establish Swift 4 compatibility - [@blackjacx](https://github.com/blackjacx).
