@@ -10,7 +10,7 @@ import UIKit
 
 public struct User: Codable {
 
-    enum CodingKeys : String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
         case createdAt = "created_at"
 
@@ -24,7 +24,6 @@ public struct User: Codable {
     /// The creation date of the model object
     public let createdAt: Date
 
-    
     /// The email address of the user
     public let email: String
     /// The first name of the user

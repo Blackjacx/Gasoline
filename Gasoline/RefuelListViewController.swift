@@ -53,8 +53,6 @@ class RefuelListViewController: UIViewController {
         fatalError()
     }
 
-
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -95,7 +93,7 @@ extension RefuelListViewController: UITableViewDelegate {
 }
 
 extension Refuel: GenericDataSourceItem {
-    
+
     var cellId: String {
         return "\(type(of: self))"
     }

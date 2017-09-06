@@ -11,16 +11,17 @@ import Foundation
 protocol DataBase {
 
     // Singleton
-    static var shared: DataBase {get}
+    static var shared: DataBase { get }
 
     func query<T>(completion: ((_ items: [T]) -> Void))
-    mutating func add(item: Any, completion: (() -> ()))
+    mutating func add(item: Any, completion: (() -> Void))
 }
 
 struct DataBaseImplementation: DataBase {
 
     // Singleton
     static let shared: DataBase = DataBaseImplementation()
+
     private init() {}
 
     private var store: [Any] = {
@@ -46,7 +47,7 @@ struct DataBaseImplementation: DataBase {
         completion(queryResult)
     }
 
-    mutating func add(item: Any, completion: (() -> ())) {
+    mutating func add(item: Any, completion: (() -> Void)) {
 
         store.append(item)
         completion()

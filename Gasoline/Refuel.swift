@@ -10,7 +10,7 @@ import UIKit
 
 public struct Refuel: Codable {
 
-    enum CodingKeys : String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
         case createdAt = "created_at"
 
@@ -26,7 +26,6 @@ public struct Refuel: Codable {
     public let id: String
     /// The creation date of the model object
     public let createdAt: Date
-    
 
     /// The total costs in the major curency value (Euro, Dollar, ...)
     public var totalPrice: Double { return literPrice * fuelAmount.value }
@@ -46,12 +45,12 @@ public struct Refuel: Codable {
 
 extension Refuel {
 
-    init(
-        date: Date,
-        currencyCode: String = "EUR", // TODO: The default for now - change later!
-        literPrice: Double,
-        fuelAmount: Measurement<UnitVolume>,
-        mileage: Measurement<UnitLength>, note: String? = nil) {
+    init(date: Date,
+         currencyCode: String = "EUR",
+         literPrice: Double,
+         fuelAmount: Measurement<UnitVolume>,
+         mileage: Measurement<UnitLength>,
+         note: String? = nil) {
 
         self.init(
             id: NSUUID().uuidString,

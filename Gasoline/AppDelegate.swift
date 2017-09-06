@@ -12,7 +12,7 @@ var globalDataBaseReference: DataBase = DataBaseImplementation.shared
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     var window: UIWindow?
     let rootViewController: RootViewController = RootViewController()
 
@@ -41,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
 
     }
-    
+
     func applicationWillTerminate(_ application: UIApplication) {
-        
+
     }
 }
