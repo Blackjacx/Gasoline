@@ -90,7 +90,11 @@ lane :release do |options|
   # 1) git config --global core.mergeoptions --no-edit
   sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"  
 
-  git push --tags
+  # push to develop + push tags
+  push_to_git_remote(local_branch: "develop", force: true)
+
+  # push to master + push tags
+  push_to_git_remote(local_branch: "master", force: true)
 
   push_github_release(product_name: product_name, version: version, github_account: github_account) 
 
