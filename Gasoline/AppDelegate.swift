@@ -6,16 +6,6 @@
 //  Copyright © 2015 Stefan Herold. All rights reserved.
 //
 
-// IMPROVEMENTS
-// TODO: Implement Adding
-// TODO: Implement Persistence
-// TODO: Include a specialized method for selecting desired fonts
-
-// FEATURES
-// TODO: Taking Picture of the bill
-// TODO: OCR mileage in the car via camera
-// TODO: Implement NSNumberFormatter and reduce to 1 textfield for currency: http://stackoverflow.com/questions/276382/what-is-the-best-way-to-enter-numeric-values-with-decimal-points
-
 import UIKit
 
 var globalDataBaseReference: DataBase = DataBaseImplementation.shared
