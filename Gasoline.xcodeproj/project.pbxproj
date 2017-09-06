@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4199F9F6002910A63A734BB8 /* Pods_GasolineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD5FCC30B0ED817E52D16D2 /* Pods_GasolineUITests.framework */; };
+		B9089B011F60C1420072EB6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B9089AFF1F60C1420072EB6C /* README.md */; };
+		B9089B021F60C1420072EB6C /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = B9089B001F60C1420072EB6C /* CHANGELOG.md */; };
 		B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */; };
 		B911C7A91BDC5A4900016B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7A81BDC5A4900016B85 /* AppDelegate.swift */; };
 		B911C7E51BDC5E5500016B85 /* RefuelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */; };
@@ -97,6 +99,8 @@
 		713A333FA20B00D2246F03CB /* Pods-GasolineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasolineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasolineTests/Pods-GasolineTests.release.xcconfig"; sourceTree = "<group>"; };
 		83EBED6146502D15608A6276 /* Pods_GasolineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasolineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD5FCC30B0ED817E52D16D2 /* Pods_GasolineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasolineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9089AFF1F60C1420072EB6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B9089B001F60C1420072EB6C /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		B911C7A81BDC5A4900016B85 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelDetailViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 		B9302F3C1BAB6F5B00CE9CC4 = {
 			isa = PBXGroup;
 			children = (
+				B9089B001F60C1420072EB6C /* CHANGELOG.md */,
+				B9089AFF1F60C1420072EB6C /* README.md */,
 				B9302F471BAB6F5B00CE9CC4 /* Gasoline */,
 				B9F8B6201F12E29900168E2D /* Core */,
 				B9F8B62D1F12E29900168E2D /* CoreTests */,
@@ -502,8 +508,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9089B011F60C1420072EB6C /* README.md in Resources */,
 				B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */,
 				B92B624C1C8F815D00790D3B /* Localizable.strings in Resources */,
+				B9089B021F60C1420072EB6C /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
