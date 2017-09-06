@@ -1,0 +1,173 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions/
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+#
+# This file was created by the help of https://gist.github.com/ulhas/e8e529d08849b8cda947
+#
+
+# NOTE: To use faslane install:
+#           gem install bundler 
+#           brew install git-flow
+#           brew install apledoc
+#
+#     Git-flow will be configured upon installation or the first run of fastlane.
+#     IMPORTANT: Use the default options !!!
+#
+#   and then run:
+#           bundle exec fastlane release product_name:SHSearchBar version:"<YOUR_VERSION_HERE>" github_account:"blackjacx"
+
+# LINKS
+# => Git flow cheat sheet: http://danielkummer.github.io/git-flow-cheatsheet/
+# => Git flow breakdown: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
+
+
+# TODO: Upload IPA in the lane `push_github_release` to github
+# TODO: Deploy app to Apple TestFlight
+
+
+
+# This is the minimum version number required. 
+# Update this, if you use features of a newer version.
+fastlane_version "2.45.0"
+
+# default_platform :ios
+
+before_all do
+  cocoapods
+end
+
+
+after_all do |lane|
+  # This block is called, only if the executed lane was successful
+  notification(message: "#{lane} finished")
+end
+
+
+error do |lane, exception|
+  # This block is called, only if the executed lane failed
+  notification(message: "#{lane} finished with error #{exception}")
+end
+
+###############################################################################
+#                          PUBLIC SECTION
+###############################################################################
+
+desc "Runs framework tests"
+desc "Increments bundle versions"
+desc "Merges into master"
+desc "Pushes the tags to origin"
+desc "Pushes a release to github"
+desc "Deploys a new version"
+lane :release do |options|
+
+  if !options[:product_name] || !options[:version] || !options[:github_account]
+    raise "No product_name, version specified, or github_account specified!".red
+  end
+
+  product_name = options[:product_name]
+  version = options[:version]
+  github_account = options[:github_account]
+  
+  ensure_git_status_clean
+  ensure_git_branch(branch: "develop")
+  git_pull
+  test(product_name: product_name)
+
+  sh "git flow release start #{version}"
+  
+  increment_bundle_versions(product_name: product_name, version: version)
+
+  sh "git commit -am 'Fastlane: Release on Production #{version}'"
+
+  # Finish the release branch. The shell may hang here because it: 
+  # 1) promts for a merge message.
+  # 
+  # To get around this do the following:
+  # 1) git config --global core.mergeoptions --no-edit
+  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"  
+
+  git push --tags
+
+  push_github_release(product_name: product_name, version: version, github_account: github_account) 
+
+  # deploy to TestFlight, Crashlytics, Hockey or whatever
+end
+
+
+
+desc "Runs tests using scan"
+lane :test do |options|
+
+  if !options[:product_name]
+    raise "No product_name or no version specified".red
+  end
+
+  product_name = options[:product_name]
+
+  scan(
+    workspace: "#{product_name}.xcworkspace",
+    scheme: product_name,
+    clean: true,
+    devices: ["iPhone 7"],
+    skip_build: true,
+    thread_sanitizer: true,
+    output_types: "html"
+  )
+end
+
+###############################################################################
+#                          PRIVATE SECTION
+###############################################################################
+
+desc "Increments CFBundleVersion by one and sets CFBundleShortVersionString"
+private_lane :increment_bundle_versions do |options|
+
+  if !options[:product_name] || !options[:version]
+    raise "No product_name or no version specified".red
+  end
+
+  product_name = options[:product_name]
+  version = options[:version]
+  project = "#{product_name}.xcodeproj"
+
+  increment_version_number(xcodeproj: project, version_number: version)
+  increment_build_number(xcodeproj: project)
+end
+
+
+
+
+desc "Creates a github release with a git commit changelog"
+private_lane :push_github_release do |options|
+
+  if !options[:product_name] || !options[:version] || !options[:github_account]
+    raise "No product_name, version specified, or github_account specified!".red
+  end
+
+  product_name = options[:product_name]
+  version = options[:version]
+  github_account = options[:github_account]
+
+  # using changelog fastlane plugin
+  changelog = read_changelog
+
+  # using changelog fastlane plugin
+  stamp_changelog(
+    section_identifier: version, # Stamp Unreleased section with newly released build number
+    git_tag: version # Specify reference to git tag associated with this section
+  )
+
+  github_release = set_github_release(
+    repository_name: "#{github_account}/#{product_name}",
+    api_token: ENV["GITHUB_TOKEN"],
+    name: version,
+    tag_name: version,
+    description: ("#{changelog}" rescue "No changelog provided"),
+    commitish: "master"
+  )
+end
