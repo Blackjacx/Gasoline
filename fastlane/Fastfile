@@ -26,7 +26,6 @@
 # => Git flow breakdown: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
 
 
-# TODO: Upload IPA in the lane `push_github_release` to github
 # TODO: Deploy app to Apple TestFlight
 
 
