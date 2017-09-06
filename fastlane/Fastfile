@@ -1,13 +1,10 @@
 # Customise this file, documentation can be found here:
 # https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+# All available actions: https://docs.fastlane.tools/actions/
 # can also be listed using the `fastlane actions` command
 
 # Change the syntax highlighting to Ruby
 # All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
 
 #
 # This file was created by the help of https://gist.github.com/ulhas/e8e529d08849b8cda947
@@ -18,25 +15,18 @@
 #           brew install git-flow
 #           brew install apledoc
 #
-#     Git-flow witll be configured upon installation or the first run of fastlane.
+#     Git-flow will be configured upon installation or the first run of fastlane.
 #     IMPORTANT: Use the default options !!!
 #
 #   and then run:
-#           bundle exec fastlane release_to_cocoapods framework:SHSearchBar version:"<YOUR_VERSION_HERE>"
-
-# POSSIBLE ADDONS
-# => update_info_plist
+#           bundle exec fastlane release product_name:SHSearchBar version:"<YOUR_VERSION_HERE>" github_account:"blackjacx"
 
 # LINKS
-# => http://danielkummer.github.io/git-flow-cheatsheet/
-# => https://docs.fastlane.tools/actions/
-# => https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
+# => Git flow cheat sheet: http://danielkummer.github.io/git-flow-cheatsheet/
+# => Git flow breakdown: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
 
 
-
-# TODO: Parametrize the github URL for the lane `push_github_release`
 # TODO: Upload IPA in the lane `push_github_release` to github
-# TODO: Correctly update changelog
 # TODO: Deploy app to Apple TestFlight
 
 
@@ -48,7 +38,7 @@ fastlane_version "2.45.0"
 # default_platform :ios
 
 before_all do
-  update_fastlane
+  update_fastlane # automatically update fastlane to the newest version
   cocoapods
 end
 
@@ -76,17 +66,18 @@ desc "Pushes a release to github"
 desc "Deploys a new version"
 lane :release do |options|
 
-  if !options[:product_name] || !options[:version]
-    raise "No product_name or no version specified".red
+  if !options[:product_name] || !options[:version] || !options[:github_account]
+    raise "No product_name, version specified, or github_account specified!".red
   end
 
   product_name = options[:product_name]
   version = options[:version]
+  github_account = options[:github_account]
   
   ensure_git_status_clean
   ensure_git_branch(branch: "develop")
   git_pull
-  run_tests(product_name: product_name)
+  test(product_name: product_name)
 
   sh "git flow release start #{version}"
   
@@ -103,7 +94,7 @@ lane :release do |options|
 
   git push --tags
 
-  push_github_release(product_name: product_name, version: version) 
+  push_github_release(product_name: product_name, version: version, github_account: github_account) 
 
   # deploy to TestFlight, Crashlytics, Hockey or whatever
 end
@@ -111,7 +102,7 @@ end
 
 
 desc "Runs tests using scan"
-lane :run_tests do |options|
+lane :test do |options|
 
   if !options[:product_name]
     raise "No product_name or no version specified".red
@@ -129,20 +120,6 @@ lane :run_tests do |options|
     output_types: "html"
   )
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ###############################################################################
 #                          PRIVATE SECTION
@@ -169,28 +146,29 @@ end
 desc "Creates a github release with a git commit changelog"
 private_lane :push_github_release do |options|
 
-  if !options[:product_name] || !options[:version]
-    raise "No product_name or no version specified".red
+  if !options[:product_name] || !options[:version] || !options[:github_account]
+    raise "No product_name, version specified, or github_account specified!".red
   end
 
   product_name = options[:product_name]
   version = options[:version]
+  github_account = options[:github_account]
 
   # using changelog fastlane plugin
-  changelog=read_changelog
+  changelog = read_changelog
 
+  # using changelog fastlane plugin
   stamp_changelog(
     section_identifier: version, # Stamp Unreleased section with newly released build number
     git_tag: version # Specify reference to git tag associated with this section
   )
 
   github_release = set_github_release(
-    repository_name: "blackjacx/#{product_name}",
+    repository_name: "#{github_account}/#{product_name}",
     api_token: ENV["GITHUB_TOKEN"],
     name: version,
     tag_name: version,
     description: ("#{changelog}" rescue "No changelog provided"),
-    commitish: "master",
-    # upload_assets: ["example_integration.ipa", "./pkg/built.gem"],
+    commitish: "master"
   )
 end
