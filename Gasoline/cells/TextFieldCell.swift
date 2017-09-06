@@ -17,20 +17,20 @@ class TextFieldCell: UITableViewCell {
         textField.backgroundColor = self?.backgroundColor
         return textField
     }()
-    
+
     // MARK: - Property Observer
     var placeholderText: String? {
         didSet {
             textField.placeholder = placeholderText
         }
     }
-    
+
     var textFieldText: String? {
         didSet {
             textField.text = textFieldText
         }
     }
-    
+
     override var backgroundColor: UIColor? {
         didSet {
             textField.backgroundColor = backgroundColor

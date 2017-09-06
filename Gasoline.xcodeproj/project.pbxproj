@@ -107,7 +107,6 @@
 		B92E57AD1F096290003437B3 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		B9302F451BAB6F5B00CE9CC4 /* Gasoline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gasoline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B9302F591BAB6F5B00CE9CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B95610921F1282C9000E5649 /* MeasurementFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatting.swift; sourceTree = "<group>"; };
 		B973FEA81F094C47008D368E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +121,8 @@
 		B9E595FC1F60A0620005D740 /* GasolineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasolineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E595FE1F60A0620005D740 /* GasolineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasolineTests.swift; sourceTree = "<group>"; };
 		B9E596001F60A0620005D740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9E596071F60B1C50005D740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		B9E596091F60B1CD0005D740 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/Info.plist; sourceTree = "<group>"; };
 		B9F8B6181F12E23C00168E2D /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		B9F8B61F1F12E29900168E2D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F8B6211F12E29900168E2D /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
@@ -213,7 +214,7 @@
 		B92B622E1C8F576600790D3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B9302F591BAB6F5B00CE9CC4 /* Info.plist */,
+				B9E596081F60B1C50005D740 /* Info.plist */,
 				B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */,
 				B92B624E1C8F815D00790D3B /* Localizable.strings */,
 			);
@@ -345,6 +346,7 @@
 				94E8B5C85E11FBC1A2D5847B /* [CP] Embed Pods Frameworks */,
 				5738B7420D16D646AD64F41D /* [CP] Copy Pods Resources */,
 				B9F8B6391F12E29900168E2D /* Embed Frameworks */,
+				B9E596061F60B17E0005D740 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -670,6 +672,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gasoline/Pods-Gasoline-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B9E596061F60B17E0005D740 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint";
+		};
 		CC955235246918BB4D3C9B04 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -784,6 +800,15 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		B9E596081F60B1C50005D740 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9E596071F60B1C50005D740 /* Base */,
+				B9E596091F60B1CD0005D740 /* de */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -893,7 +918,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = PCW579R278;
-				INFOPLIST_FILE = Gasoline/Info.plist;
+				INFOPLIST_FILE = Gasoline/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gasoline;
@@ -913,7 +938,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = PCW579R278;
-				INFOPLIST_FILE = Gasoline/Info.plist;
+				INFOPLIST_FILE = Gasoline/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gasoline;

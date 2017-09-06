@@ -1,6 +1,6 @@
 # Customise this file, documentation can be found here:
 # https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# All available actions: https://docs.fastlane.tools/actions/
+# Fastlane actions: https://docs.fastlane.tools/actions/
 # can also be listed using the `fastlane actions` command
 
 # Change the syntax highlighting to Ruby
@@ -26,7 +26,6 @@
 # => Git flow breakdown: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
 
 
-# TODO: Upload IPA in the lane `push_github_release` to github
 # TODO: Deploy app to Apple TestFlight
 
 
@@ -104,7 +103,7 @@ desc "Runs tests using scan"
 lane :test do |options|
 
   if !options[:product_name]
-    raise "No product_name or no version specified".red
+    raise "No product_name specified".red
   end
 
   product_name = options[:product_name]

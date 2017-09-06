@@ -54,8 +54,8 @@ class RefuelDetailViewController: UIViewController {
     init(refuelItem: Refuel) {
         super.init(nibName: nil, bundle: nil)
 
-        totalCostsTextField.text = textFieldFormatter.string(from: NSNumber(floatLiteral: refuelItem.totalPrice))
-        pricePerLiterTextField.text = textFieldFormatter.string(from: NSNumber(floatLiteral: refuelItem.literPrice))
+        totalCostsTextField.text = textFieldFormatter.string(from: refuelItem.totalPrice as NSNumber)
+        pricePerLiterTextField.text = textFieldFormatter.string(from: refuelItem.literPrice as NSNumber)
         literAmountTextField.text = measurementFormatter.string(from: refuelItem.fuelAmount)
         mileageTextField.text = measurementFormatter.string(from: refuelItem.mileage)
 
@@ -84,7 +84,11 @@ class RefuelDetailViewController: UIViewController {
 
         for textField in textFieldList {
             if textField.keyboardType == .decimalPad || textField.keyboardType == .numberPad {
-//                UIView.pcl_attachButtonToolbar(to: textField, title: NSLocalizedString("fli.recordDetails.numpadKeyboardAccessoryNextButon.title", comment: ""), target: self, action: #selector(RecordDetailViewController.textFieldShouldReturnHelper))
+//                UIView.pcl_attachButtonToolbar(
+//                    to: textField,
+//                    title: NSLocalizedString("fli.recordDetails.numpadKeyboardAccessoryNextButon.title", comment: ""),
+//                    target: self,
+//                    action: #selector(RecordDetailViewController.textFieldShouldReturnHelper))
             }
         }
     }
@@ -156,11 +160,11 @@ extension RefuelDetailViewController: UITextFieldDelegate {
             if !tf.isFirstResponder {
                 continue
             }
-            if idx == textFieldList.count-1 {
+            if idx == textFieldList.count - 1 {
                 tf.resignFirstResponder()
                 break
-            } else if idx < textFieldList.count-1 {
-                textFieldList[idx+1].becomeFirstResponder()
+            } else if idx < textFieldList.count - 1 {
+                textFieldList[idx + 1].becomeFirstResponder()
                 break
             }
         }
@@ -173,52 +177,41 @@ extension RefuelDetailViewController: UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
-        if (textField == noteTextField) {
-            return true
-        }
+        if textField == noteTextField { return true }
 
         let decimalSet = NSMutableCharacterSet.decimalDigit()
-        //        decimalSet.addCharactersInString(decimalSeparator)
+//        decimalSet.addCharactersInString(decimalSeparator)
         let invertedSet = decimalSet.inverted
 
         // Update the string in the text input
         var currentString = textField.text ?? ""
         currentString = (currentString as NSString).replacingCharacters(in: range, with: string)
 
-        print("\(currentString)")
-
-        currentString = textFieldFormatter.string(from: textFieldFormatter.number(from: currentString)!)!
+        guard
+            let numberFromString = textFieldFormatter.number(from: currentString),
+            let stringFromNumber = textFieldFormatter.string(from: numberFromString) else {
+                fatalError()
+        }
+        currentString = stringFromNumber
 
         // Strip out non digits and the separator and convert to cents
-        currentString = currentString.components(separatedBy: invertedSet).joined(separator: "")
+        currentString = currentString.components(separatedBy: invertedSet).joined()
         let centValue = Int(currentString) ?? 0
-
 
         // get current cursor position
         let beginning = textField.beginningOfDocument
         let start = textField.position(from: beginning, offset:range.location)
         let cursorOffset = textField.offset(from: beginning, to:start!) + string.characters.count
 
-
-
         let decimalNumber = NSDecimalNumber(value: Double(centValue) / 100.0 as Double)
         let formattedString = textFieldFormatter.string(from: decimalNumber)
         textField.text = formattedString
-
 
         // Restore the cursor position
         if let newCursorPosition = textField.position(from: textField.beginningOfDocument, offset:cursorOffset) {
             let newSelectedRange = textField.textRange(from: newCursorPosition, to:newCursorPosition)
             textField.selectedTextRange = newSelectedRange
         }
-
-
-
-
-
-
-
-
 
         // Rejects all values that are not digits or the decimal separator
         //        let decimalSet = NSMutableCharacterSet.decimalDigitCharacterSet()
@@ -229,28 +222,27 @@ extension RefuelDetailViewController: UITextFieldDelegate {
         }
 
         // Only one decimal separator is permitted
-        if (string.contains(decimalSeparator) && currentString.contains(decimalSeparator)) {
+        if string.contains(decimalSeparator) && currentString.contains(decimalSeparator) {
             return false
         }
 
         let currentCharacterCount = currentString.characters.count
-        if (range.length + range.location > currentCharacterCount){
+        if range.length + range.location > currentCharacterCount {
             return false
         }
 
         // Cnstain the number of characters entered by the user
         let newLength = currentCharacterCount + string.characters.count - range.length
-        if (textField == totalCostsTextField) {
+        if textField == totalCostsTextField {
             return newLength <= 7
-        } else if (textField == pricePerLiterTextField) {
+        } else if textField == pricePerLiterTextField {
             return newLength <= 5
-        } else if (textField == literAmountTextField) {
+        } else if textField == literAmountTextField {
             return newLength <= 7
-        } else if (textField == mileageTextField) {
+        } else if textField == mileageTextField {
             return newLength <= 7
         } else {
-            assert(false, "unknown text field: <\(textField)>: \(currentString)")
-            return false
+            fatalError("unknown text field: <\(textField)>: \(currentString)")
         }
     }
 }

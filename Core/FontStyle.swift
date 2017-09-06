@@ -37,7 +37,7 @@ enum FontStyle {
 
         return [
             .font: font,
-            .foregroundColor: UIColor.darkGray,
+            .foregroundColor: UIColor.darkGray
         ]
     }
 
@@ -50,7 +50,7 @@ enum FontStyle {
 
         return [
             .font: font,
-            .foregroundColor: UIColor.lightGray,
+            .foregroundColor: UIColor.lightGray
         ]
     }
 

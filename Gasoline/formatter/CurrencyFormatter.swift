@@ -11,6 +11,7 @@ import UIKit
 public struct CurrencyFormatter {
 
     public static let shared = CurrencyFormatter()
+
     private init() {}
 
     private let formatter: NumberFormatter = {
@@ -23,6 +24,6 @@ public struct CurrencyFormatter {
         formatter.minimumFractionDigits = fractionDigits
         formatter.maximumFractionDigits = fractionDigits
         formatter.currencyCode = currencyCode
-        return formatter.string(from: NSNumber(floatLiteral: value)) ?? "-,--"
+        return formatter.string(from: value as NSNumber) ?? "-,--"
     }
 }

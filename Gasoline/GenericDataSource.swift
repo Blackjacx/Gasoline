@@ -10,10 +10,10 @@ import UIKit
 
 protocol GenericDataSourceItem {
 
-    var cellId: String {get}
-    var classType: AnyClass {get}
-    var selectionHandler: (() -> UIViewController)? {get}
-    var isEditable: Bool {get}
+    var cellId: String { get }
+    var classType: AnyClass { get }
+    var selectionHandler: (() -> UIViewController)? { get }
+    var isEditable: Bool { get }
 }
 
 protocol ConfigurableCell {
@@ -31,7 +31,7 @@ class GenericDataSource: NSObject {
         }
     }
 
-    var dataSourceDidChangeHandler: ((_ dataSource: GenericDataSource) -> ())?
+    var dataSourceDidChangeHandler: ((_ dataSource: GenericDataSource) -> Void)?
 }
 
 extension GenericDataSource: UITableViewDataSource {
@@ -56,7 +56,7 @@ extension GenericDataSource: UITableViewDataSource {
         if let configurableCell = cell as? ConfigurableCell {
             configurableCell.configure(item: item)
         }
-        
+
         return cell
     }
 
