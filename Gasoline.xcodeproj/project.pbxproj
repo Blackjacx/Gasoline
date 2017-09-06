@@ -345,6 +345,7 @@
 				94E8B5C85E11FBC1A2D5847B /* [CP] Embed Pods Frameworks */,
 				5738B7420D16D646AD64F41D /* [CP] Copy Pods Resources */,
 				B9F8B6391F12E29900168E2D /* Embed Frameworks */,
+				B9E596061F60B17E0005D740 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -669,6 +670,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gasoline/Pods-Gasoline-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B9E596061F60B17E0005D740 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		CC955235246918BB4D3C9B04 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
