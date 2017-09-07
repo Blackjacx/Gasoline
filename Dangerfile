@@ -35,3 +35,7 @@ end
 
 # Have you updated CHANGELOG.md?
 changelog.check
+
+Danger::Changelog.configure do |config|
+  config.placeholder_line = ""
+end
