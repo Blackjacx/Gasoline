@@ -65,7 +65,6 @@ end
 error do |lane, exception|
   # This block is called, only if the executed lane failed
   clean_build_artifacts
-  puts "\n(╯°□°）╯︵ ┻━┻\n".red
   notification(
   	subtitle: "Failure",
   	message: "Lane #{lane} failed with error #{exception}"
@@ -86,8 +85,8 @@ lane :release do |options|
   product_name = options[:product_name]
   version = options[:version]
   github_account = options[:github_account]
-  
-  ensure_git_status_clean
+ 
+  ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
   git_pull
 
