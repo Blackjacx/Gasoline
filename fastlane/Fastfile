@@ -120,6 +120,7 @@ lane :test do |options|
 
   product_name = options[:product_name]
 
+  # Easily run tests of your iOS app using scan
   scan(
     workspace: "#{product_name}.xcworkspace",
     scheme: product_name,
@@ -128,6 +129,13 @@ lane :test do |options|
     skip_build: true,
     thread_sanitizer: true,
     output_types: "html"
+  )
+
+  # Runs danger for the project - should happen after the tests
+  danger(
+  	use_bundle_exec: true,
+  	github_api_token: ENV["GITHUB_API_TOKEN"],
+  	verbose: true
   )
 end
 
