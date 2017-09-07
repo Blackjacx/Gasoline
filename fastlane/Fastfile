@@ -26,6 +26,7 @@
 #
 # ENV["SLACK_URL"] = "..."
 # ENV["GITHUB_TOKEN"] = "..."
+# ENV["BITRISE_DEPLOY_DIR"] = "..."
 
 
 
@@ -55,7 +56,7 @@ after_all do |lane|
   	subtitle: "Success", 
   	message: "Lane #{lane} completed successfully"
   )
-  slack(success: true, message: "*Successfully deployed new update.*")
+  slack(success: true, message: "*Successfully deployed new update.*\n Installable via '#{ENV[BITRISE_BUILD_URL]}'")
 end
 
 
@@ -73,7 +74,14 @@ end
 ###############################################################################
 
 lane :feature_test do |options|
-
+gym(
+	workspace: "Gasoline.xcworkspace", 
+	scheme: "Gasoline",
+	output_directory: ENV["BITRISE_DEPLOY_DIR"],
+	export_method: "ad-hoc",
+	include_bitcode: true,
+  )
+	
 end
 
 
@@ -90,6 +98,9 @@ lane :release do |options|
   version = options[:version]
   github_account = options[:github_account]
   project = "#{product_name}.xcodeproj"
+  workspace = "#{product_name}.xcworkspace"
+  deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
+  ipa_name = "#{product_name}.ipa"
  
   ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
@@ -116,12 +127,24 @@ lane :release do |options|
   push_to_git_remote(local_branch: "master", remote_branch: "master")
   push_to_git_remote(local_branch: "develop", remote_branch: "develop")
 
-  push_github_release(
-  	product_name: product_name, 
-  	version: version, 
-  	github_account: github_account, 
-  	changelog: changelog
-  ) 
+  gym(
+	workspace: workspace, 
+	scheme: product_name,
+	output_directory: deploy_dir,
+	output_name: ipa_name,
+	export_method: "ad-hoc",
+	include_bitcode: true,
+  )
+
+  github_release = set_github_release(
+    repository_name: "#{github_account}/#{product_name}",
+    api_token: ENV["GITHUB_TOKEN"],
+    name: version,
+    tag_name: version,
+    description: ("#{changelog}" rescue "No changelog provided"),
+    commitish: "master",
+    upload_assets: [ipa_name]
+  )
 
   # deploy to TestFlight, Crashlytics, Hockey or whatever
 end
@@ -147,7 +170,8 @@ lane :test do |options|
     devices: ["iPhone 7"],
     skip_build: true,
     thread_sanitizer: true,
-    output_types: "html"
+    output_types: "html",
+    output_directory: ENV["BITRISE_DEPLOY_DIR"]
   )
 
   # Runs danger for the project
@@ -160,33 +184,4 @@ lane :test do |options|
     )
   end
 
-end
-
-
-
-
-###############################################################################
-#                          PRIVATE SECTION
-###############################################################################
-
-desc "Creates a github release with a git commit changelog"
-private_lane :push_github_release do |options|
-
-  if !options[:product_name] || !options[:version] || !options[:github_account] || !options[:changelog]
-    raise "No product_name, version specified, github_account or changelog specified!".red
-  end
-
-  product_name = options[:product_name]
-  version = options[:version]
-  github_account = options[:github_account]
-  changelog = options[:changelog]
-
-  github_release = set_github_release(
-    repository_name: "#{github_account}/#{product_name}",
-    api_token: ENV["GITHUB_TOKEN"],
-    name: version,
-    tag_name: version,
-    description: ("#{changelog}" rescue "No changelog provided"),
-    commitish: "master"
-  )
 end
