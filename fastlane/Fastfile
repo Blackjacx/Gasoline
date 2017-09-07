@@ -117,6 +117,7 @@ lane :release do |options|
 
   add_git_tag(tag: version)
 
+  # Bitrise/fastlane example solution
   # match(
   #   username: ENV['FASTLANE_USERNAME'],
   #   app_identifier: "io.bitrise.BitriseFastlaneSample",
@@ -124,6 +125,14 @@ lane :release do |options|
   #   type: "appstore"
   # )
 
+  # Muneebs solution
+  # match(
+  #   git_url: "https://github.com/{your-repo}/certificates.git",
+  #   app_identifier: ["ly.kweak"],
+  #   readonly: true
+  # )
+
+  # Muneebs solution
   # sigh(
   #   output_path: "/tmp",
   #   skip_certificate_verification: true,
