@@ -34,7 +34,7 @@
 
 # TODO: Include Bitrise Public Page URL in SlackMessge
 # TODO: Setup Crashlytics
-# TODO: deploy to TestFlight, Crashlytics, Hockey or whatever
+# TODO: deploy to TestFlight, Crashlytics, Hockey, ... & move away from Bitrise
 
 
 
@@ -112,9 +112,7 @@ lane :release do |options|
   changelog = read_changelog
 
   # stamp unreleased section with released version
-  change = stamp_changelog(section_identifier: version)
-
-  puts change
+  stamp_changelog(section_identifier: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
   
@@ -160,7 +158,7 @@ lane :release do |options|
   	subtitle: "Success", 
   	message: "Lane #{lane} completed successfully"
   )
-  slack(success: true, message: "*Successfully deployed new update.*\nRelease Notes: #{SET_GITHUB_RELEASE_HTML_LINK}")
+  slack(success: true, message: "*Successfully deployed new update.*")
 end
 
 ################################################################################
