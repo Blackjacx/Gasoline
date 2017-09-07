@@ -83,46 +83,28 @@ lane :release do |options|
   git_pull
 
   test(product_name: product_name, run_danger: true)
-  
-  # START: changes that must be comitted
 
   increment_bundle_versions(product_name: product_name, version: version)
 
-  # using changelog fastlane plugin
+  # read changelog
   changelog = read_changelog
 
-  # using changelog fastlane plugin
   # stamp Unreleased section with newly released build number
   stamp_changelog(section_identifier: version)
-
-  # END: changes that must be comitted
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
   # merge changes into master
-  sh "git checkout master"
-  sh "git merge develop"
+  sh "git checkout master && git merge develop"
 
   add_git_tag(tag: version)
 
   # backmerge into develop
-  sh "git checkout develop"
-  sh "git merge master"
+  sh "git checkout develop && git merge master"
 
   # push all changes on all branches and all tags
-  push_to_git_remote(
-    local_branch: "master",
-    remote_branch: "master",
-    force: true,
-    tags: true
-  )
-
-  push_to_git_remote(
-    local_branch: "develop",
-    remote_branch: "develop",
-    force: true,
-    tags: true
-  )
+  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
+  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
 
   push_github_release(
   	product_name: product_name, 
