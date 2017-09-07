@@ -1,7 +1,7 @@
 # Changelog
 
 ## [Unreleased]
-* [#100](https://github.com/blackjacx/starter/pull/100): Test if your contribution line is necessry - [@blackjacx](https://github.com/blackjacx).
+* Your contribution here.
 
 ## [0.0.1] - 2017-09-07
 ### Changed
