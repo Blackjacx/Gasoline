@@ -51,6 +51,7 @@ default_platform :ios
 
 before_all do
   cocoapods(use_bundle_exec: true)
+  sh "wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash"
 end
 
 
@@ -102,7 +103,6 @@ lane :release do |options|
 
   test(product_name: product_name, run_danger: true)
 
-  sh "brew install git-flow"
   sh "git flow release start #{version}"
 
   # Increments CFBundleVersion by one and sets CFBundleShortVersionString
