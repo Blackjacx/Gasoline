@@ -98,13 +98,18 @@ lane :release do |options|
   # END: changes that must be comitted
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
+
+  # merge changes into master
   sh "git checkout master"
   sh "git merge develop"
 
   add_git_tag(tag: version)
 
+  # backmerge into develop
   sh "git checkout develop"
   sh "git merge master"
+
+  # push all changes on all branches and all tags
   sh "git push --all"
   sh "git push --tags"
 
