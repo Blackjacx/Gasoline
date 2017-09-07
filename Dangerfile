@@ -34,7 +34,4 @@ if podfile_updated
 end
 
 # Have you updated CHANGELOG.md?
-Danger::Changelog.configure do |config|
-  config.placeholder_line = ""
-end
 changelog.check
