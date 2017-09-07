@@ -57,12 +57,7 @@ end
 
 
 after_all do |lane|
-  # This block is called, only if the executed lane was successful
-  notification(
-  	subtitle: "Success", 
-  	message: "Lane #{lane} completed successfully"
-  )
-  slack(success: true, message: "*Successfully deployed new update.*")
+
 end
 
 
@@ -167,6 +162,13 @@ lane :release do |options|
   # push all changes on all branches and all tags if everything was successful
   push_to_git_remote(local_branch: "master", remote_branch: "master")
   push_to_git_remote(local_branch: "develop", remote_branch: "develop")
+
+  # This is called, only if the executed lane was successful
+  notification(
+  	subtitle: "Success", 
+  	message: "Lane #{lane} completed successfully"
+  )
+  slack(success: true, message: "*Successfully deployed new update.*")
 end
 
 
