@@ -2,10 +2,6 @@
 
 ## [Unreleased]
 
-## [0.0.2] - 2017-09-07
-### Changed
-* Just a test - [@blackjacx](https://github.com/blackjacx).
-
 ## [0.0.1] - 2017-09-07
 ### Changed
 * [#7](https://github.com/blackjacx/starter/pull/7): Implement Dynamic Type and support for custom fonts - [@blackjacx](https://github.com/blackjacx).
