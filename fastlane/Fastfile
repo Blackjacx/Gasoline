@@ -86,8 +86,7 @@ lane :release do |options|
 
   # using changelog fastlane plugin
   stamp_changelog(
-    section_identifier: version, # Stamp Unreleased section with newly released build number
-    git_tag: version # Specify reference to git tag associated with this section
+    section_identifier: version # Stamp Unreleased section with newly released build number
   )
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
