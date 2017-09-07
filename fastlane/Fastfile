@@ -91,7 +91,7 @@ lane :release do |options|
   workspace = "#{product_name}.xcworkspace"
   deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
   ipa_name = "#{product_name}.ipa"
-  dsym_name = "#{product_name}.app.dSYM"
+  dsym_name = "#{product_name}.app.dSYM.zip"
  
   ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
@@ -112,7 +112,9 @@ lane :release do |options|
   changelog = read_changelog
 
   # stamp unreleased section with released version
-  stamp_changelog(section_identifier: version)
+  change = stamp_changelog(section_identifier: version)
+
+  puts change
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
   
@@ -145,6 +147,8 @@ lane :release do |options|
     commitish: "master",
     upload_assets: ["#{deploy_dir}/#{ipa_name}", "#{deploy_dir}/#{dsym_name}"]
   )
+
+  sh "ls -la '#{deploy_dir}'"
 
   # crashlytics(
   #   crashlytics_path: "./Crashlytics.framework",
