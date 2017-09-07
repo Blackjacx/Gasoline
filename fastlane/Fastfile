@@ -27,8 +27,8 @@
 # ENV["SLACK_URL"] = "..."
 # ENV["GITHUB_TOKEN"] = "..."
 # ENV["BITRISE_DEPLOY_DIR"] = "..."
-
-
+# ENV[$BITRISE_PUBLIC_INSTALL_PAGE_URL] = "..."
+# ENV[$BITRISE_BUILD_URL] = "..."
 
 
 # TODO: Deploy app to Apple TestFlight
@@ -127,6 +127,13 @@ lane :release do |options|
   push_to_git_remote(local_branch: "master", remote_branch: "master")
   push_to_git_remote(local_branch: "develop", remote_branch: "develop")
 
+  # match(
+  #   username: ENV['FASTLANE_USERNAME'],
+  #   app_identifier: "io.bitrise.BitriseFastlaneSample",
+  #   readonly: true,
+  #   type: "appstore"
+  # )
+
   gym(
 	workspace: workspace, 
 	scheme: product_name,
@@ -145,6 +152,14 @@ lane :release do |options|
     commitish: "master",
     upload_assets: ["#{deploy_dir}/#{ipa_name}"]
   )
+
+  # crashlytics(
+  #   crashlytics_path: "./Crashlytics.framework",
+  #   api_token: ENV['CRASHLYTICS_API_TOKEN'],
+  #   build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
+  # 	ipa_path: "#{ENV['BITRISE_DEPLOY_DIR']}/BitriseFastlaneSample.ipa"
+  # )
+
 
   # deploy to TestFlight, Crashlytics, Hockey or whatever
 end
