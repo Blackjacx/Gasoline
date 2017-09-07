@@ -6,21 +6,26 @@
 #
 # Bitrise with fastlane example:
 # https://github.com/bitrise-samples/fastlane/blob/master/BitriseFastlaneSample/fastlane/Fastfile
-
+#
 # Change the syntax highlighting to Ruby
 # All lines starting with a # are ignored when running `fastlane`
-
+#
 #
 # This file was created by the help of https://gist.github.com/ulhas/e8e529d08849b8cda947
 #
-
+#
 # NOTE: To use faslane first do:
 #           gem install bundler && bundle install
 #
 #       and then run:
 #           bundle exec fastlane release product_name:Gasoline version:"1.0.0" github_account:"blackjacx"
 #           bundle exec fastlane test product_name:Gasoline
-
+#
+# Configure the following environment variables for your project 
+# on your CI and in fastlane/.env:
+#
+# ENV["SLACK_URL"] = "..."
+# ENV["GITHUB_TOKEN"] = "..."
 
 
 
@@ -46,26 +51,33 @@ end
 
 after_all do |lane|
   # This block is called, only if the executed lane was successful
-  ship_it
   notification(
   	subtitle: "Success", 
   	message: "Lane #{lane} completed successfully"
   )
+  slack(success: true, message: "*Successfully deployed new update.*")
 end
 
 
 error do |lane, exception|
   # This block is called, only if the executed lane failed
-  clean_build_artifacts
   notification(
   	subtitle: "Failure",
-  	message: "Lane #{lane} failed with error #{exception}"
+  	message: "Lane #{lane} failed with error #{exception.message}"
   )
+  slack(success: false, message: "*#{exception.message}*")
 end
 
 ###############################################################################
 #                          PUBLIC SECTION
 ###############################################################################
+
+lane :feature_test do |options|
+
+end
+
+
+
 
 desc "Releases a new product version"
 lane :release do |options|
@@ -77,6 +89,7 @@ lane :release do |options|
   product_name = options[:product_name]
   version = options[:version]
   github_account = options[:github_account]
+  project = "#{product_name}.xcodeproj"
  
   ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
@@ -84,12 +97,14 @@ lane :release do |options|
 
   test(product_name: product_name, run_danger: true)
 
-  increment_bundle_versions(product_name: product_name, version: version)
+  # Increments CFBundleVersion by one and sets CFBundleShortVersionString
+  increment_version_number(xcodeproj: project, version_number: version)
+  increment_build_number(xcodeproj: project)
 
   # read changelog
   changelog = read_changelog
 
-  # stamp Unreleased section with newly released build number
+  # stamp unreleased section with released version
   stamp_changelog(section_identifier: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
@@ -98,8 +113,8 @@ lane :release do |options|
   add_git_tag(tag: version)
 
   # push all changes on all branches and all tags
-  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
-  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
+  push_to_git_remote(local_branch: "master", remote_branch: "master")
+  push_to_git_remote(local_branch: "develop", remote_branch: "develop")
 
   push_github_release(
   	product_name: product_name, 
@@ -154,24 +169,6 @@ end
 #                          PRIVATE SECTION
 ###############################################################################
 
-desc "Increments CFBundleVersion by one and sets CFBundleShortVersionString"
-private_lane :increment_bundle_versions do |options|
-
-  if !options[:product_name] || !options[:version]
-    raise "No product_name or no version specified".red
-  end
-
-  product_name = options[:product_name]
-  version = options[:version]
-  project = "#{product_name}.xcodeproj"
-
-  increment_version_number(xcodeproj: project, version_number: version)
-  increment_build_number(xcodeproj: project)
-end
-
-
-
-
 desc "Creates a github release with a git commit changelog"
 private_lane :push_github_release do |options|
 
@@ -192,44 +189,4 @@ private_lane :push_github_release do |options|
     description: ("#{changelog}" rescue "No changelog provided"),
     commitish: "master"
   )
-end
-
-#
-# Helper Functions
-#
-
-def ship_it
-  rand = Random.rand(0..1)
-  if rand == 0
-    squirrel
-  elsif rand == 1
-    boat
-  end
-end
-
-def squirrel
-  puts "
-    !!!!
-  !!!!!!!!
-!!!!!!!!!!!   O_O
-!!!  !!!!!!! /@ @\\
-      !!!!!! \\ x /
-      !!!!!!/ m  !m
-       !!!!/ __  |
-       !!!!|/  \\__
-        !!!\\______\\
-  "
-end
-
-def boat
-  puts "
-     .  o ..
-     o . o o.o
-          ...oo
-            __[]__
-         __|_o_o_o\__
-         \\\"\"\"\"\"\"\"\"\"\"/
-          \\. ..  . /
-     ^^^^^^^^^^^^^^^^^^^^
-  "
 end
