@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [0.0.2] - 2017-09-07
 ### Changed
 * Just a test - [@blackjacx](https://github.com/blackjacx).
 
