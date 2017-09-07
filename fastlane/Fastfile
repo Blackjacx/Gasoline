@@ -75,7 +75,7 @@ lane :release do |options|
   ensure_git_status_clean
   ensure_git_branch(branch: "develop")
   git_pull
-  test(product_name: product_name)
+  ci_test(product_name: product_name)
 
   sh "git flow release start #{version}"
   
@@ -111,7 +111,29 @@ end
 
 
 
-desc "Runs tests using scan"
+desc "Runs tests and danger - needed for ci"
+lane :ci_test do |options|
+
+  if !options[:product_name]
+    raise "No product_name specified".red
+  end
+
+  product_name = options[:product_name]
+
+  test(product_name: product_name)
+
+  # Runs danger for the project
+  danger(
+    use_bundle_exec: true,
+    github_api_token: ENV["GITHUB_TOKEN"],
+    verbose: true
+  )
+  
+end
+
+
+
+desc "Runs tests"
 lane :test do |options|
 
   if !options[:product_name]
@@ -120,27 +142,20 @@ lane :test do |options|
 
   product_name = options[:product_name]
 
-  # # Easily run tests of your iOS app using scan
-  # scan(
-  #   workspace: "#{product_name}.xcworkspace",
-  #   scheme: product_name,
-  #   clean: true,
-  #   devices: ["iPhone 7"],
-  #   skip_build: true,
-  #   thread_sanitizer: true,
-  #   output_types: "html"
-  # )
-
-  # # Runs danger for the project - should happen after the tests
-  # danger(
-  # 	use_bundle_exec: true,
-  # 	github_api_token: ENV["DANGER_GITHUB_API_TOKEN"],
-  # 	verbose: true
-  # )
-
-  puts ENV["DANGER_GITHUB_TOKEN"]
-  puts ENV["PRIVATE_FASTLANE_GITHUB_TOKEN"]
+  # Easily run tests of your iOS app using scan
+  scan(
+    workspace: "#{product_name}.xcworkspace",
+    scheme: product_name,
+    clean: true,
+    devices: ["iPhone 7"],
+    skip_build: true,
+    thread_sanitizer: true,
+    output_types: "html"
+  )
 end
+
+
+
 
 ###############################################################################
 #                          PRIVATE SECTION
