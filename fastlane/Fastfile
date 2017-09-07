@@ -31,7 +31,13 @@
 # ENV[$BITRISE_BUILD_URL] = "..."
 
 
+
+
+
+# TODO: Setup signing
 # TODO: Deploy app to Apple TestFlight
+# TODO: Setup Crashlytics
+# TODO: Include Bitrise Public Page URL in SlackMessge
 
 
 
@@ -56,7 +62,7 @@ after_all do |lane|
   	subtitle: "Success", 
   	message: "Lane #{lane} completed successfully"
   )
-  slack(success: true, message: "*Successfully deployed new update.*\n Installable via '#{ENV[BITRISE_BUILD_URL]}'")
+  slack(success: true, message: "*Successfully deployed new update.*")
 end
 
 
@@ -132,6 +138,12 @@ lane :release do |options|
   #   app_identifier: "io.bitrise.BitriseFastlaneSample",
   #   readonly: true,
   #   type: "appstore"
+  # )
+
+  # sigh(
+  #   output_path: "/tmp",
+  #   skip_certificate_verification: true,
+  #   app_identifier: "ly.kweak"
   # )
 
   gym(
