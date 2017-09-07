@@ -138,7 +138,8 @@ lane :test do |options|
   # 	verbose: true
   # )
 
-  puts ENV["DANGER_GITHUB_API_TOKEN"]
+  puts ENV["DANGER_GITHUB_TOKEN"]
+  puts ENV["PRIVATE_FASTLANE_GITHUB_TOKEN"]
 end
 
 ###############################################################################
