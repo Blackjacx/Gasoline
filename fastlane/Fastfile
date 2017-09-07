@@ -14,12 +14,12 @@
 # This file was created by the help of https://gist.github.com/ulhas/e8e529d08849b8cda947
 #
 
-# NOTE: To use faslane install:
-#           gem install bundler
-#           brew install apledoc
+# NOTE: To use faslane first do:
+#           gem install bundler && bundle install
 #
-#   and then run:
-#           bundle exec fastlane release product_name:SHSearchBar version:"<YOUR_VERSION_HERE>" github_account:"blackjacx"
+#       and then run:
+#           bundle exec fastlane release product_name:Gasoline version:"1.0.0" github_account:"blackjacx"
+#           bundle exec fastlane test product_name:Gasoline
 
 
 
