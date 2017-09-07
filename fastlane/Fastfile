@@ -43,10 +43,12 @@
 # Update this, if you use features of a newer version.
 fastlane_version "2.45.0"
 
-# default_platform :ios
+default_platform :ios
+
+
 
 before_all do
-  cocoapods
+cocoapods(use_bundle_exec: true)
 end
 
 
@@ -95,9 +97,8 @@ lane :release do |options|
   changelog = read_changelog
 
   # using changelog fastlane plugin
-  stamp_changelog(
-    section_identifier: version # Stamp Unreleased section with newly released build number
-  )
+  # stamp Unreleased section with newly released build number
+  stamp_changelog(section_identifier: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
@@ -114,7 +115,12 @@ lane :release do |options|
   # push to master + push tags
   push_to_git_remote(local_branch: "master", force: true)
 
-  push_github_release(product_name: product_name, version: version, github_account: github_account, changelog: changelog) 
+  push_github_release(
+  	product_name: product_name, 
+  	version: version, 
+  	github_account: github_account, 
+  	changelog: changelog
+  ) 
 
   # deploy to TestFlight, Crashlytics, Hockey or whatever
 end
