@@ -99,9 +99,6 @@ lane :release do |options|
 
   add_git_tag(tag: version)
 
-  # backmerge into develop
-  sh "git checkout develop && git merge master"
-
   # push all changes on all branches and all tags
   push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
   push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
