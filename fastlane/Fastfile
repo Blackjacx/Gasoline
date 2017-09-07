@@ -40,7 +40,7 @@ default_platform :ios
 
 
 before_all do
-  cocoapods(use_bundle_exec: true)
+  cocoapods
 end
 
 
