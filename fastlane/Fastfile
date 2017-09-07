@@ -32,12 +32,9 @@
 
 
 
-# TODO: Setup signing
-# TODO: Deploy app to Apple TestFlight
-# TODO: Setup Crashlytics
 # TODO: Include Bitrise Public Page URL in SlackMessge
-
-
+# TODO: Setup Crashlytics
+# TODO: deploy to TestFlight, Crashlytics, Hockey or whatever
 
 
 
@@ -69,15 +66,16 @@ error do |lane, exception|
 end
 
 ###############################################################################
-#                          PUBLIC SECTION
+# PLAYGROUND LANE
 ###############################################################################
 
-lane :feature_test do |options|
+lane :playground do |options|
 	
 end
 
-
-
+################################################################################
+# Release Lane
+################################################################################
 
 desc "Releases a new product version"
 lane :release do |options|
@@ -93,12 +91,18 @@ lane :release do |options|
   workspace = "#{product_name}.xcworkspace"
   deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
   ipa_name = "#{product_name}.ipa"
+  dsym_name = "#{product_name}.app.dSYM"
  
   ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
   git_pull
 
   test(product_name: product_name, run_danger: true)
+
+  sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
+  sh "git checkout master && git checkout develop" # init local branches
+  sh "git flow init -d" # initialize git-flow with defaults
+  sh "git flow release start #{version}"
 
   # Increments CFBundleVersion by one and sets CFBundleShortVersionString
   increment_version_number(xcodeproj: project, version_number: version)
@@ -111,24 +115,17 @@ lane :release do |options|
   stamp_changelog(section_identifier: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
-  sh "git checkout master && git merge develop"
+  
+  # Finish the release branch. The shell may hang here because it: 
+  # 1) promts for a merge message.
+  # 
+  # To get around this do the following:
+  # 1) git config --global core.mergeoptions --no-edit
+  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
 
-  add_git_tag(tag: version)
-
-  # Bitrise/fastlane example solution
-  # match(
-  #   username: ENV['FASTLANE_USERNAME'],
-  #   app_identifier: "io.bitrise.BitriseFastlaneSample",
-  #   readonly: true,
-  #   type: "appstore"
-  # )
-
-  # Muneebs solution
-  # match(
-  #   git_url: "https://github.com/{your-repo}/certificates.git",
-  #   app_identifier: ["ly.kweak"],
-  #   readonly: true
-  # )
+  # push all changes on all branches and all tags
+  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
+  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
 
   gym(
 	workspace: workspace, 
@@ -146,22 +143,15 @@ lane :release do |options|
     tag_name: version,
     description: ("#{changelog}" rescue "No changelog provided"),
     commitish: "master",
-    upload_assets: ["#{deploy_dir}/#{ipa_name}"]
+    upload_assets: ["#{deploy_dir}/#{ipa_name}", "#{deploy_dir}/#{dsym_name}"]
   )
 
   # crashlytics(
   #   crashlytics_path: "./Crashlytics.framework",
   #   api_token: ENV['CRASHLYTICS_API_TOKEN'],
   #   build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
-  # 	ipa_path: "#{ENV['BITRISE_DEPLOY_DIR']}/BitriseFastlaneSample.ipa"
+  # 	ipa_path: "#{deploy_dir}/#{ipa_name}"
   # )
-
-
-  # deploy to TestFlight, Crashlytics, Hockey or whatever
-
-  # push all changes on all branches and all tags if everything was successful
-  push_to_git_remote(local_branch: "master", remote_branch: "master")
-  push_to_git_remote(local_branch: "develop", remote_branch: "develop")
 
   # This is called, only if the executed lane was successful
   notification(
@@ -171,8 +161,9 @@ lane :release do |options|
   slack(success: true, message: "*Successfully deployed new update.*")
 end
 
-
-
+################################################################################
+# Test Lane
+################################################################################
 
 desc "Runs tests optionally with danger"
 lane :test do |options|
@@ -198,12 +189,10 @@ lane :test do |options|
 
   # Runs danger for the project
   if run_danger
-
     danger(
       use_bundle_exec: true,
       github_api_token: ENV["GITHUB_TOKEN"],
       verbose: true
     )
   end
-
 end
