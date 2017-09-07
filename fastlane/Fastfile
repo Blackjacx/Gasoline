@@ -51,7 +51,7 @@ default_platform :ios
 
 before_all do
   cocoapods(use_bundle_exec: true)
-  sh "wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash"
+  sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
 end
 
 
