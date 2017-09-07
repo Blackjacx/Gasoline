@@ -1,7 +1,11 @@
-# Customise this file, documentation can be found here:
+# Fastlane Documentation:
 # https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# Fastlane actions: https://docs.fastlane.tools/actions/
-# can also be listed using the `fastlane actions` command
+#
+# Fastlane actions: 
+# https://docs.fastlane.tools/actions/
+#
+# Bitrise with fastlane example:
+# https://github.com/bitrise-samples/fastlane/blob/master/BitriseFastlaneSample/fastlane/Fastfile
 
 # Change the syntax highlighting to Ruby
 # All lines starting with a # are ignored when running `fastlane`
