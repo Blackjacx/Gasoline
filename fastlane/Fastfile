@@ -27,8 +27,6 @@
 # ENV["SLACK_URL"] = "..."
 # ENV["GITHUB_TOKEN"] = "..."
 # ENV["BITRISE_DEPLOY_DIR"] = "..."
-# ENV[$BITRISE_PUBLIC_INSTALL_PAGE_URL] = "..."
-# ENV[$BITRISE_BUILD_URL] = "..."
 
 
 
@@ -130,13 +128,6 @@ lane :release do |options|
   #   git_url: "https://github.com/{your-repo}/certificates.git",
   #   app_identifier: ["ly.kweak"],
   #   readonly: true
-  # )
-
-  # Muneebs solution
-  # sigh(
-  #   output_path: "/tmp",
-  #   skip_certificate_verification: true,
-  #   app_identifier: "ly.kweak"
   # )
 
   gym(
