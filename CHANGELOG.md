@@ -2,9 +2,8 @@
 
 ## [Unreleased]
 
-## [0.0.2] - 2017-09-07
-### Changed
-* Just a test - [@blackjacx](https://github.com/blackjacx).
+## [1.0.0] - 2017-09-07
+* Your contribution here.
 
 ## [0.0.1] - 2017-09-07
 ### Changed

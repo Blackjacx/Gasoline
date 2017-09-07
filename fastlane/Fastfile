@@ -1,7 +1,11 @@
-# Customise this file, documentation can be found here:
+# Fastlane Documentation:
 # https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# Fastlane actions: https://docs.fastlane.tools/actions/
-# can also be listed using the `fastlane actions` command
+#
+# Fastlane actions: 
+# https://docs.fastlane.tools/actions/
+#
+# Bitrise with fastlane example:
+# https://github.com/bitrise-samples/fastlane/blob/master/BitriseFastlaneSample/fastlane/Fastfile
 
 # Change the syntax highlighting to Ruby
 # All lines starting with a # are ignored when running `fastlane`
@@ -10,23 +14,20 @@
 # This file was created by the help of https://gist.github.com/ulhas/e8e529d08849b8cda947
 #
 
-# NOTE: To use faslane install:
-#           gem install bundler 
-#           brew install git-flow
-#           brew install apledoc
+# NOTE: To use faslane first do:
+#           gem install bundler && bundle install
 #
-#     Git-flow will be configured upon installation or the first run of fastlane.
-#     IMPORTANT: Use the default options !!!
-#
-#   and then run:
-#           bundle exec fastlane release product_name:SHSearchBar version:"<YOUR_VERSION_HERE>" github_account:"blackjacx"
+#       and then run:
+#           bundle exec fastlane release product_name:Gasoline version:"1.0.0" github_account:"blackjacx"
+#           bundle exec fastlane test product_name:Gasoline
 
-# LINKS
-# => Git flow cheat sheet: http://danielkummer.github.io/git-flow-cheatsheet/
-# => Git flow breakdown: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
+
+
 
 
 # TODO: Deploy app to Apple TestFlight
+
+
 
 
 
@@ -34,34 +35,39 @@
 # Update this, if you use features of a newer version.
 fastlane_version "2.45.0"
 
-# default_platform :ios
+default_platform :ios
+
+
 
 before_all do
-  cocoapods
+  cocoapods(use_bundle_exec: true)
 end
 
 
 after_all do |lane|
   # This block is called, only if the executed lane was successful
-  notification(message: "#{lane} finished")
+  ship_it
+  notification(
+  	subtitle: "Success", 
+  	message: "Lane #{lane} completed successfully"
+  )
 end
 
 
 error do |lane, exception|
   # This block is called, only if the executed lane failed
-  notification(message: "#{lane} finished with error #{exception}")
+  clean_build_artifacts
+  notification(
+  	subtitle: "Failure",
+  	message: "Lane #{lane} failed with error #{exception}"
+  )
 end
 
 ###############################################################################
 #                          PUBLIC SECTION
 ###############################################################################
 
-desc "Runs framework tests"
-desc "Increments bundle versions"
-desc "Merges into master"
-desc "Pushes the tags to origin"
-desc "Pushes a release to github"
-desc "Deploys a new version"
+desc "Releases a new product version"
 lane :release do |options|
 
   if !options[:product_name] || !options[:version] || !options[:github_account]
@@ -71,55 +77,59 @@ lane :release do |options|
   product_name = options[:product_name]
   version = options[:version]
   github_account = options[:github_account]
-  
-  ensure_git_status_clean
+ 
+  ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
   git_pull
-  test(product_name: product_name)
 
-  sh "git flow release start #{version}"
-  
+  test(product_name: product_name, run_danger: true)
+
   increment_bundle_versions(product_name: product_name, version: version)
 
-  # using changelog fastlane plugin
+  # read changelog
   changelog = read_changelog
 
-  # using changelog fastlane plugin
-  stamp_changelog(
-    section_identifier: version # Stamp Unreleased section with newly released build number
-  )
+  # stamp Unreleased section with newly released build number
+  stamp_changelog(section_identifier: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
 
-  # Finish the release branch. The shell may hang here because it: 
-  # 1) promts for a merge message.
-  # 
-  # To get around this do the following:
-  # 1) git config --global core.mergeoptions --no-edit
-  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"  
+  # merge changes into master
+  sh "git checkout master && git merge develop"
 
-  # push to develop + push tags
-  push_to_git_remote(local_branch: "develop", force: true)
+  add_git_tag(tag: version)
 
-  # push to master + push tags
-  push_to_git_remote(local_branch: "master", force: true)
+  # backmerge into develop
+  sh "git checkout develop && git merge master"
 
-  push_github_release(product_name: product_name, version: version, github_account: github_account, changelog: changelog) 
+  # push all changes on all branches and all tags
+  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
+  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
+
+  push_github_release(
+  	product_name: product_name, 
+  	version: version, 
+  	github_account: github_account, 
+  	changelog: changelog
+  ) 
 
   # deploy to TestFlight, Crashlytics, Hockey or whatever
 end
 
 
 
-desc "Runs tests using scan"
+
+desc "Runs tests optionally with danger"
 lane :test do |options|
 
   if !options[:product_name]
-    raise "No product_name specified".red
+    raise "No product_name or use_ci specified".red
   end
 
   product_name = options[:product_name]
+  run_danger = options[:run_danger]
 
+  # Easily run tests of your iOS app using scan
   scan(
     workspace: "#{product_name}.xcworkspace",
     scheme: product_name,
@@ -129,7 +139,21 @@ lane :test do |options|
     thread_sanitizer: true,
     output_types: "html"
   )
+
+  # Runs danger for the project
+  if run_danger
+
+    danger(
+      use_bundle_exec: true,
+      github_api_token: ENV["GITHUB_TOKEN"],
+      verbose: true
+    )
+  end
+
 end
+
+
+
 
 ###############################################################################
 #                          PRIVATE SECTION
@@ -173,4 +197,44 @@ private_lane :push_github_release do |options|
     description: ("#{changelog}" rescue "No changelog provided"),
     commitish: "master"
   )
+end
+
+#
+# Helper Functions
+#
+
+def ship_it
+  rand = Random.rand(0..1)
+  if rand == 0
+    squirrel
+  elsif rand == 1
+    boat
+  end
+end
+
+def squirrel
+  puts "
+    !!!!
+  !!!!!!!!
+!!!!!!!!!!!   O_O
+!!!  !!!!!!! /@ @\\
+      !!!!!! \\ x /
+      !!!!!!/ m  !m
+       !!!!/ __  |
+       !!!!|/  \\__
+        !!!\\______\\
+  "
+end
+
+def boat
+  puts "
+     .  o ..
+     o . o o.o
+          ...oo
+            __[]__
+         __|_o_o_o\__
+         \\\"\"\"\"\"\"\"\"\"\"/
+          \\. ..  . /
+     ^^^^^^^^^^^^^^^^^^^^
+  "
 end
