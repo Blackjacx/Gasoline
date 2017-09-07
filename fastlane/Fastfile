@@ -76,9 +76,6 @@ lane :feature_test do |options|
 	
 end
 
-
-
-
 desc "Releases a new product version"
 lane :release do |options|
 
@@ -160,8 +157,9 @@ lane :release do |options|
   # deploy to TestFlight, Crashlytics, Hockey or whatever
 
   # push all changes on all branches and all tags if everything was successful
-  push_to_git_remote(local_branch: "master", remote_branch: "master")
-  push_to_git_remote(local_branch: "develop", remote_branch: "develop")
+  # tags already pushed by github release
+  push_to_git_remote(local_branch: "master", remote_branch: "master", tags: false)
+  push_to_git_remote(local_branch: "develop", remote_branch: "develop", tags: false)
 
   # This is called, only if the executed lane was successful
   notification(
