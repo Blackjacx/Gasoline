@@ -15,7 +15,10 @@
 #
 #
 # NOTE: To use faslane first do:
-#           gem install bundler && bundle install
+#           gem install bundler && bundle install && brew install git-flow
+#
+#     Git-flow witll be configured upon installation or the first run of fastlane.
+#     IMPORTANT: Use the default options !!!
 #
 #       and then run:
 #           bundle exec fastlane release product_name:Gasoline version:"1.0.0" github_account:"blackjacx"
@@ -33,8 +36,8 @@
 
 
 # TODO: Include Bitrise Public Page URL in SlackMessge
-
-
+# TODO: Setup Crashlytics
+# TODO: deploy to TestFlight, Crashlytics, Hockey or whatever
 
 
 
@@ -99,6 +102,8 @@ lane :release do |options|
 
   test(product_name: product_name, run_danger: true)
 
+  sh "git flow release start #{version}"
+
   # Increments CFBundleVersion by one and sets CFBundleShortVersionString
   increment_version_number(xcodeproj: project, version_number: version)
   increment_build_number(xcodeproj: project)
@@ -110,9 +115,17 @@ lane :release do |options|
   stamp_changelog(section_identifier: version)
 
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
-  sh "git checkout master && git merge develop"
+  
+  # Finish the release branch. The shell may hang here because it: 
+  # 1) promts for a merge message.
+  # 
+  # To get around this do the following:
+  # 1) git config --global core.mergeoptions --no-edit
+  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
 
-  add_git_tag(tag: version)
+  # push all changes on all branches and all tags
+  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
+  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
 
   gym(
 	workspace: workspace, 
@@ -133,20 +146,12 @@ lane :release do |options|
     upload_assets: ["#{deploy_dir}/#{ipa_name}", "#{deploy_dir}/#{dsym_name}"]
   )
 
-  # TODO: Setup Crashlytics
   # crashlytics(
   #   crashlytics_path: "./Crashlytics.framework",
   #   api_token: ENV['CRASHLYTICS_API_TOKEN'],
   #   build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
   # 	ipa_path: "#{deploy_dir}/#{ipa_name}"
   # )
-
-  # TODO: deploy to TestFlight, Crashlytics, Hockey or whatever
-
-  # push all changes on all branches and all tags if everything was successful
-  # tags already pushed by github release
-  push_to_git_remote(local_branch: "master", remote_branch: "master", tags: false)
-  push_to_git_remote(local_branch: "develop", remote_branch: "develop", tags: false)
 
   # This is called, only if the executed lane was successful
   notification(
