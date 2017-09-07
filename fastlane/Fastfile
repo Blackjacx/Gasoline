@@ -129,10 +129,6 @@ lane :release do |options|
 
   add_git_tag(tag: version)
 
-  # push all changes on all branches and all tags
-  push_to_git_remote(local_branch: "master", remote_branch: "master")
-  push_to_git_remote(local_branch: "develop", remote_branch: "develop")
-
   # match(
   #   username: ENV['FASTLANE_USERNAME'],
   #   app_identifier: "io.bitrise.BitriseFastlaneSample",
@@ -174,6 +170,10 @@ lane :release do |options|
 
 
   # deploy to TestFlight, Crashlytics, Hockey or whatever
+
+  # push all changes on all branches and all tags if everything was successful
+  push_to_git_remote(local_branch: "master", remote_branch: "master")
+  push_to_git_remote(local_branch: "develop", remote_branch: "develop")
 end
 
 
