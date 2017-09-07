@@ -100,7 +100,9 @@ lane :release do |options|
   sh "git commit -am 'Fastlane: Release on Production #{version}'"
   sh "git checkout master"
   sh "git merge develop"
-  sh "git tag -a '#{version}' -m '#{version}"
+
+  add_git_tag(tag: version)
+
   sh "git checkout develop"
   sh "git merge master"
   sh "git push --all"
