@@ -80,13 +80,6 @@ end
 ###############################################################################
 
 lane :feature_test do |options|
-gym(
-	workspace: "Gasoline.xcworkspace", 
-	scheme: "Gasoline",
-	output_directory: ENV["BITRISE_DEPLOY_DIR"],
-	export_method: "ad-hoc",
-	include_bitcode: true,
-  )
 	
 end
 
