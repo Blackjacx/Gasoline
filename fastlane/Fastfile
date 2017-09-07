@@ -102,6 +102,7 @@ lane :release do |options|
 
   test(product_name: product_name, run_danger: true)
 
+  sh "brew install git-flow"
   sh "git flow release start #{version}"
 
   # Increments CFBundleVersion by one and sets CFBundleShortVersionString
