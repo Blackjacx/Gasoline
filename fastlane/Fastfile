@@ -110,8 +110,19 @@ lane :release do |options|
   sh "git merge master"
 
   # push all changes on all branches and all tags
-  sh "git push --all"
-  sh "git push --tags"
+  push_to_git_remote(
+    local_branch: "master",
+    remote_branch: "master",
+    force: true,
+    tags: true
+  )
+
+  push_to_git_remote(
+    local_branch: "develop",
+    remote_branch: "develop",
+    force: true,
+    tags: true
+  )
 
   push_github_release(
   	product_name: product_name, 
