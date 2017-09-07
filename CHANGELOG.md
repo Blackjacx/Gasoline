@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.0] - 2017-09-07
 * Your contribution here.
 
 ## [0.0.1] - 2017-09-07
