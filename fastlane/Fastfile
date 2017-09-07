@@ -26,7 +26,12 @@
 # => Git flow breakdown: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
 
 
+
+
+
 # TODO: Deploy app to Apple TestFlight
+
+
 
 
 
@@ -75,7 +80,8 @@ lane :release do |options|
   ensure_git_status_clean
   ensure_git_branch(branch: "develop")
   git_pull
-  ci_test(product_name: product_name)
+
+  test(product_name: product_name, run_danger: true)
 
   sh "git flow release start #{version}"
   
@@ -111,36 +117,16 @@ end
 
 
 
-desc "Runs tests and danger - needed for ci"
-lane :ci_test do |options|
 
-  if !options[:product_name]
-    raise "No product_name specified".red
-  end
-
-  product_name = options[:product_name]
-
-  test(product_name: product_name)
-
-  # Runs danger for the project
-  danger(
-    use_bundle_exec: true,
-    github_api_token: ENV["GITHUB_TOKEN"],
-    verbose: true
-  )
-  
-end
-
-
-
-desc "Runs tests"
+desc "Runs tests optionally with danger"
 lane :test do |options|
 
   if !options[:product_name]
-    raise "No product_name specified".red
+    raise "No product_name or use_ci specified".red
   end
 
   product_name = options[:product_name]
+  run_danger = options[:run_danger]
 
   # Easily run tests of your iOS app using scan
   scan(
@@ -152,6 +138,17 @@ lane :test do |options|
     thread_sanitizer: true,
     output_types: "html"
   )
+
+  # Runs danger for the project
+  if run_danger
+
+    danger(
+      use_bundle_exec: true,
+      github_api_token: ENV["GITHUB_TOKEN"],
+      verbose: true
+    )
+  end
+
 end
 
 
