@@ -48,31 +48,35 @@ default_platform :ios
 
 
 before_all do
-cocoapods(use_bundle_exec: true)
+  cocoapods(use_bundle_exec: true)
 end
 
 
 after_all do |lane|
   # This block is called, only if the executed lane was successful
-  notification(message: "#{lane} finished")
+  ship_it
+  notification(
+  	subtitle: "Success", 
+  	message: "Lane #{lane} completed successfully"
+  )
 end
 
 
 error do |lane, exception|
   # This block is called, only if the executed lane failed
-  notification(message: "#{lane} finished with error #{exception}")
+  clean_build_artifacts
+  puts "\n(╯°□°）╯︵ ┻━┻\n".red
+  notification(
+  	subtitle: "Failure",
+  	message: "Lane #{lane} failed with error #{exception}"
+  )
 end
 
 ###############################################################################
 #                          PUBLIC SECTION
 ###############################################################################
 
-desc "Runs framework tests"
-desc "Increments bundle versions"
-desc "Merges into master"
-desc "Pushes the tags to origin"
-desc "Pushes a release to github"
-desc "Deploys a new version"
+desc "Releases a new product version"
 lane :release do |options|
 
   if !options[:product_name] || !options[:version] || !options[:github_account]
@@ -206,4 +210,44 @@ private_lane :push_github_release do |options|
     description: ("#{changelog}" rescue "No changelog provided"),
     commitish: "master"
   )
+end
+
+#
+# Helper Functions
+#
+
+def ship_it
+  rand = Random.rand(0..1)
+  if rand == 0
+    squirrel
+  elsif rand == 1
+    boat
+  end
+end
+
+def squirrel
+  puts "
+    !!!!
+  !!!!!!!!
+!!!!!!!!!!!   O_O
+!!!  !!!!!!! /@ @\\
+      !!!!!! \\ x /
+      !!!!!!/ m  !m
+       !!!!/ __  |
+       !!!!|/  \\__
+        !!!\\______\\
+  "
+end
+
+def boat
+  puts "
+     .  o ..
+     o . o o.o
+          ...oo
+            __[]__
+         __|_o_o_o\__
+         \\\"\"\"\"\"\"\"\"\"\"/
+          \\. ..  . /
+     ^^^^^^^^^^^^^^^^^^^^
+  "
 end
