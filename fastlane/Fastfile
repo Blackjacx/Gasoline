@@ -15,10 +15,7 @@
 #
 #
 # NOTE: To use faslane first do:
-#           gem install bundler && bundle install && brew install git-flow
-#
-#     Git-flow witll be configured upon installation or the first run of fastlane.
-#     IMPORTANT: Use the default options !!!
+#           gem install bundler && bundle install
 #
 #       and then run:
 #           bundle exec fastlane release product_name:Gasoline version:"1.0.0" github_account:"blackjacx"
@@ -103,8 +100,8 @@ lane :release do |options|
   test(product_name: product_name, run_danger: true)
 
   sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
-  sh "git fetch --all" # fetch all branches to local
-  sh "git flow init -d"
+  sh "git checkout master && git checkout develop" # init local branches
+  sh "git flow init -d" # initialize git-flow with defaults
   sh "git flow release start #{version}"
 
   # Increments CFBundleVersion by one and sets CFBundleShortVersionString
