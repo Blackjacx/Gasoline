@@ -103,6 +103,7 @@ lane :release do |options|
   test(product_name: product_name, run_danger: true)
 
   sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
+  sh "git fetch --all" # fetch all branches to local
   sh "git flow init -d"
   sh "git flow release start #{version}"
 
