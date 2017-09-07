@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.0.2] - 2017-09-07
+### Changed
+* Just a test - [@blackjacx](https://github.com/blackjacx).
+
 ## [0.0.1] - 2017-09-07
 ### Changed
 * [#7](https://github.com/blackjacx/starter/pull/7): Implement Dynamic Type and support for custom fonts - [@blackjacx](https://github.com/blackjacx).
@@ -9,4 +13,3 @@
 * [#5](https://github.com/blackjacx/starter/pull/5): Make currency code customisable - [@blackjacx](https://github.com/blackjacx).
 * [#4](https://github.com/blackjacx/starter/pull/4): Convert to Swift 4 Codable - [@blackjacx](https://github.com/blackjacx).
 * [#1](https://github.com/blackjacx/starter/pull/1): Establish Swift 4 compatibility - [@blackjacx](https://github.com/blackjacx).
-0.0.1* [0.0.1](https://github.com/blackjacx/starter/pull/1): Establish Swift 4 compatibility - [@blackjacx](https://github.com/blackjacx).
