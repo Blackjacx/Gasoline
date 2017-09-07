@@ -19,5 +19,5 @@ if [ $# -ne 1 ]
 else
     echo "Triggering CI to build product..."
 
-    curl https://www.bitrise.io/app/d4f39dc6286bb63a/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"Jx56IDVv9IaM83x6GE7hsw"},"build_params":{"branch":"develop","workflow_id":"release","environments":[{"mapped_to":"RELEASING_GIT_TAG","value":"'$(echo $1)'","is_expand":true}]},"triggered_by":"curl"}'
+    curl https://www.bitrise.io/app/d4f39dc6286bb63a/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"Jx56IDVv9IaM83x6GE7hsw"},"build_params":{"branch":"develop","commit_message":"Release Version '$(echo $1)',"workflow_id":"release","environments":[{"mapped_to":"RELEASING_GIT_TAG","value":"'$(echo $1)'","is_expand":true}]},"triggered_by":"curl"}'
 fi
