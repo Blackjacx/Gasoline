@@ -79,55 +79,55 @@ lane :release do |options|
 
   test(product_name: product_name, run_danger: true)
 
-  sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
-  sh "git checkout master && git checkout develop" # init local branches
-  sh "git flow init -d" # initialize git-flow with defaults
-  sh "git flow release start #{version}"
+ #  sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
+ #  sh "git checkout master && git checkout develop" # init local branches
+ #  sh "git flow init -d" # initialize git-flow with defaults
+ #  sh "git flow release start #{version}"
 
-  # Increments CFBundleVersion by one and sets CFBundleShortVersionString
-  increment_version_number(xcodeproj: project, version_number: version)
-  increment_build_number(xcodeproj: project)
+ #  # Increments CFBundleVersion by one and sets CFBundleShortVersionString
+ #  increment_version_number(xcodeproj: project, version_number: version)
+ #  increment_build_number(xcodeproj: project)
 
-  # read changelog
-  changelog = read_changelog
+ #  # read changelog
+ #  changelog = read_changelog
 
-  # stamp unreleased section with released version
-  stamp_changelog(section_identifier: version)
+ #  # stamp unreleased section with released version
+ #  stamp_changelog(section_identifier: version)
 
-  sh "git commit -am 'Fastlane: Release on Production #{version}'"
+ #  sh "git commit -am 'Fastlane: Release on Production #{version}'"
   
-  # Finish the release branch. The shell may hang here because it: 
-  # 1) promts for a merge message.
-  # 
-  # To get around this do the following:
-  # 1) git config --global core.mergeoptions --no-edit
-  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
+ #  # Finish the release branch. The shell may hang here because it: 
+ #  # 1) promts for a merge message.
+ #  # 
+ #  # To get around this do the following:
+ #  # 1) git config --global core.mergeoptions --no-edit
+ #  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
 
-  # push all changes on all branches and all tags
-  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
-  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
+ #  # push all changes on all branches and all tags
+ #  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
+ #  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
 
-  gym(
-	workspace: workspace, 
-	scheme: product_name,
-	output_directory: deploy_dir,
-	output_name: "#{product_name}.ipa",
-	export_method: "ad-hoc",
-	include_bitcode: true,
-  )
+ #  gym(
+	# workspace: workspace, 
+	# scheme: product_name,
+	# output_directory: deploy_dir,
+	# output_name: "#{product_name}.ipa",
+	# export_method: "ad-hoc",
+	# include_bitcode: true,
+ #  )
 
-  github_release = set_github_release(
-    repository_name: "#{github_account}/#{product_name}",
-    api_token: ENV["GITHUB_TOKEN"],
-    name: version,
-    tag_name: version,
-    description: ("#{changelog}" rescue "No changelog provided"),
-    commitish: "master",
-    upload_assets: [IPA_OUTPUT_PATH, DSYM_OUTPUT_PATH]
-  )
+ #  github_release = set_github_release(
+ #    repository_name: "#{github_account}/#{product_name}",
+ #    api_token: ENV["GITHUB_TOKEN"],
+ #    name: version,
+ #    tag_name: version,
+ #    description: ("#{changelog}" rescue "No changelog provided"),
+ #    commitish: "master",
+ #    upload_assets: [IPA_OUTPUT_PATH, DSYM_OUTPUT_PATH]
+ #  )
 
-  # This is called, only if the executed lane was successful
-  slack(success: true, message: "*Successfully deployed new update.*")
+ #  # This is called, only if the executed lane was successful
+ #  slack(success: true, message: "*Successfully deployed new update.*")
 end
 
 ################################################################################
