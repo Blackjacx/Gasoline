@@ -52,7 +52,7 @@ end
 
 error do |lane, exception|
   # This block is called, only if the executed lane failed
-  slack(success: false, message: "*#{exception.message}*")
+  slack(success: false, message: "*#{lane} failed with #{exception.message}*")
 end
 
 ################################################################################
@@ -122,12 +122,11 @@ lane :release do |options|
     name: version,
     tag_name: version,
     description: ("#{changelog}" rescue "No changelog provided"),
-    commitish: "master",
-    upload_assets: [IPA_OUTPUT_PATH, DSYM_OUTPUT_PATH]
+    commitish: "master"
   )
 
-  # # This is called, only if the executed lane was successful
-  # slack(success: true, message: "*Successfully deployed new update.*")
+  # This is called, only if the executed lane was successful
+  slack(success: true, message: "*Successfully deployed new update.*")
 end
 
 ################################################################################
