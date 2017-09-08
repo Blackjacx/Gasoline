@@ -128,6 +128,7 @@ lane :release do |options|
 
   # This is called, only if the executed lane was successful
   slack(success: true, message: "*Successfully deployed new update.*\nRelease Notes: #{SET_GITHUB_RELEASE_HTML_LINK}")
+end
 
 ################################################################################
 # Test Lane
