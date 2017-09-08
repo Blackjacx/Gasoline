@@ -34,144 +34,147 @@
 
 
 
-# TODO: Include Bitrise Public Page URL in SlackMessge
 # TODO: Setup Crashlytics
+
+# TODO: Include Bitrise Public Page URL in SlackMessge
 # TODO: deploy to TestFlight, Crashlytics, Hockey, ... & move away from Bitrise
 
 
 
 # This is the minimum version number required. 
 # Update this, if you use features of a newer version.
-fastlane_version "2.45.0"
+fastlane_version "2.55.0"
 
 default_platform :ios
 
 
+platform :ios do
 
-before_all do
-  cocoapods(use_bundle_exec: true, repo_update: true)
-end
+	before_all do
+	  cocoapods(use_bundle_exec: true, repo_update: true)
+	end
 
-error do |lane, exception|
-  # This block is called, only if the executed lane failed
-  slack(success: false, message: "*#{lane} failed with #{exception.message}*")
-end
+	error do |lane, exception|
+	  # This block is called, only if the executed lane failed
+	  slack(success: false, message: "*#{lane} failed with #{exception.message}*")
+	end
 
-################################################################################
-# Release Lane
-################################################################################
+	################################################################################
+	# Release Lane
+	################################################################################
 
-desc "Releases a new product version"
-lane :release do |options|
+	desc "Releases a new product version"
+	lane :release do |options|
 
-  if !options[:product_name] || !options[:version] || !options[:github_account]
-    raise "No product_name, version specified, or github_account specified!".red
-  end
+	  if !options[:product_name] || !options[:version] || !options[:github_account]
+	    raise "No product_name, version specified, or github_account specified!".red
+	  end
 
-  product_name = options[:product_name]
-  version = options[:version]
-  github_account = options[:github_account]
-  project = "#{product_name}.xcodeproj"
-  workspace = "#{product_name}.xcworkspace"
-  deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
-  ipa_name = "#{product_name}.ipa"
- 
-  ensure_git_status_clean(show_uncommitted_changes: true)
-  ensure_git_branch(branch: "develop")
-  git_pull
+	  product_name = options[:product_name]
+	  version = options[:version]
+	  github_account = options[:github_account]
+	  project = "#{product_name}.xcodeproj"
+	  workspace = "#{product_name}.xcworkspace"
+	  deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
+	  ipa_name = "#{product_name}.ipa"
+	 
+	  ensure_git_status_clean(show_uncommitted_changes: true)
+	  ensure_git_branch(branch: "develop")
+	  git_pull
 
-  test(product_name: product_name, run_danger: true)
+	  test(product_name: product_name, run_danger: true)
 
-  # git-flow commands: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
-  sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
-  sh "git checkout master && git checkout develop" # init local branches
-  sh "git flow init -d" # initialize git-flow with defaults
-  sh "git flow release start #{version}"
+	  # git-flow commands: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
+	  sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
+	  sh "git checkout master && git checkout develop" # init local branches
+	  sh "git flow init -d" # initialize git-flow with defaults
+	  sh "git flow release start #{version}"
 
-  # Increments CFBundleVersion by one and sets CFBundleShortVersionString
-  increment_version_number(xcodeproj: project, version_number: version)
-  increment_build_number(xcodeproj: project)
+	  # Increments CFBundleVersion by one and sets CFBundleShortVersionString
+	  increment_version_number(xcodeproj: project, version_number: version)
+	  increment_build_number(xcodeproj: project)
 
-  # read changelog
-  changelog = read_changelog
+	  # read changelog
+	  changelog = read_changelog
 
-  # stamp unreleased section with released version
-  stamp_changelog(section_identifier: version)
+	  # stamp unreleased section with released version
+	  stamp_changelog(section_identifier: version)
 
-  sh "git commit -am 'Fastlane: Release on Production #{version}'"
-  
-  # Finish the release branch. The shell may hang here because it: 
-  # 1) promts for a merge message.
-  # 
-  # To get around this do the following:
-  # 1) git config --global core.mergeoptions --no-edit
-  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
+	  sh "git commit -am 'Fastlane: Release on Production #{version}'"
+	  
+	  # Finish the release branch. The shell may hang here because it: 
+	  # 1) promts for a merge message.
+	  # 
+	  # To get around this do the following:
+	  # 1) git config --global core.mergeoptions --no-edit
+	  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
 
-  # push all changes on all branches and all tags
-  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
-  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
+	  # push all changes on all branches and all tags
+	  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
+	  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
 
-  gym(
-	workspace: workspace, 
-	scheme: product_name,
-	output_directory: deploy_dir,
-	output_name: "#{product_name}.ipa",
-	export_method: "ad-hoc",
-	include_bitcode: true,
-  )
+	  gym(
+		workspace: workspace, 
+		scheme: product_name,
+		output_directory: deploy_dir,
+		output_name: "#{product_name}.ipa",
+		export_method: "ad-hoc",
+		include_bitcode: true,
+	  )
 
-  github_release = set_github_release(
-    repository_name: "#{github_account}/#{product_name}",
-    api_token: ENV["GITHUB_TOKEN"],
-    name: version,
-    tag_name: version,
-    description: ("#{changelog}" rescue "No changelog provided"),
-    commitish: "master"
-  )
+	  github_release = set_github_release(
+	    repository_name: "#{github_account}/#{product_name}",
+	    api_token: ENV["GITHUB_TOKEN"],
+	    name: version,
+	    tag_name: version,
+	    description: ("#{changelog}" rescue "No changelog provided"),
+	    commitish: "master"
+	  )
 
-  crashlytics(
-    crashlytics_path: "./Fabric.framework",
-    api_token: ENV['CRASHLYTICS_API_TOKEN'],
-    build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
-    ipa_path: "#{deploy_dir}/#{ipa_name}"
-  )
+	  crashlytics(
+	    crashlytics_path: "./Fabric.framework",
+	    api_token: ENV['CRASHLYTICS_API_TOKEN'],
+	    build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
+	    ipa_path: "#{deploy_dir}/#{ipa_name}"
+	  )
 
-  # This is called, only if the executed lane was successful
-  slack(success: true, message: "*Successfully deployed new update.*")
-end
+	  # This is called, only if the executed lane was successful
+	  slack(success: true, message: "*Successfully deployed new update.*")
+	end
 
-################################################################################
-# Test Lane
-################################################################################
+	################################################################################
+	# Test Lane
+	################################################################################
 
-desc "Runs tests optionally with danger"
-lane :test do |options|
+	desc "Runs tests optionally with danger"
+	lane :test do |options|
 
-  if !options[:product_name]
-    raise "No product_name or use_ci specified".red
-  end
+	  if !options[:product_name]
+	    raise "No product_name or use_ci specified".red
+	  end
 
-  product_name = options[:product_name]
-  run_danger = options[:run_danger]
+	  product_name = options[:product_name]
+	  run_danger = options[:run_danger]
 
-  # Easily run tests of your iOS app using scan
-  scan(
-    workspace: "#{product_name}.xcworkspace",
-    scheme: product_name,
-    clean: true,
-    devices: ["iPhone 7"],
-    skip_build: true,
-    thread_sanitizer: true,
-    output_types: "html",
-    output_directory: ENV["BITRISE_DEPLOY_DIR"]
-  )
+	  # Easily run tests of your iOS app using scan
+	  scan(
+	    workspace: "#{product_name}.xcworkspace",
+	    scheme: product_name,
+	    clean: true,
+	    devices: ["iPhone 7"],
+	    skip_build: true,
+	    thread_sanitizer: true,
+	    output_types: "html",
+	    output_directory: ENV["BITRISE_DEPLOY_DIR"]
+	  )
 
-  # Runs danger for the project
-  if run_danger
-    danger(
-      use_bundle_exec: true,
-      github_api_token: ENV["GITHUB_TOKEN"],
-      verbose: true
-    )
-  end
+	  # Runs danger for the project
+	  if run_danger
+	    danger(
+	      use_bundle_exec: true,
+	      github_api_token: ENV["GITHUB_TOKEN"],
+	      verbose: true
+	    )
+	  end
+	end
 end
