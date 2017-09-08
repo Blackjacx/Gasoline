@@ -79,6 +79,7 @@ lane :release do |options|
 
   test(product_name: product_name, run_danger: true)
 
+  # git-flow commands: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
   sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
   sh "git checkout master && git checkout develop" # init local branches
   sh "git flow init -d" # initialize git-flow with defaults
