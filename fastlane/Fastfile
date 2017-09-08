@@ -50,27 +50,9 @@ before_all do
   cocoapods(use_bundle_exec: true)
 end
 
-
-after_all do |lane|
-
-end
-
-
 error do |lane, exception|
   # This block is called, only if the executed lane failed
-  notification(
-  	subtitle: "Failure",
-  	message: "Lane #{lane} failed with error #{exception.message}"
-  )
   slack(success: false, message: "*#{exception.message}*")
-end
-
-###############################################################################
-# PLAYGROUND LANE
-###############################################################################
-
-lane :playground do |options|
-	
 end
 
 ################################################################################
@@ -90,8 +72,6 @@ lane :release do |options|
   project = "#{product_name}.xcodeproj"
   workspace = "#{product_name}.xcworkspace"
   deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
-  ipa_name = "#{product_name}.ipa"
-  dsym_name = "#{product_name}.app.dSYM.zip"
  
   ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
@@ -131,7 +111,7 @@ lane :release do |options|
 	workspace: workspace, 
 	scheme: product_name,
 	output_directory: deploy_dir,
-	output_name: ipa_name,
+	output_name: "#{product_name}.ipa",
 	export_method: "ad-hoc",
 	include_bitcode: true,
   )
@@ -143,22 +123,11 @@ lane :release do |options|
     tag_name: version,
     description: ("#{changelog}" rescue "No changelog provided"),
     commitish: "master",
-    upload_assets: ["#{deploy_dir}/#{ipa_name}", "#{deploy_dir}/#{dsym_name}"]
+    upload_assets: [IPA_OUTPUT_PATH, DSYM_OUTPUT_PATH]
   )
 
-  # crashlytics(
-  #   crashlytics_path: "./Crashlytics.framework",
-  #   api_token: ENV['CRASHLYTICS_API_TOKEN'],
-  #   build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
-  # 	ipa_path: "#{deploy_dir}/#{ipa_name}"
-  # )
-
-  # This is called, only if the executed lane was successful
-  notification(
-  	subtitle: "Success", 
-  	message: "Lane #{lane} completed successfully"
-  )
-  slack(success: true, message: "*Successfully deployed new update.*")
+  # # This is called, only if the executed lane was successful
+  # slack(success: true, message: "*Successfully deployed new update.*")
 end
 
 ################################################################################
