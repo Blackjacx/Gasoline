@@ -353,6 +353,7 @@
 				5738B7420D16D646AD64F41D /* [CP] Copy Pods Resources */,
 				B9F8B6391F12E29900168E2D /* Embed Frameworks */,
 				B9E596061F60B17E0005D740 /* SwiftLint */,
+				B98229241F6293F00062FCDC /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -678,6 +679,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gasoline/Pods-Gasoline-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B98229241F6293F00062FCDC /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run ea239609f5e8e3b52685880e28f118b9fb757a2a 44ffb154941bf568d8cd9b09e82f9cdded1438bdb4bfc727ed9ab91134646500";
 		};
 		B9E596061F60B17E0005D740 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;

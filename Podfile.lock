@@ -1,7 +1,7 @@
 PODS:
-  - Crashlytics (3.8.5):
+  - Crashlytics (3.8.6):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.12)
+  - Fabric (1.6.13)
   - Nimble (7.0.1)
   - Quick (1.1.0)
   - SHDateFormatter (0.9.6)
@@ -16,8 +16,8 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC CHECKSUMS:
-  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
-  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
+  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
+  Fabric: 2fb5676bc811af011a04513451f463dac6803206
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SHDateFormatter: c45354ab53665cd00073a1e3c784d9cb8d21b37b
