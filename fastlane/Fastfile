@@ -72,8 +72,6 @@ lane :release do |options|
   project = "#{product_name}.xcodeproj"
   workspace = "#{product_name}.xcworkspace"
   deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
-  ipa_name = "#{product_name}.ipa"
-  dsym_name = "#{product_name}.app.dSYM.zip"
  
   ensure_git_status_clean(show_uncommitted_changes: true)
   ensure_git_branch(branch: "develop")
@@ -113,7 +111,7 @@ lane :release do |options|
 	workspace: workspace, 
 	scheme: product_name,
 	output_directory: deploy_dir,
-	output_name: ipa_name,
+	output_name: "#{product_name}.ipa",
 	export_method: "ad-hoc",
 	include_bitcode: true,
   )
