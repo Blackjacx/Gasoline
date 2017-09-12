@@ -7,6 +7,10 @@
 # Bitrise with fastlane example:
 # https://github.com/bitrise-samples/fastlane/blob/master/BitriseFastlaneSample/fastlane/Fastfile
 #
+# AUTHENTICATION
+# https://docs.fastlane.tools/best-practices/continuous-integration/
+# https://github.com/fastlane/fastlane/tree/master/spaceship
+#
 # Change the syntax highlighting to Ruby
 # All lines starting with a # are ignored when running `fastlane`
 #
@@ -29,14 +33,12 @@
 # ENV["BITRISE_DEPLOY_DIR"] = "..."
 # ENV['CRASHLYTICS_API_TOKEN'] = "..."
 # ENV['CRASHLYTICS_BUILD_SECRET'] = "..."
+# ENV['FASTLANE_USER'] = "..."
+# ENV['FASTLANE_PASSWORD'] = "..."
+# ENV['FASTLANE_DONT_STORE_PASSWORD'] = "..."
 
 
 
-
-
-# TODO: Setup Crashlytics
-
-# TODO: Include Bitrise Public Page URL in SlackMessge
 # TODO: deploy to TestFlight, Crashlytics, Hockey, ... & move away from Bitrise
 
 
@@ -50,14 +52,18 @@ default_platform :ios
 
 platform :ios do
 
-	before_all do
-	  cocoapods(use_bundle_exec: true, repo_update: true)
-	end
+  before_all do
+  end
 
-	error do |lane, exception|
-	  # This block is called, only if the executed lane failed
-	  slack(success: false, message: "*#{lane} failed with #{exception.message}*")
-	end
+  after_all do
+    # This is called, only if the executed lane was successful
+    slack(success: true, message: "*Successfully Built App 🎉*")
+  end
+
+  error do |lane, exception|
+    # This block is called, only if the executed lane failed
+    slack(success: false, message: "*#{lane} failed with #{exception.message}*")
+  end
 
   ##############################################################################
   # Playground Lane
@@ -66,122 +72,116 @@ platform :ios do
   lane :playground do |options|
   end
 
-	################################################################################
-	# Release Lane
-	################################################################################
+  ##############################################################################
+  # Release Lane
+  ##############################################################################
 
-	desc "Releases a new product version"
-	lane :release do |options|
+  desc "Releases a new product version"
+  lane :release do |options|
 
-	  if !options[:product_name] || !options[:version] || !options[:github_account]
-	    raise "No product_name, version specified, or github_account specified!".red
-	  end
+    possible_release_types = ["appstore", "nightly", "beta"]
 
-	  product_name = options[:product_name]
-	  version = options[:version]
-	  github_account = options[:github_account]
-	  project = "#{product_name}.xcodeproj"
-	  workspace = "#{product_name}.xcworkspace"
-	  deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
-	  ipa_name = "#{product_name}.ipa"
-	 
-	  ensure_git_status_clean(show_uncommitted_changes: true)
-	  ensure_git_branch(branch: "develop")
-	  git_pull
+    if !options[:product_name]; raise "No product_name provided!".red; end
+    if !options[:build]; raise "No build provided!".red; end
+    if !options[:github_account]; raise "No github_account provided!".red; end
+    if !possible_release_types.include? options[:release_type]
+      raise "Please set release_type to one of: #{possible_release_types}".red
+    end
 
-	  test(product_name: product_name, run_danger: true)
+    product_name = options[:product_name]
+    build = options[:build]
+    github_account = options[:github_account]
+    release_type = options[:release_type]
+    project = "#{product_name}.xcodeproj"
+    workspace = "#{product_name}.xcworkspace"
+    version = get_version_number(xcodeproj: "#{project}", target: "#{product_name}")
+    deploy_dir = ENV["BITRISE_DEPLOY_DIR"]
+    ipa_name = "#{product_name}.ipa"
+    ipa_path = "#{deploy_dir}/#{product_name}.ipa"
 
-	  # git-flow commands: https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac
-	  sh "cd /tmp && wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash && cd -"
-	  sh "git checkout master && git checkout develop" # init local branches
-	  sh "git flow init -d" # initialize git-flow with defaults
-	  sh "git flow release start #{version}"
+    test(product_name: product_name, run_danger: true)
 
-	  # Increments CFBundleVersion by one and sets CFBundleShortVersionString
-	  increment_version_number(xcodeproj: project, version_number: version)
-	  increment_build_number(xcodeproj: project)
+    # Increments CFBundleVersion by one and sets CFBundleShortVersionString
+    increment_version_number(version_number: version)
+    increment_build_number(build_number: build)
 
-	  # read changelog
-	  changelog = read_changelog
+    # read changelog
+    changelog = read_changelog(section_identifier: "[#{version}]")
 
-	  # stamp unreleased section with released version
-	  stamp_changelog(section_identifier: version)
+    gym(
+      workspace: workspace, 
+      scheme: product_name,
+      output_directory: deploy_dir,
+      output_name: "#{ipa_name}",
+      export_method: "ad-hoc",
+      include_bitcode: true,
+      include_symbols: true
+    )
 
-	  sh "git commit -am 'Fastlane: Release on Production #{version}'"
-	  
-	  # Finish the release branch. The shell may hang here because it: 
-	  # 1) promts for a merge message.
-	  # 
-	  # To get around this do the following:
-	  # 1) git config --global core.mergeoptions --no-edit
-	  sh "git flow release finish -m 'finished_release_on_production_#{version}' #{version}"   
+    github_release = set_github_release(
+      repository_name: "#{github_account}/#{product_name}",
+      api_token: ENV["GITHUB_TOKEN"],
+      name: version,
+      tag_name: version,
+      description: ("#{changelog}" rescue "No changelog provided"),
+      commitish: "master"
+    )
+    
+    crashlytics(
+      crashlytics_path: "./Pods/Crashlytics/iOS/Crashlytics.framework",
+      api_token: ENV['CRASHLYTICS_API_TOKEN'],
+      build_secret: ENV['CRASHLYTICS_BUILD_SECRET']
+    )
 
-	  # push all changes on all branches and all tags
-	  push_to_git_remote(local_branch: "develop", remote_branch: "develop", force: true)
-	  push_to_git_remote(local_branch: "master", remote_branch: "master", force: true)
+    testflight(
+      changelog: changelog,
+      ipa: "#{ipa_path}"
+    )
 
-	  gym(
-		workspace: workspace, 
-		scheme: product_name,
-		output_directory: deploy_dir,
-		output_name: "#{product_name}.ipa",
-		export_method: "ad-hoc",
-		include_bitcode: true,
-	  )
+    slack_message = "*Successfully Built App 🎉*\n" \
+                    "Hey @channel, Product Version #{version} " \
+                    "is out 🤜:boom:🤛\n\n" \
+                    "In the following you'll find whats new in this " \
+                    "release:\n\n" \
+                    "#{changelog}\n\n" \
+                    "You'll be notified via TestFlight about the new version.\n"
+    slack(success: true, message: slack_message)
+  end
 
-	  github_release = set_github_release(
-	    repository_name: "#{github_account}/#{product_name}",
-	    api_token: ENV["GITHUB_TOKEN"],
-	    name: version,
-	    tag_name: version,
-	    description: ("#{changelog}" rescue "No changelog provided"),
-	    commitish: "master"
-	  )
+  ##############################################################################
+  # Test Lane
+  ##############################################################################
 
-	  crashlytics(
-	    crashlytics_path: "./Fabric.framework",
-	    api_token: ENV['CRASHLYTICS_API_TOKEN'],
-	    build_secret: ENV['CRASHLYTICS_BUILD_SECRET'],
-	    ipa_path: "#{deploy_dir}/#{ipa_name}"
-	  )
+  desc "Runs tests optionally with danger"
+  lane :test do |options|
 
-	  # This is called, only if the executed lane was successful
-	  slack(success: true, message: "*Successfully deployed new update.*")
-	end
+    if !options[:product_name]; raise "No product_name provided!".red; end
 
-	################################################################################
-	# Test Lane
-	################################################################################
+    product_name = options[:product_name]
+    run_danger = options[:run_danger]
 
-	desc "Runs tests optionally with danger"
-	lane :test do |options|
+    cocoapods(use_bundle_exec: true, repo_update: true)
 
-	  if !options[:product_name]
-	    raise "No product_name or use_ci specified".red
-	  end
+    # Easily run tests of your iOS app using scan
+    scan(
+      workspace: "#{product_name}.xcworkspace",
+      scheme: product_name,
+      clean: true,
+      devices: ["iPhone 7"],
+      skip_build: true,
+      thread_sanitizer: true,
+      output_types: "html",
+      skip_slack: true,
+      output_directory: ENV["BITRISE_DEPLOY_DIR"]
+    )
 
-	  product_name = options[:product_name]
-	  run_danger = options[:run_danger]
-
-	  # Easily run tests of your iOS app using scan
-	  scan(
-	    workspace: "#{product_name}.xcworkspace",
-	    scheme: product_name,
-	    clean: true,
-	    devices: ["iPhone 7"],
-	    skip_build: true,
-	    thread_sanitizer: true,
-	    output_types: "html",
-	    output_directory: ENV["BITRISE_DEPLOY_DIR"]
-	  )
-
-	  # Runs danger for the project
-	  if run_danger
-	    danger(
-	      use_bundle_exec: true,
-	      github_api_token: ENV["GITHUB_TOKEN"],
-	      verbose: true
-	    )
-	  end
-	end
+    # Runs danger for the project
+    if run_danger
+      danger(
+        use_bundle_exec: true,
+        github_api_token: ENV["GITHUB_TOKEN"],
+        verbose: true
+      )
+    end
+  end
 end
