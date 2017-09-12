@@ -24,6 +24,7 @@
 		B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAA1F094D34008D368E /* RefuelListViewController.swift */; };
 		B973FEAD1F094E2E008D368E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAC1F094E2E008D368E /* Extensions.swift */; };
 		B973FEAF1F094EE5008D368E /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAE1F094EE5008D368E /* GenericDataSource.swift */; };
+		B98477271F67F18200A6FC77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98477261F67F18200A6FC77 /* LaunchScreen.storyboard */; };
 		B9DD145F1F09825B0095AD0F /* RefuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */; };
 		B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */; };
 		B9E595F11F60A0590005D740 /* GasolineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E595F01F60A0590005D740 /* GasolineUITests.swift */; };
@@ -117,6 +118,7 @@
 		B973FEAA1F094D34008D368E /* RefuelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelListViewController.swift; sourceTree = "<group>"; };
 		B973FEAC1F094E2E008D368E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B973FEAE1F094EE5008D368E /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		B98477261F67F18200A6FC77 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelCell.swift; sourceTree = "<group>"; };
 		B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		B9E595EE1F60A0590005D740 /* GasolineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasolineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,8 +220,9 @@
 		B92B622E1C8F576600790D3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B9E596081F60B1C50005D740 /* Info.plist */,
+				B98477261F67F18200A6FC77 /* LaunchScreen.storyboard */,
 				B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */,
+				B9E596081F60B1C50005D740 /* Info.plist */,
 				B92B624E1C8F815D00790D3B /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -511,6 +514,7 @@
 				B9089B011F60C1420072EB6C /* README.md in Resources */,
 				B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */,
 				B92B624C1C8F815D00790D3B /* Localizable.strings in Resources */,
+				B98477271F67F18200A6FC77 /* LaunchScreen.storyboard in Resources */,
 				B9089B021F60C1420072EB6C /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,7 +947,7 @@
 				INFOPLIST_FILE = Gasoline/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gasoline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.car;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -963,7 +967,7 @@
 				INFOPLIST_FILE = Gasoline/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.gasoline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingcobra.car;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -1081,11 +1085,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 21;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Core/Info.plist;
@@ -1113,11 +1117,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 21;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Core/Info.plist;
