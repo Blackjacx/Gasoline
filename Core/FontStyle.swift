@@ -8,11 +8,11 @@
 
 import UIKit
 
-enum FontStyle {
+public enum FontStyle {
 
     case title1, title2, title3, headline, subHeadline, body, callout, footnote, caption1, caption2
 
-    var textStyle: UIFontTextStyle {
+    public var textStyle: UIFontTextStyle {
 
         switch self {
         case .title1: return .title1
@@ -28,12 +28,12 @@ enum FontStyle {
         }
     }
 
-    var font: UIFont {
+    public var font: UIFont {
 
         return UIFont.preferredFont(forTextStyle: textStyle)
     }
 
-    var normalStyleAttributes: [NSAttributedStringKey: Any] {
+    public var normalStyleAttributes: [NSAttributedStringKey: Any] {
 
         return [
             .font: font,
@@ -41,12 +41,12 @@ enum FontStyle {
         ]
     }
 
-    func normalStyleAttributedString(_ string: String) -> NSAttributedString {
+    public func normalStyleAttributedString(_ string: String) -> NSAttributedString {
 
         return NSAttributedString(string: string, attributes: normalStyleAttributes)
     }
 
-    var lightStyleAttributes: [NSAttributedStringKey: Any] {
+    public var lightStyleAttributes: [NSAttributedStringKey: Any] {
 
         return [
             .font: font,
@@ -54,7 +54,7 @@ enum FontStyle {
         ]
     }
 
-    func lightStyleAttributedString(_ string: String) -> NSAttributedString {
+    public func lightStyleAttributedString(_ string: String) -> NSAttributedString {
 
         return NSAttributedString(string: string, attributes: lightStyleAttributes)
     }

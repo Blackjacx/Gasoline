@@ -8,6 +8,7 @@
 
 import UIKit
 import SHDateFormatter
+import Core
 
 class RefuelCell: UITableViewCell {
 
