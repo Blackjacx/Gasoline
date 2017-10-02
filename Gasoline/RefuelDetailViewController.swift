@@ -54,8 +54,8 @@ class RefuelDetailViewController: UIViewController {
     init(refuelItem: Refuel) {
         super.init(nibName: nil, bundle: nil)
 
-        totalCostsTextField.text = textFieldFormatter.string(from: refuelItem.totalPrice as NSNumber)
-        pricePerLiterTextField.text = textFieldFormatter.string(from: refuelItem.literPrice as NSNumber)
+        totalCostsTextField.text = textFieldFormatter.string(from: refuelItem.totalPrice as NSDecimalNumber)
+        pricePerLiterTextField.text = textFieldFormatter.string(from: refuelItem.literPrice as NSDecimalNumber)
         literAmountTextField.text = measurementFormatter.string(from: refuelItem.fuelAmount)
         mileageTextField.text = measurementFormatter.string(from: refuelItem.mileage)
 
@@ -134,7 +134,7 @@ class RefuelDetailViewController: UIViewController {
 
         let refuel = Refuel(
             date: datePicker.date,
-            literPrice: price,
+            literPrice: Decimal(price),
             fuelAmount: Measurement(value: literAmount, unit: UnitVolume.liters),
             mileage: Measurement(value: mileage, unit: UnitLength.kilometers),
             note: noteTextField.text)
