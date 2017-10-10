@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Core
 
 class RefuelListViewController: UIViewController {
 
@@ -75,7 +76,9 @@ class RefuelListViewController: UIViewController {
 
     @IBAction func pressedAddNewItem(sender: UIButton) {
 
-        print("pressed add new refuel item...")
+        let refuelDetailScreen = RefuelDetailViewController(refuelItem: nil)
+        let navigationController = BaseNavigationViewController(rootViewController: refuelDetailScreen)
+        present(navigationController, animated: true, completion: nil)
     }
 }
 

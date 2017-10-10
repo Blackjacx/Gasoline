@@ -8,59 +8,34 @@
 
 import UIKit
 import SHDateFormatter
+import Core
 
 class RefuelDetailViewController: UIViewController {
 
-    let totalCostsLabel = UILabel()
-    let pricePerLiterLabel = UILabel()
-    let literAmountLabel = UILabel()
-    let kilometerAmountLabel = UILabel()
-    let dateLabel = UILabel()
-    let datePicker = UIDatePicker()
+    let refuelItem: Refuel?
 
-    let totalCostsTextField = UITextField()
-    let pricePerLiterTextField = UITextField()
-    let literAmountTextField = UITextField()
-    let mileageTextField = UITextField()
-    let noteTextField = UITextField()
+    let totalCostsTextField = LabelledTextField()
+    let pricePerLiterTextField = LabelledTextField()
+    let literAmountTextField = LabelledTextField()
+    let mileageTextField = LabelledTextField()
+    let datePicker = LabelledDatePicker()
+    let noteTextField = LabelledTextField()
 
     var textFieldList: [UITextField] {
         return [
-            totalCostsTextField,
-            pricePerLiterTextField,
-            literAmountTextField,
-            mileageTextField,
-            noteTextField]
+            totalCostsTextField.field,
+            pricePerLiterTextField.field,
+            literAmountTextField.field,
+            mileageTextField.field,
+            noteTextField.field]
     }
 
-    var measurementFormatter: MeasurementFormatter {
-        let formatter = MeasurementFormatter()
-        return formatter
-    }
+    // MARK: - Lifecycle
 
-    private lazy var textFieldFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.usesGroupingSeparator = false
-        formatter.numberStyle = .currency
-        formatter.currencySymbol = ""
-        formatter.maximumFractionDigits = 2
-        return formatter
-    }()
+    init(refuelItem: Refuel?) {
 
-    private var decimalSeparator: String {
-        return textFieldFormatter.decimalSeparator
-    }
-
-    init(refuelItem: Refuel) {
+        self.refuelItem = refuelItem
         super.init(nibName: nil, bundle: nil)
-
-        totalCostsTextField.text = textFieldFormatter.string(from: refuelItem.totalPrice as NSDecimalNumber)
-        pricePerLiterTextField.text = textFieldFormatter.string(from: refuelItem.literPrice as NSDecimalNumber)
-        literAmountTextField.text = measurementFormatter.string(from: refuelItem.fuelAmount)
-        mileageTextField.text = measurementFormatter.string(from: refuelItem.mileage)
-
-        noteTextField.text = refuelItem.note
-        datePicker.date = refuelItem.date
     }
 
     @available(*, unavailable, message:"init() has not been implemented")
@@ -82,6 +57,27 @@ class RefuelDetailViewController: UIViewController {
 
         super.viewDidLoad()
 
+        if let refuelItem = refuelItem {
+            title = "\(refuelItem.date)"
+        } else {
+            title = "refuelDetailScreen.addItem.title".localized
+        }
+
+        applyCloseButtonStyle()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
+                                                            target: self,
+                                                            action: #selector(pressedSave(_:)))
+
+        view.backgroundColor = Colors.background
+
+        setupDatePicker()
+        setupTotalCostsTextField()
+        setupPricePerLiterTextField()
+        setupLiterAmountTextField()
+        setupMileageTextField()
+        setupNoteTextField()
+        setupStack()
+
         for textField in textFieldList {
             if textField.keyboardType == .decimalPad || textField.keyboardType == .numberPad {
 //                UIView.pcl_attachButtonToolbar(
@@ -93,12 +89,56 @@ class RefuelDetailViewController: UIViewController {
         }
     }
 
+    // MARK: - Setup UI
+
+    private func setupDatePicker() {
+        if let item = refuelItem {
+            datePicker.date = item.date
+        }
+    }
+
+    private func setupTotalCostsTextField() {
+        totalCostsTextField.text = NumberFormatting.shared.string(from: refuelItem?.totalPrice as NSDecimalNumber?)
+    }
+
+    private func setupPricePerLiterTextField() {
+        pricePerLiterTextField.text = NumberFormatting.shared.string(from: refuelItem?.literPrice as NSDecimalNumber?)
+    }
+
+    private func setupLiterAmountTextField() {
+        if let item = refuelItem {
+            literAmountTextField.text = MeasurementFormatting.shared.string(from: item.fuelAmount, fractionDigits: 3)
+        }
+    }
+
+    private func setupMileageTextField() {
+        if let item = refuelItem {
+            mileageTextField.text = MeasurementFormatting.shared.string(from: item.mileage, fractionDigits: 0)
+        }
+    }
+
+    private func setupNoteTextField() {
+        noteTextField.text = refuelItem?.note
+    }
+
+    private func setupStack() {
+        let subviews = [totalCostsTextField,
+                        pricePerLiterTextField,
+                        literAmountTextField,
+                        mileageTextField,
+                        datePicker,
+                        noteTextField]
+        let stack = UIStackView(arrangedSubviews: subviews)
+        stack.axis = .vertical
+        stack.addMaximizedTo(view)
+    }
+
     // MARK: - Actions
 
     @IBAction func datePickerDidFinish(_ datePicker: UIDatePicker) {
         let date = SHDateFormatter.shared.stringFromDate(date: datePicker.date, format: .noTimeShortDate)
         let time = SHDateFormatter.shared.stringFromDate(date: datePicker.date, format: .shortTimeNoDate)
-        dateLabel.text = "\(date), \(time)"
+        self.datePicker.title = "\(date), \(time)"
     }
 
     @IBAction func pressedBackground(_ gr: UITapGestureRecognizer) {
@@ -139,8 +179,8 @@ class RefuelDetailViewController: UIViewController {
             mileage: Measurement(value: mileage, unit: UnitLength.kilometers),
             note: noteTextField.text)
 
-        globalDataBaseReference.add(item: refuel) { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
+        globalDataBaseReference.add(item: refuel) {
+            dismissViewControllerAnimated()
         }
     }
 
@@ -179,6 +219,7 @@ extension RefuelDetailViewController: UITextFieldDelegate {
 
         if textField == noteTextField { return true }
 
+        let decimalSeparator = NumberFormatting.shared.decimalSeparator
         let decimalSet = NSMutableCharacterSet.decimalDigit()
 //        decimalSet.addCharactersInString(decimalSeparator)
         let invertedSet = decimalSet.inverted
@@ -188,8 +229,8 @@ extension RefuelDetailViewController: UITextFieldDelegate {
         currentString = (currentString as NSString).replacingCharacters(in: range, with: string)
 
         guard
-            let numberFromString = textFieldFormatter.number(from: currentString),
-            let stringFromNumber = textFieldFormatter.string(from: numberFromString) else {
+            let numberFromString = NumberFormatting.shared.number(from: currentString),
+            let stringFromNumber = NumberFormatting.shared.string(from: numberFromString) else {
                 fatalError()
         }
         currentString = stringFromNumber
@@ -200,16 +241,16 @@ extension RefuelDetailViewController: UITextFieldDelegate {
 
         // get current cursor position
         let beginning = textField.beginningOfDocument
-        let start = textField.position(from: beginning, offset:range.location)
-        let cursorOffset = textField.offset(from: beginning, to:start!) + string.characters.count
+        let start = textField.position(from: beginning, offset: range.location)
+        let cursorOffset = textField.offset(from: beginning, to: start!) + string.characters.count
 
         let decimalNumber = NSDecimalNumber(value: Double(centValue) / 100.0 as Double)
-        let formattedString = textFieldFormatter.string(from: decimalNumber)
+        let formattedString = NumberFormatting.shared.string(from: decimalNumber)
         textField.text = formattedString
 
         // Restore the cursor position
-        if let newCursorPosition = textField.position(from: textField.beginningOfDocument, offset:cursorOffset) {
-            let newSelectedRange = textField.textRange(from: newCursorPosition, to:newCursorPosition)
+        if let newCursorPosition = textField.position(from: textField.beginningOfDocument, offset: cursorOffset) {
+            let newSelectedRange = textField.textRange(from: newCursorPosition, to: newCursorPosition)
             textField.selectedTextRange = newSelectedRange
         }
 

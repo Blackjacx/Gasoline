@@ -17,7 +17,7 @@ public struct MeasurementFormatting {
 
     private init() {}
 
-    func stringFrom<U>(measurement: Measurement<U>, fractionDigits: Int) -> String {
+    func string<U>(from measurement: Measurement<U>, fractionDigits: Int) -> String {
         numberFormatter.minimumFractionDigits = fractionDigits
         numberFormatter.maximumFractionDigits = fractionDigits
         formatter.numberFormatter = numberFormatter

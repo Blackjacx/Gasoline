@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		014B6D03C983304F74DB1947 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74EABFC1E6F86AF82D96C34 /* Pods_Core.framework */; };
 		4199F9F6002910A63A734BB8 /* Pods_GasolineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD5FCC30B0ED817E52D16D2 /* Pods_GasolineUITests.framework */; };
+		B90727C11F8D798300CF680C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90727C01F8D798300CF680C /* UIViewController+Extensions.swift */; };
 		B9089B011F60C1420072EB6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B9089AFF1F60C1420072EB6C /* README.md */; };
 		B9089B021F60C1420072EB6C /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = B9089B001F60C1420072EB6C /* CHANGELOG.md */; };
 		B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */; };
@@ -21,12 +22,21 @@
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
 		B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F8ED1C7A327C008C66E5 /* Constants.swift */; };
 		B93908D21F82FAD300F16923 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8B6181F12E23C00168E2D /* FontStyle.swift */; };
+		B94544FC1F8D6A56003B982E /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94544FA1F8D69AF003B982E /* BaseNavigationViewController.swift */; };
+		B94545151F8D6E65003B982E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94545141F8D6E65003B982E /* UIColor+Extensions.swift */; };
+		B94545171F8D7062003B982E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94545161F8D7062003B982E /* Constants.swift */; };
+		B94545191F8D70F5003B982E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94545181F8D70F5003B982E /* UIImage+Extensions.swift */; };
+		B945451B1F8D736B003B982E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B945451A1F8D736B003B982E /* String+Extensions.swift */; };
 		B95610931F12830D000E5649 /* MeasurementFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95610921F1282C9000E5649 /* MeasurementFormatting.swift */; };
 		B973FEA91F094C47008D368E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEA81F094C47008D368E /* RootViewController.swift */; };
 		B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAA1F094D34008D368E /* RefuelListViewController.swift */; };
 		B973FEAD1F094E2E008D368E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAC1F094E2E008D368E /* Extensions.swift */; };
 		B973FEAF1F094EE5008D368E /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAE1F094EE5008D368E /* GenericDataSource.swift */; };
 		B98477271F67F18200A6FC77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98477261F67F18200A6FC77 /* LaunchScreen.storyboard */; };
+		B9C714561F830D9400073EB7 /* LabelledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C714551F830D9400073EB7 /* LabelledTextField.swift */; };
+		B9C714581F830EE300073EB7 /* LabelledDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C714571F830EE300073EB7 /* LabelledDatePicker.swift */; };
+		B9C7145A1F83129400073EB7 /* NumberFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C714591F83129400073EB7 /* NumberFormatting.swift */; };
+		B9C7145C1F831BD300073EB7 /* Themable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7145B1F831BD300073EB7 /* Themable.swift */; };
 		B9DD145F1F09825B0095AD0F /* RefuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */; };
 		B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */; };
 		B9E595F11F60A0590005D740 /* GasolineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E595F01F60A0590005D740 /* GasolineUITests.swift */; };
@@ -108,6 +118,7 @@
 		A95C3E95BCFE38F5434F6CEA /* Pods-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreTests/Pods-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD5FCC30B0ED817E52D16D2 /* Pods_GasolineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasolineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7882B4439D20ADEE21587B /* Pods-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreTests/Pods-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		B90727C01F8D798300CF680C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		B9089AFF1F60C1420072EB6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B9089B001F60C1420072EB6C /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B90B921C1C976B2F0049C7A8 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
@@ -122,12 +133,21 @@
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B93908D31F82FD5F00F16923 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B94544FA1F8D69AF003B982E /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		B94545141F8D6E65003B982E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B94545161F8D7062003B982E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B94545181F8D70F5003B982E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		B945451A1F8D736B003B982E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B95610921F1282C9000E5649 /* MeasurementFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatting.swift; sourceTree = "<group>"; };
 		B973FEA81F094C47008D368E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B973FEAA1F094D34008D368E /* RefuelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelListViewController.swift; sourceTree = "<group>"; };
 		B973FEAC1F094E2E008D368E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B973FEAE1F094EE5008D368E /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		B98477261F67F18200A6FC77 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9C714551F830D9400073EB7 /* LabelledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledTextField.swift; sourceTree = "<group>"; };
+		B9C714571F830EE300073EB7 /* LabelledDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDatePicker.swift; sourceTree = "<group>"; };
+		B9C714591F83129400073EB7 /* NumberFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatting.swift; sourceTree = "<group>"; };
+		B9C7145B1F831BD300073EB7 /* Themable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themable.swift; sourceTree = "<group>"; };
 		B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelCell.swift; sourceTree = "<group>"; };
 		B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		B9E595EE1F60A0590005D740 /* GasolineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasolineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +299,8 @@
 				B92E57AD1F096290003437B3 /* DataBase.swift */,
 				B973FEAC1F094E2E008D368E /* Extensions.swift */,
 				B973FEAE1F094EE5008D368E /* GenericDataSource.swift */,
+				B9C714571F830EE300073EB7 /* LabelledDatePicker.swift */,
+				B9C714551F830D9400073EB7 /* LabelledTextField.swift */,
 				B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */,
 				B973FEAA1F094D34008D368E /* RefuelListViewController.swift */,
 				B973FEA81F094C47008D368E /* RootViewController.swift */,
@@ -288,6 +310,37 @@
 				B92B622E1C8F576600790D3B /* Supporting Files */,
 			);
 			path = Gasoline;
+			sourceTree = "<group>";
+		};
+		B94544FD1F8D6A69003B982E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B94544FA1F8D69AF003B982E /* BaseNavigationViewController.swift */,
+				B94545161F8D7062003B982E /* Constants.swift */,
+				B9F8B6181F12E23C00168E2D /* FontStyle.swift */,
+				B9C7145B1F831BD300073EB7 /* Themable.swift */,
+				B94545121F8D6E41003B982E /* extensions */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B94545121F8D6E41003B982E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B94545131F8D6E4A003B982E /* UIKit */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		B94545131F8D6E4A003B982E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B94545141F8D6E65003B982E /* UIColor+Extensions.swift */,
+				B94545181F8D70F5003B982E /* UIImage+Extensions.swift */,
+				B945451A1F8D736B003B982E /* String+Extensions.swift */,
+				B90727C01F8D798300CF680C /* UIViewController+Extensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		B95450D01F12754800371C0F /* cells */ = {
@@ -304,6 +357,7 @@
 			children = (
 				B9DD14621F0997580095AD0F /* CurrencyFormatter.swift */,
 				B95610921F1282C9000E5649 /* MeasurementFormatting.swift */,
+				B9C714591F83129400073EB7 /* NumberFormatting.swift */,
 			);
 			path = formatter;
 			sourceTree = "<group>";
@@ -329,9 +383,9 @@
 		B9F8B6201F12E29900168E2D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B9F8B6181F12E23C00168E2D /* FontStyle.swift */,
 				B9F8B6211F12E29900168E2D /* Core.h */,
 				B9F8B6221F12E29900168E2D /* Info.plist */,
+				B94544FD1F8D6A69003B982E /* Source */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -847,10 +901,13 @@
 				B973FEAF1F094EE5008D368E /* GenericDataSource.swift in Sources */,
 				B95610931F12830D000E5649 /* MeasurementFormatting.swift in Sources */,
 				B92E57AE1F096290003437B3 /* DataBase.swift in Sources */,
+				B9C714581F830EE300073EB7 /* LabelledDatePicker.swift in Sources */,
 				B973FEA91F094C47008D368E /* RootViewController.swift in Sources */,
 				B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */,
 				B92B622C1C8F573800790D3B /* User.swift in Sources */,
 				B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */,
+				B9C714561F830D9400073EB7 /* LabelledTextField.swift in Sources */,
+				B9C7145A1F83129400073EB7 /* NumberFormatting.swift in Sources */,
 				B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */,
 				B92B622A1C8F572300790D3B /* Refuel.swift in Sources */,
 				B911C7E51BDC5E5500016B85 /* RefuelDetailViewController.swift in Sources */,
@@ -880,7 +937,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94545171F8D7062003B982E /* Constants.swift in Sources */,
+				B945451B1F8D736B003B982E /* String+Extensions.swift in Sources */,
+				B94544FC1F8D6A56003B982E /* BaseNavigationViewController.swift in Sources */,
 				B93908D21F82FAD300F16923 /* FontStyle.swift in Sources */,
+				B90727C11F8D798300CF680C /* UIViewController+Extensions.swift in Sources */,
+				B94545191F8D70F5003B982E /* UIImage+Extensions.swift in Sources */,
+				B9C7145C1F831BD300073EB7 /* Themable.swift in Sources */,
+				B94545151F8D6E65003B982E /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,6 +1253,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1222,6 +1287,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

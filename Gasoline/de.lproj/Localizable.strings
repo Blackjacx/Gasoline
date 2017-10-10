@@ -10,3 +10,4 @@
 "gz.general.yes.text" = "ja";
 "gz.general.no.text" = "nein";
 "fli.recordDetails.numpadKeyboardAccessoryNextButon.title" = "Weiter";
+"refuelDetailScreen.addItem.title" = "Eintrag Hinzufügen";

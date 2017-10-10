@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Core
 
 class RootViewController: UIViewController {
 
@@ -14,12 +15,12 @@ class RootViewController: UIViewController {
 
         super.viewDidLoad()
 
-        let refuelListViewController = RefuelListViewController()
-        refuelListViewController.view.layoutIfNeeded() // avoids animated navbar glitch when presented
+        let refuelListScreen = RefuelListViewController()
+        let navigationController = BaseNavigationViewController(rootViewController: refuelListScreen)
 
-        refuelListViewController.willMove(toParentViewController: self)
-        addChildViewController(refuelListViewController)
-        refuelListViewController.didMove(toParentViewController: self)
-        refuelListViewController.view.addMaximizedTo(view)
+        navigationController.willMove(toParentViewController: self)
+        addChildViewController(navigationController)
+        navigationController.didMove(toParentViewController: self)
+        navigationController.view.addMaximizedTo(view)
     }
 }

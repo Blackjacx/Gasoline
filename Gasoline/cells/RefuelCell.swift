@@ -57,13 +57,12 @@ extension RefuelCell: ConfigurableCell {
 
         guard let item = item as? Refuel else { return }
         let dateFormatter = SHDateFormatter.shared
-        let measurementFormatter = MeasurementFormatting.shared
         let currencyFormatter = CurrencyFormatter.shared
 
         let date = dateFormatter.stringFromDate(date: item.date, format: .noTimeRelativeDate)
         let time = dateFormatter.stringFromDate(date: item.date, format: .shortTimeNoDate)
-        let mileage = measurementFormatter.stringFrom(measurement: item.mileage, fractionDigits: 0)
-        let fuelAmount = measurementFormatter.stringFrom(measurement: item.fuelAmount, fractionDigits: 2)
+        let mileage = MeasurementFormatting.shared.string(from: item.mileage, fractionDigits: 0)
+        let fuelAmount = MeasurementFormatting.shared.string(from: item.fuelAmount, fractionDigits: 2)
         let note = item.note ?? ""
         let totalPrice = currencyFormatter.stringFromValue(value: item.totalPrice, currencyCode: item.currencyCode)
         let literPrice = currencyFormatter.stringFromValue(value: item.literPrice, currencyCode: item.currencyCode, fractionDigits: 3)

@@ -7,7 +7,7 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
 
 opt_in_rules: # some rules are only opt-in
   - empty_count
-  - force_unwrapping
+  # - force_unwrapping
   - attributes
   - closure_end_indentation
   - closure_spacing
@@ -67,6 +67,13 @@ variable_name:
     error: 60
   min_length:
     warning: 1
+
+type_name:
+  max_length:
+    warning: 30
+    error: 40
+  min_length:
+    warning: 2
 
 nesting:
   type_level:

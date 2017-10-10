@@ -22,7 +22,7 @@ public struct CurrencyFormatter {
     }()
 
     func stringFromValue(value: Decimal?, currencyCode: String, fractionDigits: Int = 2) -> String {
-        
+
         guard let value = value else { return CurrencyFormatter.defaultString }
         formatter.minimumFractionDigits = fractionDigits
         formatter.maximumFractionDigits = fractionDigits
