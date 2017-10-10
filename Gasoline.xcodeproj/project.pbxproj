@@ -20,7 +20,6 @@
 		B92B624C1C8F815D00790D3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B92B624E1C8F815D00790D3B /* Localizable.strings */; };
 		B92E57AE1F096290003437B3 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E57AD1F096290003437B3 /* DataBase.swift */; };
 		B9302F551BAB6F5B00CE9CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */; };
-		B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F8ED1C7A327C008C66E5 /* Constants.swift */; };
 		B93908D21F82FAD300F16923 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8B6181F12E23C00168E2D /* FontStyle.swift */; };
 		B94544FC1F8D6A56003B982E /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94544FA1F8D69AF003B982E /* BaseNavigationViewController.swift */; };
 		B94545151F8D6E65003B982E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94545141F8D6E65003B982E /* UIColor+Extensions.swift */; };
@@ -131,7 +130,6 @@
 		B92E57AD1F096290003437B3 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		B9302F451BAB6F5B00CE9CC4 /* Gasoline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gasoline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9302F541BAB6F5B00CE9CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B936F8ED1C7A327C008C66E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B93908D31F82FD5F00F16923 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94544FA1F8D69AF003B982E /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		B94545141F8D6E65003B982E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -295,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				B911C7A81BDC5A4900016B85 /* AppDelegate.swift */,
-				B936F8ED1C7A327C008C66E5 /* Constants.swift */,
 				B92E57AD1F096290003437B3 /* DataBase.swift */,
 				B973FEAC1F094E2E008D368E /* Extensions.swift */,
 				B973FEAE1F094EE5008D368E /* GenericDataSource.swift */,
@@ -913,7 +910,6 @@
 				B911C7E51BDC5E5500016B85 /* RefuelDetailViewController.swift in Sources */,
 				B973FEAD1F094E2E008D368E /* Extensions.swift in Sources */,
 				B9DD145F1F09825B0095AD0F /* RefuelCell.swift in Sources */,
-				B936F8EE1C7A327C008C66E5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ class RefuelCell: UITableViewCell {
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        let margin = Constants.rasterSize
+        let margin = Constants.UI.rasterSize
         let parentStackMargins = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
 
         let verticalStack = UIStackView(arrangedSubviews: [totalPriceLabel, mileageLabel, literPriceLabel, fuelAmountLabel, notesLabel])

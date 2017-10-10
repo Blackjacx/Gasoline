@@ -20,7 +20,7 @@ class RefuelListViewController: UIViewController {
         table.backgroundColor = GasolineColor.background
         table.separatorColor = GasolineColor.cellSeparator
         table.rowHeight = UITableViewAutomaticDimension
-        table.estimatedRowHeight = Constants.tableViewCellHeight
+        table.estimatedRowHeight = Constants.UI.tableViewCellHeight
         table.tableFooterView = UIView()
         return table
     }()
