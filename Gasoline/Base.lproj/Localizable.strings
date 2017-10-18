@@ -1,13 +1,11 @@
-/* 
-  Localizable.strings
-  Gasoline
-
-  Created by Stefan Herold on 08/03/16.
-  Copyright © 2016 Stefan Herold. All rights reserved.
-*/
-
 "gz.recordListViewController.listCellTitle.format" = "%.2fl for %.2f€";
 "gz.general.yes.text" = "yes";
 "gz.general.no.text" = "no";
 "fli.recordDetails.numpadKeyboardAccessoryNextButon.title" = "Next";
-"refuelDetailScreen.addItem.title" = "Add Item";
+"refuelDetailScreen.addItem.title" = "Add";
+"refuelDetailScreen.totalCostsTextField.title" = "Total Costs";
+"refuelDetailScreen.pricePerFuelUnitTextField.title" = "Price Per Unit";
+"refuelDetailScreen.fuelAmountTextField.title" = "Fuel Amount";
+"refuelDetailScreen.mileageTextField.title" = "Mileage";
+"refuelDetailScreen.noteTextField.title" = "Notes";
+"refuelDetailScreen.datePicker.title" = "Refuel Time";

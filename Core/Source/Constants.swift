@@ -14,6 +14,10 @@ public struct Constants {
         public static let rasterSize: CGFloat = 11.0
         public static let lineWidth: CGFloat = 1.0 / UIScreen.main.scale
         public static let tableViewCellHeight: CGFloat = rasterSize * 5
+        public static let defaultInsets = UIEdgeInsets(top: rasterSize * 2,
+                                                       left: rasterSize * 2,
+                                                       bottom: rasterSize * 2,
+                                                       right: rasterSize * 2)
 
         public static let statusbarStyle: UIStatusBarStyle = .lightContent
     }

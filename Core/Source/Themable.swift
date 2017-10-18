@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol Stylable {
+public protocol Themable {
     static var colorProvider: ColorProvidable { get }
 }
 
@@ -17,8 +17,8 @@ public protocol ColorProvidable {
 }
 
 public struct Colors: ColorProvidable {
-    public static let primary: UIColor = UIColor(hex: 0x0000f9)
-    public static let secondary: UIColor = UIColor(hex: 0x287cf6)
+    public static let primary: UIColor = UIColor(hex: 0x84d6e9)
+    public static let secondary: UIColor = UIColor(hex: 0xb2db5c)
     public static let background: UIColor = UIColor(hex: 0xffffff)
     public static let navbarBackground: UIColor = UIColor(hex: 0xf9f9f9)
     public static let shadowColor: UIColor = UIColor(hex: 0x000000).withAlphaComponent(0.25)

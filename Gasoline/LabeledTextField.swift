@@ -1,5 +1,5 @@
 //
-//  LabelledDatePicker.swift
+//  LabeledTextField.swift
 //  Gasoline
 //
 //  Created by Stefan Herold on 03.10.17.
@@ -8,26 +8,31 @@
 
 import UIKit
 
-class LabelledDatePicker: UIView {
+class LabeledTextField: UIView {
 
-    private let titleLabel = UILabel()
-    private let picker = UIDatePicker()
+    let titleLabel = UILabel()
+    let textField = UITextField()
 
     var title: String? {
         get { return titleLabel.text }
         set { titleLabel.text = newValue }
     }
 
-    var date: Date {
-        get { return picker.date }
-        set { picker.date = newValue }
+    var text: String? {
+        get { return textField.text }
+        set { textField.text = newValue }
+    }
+
+    var placeholder: String? {
+        get { return textField.placeholder }
+        set { textField.placeholder = newValue }
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         setupTitleLabel()
-        setupPicker()
+        setupTextField()
         setupStack()
     }
 
@@ -37,17 +42,14 @@ class LabelledDatePicker: UIView {
     }
 
     private func setupTitleLabel() {
-
-        titleLabel.text = "Dummy Picker Title"
     }
 
-    private func setupPicker() {
-
+    private func setupTextField() {
     }
 
     private func setupStack() {
 
-        let stack = UIStackView(arrangedSubviews: [titleLabel, picker])
+        let stack = UIStackView(arrangedSubviews: [titleLabel, textField])
         stack.axis = .vertical
         stack.addMaximizedTo(self)
     }

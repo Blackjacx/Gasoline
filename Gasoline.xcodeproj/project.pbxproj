@@ -27,13 +27,13 @@
 		B94545191F8D70F5003B982E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94545181F8D70F5003B982E /* UIImage+Extensions.swift */; };
 		B945451B1F8D736B003B982E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B945451A1F8D736B003B982E /* String+Extensions.swift */; };
 		B95610931F12830D000E5649 /* MeasurementFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95610921F1282C9000E5649 /* MeasurementFormatting.swift */; };
+		B973AD411F96B23C0033AC56 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973AD401F96B23C0033AC56 /* LabeledTextField.swift */; };
 		B973FEA91F094C47008D368E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEA81F094C47008D368E /* RootViewController.swift */; };
 		B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAA1F094D34008D368E /* RefuelListViewController.swift */; };
 		B973FEAD1F094E2E008D368E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAC1F094E2E008D368E /* Extensions.swift */; };
 		B973FEAF1F094EE5008D368E /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973FEAE1F094EE5008D368E /* GenericDataSource.swift */; };
 		B98477271F67F18200A6FC77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98477261F67F18200A6FC77 /* LaunchScreen.storyboard */; };
-		B9C714561F830D9400073EB7 /* LabelledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C714551F830D9400073EB7 /* LabelledTextField.swift */; };
-		B9C714581F830EE300073EB7 /* LabelledDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C714571F830EE300073EB7 /* LabelledDatePicker.swift */; };
+		B9C714581F830EE300073EB7 /* LabeledDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C714571F830EE300073EB7 /* LabeledDatePicker.swift */; };
 		B9C7145A1F83129400073EB7 /* NumberFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C714591F83129400073EB7 /* NumberFormatting.swift */; };
 		B9C7145C1F831BD300073EB7 /* Themable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7145B1F831BD300073EB7 /* Themable.swift */; };
 		B9DD145F1F09825B0095AD0F /* RefuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */; };
@@ -137,13 +137,13 @@
 		B94545181F8D70F5003B982E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		B945451A1F8D736B003B982E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B95610921F1282C9000E5649 /* MeasurementFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatting.swift; sourceTree = "<group>"; };
+		B973AD401F96B23C0033AC56 /* LabeledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		B973FEA81F094C47008D368E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B973FEAA1F094D34008D368E /* RefuelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefuelListViewController.swift; sourceTree = "<group>"; };
 		B973FEAC1F094E2E008D368E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B973FEAE1F094EE5008D368E /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		B98477261F67F18200A6FC77 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B9C714551F830D9400073EB7 /* LabelledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledTextField.swift; sourceTree = "<group>"; };
-		B9C714571F830EE300073EB7 /* LabelledDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDatePicker.swift; sourceTree = "<group>"; };
+		B9C714571F830EE300073EB7 /* LabeledDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledDatePicker.swift; sourceTree = "<group>"; };
 		B9C714591F83129400073EB7 /* NumberFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatting.swift; sourceTree = "<group>"; };
 		B9C7145B1F831BD300073EB7 /* Themable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themable.swift; sourceTree = "<group>"; };
 		B9DD145E1F0981CD0095AD0F /* RefuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefuelCell.swift; sourceTree = "<group>"; };
@@ -296,8 +296,8 @@
 				B92E57AD1F096290003437B3 /* DataBase.swift */,
 				B973FEAC1F094E2E008D368E /* Extensions.swift */,
 				B973FEAE1F094EE5008D368E /* GenericDataSource.swift */,
-				B9C714571F830EE300073EB7 /* LabelledDatePicker.swift */,
-				B9C714551F830D9400073EB7 /* LabelledTextField.swift */,
+				B9C714571F830EE300073EB7 /* LabeledDatePicker.swift */,
+				B973AD401F96B23C0033AC56 /* LabeledTextField.swift */,
 				B911C7E41BDC5E5500016B85 /* RefuelDetailViewController.swift */,
 				B973FEAA1F094D34008D368E /* RefuelListViewController.swift */,
 				B973FEA81F094C47008D368E /* RootViewController.swift */,
@@ -894,16 +894,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B973AD411F96B23C0033AC56 /* LabeledTextField.swift in Sources */,
 				B911C7A91BDC5A4900016B85 /* AppDelegate.swift in Sources */,
 				B973FEAF1F094EE5008D368E /* GenericDataSource.swift in Sources */,
 				B95610931F12830D000E5649 /* MeasurementFormatting.swift in Sources */,
 				B92E57AE1F096290003437B3 /* DataBase.swift in Sources */,
-				B9C714581F830EE300073EB7 /* LabelledDatePicker.swift in Sources */,
+				B9C714581F830EE300073EB7 /* LabeledDatePicker.swift in Sources */,
 				B973FEA91F094C47008D368E /* RootViewController.swift in Sources */,
 				B9DD14631F0997580095AD0F /* CurrencyFormatter.swift in Sources */,
 				B92B622C1C8F573800790D3B /* User.swift in Sources */,
 				B90B921D1C976B2F0049C7A8 /* TextFieldCell.swift in Sources */,
-				B9C714561F830D9400073EB7 /* LabelledTextField.swift in Sources */,
 				B9C7145A1F83129400073EB7 /* NumberFormatting.swift in Sources */,
 				B973FEAB1F094D34008D368E /* RefuelListViewController.swift in Sources */,
 				B92B622A1C8F572300790D3B /* Refuel.swift in Sources */,

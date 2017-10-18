@@ -11,7 +11,8 @@ import UIKit
 public struct CurrencyFormatter {
 
     public static let shared = CurrencyFormatter()
-    private static let defaultString = "-,--"
+    public var currencyCode: String { return formatter.currencyCode }
+    private var defaultString: String { return "-\(formatter.decimalSeparator)--" }
 
     private init() {}
 
@@ -23,10 +24,10 @@ public struct CurrencyFormatter {
 
     func stringFromValue(value: Decimal?, currencyCode: String, fractionDigits: Int = 2) -> String {
 
-        guard let value = value else { return CurrencyFormatter.defaultString }
+        guard let value = value else { return defaultString }
         formatter.minimumFractionDigits = fractionDigits
         formatter.maximumFractionDigits = fractionDigits
         formatter.currencyCode = currencyCode
-        return formatter.string(from: value as NSDecimalNumber) ?? CurrencyFormatter.defaultString
+        return formatter.string(from: value as NSDecimalNumber) ?? defaultString
     }
 }

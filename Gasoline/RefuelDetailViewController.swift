@@ -12,22 +12,27 @@ import Core
 
 class RefuelDetailViewController: UIViewController {
 
-    let refuelItem: Refuel?
+    var refuelItem: Refuel? {
+        didSet {
+            guard let item = refuelItem else { return }
+            item.
+        }
+    }
 
-    let totalCostsTextField = LabelledTextField()
-    let pricePerLiterTextField = LabelledTextField()
-    let literAmountTextField = LabelledTextField()
-    let mileageTextField = LabelledTextField()
-    let datePicker = LabelledDatePicker()
-    let noteTextField = LabelledTextField()
+    let totalCosts = LabeledTextField()
+    let pricePerFuelUnit = LabeledTextField()
+    let fuelAmount = LabeledTextField()
+    let mileage = LabeledTextField()
+    let datePicker = LabeledDatePicker()
+    let notes = LabeledTextField()
 
     var textFieldList: [UITextField] {
         return [
-            totalCostsTextField.field,
-            pricePerLiterTextField.field,
-            literAmountTextField.field,
-            mileageTextField.field,
-            noteTextField.field]
+            totalCosts.textField,
+            pricePerFuelUnit.textField,
+            fuelAmount.textField,
+            mileage.textField,
+            notes.textField]
     }
 
     // MARK: - Lifecycle
@@ -72,8 +77,8 @@ class RefuelDetailViewController: UIViewController {
 
         setupDatePicker()
         setupTotalCostsTextField()
-        setupPricePerLiterTextField()
-        setupLiterAmountTextField()
+        setupPricePerFuelUnitTextField()
+        setupFuelAmountTextField()
         setupMileageTextField()
         setupNoteTextField()
         setupStack()
@@ -89,48 +94,49 @@ class RefuelDetailViewController: UIViewController {
         }
     }
 
-    // MARK: - Setup UI
-
     private func setupDatePicker() {
-        if let item = refuelItem {
-            datePicker.date = item.date
-        }
+        datePicker.title = "refuelDetailScreen.datePicker.title".localized
     }
 
     private func setupTotalCostsTextField() {
-        totalCostsTextField.text = NumberFormatting.shared.string(from: refuelItem?.totalPrice as NSDecimalNumber?)
+        let formatter = CurrencyFormatter.shared
+        totalCosts.title = "refuelDetailScreen.totalCostsTextField.title".localized
+        totalCosts.placeholder = formatter.stringFromValue(value: 39.99, currencyCode: formatter.currencyCode)
+        totalCosts.textField.keyboardType = .numberPad
     }
 
-    private func setupPricePerLiterTextField() {
-        pricePerLiterTextField.text = NumberFormatting.shared.string(from: refuelItem?.literPrice as NSDecimalNumber?)
+    private func setupPricePerFuelUnitTextField() {
+        let formatter = CurrencyFormatter.shared
+        pricePerFuelUnit.title = "refuelDetailScreen.pricePerFuelUnitTextField.title".localized
+        pricePerFuelUnit.placeholder = formatter.stringFromValue(value: 1.299, currencyCode: formatter.currencyCode, fractionDigits: 3)
+        pricePerFuelUnit.textField.keyboardType = .numberPad
     }
 
-    private func setupLiterAmountTextField() {
-        if let item = refuelItem {
-            literAmountTextField.text = MeasurementFormatting.shared.string(from: item.fuelAmount, fractionDigits: 3)
-        }
+    private func setupFuelAmountTextField() {
+        fuelAmount.title = "refuelDetailScreen.fuelAmountTextField.title".localized
+        fuelAmount.placeholder = MeasurementFormatting.shared.string(from: Measurement(value: 33.13, unit: UnitVolume.liters),
+                                                                     fractionDigits: 2)
+        fuelAmount.textField.keyboardType = .numberPad
     }
 
     private func setupMileageTextField() {
-        if let item = refuelItem {
-            mileageTextField.text = MeasurementFormatting.shared.string(from: item.mileage, fractionDigits: 0)
-        }
+        mileage.title = "refuelDetailScreen.mileageTextField.title".localized
+        mileage.placeholder = MeasurementFormatting.shared.string(from: Measurement(value: 135000, unit: UnitLength.kilometers),
+                                                                  fractionDigits: 0)
+        mileage.textField.keyboardType = .numberPad
     }
 
     private func setupNoteTextField() {
-        noteTextField.text = refuelItem?.note
+        notes.title = "refuelDetailScreen.noteTextField.title".localized
+        notes.placeholder = "refuelDetailScreen.noteTextField.title".localized
     }
 
     private func setupStack() {
-        let subviews = [totalCostsTextField,
-                        pricePerLiterTextField,
-                        literAmountTextField,
-                        mileageTextField,
-                        datePicker,
-                        noteTextField]
+        let subviews = [totalCosts, pricePerFuelUnit, fuelAmount, mileage, notes, datePicker, UIView()]
         let stack = UIStackView(arrangedSubviews: subviews)
         stack.axis = .vertical
-        stack.addMaximizedTo(view)
+        stack.spacing = Constants.UI.rasterSize
+        stack.addMaximizedTo(view, margins: Constants.UI.defaultInsets)
     }
 
     // MARK: - Actions
@@ -148,7 +154,7 @@ class RefuelDetailViewController: UIViewController {
 
     @IBAction func pressedSave(_ sender: AnyObject) {
 
-        guard let priceText = pricePerLiterTextField.text else {
+        guard let priceText = pricePerFuelUnit.text else {
             return
         }
 
@@ -156,7 +162,7 @@ class RefuelDetailViewController: UIViewController {
             return
         }
 
-        guard let literAmountText = literAmountTextField.text else {
+        guard let literAmountText = fuelAmount.text else {
             return
         }
 
@@ -164,7 +170,7 @@ class RefuelDetailViewController: UIViewController {
             return
         }
 
-        guard let mileageText = mileageTextField.text else {
+        guard let mileageText = mileage.text else {
             return
         }
 
@@ -177,7 +183,7 @@ class RefuelDetailViewController: UIViewController {
             literPrice: Decimal(price),
             fuelAmount: Measurement(value: literAmount, unit: UnitVolume.liters),
             mileage: Measurement(value: mileage, unit: UnitLength.kilometers),
-            note: noteTextField.text)
+            note: notes.text)
 
         globalDataBaseReference.add(item: refuel) {
             dismissViewControllerAnimated()
@@ -217,7 +223,7 @@ extension RefuelDetailViewController: UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
-        if textField == noteTextField { return true }
+        if textField == notes { return true }
 
         let decimalSeparator = NumberFormatting.shared.decimalSeparator
         let decimalSet = NSMutableCharacterSet.decimalDigit()
@@ -274,13 +280,13 @@ extension RefuelDetailViewController: UITextFieldDelegate {
 
         // Cnstain the number of characters entered by the user
         let newLength = currentCharacterCount + string.characters.count - range.length
-        if textField == totalCostsTextField {
+        if textField == totalCosts {
             return newLength <= 7
-        } else if textField == pricePerLiterTextField {
+        } else if textField == pricePerFuelUnit {
             return newLength <= 5
-        } else if textField == literAmountTextField {
+        } else if textField == fuelAmount {
             return newLength <= 7
-        } else if textField == mileageTextField {
+        } else if textField == mileage {
             return newLength <= 7
         } else {
             fatalError("unknown text field: <\(textField)>: \(currentString)")
